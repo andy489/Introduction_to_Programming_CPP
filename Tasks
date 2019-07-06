@@ -40,7 +40,7 @@
     или „Outside”.
  
         Пример:
-        Вход	      Изход
+        Вход	        Изход
         -2 0.5        White
         0 3	        Black
         0 2	        Undefined
