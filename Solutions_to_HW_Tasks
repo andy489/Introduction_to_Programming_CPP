@@ -476,41 +476,41 @@ int countAppearances(int M, int matrix[][6])
 		for (size_t j = 0; j < 6; j++)
 		{
 			if (matrix[i][j] == numArr[0])
-			{
-				for (size_t k = 0; k <= lenNum - 1; k++)
-					/*only here we include k=0, when M is with one digit! Because when M is with one digit
-					we cycle the matrix	only by rows from left to right and only once*/
+			 {
+			 for (size_t k = 0; k <= lenNum - 1; k++)
+				/*only here we include k=0, when M is with one digit! Because when M is with one digit
+				we cycle the matrix	only by rows from left to right and only once*/
+			 {
+				if (matrix[i][j + k] == numArr[k] && j + k <= 5) //checks rows from left to right
 				{
-					if (matrix[i][j + k] == numArr[k] && j + k <= 5) //checks rows from left to right
-					{
-						if (k == lenNum - 1) count++;
-					}
-					else break;
+					if (k == lenNum - 1) count++;
 				}
-				for (size_t k = 1; k <= lenNum - 1; k++) //k=1
+				else break;
+			 }
+			 for (size_t k = 1; k <= lenNum - 1; k++) //k=1
+			 {
+				if (matrix[i][j - k] == numArr[k] && j - k >= 0 && !palindrome(M)) //checks rows from right to left
 				{
-					if (matrix[i][j - k] == numArr[k] && j - k >= 0 && !palindrome(M)) //checks rows from right to left
-					{
-						if (k == lenNum - 1) count++;
-					}
-					else break;
+					if (k == lenNum - 1) count++;
 				}
-				for (size_t k = 1; k <= lenNum - 1; k++) //k=1
+				else break;
+			 }
+			 for (size_t k = 1; k <= lenNum - 1; k++) //k=1
+			 {
+				if (matrix[i + k][j] == numArr[k] && i + k <= 5) //checks columns from top to bottom
 				{
-					if (matrix[i + k][j] == numArr[k] && i + k <= 5) //checks columns from top to bottom
-					{
-						if (k == lenNum - 1) count++;
-					}
-					else break;
+					if (k == lenNum - 1) count++;
 				}
-				for (size_t k = 1; k <= lenNum - 1; k++) //k=1
+				else break;
+			 }
+			 for (size_t k = 1; k <= lenNum - 1; k++) //k=1
+			 {
+				if (matrix[i - k][j] == numArr[k] && i - k >= 0 && !palindrome(M))//checks columns from bottom to top
 				{
-					if (matrix[i - k][j] == numArr[k] && i - k >= 0 && !palindrome(M))//checks columns from bottom to top
-					{
-						if (k == lenNum - 1) count++;
-					}
-					else break;
+					if (k == lenNum - 1) count++;
 				}
+				else break;
+			 }
 			}
 		}
 	}
