@@ -3,7 +3,7 @@
 
 int myAbs(int num) 
 {
-	int	absValue;
+	int absValue;
 	absValue = (num >= 0) ? num : -num;
 	return absValue;
 }
