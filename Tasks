@@ -1,4 +1,10 @@
-•PRIMITIVE DATA TYPES
+• PRIMITIVE DATA TYPES;
+• CONDITIONAL STATEMENTS (if, else/switch);
+• LOOPS (for/while);
+• ARRAYS;
+• MATRICES;
+• FUNCTIONS AND RECURSION;
+• STRINGS; 
+• COMPLEX TASKS;
 
-Primitive data types, conditionals statements (if, else/switch), loops (for/while), arrays, matrices, functions and recursion, strings
-complex tasks
+1. Write a program which initializes 2 variables and then swaps their values.
