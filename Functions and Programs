@@ -1,7 +1,0 @@
-1. Write a function that reads from cin until it gets an integer in the required range and also handles invalid characters.
-2. Write a function that takes one integer n and returns n!.
-3. Write a function that takes two integers - n and k and returns (n choose k) (binomial coefficient).
-4. Write a program which asks the user for a number n and prints the first n numbers of Fibonacci.
-5. Write a program which asks the user for a number n and prints the first n numbers of Tribonacci.
-6. Write a function which takes a double b and positive integer n and returns b raised to the n-th power.(Karatsuba multiplication)
-7. Write a function which takes a two positive integers and returns their GCD (Euclid algorithm)
