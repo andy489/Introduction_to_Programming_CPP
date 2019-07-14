@@ -18,4 +18,35 @@ int main()
 
 	return 0;
 }
------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+• CONTROL OF THE INPUT DATA
+
+#include <iostream>
+
+/* Function that reads from cin until it gets an integer in
+the required range and also handles invalid characters.*/
+
+int inputNum(int lowerBound, int upperBound) 
+{
+	int n;
+	while (true)
+	{
+		std::cout << "Input a number: "; std::cin >> n;
+		if (std::cin.fail())
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else if ((n >= lowerBound) && (n <= upperBound)) break;
+	}
+	return n;
+}
+
+int main()
+{
+	int n = inputNum(0, 9);
+	std::cout << "Correct number: " << n;
+
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
