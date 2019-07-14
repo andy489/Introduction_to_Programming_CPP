@@ -136,3 +136,36 @@ int main()
 }
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 5
+#include <iostream>
+
+size_t numLen(long long num)
+{
+	size_t len = size_t(floor(log10(abs(num)))) + 1;
+	return len;
+}
+
+int digitPos(long long num, int k)
+{
+	int len = numLen(num);
+	num = abs(num);
+	int endCycle = len - k;
+	int digit = -1;
+	if (k > len || k < 1) return -1;
+	for (int i = len - 1; i >= endCycle; i--)
+	{
+		digit = (size_t)(num / pow(10, i));
+		long long denom = (long long)(pow(10, len - 1));
+		num = num % denom;
+		len--;
+	}
+	return digit;
+}
+
+int main()
+{
+	long long n;
+	std::cin >> n;
+	for (size_t i = 1; i <= numLen(n); i++) std::cout << digitPos(n, i) << std::endl;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
