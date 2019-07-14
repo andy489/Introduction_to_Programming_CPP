@@ -1,6 +1,5 @@
 //Task 1
 #include <iostream>
-
 void swap(int& a, int& b)
 {
 	int temp = a;
@@ -20,52 +19,42 @@ int main()
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 2
 #include <iostream>
-
-long long absVal(long long a)
+long long absVal(long long n)
 {
-	return a < 0 ? -a : a;
+	return n < 0 ? -n : n;
 }
 int main()
 {
 	long long n;
 	std::cin >> n;
-	size_t count = (size_t)log10(absVal(n)) + 1;
-	std::cout << count;
-	return 0;
-}
-//second way
-#include <iostream>
+	size_t count(0), sum(0);
+	long long num = absVal(n);
 
-int main()
-{
-	long long n;
-	std::cin >> n;
-	size_t count = 0;
-	
-	while (n != 0)
-	{		
-		n /= 10;
+	while (num != 0)
+	{
+		sum += num % 10;
+		num /= 10;
 		count++;
 	}
-	std::cout << count;
+
+	std::cout.setf(std::ios::fixed);
+	std::cout.precision(2);
+	std::cout << sum / (double)count;
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 3
 #include <iostream>
-
 size_t myStrLen(const char* str)
 {
 	size_t len;
 	for (len = 0; str[len] != '\0'; len++) {}
 	return len;
 }
-
 bool isDigit(const char symbol)
 {
 	return (symbol >= '0' && symbol <= '9');
 }
-
 bool checkDate(const char* text)
 {
 	size_t len = myStrLen(text);
@@ -85,7 +74,6 @@ bool checkDate(const char* text)
 	};
 	return days <= maxDaysPerMonth[months];
 }
-
 int main()
 {
 	const char* str1 = "22.12";
@@ -99,14 +87,12 @@ int main()
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 4
 #include <iostream> 
-
 size_t strLen(const char* text)
 {
 	size_t len;
 	for (len = 0; text[len] != '\0'; len++) {}
 	return len;
 }
-
 int subString(const char* subStr, const char* str)
 {
 	size_t lenSubStr = strLen(subStr);
@@ -124,7 +110,6 @@ int subString(const char* subStr, const char* str)
 	}
 	return -1;
 }
-
 int main()
 {
 	const char* s1 = "hub";
@@ -138,13 +123,11 @@ int main()
 //Task 5 (without reverting the number)
 #include <iostream>
 #include <cmath>
-
 size_t numLen(long long num)
 {
 	size_t len = size_t(floor(log10(abs(num)))) + 1;
 	return len;
 }
-
 int digitPos(long long num, int k)
 {
 	int len = numLen(num);
@@ -161,7 +144,6 @@ int digitPos(long long num, int k)
 	}
 	return digit;
 }
-
 int main()
 {
 	long long n;
