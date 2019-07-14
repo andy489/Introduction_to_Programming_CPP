@@ -753,13 +753,18 @@ int main()
 }
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 11
+#define _CRTDBG_MAP_ALLOC   // required
+#include <stdlib.h>         // to enable MSVC++
+#include <crtdbg.h>         // memory leak detection
+
+#include <string>
 #include <iostream>
 
 /* 1. Function that simplifies the matrix. Applying Carl Friedrich Gauss's method
 and returning an array, which shows us the columns on which we have been working on*/
 size_t* simMatr(double** A, size_t m)
 {
-	size_t* indexes = new size_t[4];// creating an array filled with zeroes, which we will return
+	static size_t indexes[4];// creating an array filled with zeroes, which we will return
 	for (size_t i = 0; i < 4; i++) indexes[i] = 0;
 	// there are two cases, both of which are analogical
 	if (m < 4)
@@ -899,11 +904,15 @@ double** FSS(double** A, size_t m, size_t &t)
 	}
 	if (count == 0) {// if all are used then the only solution is null 
 		std::cout << "Only null solution for the system.";
+
+		delete[] notUsed;
+		delete[] used;
+
 		return 0;
 	}
 	else
 	{
-		delete[] indexes;
+		//delete[] indexes;
 		double** FSSnew = nullptr;
 		FSSnew = new double*[count];
 		for (size_t i = 0; i < count; i++)
@@ -927,6 +936,10 @@ double** FSS(double** A, size_t m, size_t &t)
 			tr++;
 		}
 		t = count;
+
+		delete[] notUsed;
+		delete[] used;
+
 		return FSSnew;
 	}// returning a matrix with every row a vector of FS (fundamental solution)
 }
@@ -951,10 +964,10 @@ double** func(double** A, double** B, int n, size_t &m) // the function wanted f
 	delete[] new_B;
 	// creating new matrix whose non-zero rows are the basis of U + W, using Gauss's method
 	simMatr(sol, br);
-	m = br;// zapazvame kolko sa tezi redove v novata ni matrica za ulesnenie
+	m = br;// keeping track of how many these rows are in our new matrix
 	return sol;
 }
-int main()
+void test()
 {
 	// we create the matrices locally
 	double A[4][4] =
@@ -1003,10 +1016,16 @@ int main()
 		}
 	}
 	for (size_t i = 0; i < m; i++) delete[] solution[i];
-		delete[] solution;
+	delete[] solution;
 	for (size_t i = 0; i < m - n; i++) delete[] newB[i];
-		delete[] newB;
+	delete[] newB;
 	for (size_t i = 0; i < n; i++) delete[] newA[i];
-		delete[] newA;
+	delete[] newA;
+}
+
+int main()
+{
+	test();
+	_CrtDumpMemoryLeaks();
 	return 0;
 }
