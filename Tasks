@@ -21,5 +21,5 @@
 5. Write a function with signature int digitPos(long long num, int k), which returns the k-th digit of the number num or -1 if 
    such position does not exist. It starts counting from left to right and from 1. For example - digitPos(1234, 3) returns 3.
    
-6. Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
+6. Write a function with signature void revert(const char* text), which converts the given string as a parameter, replacing all 
    lowercase Latin alphabet with uppercase and reverse. Do not use the built-in string library.
