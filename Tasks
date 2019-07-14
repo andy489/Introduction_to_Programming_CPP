@@ -23,3 +23,6 @@
    
 6. Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
    lowercase Latin alphabet with uppercase and reverse. Do not use the built-in string library.
+   
+7. Write a function with signature double sqrt_a(double a, double eps), which calculates a square root with an epsilon (eps) 
+   precision.
