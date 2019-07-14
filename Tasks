@@ -18,4 +18,4 @@
    to the first position the substring is located in the string, else return -1.
    
 5. Write a function with signature int digitPos(long long num, int k), which returns the k-th digit of the number num or -1 if 
-   such position does not exist. We start counting from left to right and we start from 1.
+   such position does not exist. It starts counting from left to right and from 1.
