@@ -13,3 +13,5 @@
 DD.MM format. Do not use string.
 4. Write a function which checks whether a string is а substring in another string. If true, the functions must return the index 
 to the first position the substring is located in the string, else return -1.
+5. Write a function with signature int digitPos(long long num, int k), which returns the k-th digit of the number num or -1 if 
+such position does not exist. We start counting from left to right and we start from 1.
