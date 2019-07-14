@@ -233,15 +233,15 @@ int main()
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 7
 #include <iostream>
-double sqrt_a(double a, double eps)
+double sqrt_x(double x, double eps)
 { // Babylonian method
-	double s = a;
-	while ((s - a / s) > eps) s = (s + a / s) / 2;
+	double s = x;
+	while ((s - x / s) > eps) s = (s + x / s) / 2;
 	return s;
 }
 int main()
 {
-	std::cout << sqrt_a(2, 0.000001) << std::endl;
+	std::cout << sqrt_x(2, 0.000001) << std::endl;
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
