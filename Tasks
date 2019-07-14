@@ -11,5 +11,5 @@
 2. Write a program which counts the number of digits in an integer.
 3. Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in 
 DD.MM format. Do not use string.
-4. Write a function which checks whether a string is а substring in another string. If true, the functions must return the index to
-   the first position the substring is located in the string, else return -1.
+4. Write a function which checks whether a string is а substring in another string. If true, the functions must return the index 
+to the first position the substring is located in the string, else return -1.
