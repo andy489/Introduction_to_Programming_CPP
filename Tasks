@@ -9,7 +9,8 @@
 
 1. Write a program which initializes 2 variables and then swaps their values.
 
-2. Write a program which counts the number of digits in an integer.
+2. Write a program which calculates the arithmetic mean of the digits of a given integer long long number, formatted to the second 
+   digit after the decimal point.
 
 3. Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in 
    DD.MM format. Do not use string.
