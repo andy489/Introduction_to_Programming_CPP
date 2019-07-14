@@ -1,0 +1,21 @@
+• REGULAR EXPRESSIONS (RegEx)
+
+// Example 1:
+#include <iostream> 
+#include <regex> 
+
+int main()
+{
+	std::string s1 = "http//www.github.com/"; // target string
+	std::regex s2("(.+)(www.)[a-zA-Z0-9]+(.com/)(.*)"); // searched string
+	//(.+) -> At least one non-eps (eps - the empty char) symbol of any kind;
+	//(.*) -> Character/s of any kind (even eps);
+	//[a-zA-Z0-9]+ Specify the desired characters we want to search (at least one of them -> +; else -> *)
+	if (regex_match(s1, s2))
+		std::cout << "String 'a' matches regular expression 'b' \n";
+	if (regex_match(s1.begin(), s1.end(), s2))
+		std::cout << "String 'a' matches with regular expression 'b' in the range from 0 to string end\n";
+
+	return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------------------
