@@ -245,3 +245,18 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+//Task 8
+#include <iostream>
+double karPow(double x, size_t n)
+{ // Karatsuba algorithm
+	if (n == 0)		return 1;
+	if (n == 1)		return x;
+	if (n % 2 == 0) return karPow(x, n / 2)*karPow(x, n / 2);
+	else return x * karPow(x, n - 1);
+}
+int main()
+{
+	std::cout << karPow(-2, 10) << std::endl;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
