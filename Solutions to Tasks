@@ -130,10 +130,8 @@ int main()
 	const char* s1 = "hub";
 	const char* s2 = "www.github.com";
 	int res = subString(s1, s2);
-	if (res == -1)
-		std::cout << "Not present";
-	else
-		std::cout << "Present at index " << res;
+	if (res == -1) std::cout << "Not present";
+	else std::cout << "Present at index " << res;
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
