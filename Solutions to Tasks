@@ -135,8 +135,9 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 5
+//Task 5 (without reverting the number)
 #include <iostream>
+#include <cmath>
 
 size_t numLen(long long num)
 {
@@ -165,6 +166,58 @@ int main()
 {
 	long long n;
 	std::cin >> n;
+	for (size_t i = 1; i <= numLen(n); i++) std::cout << digitPos(n, i) << std::endl;
+	return 0;
+}
+//Task 5 second way (reverting the number)
+#include <iostream>
+#include <cmath>
+
+size_t numLen(long long n)
+{
+	size_t len = 0;
+	while (n != 0)
+	{
+		n /= 10;
+		len++;
+	}
+	return len;
+}
+long long revNum(long long n)
+{
+	long long r = 0;
+	size_t len = numLen(n);
+	while (len != 0)
+	{
+		r += (long long)((n % 10)*pow(10, len - 1));
+		n /= 10;
+		len--;
+	}
+	return r;
+}
+int digitPos(long long num, int k)
+{
+	size_t len = numLen(num);
+	long long rev = revNum(num);
+	num = abs(num);
+	int end = len - k;
+	int digit = -1;
+	if (k > (int)len || k < 1)return digit;
+	for (int i = 1; i <= k; i++)
+	{
+		if (i == k)
+		{
+			digit = num % 10;
+			return digit;
+		}
+		num /= 10;
+	}
+	return 0;
+}
+int main()
+{
+	long long n;
+	std::cin >> n;	
 	for (size_t i = 1; i <= numLen(n); i++) std::cout << digitPos(n, i) << std::endl;
 	return 0;
 }
