@@ -26,3 +26,6 @@
    
 7. Write a function with signature double sqrt_x(double x, double eps), which calculates a square root of x with an epsilon (eps) 
    precision.
+   
+8. Write a function which by a given real number x and a non-negative integer n returns x raised to the n-th power. Use Karatsuba
+   multiplication method (recursion).
