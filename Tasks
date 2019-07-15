@@ -29,3 +29,6 @@
    
 8. Write a function which by a given real number x and a non-negative integer n returns x raised to the n-th power. Use Karatsuba
    multiplication method (recursion).
+
+9. Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters diferent from 
+   ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
