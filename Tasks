@@ -35,7 +35,7 @@
    
 10. Write a program which asks the user for a 5-digit number and then prints:
     ∘ the same number in binary;
-    ∘ the same number in hex;
-    ∘ the same number in oct.
+    ∘ the same number in oct;
+    ∘ the same number in hex.
 
 
