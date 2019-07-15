@@ -289,3 +289,51 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+//Task 10
+#include <iostream>
+#include <cmath>
+#include <string>
+void swap(char& a, char& b)
+{
+	char temp = a;
+	a = b;
+	b = temp;
+}
+void reverse(std::string& str)
+{
+	size_t len = str.length();
+	for (size_t i = 0; i < len / 2; i++)
+		swap(str[i], str[len - i - 1]);
+}
+std::string convNum(long long n, size_t m)
+{
+	std::string zero = "0";
+	if (n == 0) return zero;
+	std::string num("");
+	bool isNegative = false;
+	if (n < 0) isNegative = true;
+	n = abs(n);
+
+	size_t i = 0;
+	while (n != 0)
+	{
+		int rem = n % m;
+		if (rem <= 9) num += rem + '0';
+		else num += (char)(rem)+'7';
+		n /= m;
+	}
+	if (isNegative) num += '-';
+	reverse(num);
+	return num;
+}
+int main()
+{
+	long long n;
+	std::cin >> n;
+	std::cout << "Decimal: " << n
+		<< "\nBinary: " << convNum(n, 2)
+		<< "\nOct: " << convNum(n, 8)
+		<< "\nHex: " << convNum(n, 16) << std::endl;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
