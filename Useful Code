@@ -50,3 +50,18 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+• INTERESTING WAY OF FINDING THE MAX AND MIN FROM TWO INTEGERS
+
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+	int a, b;
+	std::cin >> a >> b;
+	int max = (a + b + abs(a - b)) / 2;
+	int min = (a + b - abs(a - b)) / 2;
+	std::cout << "Max: " << max << "\nMin: " << min;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
