@@ -108,11 +108,11 @@
                                                      
 9.  Да се напише програма, която анимира в конзолата следния надпис:
 
-                                              H   H   EEEEE   L       L          O
-                                              H   H   E       L       L        O   O
-                                              HHHHH   EEEEE   L       L       O     O
-                                              H   H   E       L       L        O   O
-                                              H   H   EEEEE   LLLLL   LLLLL      O
+                                         H   H   EEEEE   L       L          O
+                                         H   H   E       L       L        O   O
+                                         HHHHH   EEEEE   L       L       O     O
+                                         H   H   E       L       L        O   O
+                                         H   H   EEEEE   LLLLL   LLLLL      O
 
     Надписът да преминава отляво-надясно, центриран вертикално (спрямо прозореца на конзолата, с височина 25 реда), като първо 
     се появява буквата “О”, а накрая – изчезват буквите “H”. За решаването на задачата не се допуска използването на вградените 
@@ -134,22 +134,23 @@
             -1 -3 -5  
             
 11.* В линейното пространство <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{R}^4"> са дадени две числа m и n, както и векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">. Нека <img src="https://latex.codecogs.com/svg.latex?\Large&space;U=l(a_1,a_2,...,a_n)"> e 
-     подпространство на <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{R}^4;l(a_1,a_2,a_3,a_n)=x|x=\sum_{i-1}^{n}\lambda_ia_i\}"> и нека W e подпространство на <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{R}^4">, зададено като пространството от решения на хомогенната система:     
+     подпространство на <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{R}^4;l(a_1,a_2,a_3,a_n)=\{x|x=\sum_{i-1}^{n}\lambda_ia_i\}"> и нека W e подпространство на <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{R}^4">, зададено като пространството от решения на хомогенната система:     
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{11}x_1+b_{12}x_2+b_{13}x_3+b_{14}x_4=0">;                  
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{21}x_1+b_{22}x_2+b_{23}x_3+b_{24}x_4=0">;                  
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;...">                     
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{m1}x_1+b_{m2}x_2+b_{m3}x_3+b_{m4}x_4=0">.                  
-      Да се напише функция F, която приема като параметри числата m и n, векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">,  и коефициентите на <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{ij}"> на хомогенната система. Да се напише функция main, в която са декларирани локално числата m и n, както и матриците <img src="https://latex.codecogs.com/svg.latex?\Large&space;(a_{ij})_{nx4}"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;(b_{ij})_{mx4}">, където <img src="https://latex.codecogs.com/svg.latex?\Large&space;(a_{ij})_{nx4}"> е матрицата от координатите на векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">. Програмата да изведе на екрана на конзолата базис на <img src="https://latex.codecogs.com/svg.latex?\Large&space;U+W^4">.
-  Пример (с <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_2"> са означени коефициентите от редовете на матрицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;(b_{ij})_{2x4}">):                                        
+      Да се напише функция F, която приема като параметри числата m и n, векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">,  и коефициентите на <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{ij}"> на хомогенната система. Да се напише функция main, в която са декларирани локално числата m и n, както и матриците <img src="https://latex.codecogs.com/svg.latex?\Large&space;(a_{ij})_{nX4}"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;(b_{ij})_{mx4}">, където <img src="https://latex.codecogs.com/svg.latex?\Large&space;(a_{ij})_{nX4}"> е матрицата от координатите на векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">. Програмата да изведе на екрана на конзолата базис на <img src="https://latex.codecogs.com/svg.latex?\Large&space;U+W^4">.
+  Пример (с <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_2"> са означени коефициентите от редовете на матрицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;(b_{ij})_{2X4}">:                                        
   Вход:                                        
-  <img src="https://latex.codecogs.com/svg.latex?\Large&space;m=2,n=4">                                        
+  <img src="https://latex.codecogs.com/svg.latex?\Large&space;m=2,n=4">
+  
   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(2,8,-3,14)">                                        
   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(-1,2,3,5)">                                        
   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(-1,14,6,29)">                                        
   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_4=(0,12,3,24)">
   
   <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1=(0,1,1,0)">                                        
-  <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_2=(10,7,0,-8)">   
-  
+  <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_2=(10,7,0,-8)">                       
+    
   Да не се извежда нищо в конзолата от функцията F (а само от main). Функцията трябва да симулира метода на Карл Фридрих Гаус 
   за решаване на система линейни уравнения.                                     
