@@ -53,3 +53,5 @@ input | output
 31 | 1
 32 | 5
 100 | 249000
+
+**17** Write a program whick converts a decimal number lying between 1 and 3999 to Roman numerals.
