@@ -38,7 +38,7 @@
     или „Outside”. https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/yan%20yin.png
   
         Пример:
-        Вход	      Изход
+        Вход	        Изход
         -2.0 0.5          White
          0.0 3.0	  Black
          0.0 2.0	  Undefined
