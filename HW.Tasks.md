@@ -39,7 +39,7 @@
   
         Пример:
         Вход	      Изход
-        -2.0 0.5           White
+        -2.0 0.5          White
          0.0 3.0	  Black
          0.0 2.0	  Undefined
          6.0 6.0	  Outside
