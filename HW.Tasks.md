@@ -151,8 +151,8 @@
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;(0,1,1,0)">;                  
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;(10,7,0,-8)">;                  
-  Вход: 
-  <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(-1,2,3,5)">;                 
+  Изход:                                        
+   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(-1,2,3,5)">;                 
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(0,4,1,8)">                  
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(0,0,10,9)"> 
         
