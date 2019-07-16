@@ -38,5 +38,4 @@
 
 13. Write a program which asks the user for a non-negative integer n and gives the n-th number of Fibonacci.
 
-14. Write a program which asks the user for a non-negative integer n and gives the n-th number of the sequence 
-    a_{n+2}=5a_{n+1}-6a_n+6^n, with a_0=0 and a_1=1.
+14. Write a program which asks the user for a non-negative integer n and gives the n-th number of the sequence <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_{n+2}=5a_{n+1}-6a_n+6^n">, with <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0=0"> <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=1">
