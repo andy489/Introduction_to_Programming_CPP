@@ -143,11 +143,12 @@
   Пример (с <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_2"> са означени коефициентите от редовете на матрицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;(b_{ij})_{2X4}">:                                        
   Вход:                                        
    <img src="https://latex.codecogs.com/svg.latex?\Large&space;m=2,n=4">
-  
-   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(2,8,-3,14)">                  
-   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(-1,2,3,5)">                  
-   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(-1,14,6,29)">                  
-   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_4=(0,12,3,24)">
+    
+  <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(2,8,-3,14)">;                 
+      <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(-1,2,3,5)">                  
+      <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(-1,14,6,29)">                     
+      <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_4=(0,12,3,24)">
+
   
    <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1=(0,1,1,0)">                  
    <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_2=(10,7,0,-8)">                       
