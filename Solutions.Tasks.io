@@ -10,7 +10,6 @@ int main()
 {
 	int a, b;
 	std::cin >> a >> b;
-
 	std::cout << a << ", " << b << "\n";
 	swap(a, b);
 	std::cout << a << ", " << b << "\n";
@@ -33,7 +32,6 @@ int main()
 {
 	double a, b, c;
 	std::cin >> a >> b >> c;
-
 	switch (tri(a,b,c))
 	{
 	case 0:
@@ -100,14 +98,12 @@ int main()
 	std::cin >> n;
 	size_t count(0), sum(0);
 	long long num = absVal(n);
-
 	while (num != 0)
 	{
 		sum += num % 10;
 		num /= 10;
 		count++;
 	}
-
 	std::cout.setf(std::ios::fixed);
 	std::cout.precision(2);
 	std::cout << sum / (double)count;
@@ -152,7 +148,6 @@ int main()
 		
 	std::cout << checkDate(str1)<<std::endl;
 	std::cout << checkDate(str2) << std::endl;
-
 	return 0;
 }
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -323,7 +318,6 @@ int main()
 ----------------------------------------------------------------------------------------------------------------------------------------
 //Task 11
 #include <iostream>
-
 int countWords(char* text)
 {
 	for (size_t i = 0; text[i] != '\0'; i++)
@@ -374,7 +368,7 @@ std::string convNum(long long n, size_t m)
 	bool isNegative = false;
 	if (n < 0) isNegative = true;
 	n = abs(n);
-
+	
 	size_t i = 0;
 	while (n != 0)
 	{
