@@ -160,7 +160,7 @@
         
 вход | изход
 ------------ | -------------
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;m=2,n=4">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;m=2,n=4">|
     
   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(2,8,-3,14)">| <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(-1,2,3,5)">                
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(-1,2,3,5)"> | <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(0,4,1,8)">                 
