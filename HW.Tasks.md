@@ -160,10 +160,11 @@
         
 вход | изход
 ------------ | -------------
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;m=2,n=4">|
-    
-  <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(2,8,-3,14)">| <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(-1,2,3,5)">                
-      <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(-1,2,3,5)"> | <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(0,4,1,8)">                 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;m=2,n=4">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(-1,2,3,5)">                |
+  <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(-1,2,3,5)">   
+  <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(2,8,-3,14)"> 
+      | <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(0,4,1,8)">                 
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(-1,14,6,29)">|<img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(0,0,10,9)">                     
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_4=(0,12,3,24)">|
 
