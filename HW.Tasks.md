@@ -134,9 +134,9 @@
             -1 -3 -5  
             
 11.* В линейното пространство <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{R}^4"> са дадени две числа m и n, както и векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">. Нека <img src="https://latex.codecogs.com/svg.latex?\Large&space;U=l(a_1,a_2,...,a_n)"> e 
-     подпространство на <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{R}^4 l(a_1,a_2,a_3,a_n)"> и нека W e подпространство на R4, зададено като 
+     подпространство на <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{R}^4"> ,<img src="https://latex.codecogs.com/svg.latex?\Large&space;l(a_1,a_2,a_3,a_n)"> и нека W e подпространство на <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{R}^4">, зададено като 
      пространството от решения на хомогенната система:    
-      b_{11}.x_1 + b_{12}.x_2 + b_{13}x_3+b_{14}.x_4 = 0;                  
+      <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{11}.x_1 + b_{12}.x_2 + b_{13}x_3+b_{14}.x_4 = 0">;                  
       ...
       b_{m1}.x1 + b_{m2}.x_2 +b_{m3}.x_3+b_{m4}.x_4 = 0.  
      Да се напише функция F, която приема като параметри числата m и n, векторите a_1, a_2,..., a_n и коефициентите на b_ij на 
