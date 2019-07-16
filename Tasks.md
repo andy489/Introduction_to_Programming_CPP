@@ -1,7 +1,7 @@
   ## TASKS
   #### SIMPLE CALCULATIONS; CONDITIONAL STATEMENTS (if, else/switch); LOOPS (for/while); ARRAYS; MATRICES; FUNCTIONS AND                    RECURSION; STRINGS; COMPLEX TASKS
 
-**1.**1 Write a program which initializes 2 variables and then swaps their values.
+**1.** 1 Write a program which initializes 2 variables and then swaps their values.
 
 **2.** Write a program which asks the user to enter 3 numbers and prints whether there exist a triangle. If so, print the type of the 
    triangle (scalene, isoscles or equaterial).
