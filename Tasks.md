@@ -46,3 +46,10 @@
 **16.** Write a function which finds the number of solutions of the system in natural numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{N}\cup{0}">:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\left\{\begin{array}{l}x_1+x_2+x_3+x_4+x_5=100\\x_1<10\\10\leq{x_2}<30\\x_4>20\\x_5<30\end{array}\right."> 
+
+input | output
+------------ | -------------
+30 | 0
+31 | 1
+32 | 5
+100 | 249000
