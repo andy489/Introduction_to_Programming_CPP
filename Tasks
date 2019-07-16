@@ -9,6 +9,9 @@
 
 1. Write a program which initializes 2 variables and then swaps their values.
 
+2. Write a program which asks the user to enter 3 numbers and prints whether there exist a triangle. If so, print the type of the 
+   triangle (obtuse, right or acute).
+
 2. Write a program which calculates the arithmetic mean of the digits of a given integer long long number, formatted to the second 
    digit after the decimal point.
 
