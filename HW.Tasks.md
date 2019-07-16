@@ -35,7 +35,7 @@
 5.  Да се напише програма, която прочита от клавиатурата координатите на точка в декартовата координатна система (две дробни 
     числа, отделени с интервал) и определя дали точката се намира в черната, в бялата област на фигурата, дали е на границата на
     някоя от областите или се намира извън фигурата. Програмата да извежда в конзолата съответно: „White”, “Black”, “Undefined” 
-    или „Outside”. https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/yan%20yin.png
+    или „Outside”. ![alt text](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/yan%20yin.png)
   
         Пример:
         Вход	          Изход
