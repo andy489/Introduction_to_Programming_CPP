@@ -16,7 +16,7 @@ int main()
 	std::cout << a << ", " << b << "\n";
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 //Task 2
 #include <iostream>
 #include <cmath>
@@ -53,8 +53,42 @@ int main()
 	}
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
-//Task 3
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 3 
+#include <iostream>
+#include <cmath>
+int main()
+{
+	double x, y, k;
+	std::cin >> x >> y;
+	if (x*y == 0)
+	{
+		if (x == y) std::cout << "Point P(" << x << ',' << y << ") matches point O(0,0).";
+		else
+		{
+			if (x > 0) std::cout << "Point P(" << x << ',' << y << ") lies on the abscissa.";			
+			else std::cout << "Point P(" << x << ',' << y << ") lies on the ordinate.";			
+		}
+		return 0;
+	}
+	else
+	{
+		if (x*y > 0)
+		{
+			if (x > 0) k = 1;
+			else k = 3;
+		}
+		else
+		{
+			if (x > 0) k = 4;
+			else k = 2;
+		}
+	}
+	std::cout << "Point P(" << x << ',' << y << ") lies in the "<<k<< " quadrant.";
+	return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 4
 #include <iostream>
 long long absVal(long long n)
 {
@@ -79,8 +113,8 @@ int main()
 	std::cout << sum / (double)count;
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
-//Task 4
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 5
 #include <iostream>
 size_t myStrLen(const char* str)
 {
@@ -121,8 +155,8 @@ int main()
 
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
-//Task 5
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 6
 #include <iostream> 
 size_t strLen(const char* text)
 {
@@ -156,18 +190,40 @@ int main()
 	else std::cout << "Present at index " << res;
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
-//Task 6 first way (without reverting the number)
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 7 
 #include <iostream>
 #include <cmath>
-size_t numLen(long long num)
-{
+size_t numLen1(long long num)
+{ // first way using log10 function
 	size_t len = size_t(floor(log10(abs(num)))) + 1;
 	return len;
 }
-int digitPos(long long num, int k)
+size_t numLen2(long long n)
+{ // second way with counting
+	size_t len = 0;
+	while (n != 0)
+	{
+		n /= 10;
+		len++;
+	}
+	return len;
+}
+long long revNum(long long n)
 {
-	int len = numLen(num);
+	long long r = 0;
+	size_t len = numLen1(n);
+	while (len != 0)
+	{
+		r += (long long)((n % 10)*pow(10, len - 1));
+		n /= 10;
+		len--;
+	}
+	return r;
+}
+int digitPos1(long long num, int k)
+{ // first way (without reverting the number)
+	int len = numLen2(num);
 	num = abs(num);
 	int endCycle = len - k;
 	int digit = -1;
@@ -181,67 +237,31 @@ int digitPos(long long num, int k)
 	}
 	return digit;
 }
+int digitPos2(long long num, int k)
+{ // second way with reverting the number
+	size_t len = numLen2(num);
+	long long rev = revNum(num);
+	num = abs(rev);
+	int digit = -1;
+	if (k > (int)len || k < 1)return digit;
+	size_t i(0);
+	while (i != k)
+	{
+		digit = num % 10;
+		num /= 10;
+		i++;
+	}
+	return digit;
+}
 int main()
 {
 	long long n;
 	std::cin >> n;
-	for (size_t i = 1; i <= numLen(n); i++) std::cout << digitPos(n, i) << std::endl;
+	for (size_t i = 1; i <= numLen1(n); i++) std::cout << digitPos1(n, i) << ' ' << digitPos2(n, i) << std::endl;
 	return 0;
 }
-//Task 5 second way (reverting the number)
-#include <iostream>
-#include <cmath>
-
-size_t numLen(long long n)
-{
-	size_t len = 0;
-	while (n != 0)
-	{
-		n /= 10;
-		len++;
-	}
-	return len;
-}
-long long revNum(long long n)
-{
-	long long r = 0;
-	size_t len = numLen(n);
-	while (len != 0)
-	{
-		r += (long long)((n % 10)*pow(10, len - 1));
-		n /= 10;
-		len--;
-	}
-	return r;
-}
-int digitPos(long long num, int k)
-{
-	size_t len = numLen(num);
-	long long rev = revNum(num);
-	num = abs(num);
-	int end = len - k;
-	int digit = -1;
-	if (k > (int)len || k < 1)return digit;
-	for (int i = 1; i <= k; i++)
-	{
-		if (i == k)
-		{
-			digit = num % 10;
-			return digit;
-		}
-		num /= 10;
-	}
-	return 0;
-}
-int main()
-{
-	long long n;
-	std::cin >> n;	
-	for (size_t i = 1; i <= numLen(n); i++) std::cout << digitPos(n, i) << std::endl;
-	return 0;
-}
---------------------------------------------------------------------------------------------------------------------------------
-//Task 7
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 8
 #include <iostream>
 size_t strLen(char* text)
 {	
@@ -267,8 +287,8 @@ int main()
 	std::cout << text << std::endl;
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
-//Task 8
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 9
 #include <iostream>
 double sqrt_x(double x, double eps)
 { // Babylonian method
@@ -281,8 +301,8 @@ int main()
 	std::cout << sqrt_x(2, 0.000001) << std::endl;
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
-//Task 9
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 10
 #include <iostream>
 double karPow(double x, int n)
 { // Karatsuba algorithm
@@ -300,8 +320,8 @@ int main()
 	std::cout << karPow(3, -2) << std::endl;
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
-//Task 10
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 11
 #include <iostream>
 
 int countWords(char* text)
@@ -329,8 +349,8 @@ int main()
 	std::cout << countWords(text) << std::endl;
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
-//Task 11
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 12
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -377,8 +397,8 @@ int main()
 		<< "\nHex: " << convNum(n, 16) << std::endl;
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
-//Task 12 
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 13 
 #include <iostream>
 #include <cmath>
 size_t fib1(size_t n)
@@ -413,23 +433,23 @@ int main()
 	std::cout << fib3(n) << std::endl;
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
-//Task 13 three ways - seq1: recursion, seq2: solving the characteristical polynomial of the sequence , seq3: cycling
+----------------------------------------------------------------------------------------------------------------------------------------
+//Task 14 
 #include <iostream>
 #include <cmath>
 size_t seq1(size_t n)
-{
+{ // first way - using recursion
 	if (n == 0) return 0;
 	if (n == 1) return 1;
 	else return (size_t)(5 * seq1(n - 1) - 6 * seq1(n - 2) + pow(6, n - 2));
 }
 size_t seq2(size_t n)
-{
+{ // second way - solving the characteristical polynomial of the sequence
 	size_t result = (size_t)(-3.0 / 4 * pow(2, n) + 2.0 / 3 * pow(3, n) + 1.0 / 12 * pow(6, n));
 	return result;
 }
 size_t seq3(size_t n)
-{
+{ // third way - cycling
 	size_t a0(0), a1(1), a2;
 	if (n == 0)	return a0;
 	for (size_t i = 2; i <= n; i++)
@@ -449,4 +469,4 @@ int main()
 	std::cout << seq3(n) << std::endl;
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
