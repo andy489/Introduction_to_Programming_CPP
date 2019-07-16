@@ -139,7 +139,7 @@
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{21}x_1+b_{22}x_2+b_{23}x_3+b_{24}x_4=0">;                  
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;...">                     
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{m1}x_1+b_{m2}x_2+b_{m3}x_3+b_{m4}x_4=0">.                  
-      Да се напише функция F, която приема като параметри числата m и n, векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">,  и коефициентите на <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{ij}"> на хомогенната система. Да се напише функция main, в която са декларирани локално числата m и n, както и матриците <img src="https://latex.codecogs.com/svg.latex?\Large&space;(a_{ij})_{nX4}"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;(b_{ij})_{mx4}">, където <img src="https://latex.codecogs.com/svg.latex?\Large&space;(a_{ij})_{nX4}"> е матрицата от координатите на векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">. Програмата да изведе на екрана на конзолата базис на <img src="https://latex.codecogs.com/svg.latex?\Large&space;U+W^4">.
+      Да се напише функция F, която приема като параметри числата m и n, векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">,  и коефициентите на <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{ij}"> на хомогенната система. Да се напише функция main, в която са декларирани локално числата m и n, както и матриците <img src="https://latex.codecogs.com/svg.latex?\Large&space;(a_{ij})_{nX4}"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;(b_{ij})_{mX4}">, където <img src="https://latex.codecogs.com/svg.latex?\Large&space;(a_{ij})_{nX4}"> е матрицата от координатите на векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">. Програмата да изведе на екрана на конзолата базис на <img src="https://latex.codecogs.com/svg.latex?\Large&space;U+W^4">.
   Пример (с <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_2"> са означени коефициентите от редовете на матрицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;(b_{ij})_{2X4}">:                                        
   Вход:                                        
    <img src="https://latex.codecogs.com/svg.latex?\Large&space;m=2,n=4">
@@ -157,4 +157,4 @@
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(0,0,10,9)"> 
         
   Да не се извежда нищо в конзолата от функцията F (а само от main). Функцията трябва да симулира метода на Карл Фридрих Гаус 
-  за решаване на система линейни уравнения.                                     
+  за решаване на система линейни уравнения. https://en.wikipedia.org/wiki/Gaussian_elimination                                     
