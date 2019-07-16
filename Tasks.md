@@ -38,4 +38,8 @@
 
 13. Write a program which asks the user for a non-negative integer n and gives the n-th number of Fibonacci.
 
-14. Write a program which asks the user for a non-negative integer n and gives the n-th number of the sequence <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_{n+2}=5a_{n+1}-6a_n+6^n">, with <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0=0"> <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=1">
+14. Write a program which asks the user for a non-negative integer n and gives the n-th number of the sequence <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_{n+2}=5a_{n+1}-6a_n+6^n">, with <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0=0"> <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=1">.
+
+15. Write a program which asks the user for the numbers n and k and prints the number of combinations <img src="https://latex.codecogs.com/svg.latex?\Large&space;{n}\choose{k}">. Hint: 
+    - <img src="https://latex.codecogs.com/svg.latex?\Large&space;{n}\choose{k}=\frac{n!}{k!(n-k)!}">;
+    - <img src="https://latex.codecogs.com/svg.latex?\Large&space;{n}\choose{k}=\frac{n!}{k!(n-k)!}=C_{k}^{n}"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;C_{n}^{0}=C_{n}^{n}=1">; <img src="https://latex.codecogs.com/svg.latex?\Large&space;C_{n}^{m}=C_{n-1}^{m}+C_{n-1}^{m-1}">.
