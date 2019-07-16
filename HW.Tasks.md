@@ -154,25 +154,7 @@
   Изход:                                        
    <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(-1,2,3,5)">;                 
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(0,4,1,8)">                  
-      <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(0,0,10,9)"> 
-        
-        
-        
-вход | изход
------------- | -------------
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;m=2,n=4">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(-1,2,3,5)">                |
-  <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(-1,2,3,5)">   
-  <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(2,8,-3,14)"> 
-      | <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(0,4,1,8)">                 
-      <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(-1,14,6,29)">|<img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(0,0,10,9)">                     
-      <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_4=(0,12,3,24)">|
-
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;(0,1,1,0)">|                  
-      <img src="https://latex.codecogs.com/svg.latex?\Large&space;(10,7,0,-8)">;  |                  
-                       
-      
-
-        
+      <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(0,0,10,9)">             
+    
   Да не се извежда нищо в конзолата от функцията F (а само от main). Функцията трябва да симулира метода на Карл Фридрих Гаус 
   за решаване на система линейни уравнения. https://en.wikipedia.org/wiki/Gaussian_elimination                                     
