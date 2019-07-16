@@ -19,6 +19,43 @@ int main()
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 2
 #include <iostream>
+#include <cmath>
+size_t tri(double a, double b, double c)
+{
+	bool x = (a <= 0) || (b <= 0) || (c <= 0) ||
+		(a + b <= c) || (a + c <= b) || (b + c <= a);
+	if (x) return 0;
+	else if ((a == b) && (b == c))return 3;
+	else if ((a == b) || (b == c) || (c == a)) return 2;
+	else return 1;	
+}
+int main()
+{
+	double a, b, c;
+	std::cin >> a >> b >> c;
+
+	switch (tri(a,b,c))
+	{
+	case 0:
+		std::cout << "Such triangle with sides a,b,c don't exist";
+		break;
+	case 1:
+		std::cout << "Scalene";
+		break;
+	case 2:
+		std::cout << "Isosceles";
+		break;
+	case 3:
+		std::cout << "Еquilateral";
+		break;
+	default:
+		break;
+	}
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+//Task 3
+#include <iostream>
 long long absVal(long long n)
 {
 	return n < 0 ? -n : n;
@@ -43,7 +80,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 3
+//Task 4
 #include <iostream>
 size_t myStrLen(const char* str)
 {
@@ -85,7 +122,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 4
+//Task 5
 #include <iostream> 
 size_t strLen(const char* text)
 {
@@ -120,7 +157,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 5 first way (without reverting the number)
+//Task 6 first way (without reverting the number)
 #include <iostream>
 #include <cmath>
 size_t numLen(long long num)
@@ -204,7 +241,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 6
+//Task 7
 #include <iostream>
 size_t strLen(char* text)
 {	
@@ -231,7 +268,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 7
+//Task 8
 #include <iostream>
 double sqrt_x(double x, double eps)
 { // Babylonian method
@@ -245,22 +282,26 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 8
+//Task 9
 #include <iostream>
-double karPow(double x, size_t n)
+double karPow(double x, int n)
 { // Karatsuba algorithm
 	if (n == 0)		return 1;
 	if (n == 1)		return x;
-	if (n % 2 == 0) return karPow(x, n / 2)*karPow(x, n / 2);
-	else return x * karPow(x, n - 1);
+	if (n > 0)
+	{
+		if (n % 2 == 0) return karPow(x, n / 2)*karPow(x, n / 2);
+		else return x * karPow(x, n - 1);
+	}
+	else return 1 / karPow(x, abs(n));	
 }
 int main()
 {
-	std::cout << karPow(-2, 10) << std::endl;
+	std::cout << karPow(3, -2) << std::endl;
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 9
+//Task 10
 #include <iostream>
 
 int countWords(char* text)
@@ -289,7 +330,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 10
+//Task 11
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -337,40 +378,22 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 11 first way - using recursion
-#include <iostream>
-size_t fibonacci(size_t n)
-{
-	if (n == 0) return 0;
-	if (n == 1) return 1;
-	else return fibonacci(n - 1) + fibonacci(n - 2);
-}
-int main()
-{
-	size_t n;
-	std::cin >> n;
-	std::cout << fibonacci(n) << std::endl;
-	return 0;
-}
-//Task 11 second way - solving the characteristical polynomial of the sequence
+//Task 12 
 #include <iostream>
 #include <cmath>
-size_t fibonacci(size_t n)
-{
+size_t fib1(size_t n)
+{ // first way - using recursion
+	if (n == 0) return 0;
+	if (n == 1) return 1;
+	else return fib1(n - 1) + fib1(n - 2);
+}
+size_t fib2(size_t n)
+{ // second way - solving the characteristical polynomial of the sequence
 	double root1 = (1 + sqrt(5)) / 2;
 	return (size_t)((pow(root1, n) - 1 / pow(-root1, n))/sqrt(5));
 }
-int main()
-{
-	size_t n;
-	std::cin >> n;
-	std::cout << fibonacci(n) << std::endl;
-	return 0;
-}
-//Task 11 third way - cycling
-#include <iostream>
-size_t fibonacci(size_t n)
-{
+size_t fib3(size_t n)
+{ // third way - cycling
 	size_t f1(0), f2(1), f3;
 	if (n == 0)	return f1;
 	for (size_t i = 2; i <= n; i++)
@@ -385,11 +408,13 @@ int main()
 {
 	size_t n;
 	std::cin >> n;
-	std::cout << fibonacci(n) << std::endl;
+	std::cout << fib1(n) << std::endl;
+	std::cout << fib2(n) << std::endl;
+	std::cout << fib3(n) << std::endl;
 	return 0;
 }
-----------------------------------------------------------------------------------------------------------------------------------------
-//Task 12 three ways - seq1: recursion, seq2: solving the characteristical polynomial of the sequence , seq3: cycling
+--------------------------------------------------------------------------------------------------------------------------------
+//Task 13 three ways - seq1: recursion, seq2: solving the characteristical polynomial of the sequence , seq3: cycling
 #include <iostream>
 #include <cmath>
 size_t seq1(size_t n)
@@ -424,4 +449,4 @@ int main()
 	std::cout << seq3(n) << std::endl;
 	return 0;
 }
-----------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
