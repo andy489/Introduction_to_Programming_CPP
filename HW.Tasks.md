@@ -108,11 +108,11 @@
                                                      
 9.  Да се напише програма, която анимира в конзолата следния надпис:
 
-                   H   H   EEEEE   L       L          O
-                   H   H   E       L       L        O   O
-                   HHHHH   EEEEE   L       L       O     O
-                   H   H   E       L       L        O   O
-                   H   H   EEEEE   LLLLL   LLLLL      O
+                                              H   H   EEEEE   L       L          O
+                                              H   H   E       L       L        O   O
+                                              HHHHH   EEEEE   L       L       O     O
+                                              H   H   E       L       L        O   O
+                                              H   H   EEEEE   LLLLL   LLLLL      O
 
     Надписът да преминава отляво-надясно, центриран вертикално (спрямо прозореца на конзолата, с височина 25 реда), като първо 
     се появява буквата “О”, а накрая – изчезват буквите “H”. За решаването на задачата не се допуска използването на вградените 
@@ -137,7 +137,7 @@
      подпространство на <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{R}^4;l(a_1,a_2,a_3,a_n)=x|x=\sum_{i-1}^{n}\lambda_ia_i\}"> и нека W e подпространство на <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{R}^4">, зададено като пространството от решения на хомогенната система:     
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{11}x_1+b_{12}x_2+b_{13}x_3+b_{14}x_4=0">;                  
       ...
-     <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{m1}x_1+b_{m2}x_2+b_{m3}x_3+b_{m4}x_4=0">;  .  
+      <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{m1}x_1+b_{m2}x_2+b_{m3}x_3+b_{m4}x_4=0">;  .  
      Да се напише функция F, която приема като параметри числата m и n, векторите a_1, a_2,..., a_n и коефициентите на b_ij на 
      хомогенната система. Да се напише функция main, в която са декларирани локално числата m и n, както и матриците 
      (a_ij)_nx4 и (b_ij)_mx4, където (a_ij)_nx4 е матрицата от координатите на векторите a_1, a_2,..., a_n. Програмата да 
