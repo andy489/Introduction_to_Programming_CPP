@@ -1,11 +1,11 @@
-   • PRIMITIVE DATA TYPES;
-   • CONDITIONAL STATEMENTS (if, else/switch);
-   • LOOPS (for/while);
-   • ARRAYS;
-   • MATRICES;
-   • FUNCTIONS AND RECURSION;
-   • STRINGS; 
-   • COMPLEX TASKS;
+   # PRIMITIVE DATA TYPES;
+   # CONDITIONAL STATEMENTS (if, else/switch);
+   # LOOPS (for/while);
+   # ARRAYS;
+   # MATRICES;
+   # FUNCTIONS AND RECURSION;
+   # STRINGS; 
+   # COMPLEX TASKS;
 
 1. Write a program which initializes 2 variables and then swaps their values.
 
@@ -47,5 +47,3 @@
 
 14. Write a program which asks the user for a non-negative integer n and gives the n-th number of the sequence 
     a_{n+2}=5a_{n+1}-6a_n+6^n, with a_0=0 and a_1=1.
-
-# asd
