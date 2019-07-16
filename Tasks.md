@@ -46,3 +46,7 @@
 **16.** Write a function which finds the number of solutions of the system in natural numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{N}\cup{0}">:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\left\{\begin{array}{l}\sum_{i=1}^{k\ge{5}}x_i=n\\x_1<10\\10\leq{x_2}<30\\x_4>20\\x_5<30\end{array}\right."> 
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
