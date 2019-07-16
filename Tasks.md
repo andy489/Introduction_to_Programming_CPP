@@ -44,4 +44,4 @@
 **15.** Write a program which asks the user for the numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;0\leq{k}\leq{n}"> and prints the number of combinations <img src="https://latex.codecogs.com/svg.latex?\Large&space;\binom{n}{k}">. Hints: <img src="https://latex.codecogs.com/svg.latex?\Large&space;\binom{n}{k}=\frac{n!}{k!(n-k)!}=C_{n}^{k}"> , also <img src="https://latex.codecogs.com/svg.latex?\Large&space;C_{n}^{0}=C_{n}^{n}=1"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;C_{n}^{k}=C_{n-1}^{k}+C_{n-1}^{k-1}">.
 
 **16.** Write a function which finds the number of solutions of the system in natural numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{N}\cup{0}">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\[\systeme*{\sum_{1}^{k}=n,x_1<10,10\leq{x_2}<30,x_4>20,x_5<30}\]">; 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\systeme{\sum_{1}^{k}=n,x_1<10,10\leq{x_2}<30,x_4>20,x_5<30}">; 
