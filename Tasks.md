@@ -45,7 +45,7 @@
 
 **16.** Write a function which by given integer numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;n\geq{k}\geq{5}."> finds the number of solutions of the system in natural numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{N}\cup{0}">:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\left\{\begin{array}{l}\sum_{i=1}^{k\ge{5}}x_i=n\\x_1<10\\10\leq{x_2}<30\\x_4>20\\x_5<30\end{array}\right."> 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\left\{\begin{array}{l}x_1+x_2+x_3+x_4+x_5=n\\x_1<10\\10\leq{x_2}<30\\x_4>20\\x_5<30\end{array}\right."> 
 
 Input | Output
 ------------ | -------------
