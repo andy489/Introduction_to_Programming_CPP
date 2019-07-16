@@ -1,6 +1,5 @@
 //Task 1  
 #include <iostream>
-
 int myAbs(int num) 
 {
 	int absValue;
@@ -12,7 +11,6 @@ int main()
 	short input; int minNumber, maxNumber, diff, count, flag;
 	minNumber = INT_MAX;
 	maxNumber = 0; // no need to take INT_MIN, because if input < 0 it will stop the program;
-
 	count = 0;
 	flag = 0;
 	std::cout << "Enter an integer number: " << std::endl;;
@@ -55,7 +53,6 @@ int main()
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 2
 #include <iostream>
-
 int SafelyInputDigit(int lowerBound, int upperBound)
 {
 	int number;
@@ -74,7 +71,6 @@ int SafelyInputDigit(int lowerBound, int upperBound)
 			continue;
 		}
 	} while (((number < lowerBound) || (number > upperBound)) || check);
-
 	return number;
 }
 int main()
@@ -90,11 +86,8 @@ int main()
 		std::cout << "Please enter an integer number, that works: " << std::endl;
 	}
 	int num = number;
-
 	digit = SafelyInputDigit(0, 9);
-
 	int counter = 0;
-
 	while (number != 0)
 	{
 		if (number % 10 == digit) counter++;
@@ -108,25 +101,19 @@ int main()
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 3
 #include <iostream>
-
 int main()
 {
 	//base 16
 	int short firstOperand, secondOperand, operation;
-
 	int base = 16;
-
 	std::cout << "Enter two numbers from 0 to 15 and one from 0 to 3 separated by space:\n";
-
 	while (!(std::cin >> firstOperand >> secondOperand >> operation))
 	{
 		std::cin.clear(); //reset input
 		while (std::cin.get() != '\n') continue; //get rid of bad input
 		std::cout << "Please, enter two numbers from 0 to 15 and one from 0 to 3 separated by space:\n";
 	}
-
 	bool definitionSet = firstOperand >= 0 && firstOperand <= 15 && operation <= 3 && operation >= 0;
-
 	if (!definitionSet)
 	{
 		std::cout << "Wrong input";
@@ -138,9 +125,7 @@ int main()
 		but this operation (without casting to double or float) returns integer number. So the result can be at most
 		15: 1 = 15 or at least a:b = 0, where a<b and will always be in the allowed values. In this case of division
 		we will only check if we divide by 0, which is not allowed.*/
-
 		int result;
-
 		switch (operation)
 		{
 		case 0:
@@ -176,7 +161,6 @@ int main()
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 4
 #include <iostream>
-
 int main()
 {
 	short side;
@@ -212,13 +196,11 @@ int main()
 			std::cout << std::endl;
 		}
 	}
-	else
-		std::cout << "Wrong input. Number must be between 0 and 13.";
+	else std::cout << "Wrong input. Number must be between 0 and 13.";
 }
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 5
 #include <iostream>
-
 int main()
 {
 	double x, y;
@@ -270,7 +252,6 @@ int main()
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 6
 #include <iostream>
-
 void printArr(int* arr, size_t size)
 {
 	std::cout << "Arr = {";
@@ -285,7 +266,6 @@ void printArr(int* arr, size_t size)
 	}
 	std::cout << '}';
 }
-
 int F(int* arr, size_t const L, int M)
 {
 	if (M < 0) while (M < 0) M += 5;
@@ -309,13 +289,11 @@ int main()
 	std::cin >> rotationOffset;
 	arrAfterRotations[L] = F(arr, L, rotationOffset);
 	printArr(arr, L);
-
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 7
 #include <iostream>
-
 size_t len(char* arr, size_t size)
 {
 	size_t arrLen = 0;
@@ -331,11 +309,9 @@ void G(char* B, char* C, const size_t MAX_ARRAY_SIZE)
 {
 	size_t lenB = len(B, MAX_ARRAY_SIZE);
 	size_t lenC = len(C, MAX_ARRAY_SIZE);
-
 	int index = -1;
 	size_t currCount = 0;
 	size_t maxCount = 0;
-
 	for (size_t i = 0; i < lenB; i++)
 	{
 		if (B[i] == C[0])
@@ -380,7 +356,6 @@ void G(char* B, char* C, const size_t MAX_ARRAY_SIZE)
 	/*std::cout << "Subtraction of consistently repeating strings C (in array of chars C) in B is: ";
 	for (size_t i = 0; i < L; i++) std::cout << A[i];
 	std::cout << std::endl;*/
-
 	std::cout << "Index: " << index << std::endl;
 	std::cout << "Length: " << maxCount * lenC << std::endl;
 }
@@ -389,21 +364,16 @@ int main()
 	const size_t MAX_ARRAY_SIZE = 100;
 	char arrC[MAX_ARRAY_SIZE];
 	char arrB[MAX_ARRAY_SIZE];
-
 	std::cout << "Enter array \"B\" : ";
 	std::cin >> arrB;
-
 	std::cout << "Enter array \"C\" : ";
 	std::cin >> arrC;
-
 	G(arrB, arrC, MAX_ARRAY_SIZE);
-
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 8
 #include <iostream>
-
 size_t arrLen(int* arr, size_t size)
 {
 	size_t arrLen = 0;
@@ -453,7 +423,6 @@ the matrix only once from left to right and once from top to bottom */
 {
 	if (num < 0) return false;
 	if (num / 10 == 0) return true;
-
 	size_t n = num;
 	short digit;
 	size_t rev = 0;
@@ -462,7 +431,8 @@ the matrix only once from left to right and once from top to bottom */
 		digit = num % 10;
 		rev = (rev * 10) + digit;
 		num = num / 10;
-	} while (num != 0);
+	} 
+	while (num != 0);
 	if (n == rev)return true;
 	else return false;
 }
@@ -476,7 +446,7 @@ int countAppearances(int M, int matrix[][6])
 		for (size_t j = 0; j < 6; j++)
 		{
 			if (matrix[i][j] == numArr[0])
-			 {
+			{
 			 for (size_t k = 0; k <= lenNum - 1; k++)
 				/*only here we include k=0, when M is with one digit! Because when M is with one digit
 				we cycle the matrix	only by rows from left to right and only once*/
@@ -511,7 +481,7 @@ int countAppearances(int M, int matrix[][6])
 				}
 				else break;
 			 }
-			}
+			}			
 		}
 	}
 	delete[] numArr;
@@ -547,7 +517,6 @@ int main()
 //Task 9
 #include "iostream"
 #include <windows.h>
-
 const char hello[5][41] =
 {
 	{'H',' ',' ',' ','H',' ',' ',' ','E','E','E','E','E',' ',' ',' ','L',' ',' ',' ',
@@ -565,7 +534,6 @@ const char hello[5][41] =
 	{'H',' ',' ',' ','H',' ',' ',' ','E','E','E','E','E',' ',' ',' ','L','L','L','L','L',
 	' ',' ',' ','L','L','L','L','L',' ',' ',' ',' ',' ',' ','O',' ',' ',' ',' ','\n'}
 };
-
 void printMe(int count)
 {
 	//we create 10 empty lines to center the text
@@ -617,7 +585,6 @@ int main()
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 10
 #include<iostream>
-
 /* we will divide the code into а number of functions for clarity
 1. Function for multiplying matrices 3x3*/
 double** multiplyMatr(double** A, double** B)
@@ -1022,7 +989,6 @@ void test()
 	for (size_t i = 0; i < n; i++) delete[] newA[i];
 	delete[] newA;
 }
-
 int main()
 {
 	test();
