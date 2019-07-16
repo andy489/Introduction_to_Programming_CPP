@@ -149,8 +149,10 @@
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(-1,14,6,29)">                     
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_4=(0,12,3,24)">
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(-1,2,3,5)">                  
-      <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(-1,14,6,29)">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{11}x_1+b_{12}x_2+b_{13}x_3+b_{14}x_4=0">;                  
+      <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{21}x_1+b_{22}x_2+b_{23}x_3+b_{24}x_4=0">;                  
+      <img src="https://latex.codecogs.com/svg.latex?\Large&space;...">                     
+      <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{m1}x_1+b_{m2}x_2+b_{m3}x_3+b_{m4}x_4=0">.  
         
   Да не се извежда нищо в конзолата от функцията F (а само от main). Функцията трябва да симулира метода на Карл Фридрих Гаус 
   за решаване на система линейни уравнения.                                     
