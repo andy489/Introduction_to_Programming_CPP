@@ -50,7 +50,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-• INTERESTING WAY OF FINDING THE MAX AND MIN FROM TWO INTEGERS
+• MAX AND MIN FROM TWO INTEGERS
 
 #include <iostream>
 #include <cmath>
