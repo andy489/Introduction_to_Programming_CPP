@@ -151,7 +151,10 @@
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;(0,1,1,0)">;                  
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;(10,7,0,-8)">;                  
-       
+  Вход: 
+  <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(-1,2,3,5)">;                 
+      <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(0,4,1,8)">                  
+      <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(0,0,10,9)"> 
         
   Да не се извежда нищо в конзолата от функцията F (а само от main). Функцията трябва да симулира метода на Карл Фридрих Гаус 
   за решаване на система линейни уравнения.                                     
