@@ -141,8 +141,8 @@
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{m1}x_1+b_{m2}x_2+b_{m3}x_3+b_{m4}x_4=0">.                  
       Да се напише функция F, която приема като параметри числата m и n, векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">,  и коефициентите на <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_{ij}"> на хомогенната система. Да се напише функция main, в която са декларирани локално числата m и n, както и матриците <img src="https://latex.codecogs.com/svg.latex?\Large&space;(a_{ij})_{nx4}"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;(b_{ij})_{mx4}">, където <img src="https://latex.codecogs.com/svg.latex?\Large&space;(a_{ij})_{nx4}"> е матрицата от координатите на векторите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n">. Програмата да изведе на екрана на конзолата базис на <img src="https://latex.codecogs.com/svg.latex?\Large&space;U+W^4">.
   Пример (с <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_2"> са означени коефициентите от редовете на матрицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;(b_{ij})_{2x4}">):
-  Вход:                             Изход (примерен базис)
-  <img src="https://latex.codecogs.com/svg.latex?\Large&space;m=2,n=4">                                                                         
+  Вход:                             
+  <img src="https://latex.codecogs.com/svg.latex?\Large&space;m=2,n=4">
   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=(2,8,-3,14))">                    
   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(-1,14,6,29))">                                        
   <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_2=(-1,14,6,29))">                                        
