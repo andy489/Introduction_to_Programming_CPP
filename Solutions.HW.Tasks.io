@@ -603,6 +603,7 @@ double** multiplyMatr(double** A, double** B)
 				prod[i][j] += A[i][k] * B[k][j];
 	return prod;
 }
+
 /* 2. Function for transposing a matrix (changing the elements
 symmetrically to the main diagonal (rows becomes columns))*/
 double** transposition(double** A)
@@ -616,6 +617,7 @@ double** transposition(double** A)
 	}
 	return result;
 }
+
 // 3. Function for finding the unique inverse matrix
 double** inverseMatr(double** A)
 {
@@ -644,6 +646,7 @@ double** inverseMatr(double** A)
 	}
 	return result;
 }
+
 // 4. Function for solving the matrix equation
 double** solvingEquation(double** A, double** C)
 {
