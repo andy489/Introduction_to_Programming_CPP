@@ -609,3 +609,29 @@ int main()
 	std::cout << "Max = " << max << "\nMin = " << min << '\n';
 	return 0;
 }
+--------------------------------------------------------------------------------------------------------------------------------
+// Task 19
+#include <iostream>
+
+int main()
+{
+	double change;
+	std::cin >> change;
+
+	size_t coins = change * 100;
+	size_t count(0);
+	while (coins > 0)
+	{ // 2.00; 1.00; 0.50; 0.20; 0.10; 0.05; 0.02; 0.01
+		if (coins >= 200){coins -= 200;count++;}
+		else if (coins >= 100){coins -= 100;count++;}
+		else if (coins >= 50){coins -= 50;count++;}
+		else if (coins >= 20){coins -= 20;count++;}
+		else if (coins >= 10){coins -= 10;count++;}
+		else if (coins >= 5){coins -= 5;count++;}
+		else if (coins >= 2){coins -= 2;count++;}
+		else if (coins >= 1){coins -= 1;count++;}
+	}
+	std::cout << count;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
