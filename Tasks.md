@@ -10,7 +10,7 @@ Personal collection of exercise tasks.
  
 **1.4.)** Write a program which asks the user for three numbers a, d and n and prints the sum of the first n numbers of arithmetic progression with starting number a and difference d.
 
-**1.5.)** Andy decides to make a party and goes to the alcohol market to buy beer, wine, brandy and whiskey. On the console he inputs the price of the whiskey (lv./liter), and the quantities of the beer, wine, brandy and whiskey, which he has to buy. Write a program that calculates how much money he needs to pay for the bill, knowing that:
+**1.5.)** Andy decides to make a party and goes to the alcohol market to buy beer, wine, brandy and whiskey. On the console he inputs the price of the whiskey (lv./liter), and the quantities of the products, which he has to buy. Write a program that calculates how much money he needs to pay for the bill, knowing that:
 
 • the price of the brandy is half-lower than this of the whiskey;
 
