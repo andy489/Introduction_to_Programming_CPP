@@ -26,7 +26,7 @@ Print a single number on the console: the money that Andy needs to pay for the b
 
    a) scalene, isoscles or equaterial
 
-   b) obtuse, right or acute.
+   b) obtuse, right-angled or acute.
    
    
    
