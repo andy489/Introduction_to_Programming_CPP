@@ -69,8 +69,8 @@ input | output
 
 **19** Manufacturers of vending machines like to make their machines return as little as possible coins change. Write down a program that accepts a sum - the change that has to be returned and calculates the smallest number of coins with which this action can take place.
 
-input | output
------------- | -------------
-0.87 | 6 (0.50+0.20+0.10+0.05+0.02+0.01)
-1.55 | 3
-2.63 | 5
+input | output | explanation
+------------ | ------------- | -------------
+0.87 | 6 | 0.50+0.20+0.10+0.05+0.02+0.01 
+1.55 | 3 | 1.00+0.50+0.05
+2.63 | 5 | 2.00+0.50+0.10+0.02+0.01
