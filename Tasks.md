@@ -96,8 +96,8 @@ tm_yday | int | days since January 1 | 0-365
 tm_isdst | int | Daylight Saving Time flag | 
 
 
-Conversion (function)
 
+Conversion (function) | do
 ------------ | -------------
 asctime | Convert tm structure to string
 ctime | Convert time_t value to string
