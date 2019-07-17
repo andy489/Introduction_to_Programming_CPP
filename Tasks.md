@@ -81,6 +81,7 @@ input | output | explanation
 
 **20.** Write a program which by given two days of any year computes the number of days between them. Hint:
 struct tm
+
 Member | Type | Meaning | Range
 ------------ | ------------- | ------------- | -------------
 tm_sec | int | seconds after the minute | 0-60*
