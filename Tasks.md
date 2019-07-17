@@ -2,15 +2,15 @@
 Personal collection of exercise tasks.
   
 ## Simple operations and calculations. Primitive data types.
-**1.1)** Write a program which initializes 2 variables and then swaps their values.
+**1.1.)** Write a program which initializes 2 variables and then swaps their values.
 
-**1.2)** Write a program which asks the user for his age and then prints the number of seconds, days, weeks, months he has lived on the Earth.
+**1.2.)** Write a program which asks the user for his age and then prints the number of seconds, days, weeks, months he has lived on the Earth.
 
-**1.3)** Write a program which asks the user for the lengths of sides of a triangle and prints the area of the triangle.
+**1.3.)** Write a program which asks the user for the lengths of sides of a triangle and prints the area of the triangle.
  
-**1.4)** Write a program which asks the user for three numbers a, d and n and prints the sum of the first n numbers of arithmetic progression with starting number a and difference d.
+**1.4.)** Write a program which asks the user for three numbers a, d and n and prints the sum of the first n numbers of arithmetic progression with starting number a and difference d.
 
-**1.5)** Andy decides to make a party and goes to the alcohol market to buy beer, wine, brandy and whiskey. On the console he inputs the price of the whiskey (lv./liter), and the quantities of the beer, wine, brandy and whiskey, which he has to buy. Write a program that calculates how much money he needs to pay for the bill, knowing that:
+**1.5.)** Andy decides to make a party and goes to the alcohol market to buy beer, wine, brandy and whiskey. On the console he inputs the price of the whiskey (lv./liter), and the quantities of the beer, wine, brandy and whiskey, which he has to buy. Write a program that calculates how much money he needs to pay for the bill, knowing that:
 
 • the price of the brandy is half-lower than this of the whiskey;
 
