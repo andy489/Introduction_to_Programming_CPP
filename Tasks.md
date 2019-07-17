@@ -78,3 +78,18 @@ input | output | explanation
 0.88 | 6 | 0.50+0.20+0.10+0.05+0.02+0.01 
 1.55 | 3 | 1.00+0.50+0.05
 2.63 | 5 | 2.00+0.50+0.10+0.02+0.01
+
+**20.** Write a program which by given two days of any year computes the number of days between them. Hint:
+struct tm
+Member | Type | Meaning | Range
+------------ | ------------- | ------------- | -------------
+tm_sec | int | seconds after the minute | 0-60*
+tm_min | int | minutes after the hour | 0-59
+tm_hour | int | hours since midnight | 0-23
+tm_mday | int | day of the month | 1-31
+tm_mon | int | months since January | 0-11
+tm_year | int | years since 1900 |
+tm_wday | int | days since Sunday | 0-6
+tm_yday | int | days since January 1 | 0-365
+tm_yday | int | Daylight Saving Time flag | 
+tm_isdst | 5 | 2.00+0.50+0.10+0.02+0.01
