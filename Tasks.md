@@ -80,6 +80,7 @@ input | output | explanation
 2.63 | 5 | 2.00+0.50+0.10+0.02+0.01
 
 **20.** Write a program which by given two days of any year computes the number of days between them. Hint:
+
 struct tm
 
 Member | Type | Meaning | Range
