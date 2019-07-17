@@ -69,7 +69,7 @@ input | output
 
 input | output 
 ------------ | ------------- 
-a=3,b=2,c=1,p=-1,q=2 | Max = 17.00, Min = 0.67
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;a=3,b=2,c=1,p=-1,q=2"> | Max = 17.00, Min = 0.67
 
 **19** Manufacturers of vending machines like to make their machines return as little as possible coins change. Write down a program that accepts a sum - the change that has to be returned and calculates the smallest number of coins with which this action can take place.
 
