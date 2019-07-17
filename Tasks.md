@@ -66,3 +66,11 @@ input | output
 2018 | MMXVIII
 
 **18** Write a program which asks the user for 5 numbers - a, b, c, p, q and prints the maximum and minimum value of the quadratic function  <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x)=ax^2+bx+c">  in the range <img src="https://latex.codecogs.com/svg.latex?\Large&space;[p;q]">.
+
+**19** Manufacturers of vending machines like to make their machines return as little as possible coins change. Write down a program that accepts a sum - the change that has to be returned and calculates the smallest number of coins with which this action can take place.
+
+input | output
+------------ | -------------
+0.87 | 6 (0.50+0.20+0.10+0.05+0.02+0.01)
+1.55 | 3
+2.63 | 5
