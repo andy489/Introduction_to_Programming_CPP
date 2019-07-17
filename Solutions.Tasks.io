@@ -87,42 +87,40 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Task 2
+//Task 2.1
 #include <iostream>
 #include <cmath>
-size_t tri(double a, double b, double c)
+size_t firstCriteria(double a, double b, double c)
 {
 	bool x = (a <= 0) || (b <= 0) || (c <= 0) ||
 		(a + b <= c) || (a + c <= b) || (b + c <= a);
 	if (x) return 0;
-	else if ((a == b) && (b == c))return 3;
-	else if ((a == b) || (b == c) || (c == a)) return 2;
-	else return 1;	
+	else if ((a == b) && (b == c))return 3; // equilateral
+	else if ((a == b) || (b == c) || (c == a)) return 2; // isoscles
+	else return 1; // scalene
+}
+size_t secondCriteria(double a, double b, double c)
+{
+	if (a > c) std::swap(a, c);
+	if (a > b) std::swap(a, b); // Now the smallest element is the first one
+	if (b > c) std::swap(b, c);
+
+	double exp = a * a + b * b - c * c;
+
+	bool x = (a <= 0) || (b <= 0) || (c <= 0) || (a + b <= c);
+	if (x) return 0;
+	else if (exp > 0) return 1; // acute
+	else if (exp == 0) return 2; // right-angled
+	else return 3; // obtuse
 }
 int main()
 {
 	double a, b, c;
 	std::cin >> a >> b >> c;
-	switch (tri(a,b,c))
+	switch (firstCriteria(a, b, c))
 	{
 	case 0:
-		std::cout << "Such triangle with sides a,b,c don't exist";
+		std::cout << "Sides " << a << ' ' << b << ' ' << c << " cannot form a";
 		break;
 	case 1:
 		std::cout << "Scalene";
@@ -131,14 +129,71 @@ int main()
 		std::cout << "Isosceles";
 		break;
 	case 3:
-		std::cout << "Еquilateral";
+		std::cout << "Equilateral";
 		break;
 	default:
 		break;
 	}
+	std::cout << ' ';
+	switch (secondCriteria(a, b, c))
+	{
+	case 0:
+		break;
+	case 1:
+		std::cout << "acute ";
+		break;
+	case 2:
+		std::cout << "right-angled ";
+		break;
+	case 3:
+		std::cout << "obtuse ";
+		break;
+	default:
+		break;
+	}
+	std::cout << "triangle.";
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Task 3 
 #include <iostream>
 #include <cmath>
