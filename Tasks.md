@@ -22,7 +22,7 @@ Print a single number on the console: the money that Andy needs to pay for the b
 
 ## Conditional statements (if/else if/else/switch). Nested conditional statements 
 
-**2.** Write a program which asks the user to enter 3 numbers and prints whether there exist a triangle. If so, print the type of the triangle:
+**2.1.)** Write a program which asks the user to enter 3 numbers and prints whether there exist a triangle. If so, print the type of the triangle:
 
    a) scalene, isoscles or equaterial
 
