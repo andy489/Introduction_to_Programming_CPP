@@ -94,3 +94,10 @@ tm_year | int | years since 1900 |
 tm_wday | int | days since Sunday | 0-6
 tm_yday | int | days since January 1 | 0-365
 tm_isdst | int | Daylight Saving Time flag | 
+
+
+Conversion (function)
+
+asctime | Convert tm structure to string
+------------ | -------------
+ctime | Convert time_t value to string
