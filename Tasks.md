@@ -32,10 +32,13 @@
 **11.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from 
    ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
    
-**12.** Write a program which asks the user for a long long number and then prints:
-	• the same number in binary;
-	• the same number in oct;
-	• the same number in hex.
+**12.** Write a program which asks the user for a long long number and then prints:	
+
+• the same number in binary;
+
+• the same number in oct;
+
+• the same number in hex.
 
 **13.** Write a program which asks the user for a non-negative integer n and gives the n-th number of Fibonacci.
 
