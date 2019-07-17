@@ -1,4 +1,4 @@
-//Task 1
+//Task 1.1
 #include <iostream>
 void swap(int& a, int& b)
 {
@@ -16,6 +16,69 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+//Task 1.2
+#include <iostream> 
+int main()
+{
+	size_t age;
+	std::cin >> age;
+	size_t months = age * 12;
+	size_t weeks = (size_t)(age * 52.177457);
+	size_t days = (size_t)(age * 365.242199);
+	size_t hours = days * 24;
+	size_t minutes = hours * 60;
+	size_t seconds = minutes * 60;
+	std::cout << seconds << " seconds\n" << days << " days\n"
+		<< weeks << " weeks\n" << months << " months";
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+//Task 1.3
+#include <iostream> 
+#include <cmath>
+int main()
+{
+	double a, b, c;
+	std::cin >> a >> b >> c;
+	double s = (a + b + c) / 2; // semiperimeter
+	double area = sqrt(s*(s - a)*(s - b)*(s - c)); // Heron's formula
+
+	std::cout << "Area of triangle is: " << area;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+//Task 1.4
+#include <iostream> 
+int main()
+{
+	double a, d;
+	size_t n;
+	std::cin >> a >> d >> n;
+	double sum = a * n + (size_t)(((n - 1)*n) / 2)*d;
+	std::cout << "Sum of first " << n
+		<< " elements of the arithmetic progression with starting element "
+		<< a << " and difference " << d << " is: " << sum;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Task 2
 #include <iostream>
 #include <cmath>
