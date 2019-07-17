@@ -28,6 +28,39 @@ Print a single number on the console: the money that Andy needs to pay for the b
 
    b) obtuse, right or acute.
    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 **2.** Write a program which asks the user for a number n and prints whether n is a leap year.
 
 **2.** Write a program wchich assigns to the variable k the number of the quadrant in which the point P(x, y) is located. 
