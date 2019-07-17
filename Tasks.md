@@ -33,9 +33,9 @@
    ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
    
 **12.** Write a program which asks the user for a long long number and then prints:
-    ○ the same number in binary;
-    ○ the same number in oct;
-    ○ the same number in hex.
+	• the same number in binary;
+	• the same number in oct;
+	• the same number in hex.
 
 **13.** Write a program which asks the user for a non-negative integer n and gives the n-th number of Fibonacci.
 
