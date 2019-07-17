@@ -61,3 +61,7 @@ input | output
 44 | XLIV
 1111 | MCXI
 2018 | MMXVIII
+
+**18** Write a program whick converts a decimal number lying between 1 and 3999 to Roman numerals.
+
+**19** Write a program which asks the user for 5 numbers - a, b, c, p, q and prints the maximum and minimum value of the quadratic function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x)ax^2+bx+c"> in the range <img src="https://latex.codecogs.com/svg.latex?\Large&space;[p;q]">.
