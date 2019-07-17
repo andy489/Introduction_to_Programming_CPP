@@ -97,6 +97,7 @@ tm_isdst | int | Daylight Saving Time flag |
 
 
 Conversion (function)
+
 ------------ | -------------
 asctime | Convert tm structure to string
 ctime | Convert time_t value to string
