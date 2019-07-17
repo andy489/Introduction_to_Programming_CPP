@@ -61,8 +61,32 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+//Task 1.5
+#include <iostream> 
+int main()
+{
+	double priceWhiskey;
+	std::cin >> priceWhiskey;
+	double quantityBeer, quantityWine, quantityBrandy, quantityWhiskey;
+	std::cin >> quantityBeer >> quantityWine >> quantityBrandy >> quantityWhiskey;
+	
+	double priceBrandy = priceWhiskey / 2;
+	double priceWine = priceBrandy - (40.0 / 100)*priceBrandy;
+	double priceBeer = priceBrandy - (80.0 / 100)*priceBrandy;
+	
+	double totalPriceWhiskey = quantityWhiskey * priceWhiskey;
+	double totalPriceBrandy = quantityBrandy * priceBrandy;
+	double totalPriceWine = quantityWine * priceWine;
+	double totalPriceBeer = quantityBeer * priceBeer;
 
+	double bill = totalPriceWhiskey + totalPriceBrandy + totalPriceWine + totalPriceBeer;
 
+	std::cout.setf(std::ios::fixed);
+	std::cout.precision(2);
+	std::cout << bill;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
 
 
 
