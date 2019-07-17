@@ -57,7 +57,7 @@ input | output
 32 | 5
 100 | 249000
 
-**17** Write a program whick converts a decimal number lying between 1 and 3999 to Roman numerals.
+**17.** Write a program whick converts a decimal number lying between 1 and 3999 to Roman numerals.
 
 input | output
 ------------ | -------------
@@ -65,13 +65,13 @@ input | output
 1111 | MCXI
 2018 | MMXVIII
 
-**18** Write a program which asks the user for 5 numbers - a, b, c, p, q and prints the maximum and minimum value of the quadratic function  <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x)=ax^2+bx+c">  in the range <img src="https://latex.codecogs.com/svg.latex?\Large&space;[p;q]">.
+**18.** Write a program which asks the user for 5 numbers - a, b, c, p, q and prints the maximum and minimum value of the quadratic function  <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x)=ax^2+bx+c">  in the range <img src="https://latex.codecogs.com/svg.latex?\Large&space;[p;q]">.
 
 input | output 
 ------------ | ------------- 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=3,b=2,c=1,p=-1,q=2"> | <img src="https://latex.codecogs.com/svg.latex?\Large&space;max=17.00;min=0.67">
 
-**19** Manufacturers of vending machines like to make their machines return as little as possible coins change. Write down a program that accepts a sum - the change that has to be returned and calculates the smallest number of coins with which this action can take place.
+**19.** Manufacturers of vending machines like to make their machines return as little as possible coins change. Write down a program that accepts a sum - the change that has to be returned and calculates the smallest number of coins with which this action can take place.
 
 input | output | explanation
 ------------ | ------------- | -------------
