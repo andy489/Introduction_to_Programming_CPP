@@ -155,46 +155,44 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+//Task 2.2
+#include <iostream>
+int main()
+{
+	size_t year;
+	std::cin >> year;
+	if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+		std::cout << year << " is a leap year";
+	else std::cout << year << " is not a leap year";
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+// Task 2.3
+#include <iostream>
 
+int main()
+{
+	double change;
+	std::cin >> change;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Task 3 
+	size_t coins = change * 100;
+	size_t count(0);
+	while (coins > 0)
+	{ // 2.00; 1.00; 0.50; 0.20; 0.10; 0.05; 0.02; 0.01
+		if (coins >= 200){coins -= 200;count++;}
+		else if (coins >= 100){coins -= 100;count++;}
+		else if (coins >= 50){coins -= 50;count++;}
+		else if (coins >= 20){coins -= 20;count++;}
+		else if (coins >= 10){coins -= 10;count++;}
+		else if (coins >= 5){coins -= 5;count++;}
+		else if (coins >= 2){coins -= 2;count++;}
+		else if (coins >= 1){coins -= 1;count++;}
+	}
+	std::cout << count;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+//Task 2.4 
 #include <iostream>
 #include <cmath>
 int main()
@@ -206,8 +204,8 @@ int main()
 		if (x == y) std::cout << "Point P(" << x << ',' << y << ") matches point O(0,0).";
 		else
 		{
-			if (x > 0) std::cout << "Point P(" << x << ',' << y << ") lies on the abscissa.";			
-			else std::cout << "Point P(" << x << ',' << y << ") lies on the ordinate.";			
+			if (x > 0) std::cout << "Point P(" << x << ',' << y << ") lies on the abscissa.";
+			else std::cout << "Point P(" << x << ',' << y << ") lies on the ordinate.";
 		}
 		return 0;
 	}
@@ -224,10 +222,56 @@ int main()
 			else k = 2;
 		}
 	}
-	std::cout << "Point P(" << x << ',' << y << ") lies in the "<<k<< " quadrant.";
+	std::cout << "Point P(" << x << ',' << y << ") is located in " << k << " quadrant";
+	if ((x - 0.5)*(x - 0.5) + (y - 0.5)*(y - 0.5) < 1 * 1)
+		std::cout << "\n~inside the given unit circle.";
+	else if ((x - 0.5)*(x - 0.5) + (y - 0.5)*(y - 0.5) == 1 * 1)
+		std::cout << "\n~on the perimeter of the given unit circle.";
+	else std::cout << "\n~outside the given unit circle.";
+	if (abs(x) + abs(y) < 1)
+		std::cout << "\n~inside the given unit square.";
+	else if (abs(x) + abs(y) == 1)
+		std::cout << "\n~on the perimeter of the given unit square.";
+	else std::cout << "\n~outside the given unit square.";
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Task 4
 #include <iostream>
 long long absVal(long long n)
@@ -751,31 +795,7 @@ int main()
 	std::cout << "Max = " << max << "\nMin = " << min << '\n';
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
-// Task 19
-#include <iostream>
 
-int main()
-{
-	double change;
-	std::cin >> change;
-
-	size_t coins = change * 100;
-	size_t count(0);
-	while (coins > 0)
-	{ // 2.00; 1.00; 0.50; 0.20; 0.10; 0.05; 0.02; 0.01
-		if (coins >= 200){coins -= 200;count++;}
-		else if (coins >= 100){coins -= 100;count++;}
-		else if (coins >= 50){coins -= 50;count++;}
-		else if (coins >= 20){coins -= 20;count++;}
-		else if (coins >= 10){coins -= 10;count++;}
-		else if (coins >= 5){coins -= 5;count++;}
-		else if (coins >= 2){coins -= 2;count++;}
-		else if (coins >= 1){coins -= 1;count++;}
-	}
-	std::cout << count;
-	return 0;
-}
 --------------------------------------------------------------------------------------------------------------------------------
 //Task 20
 #include <iostream>
