@@ -1,3 +1,5 @@
+## Simple operations and calculations. Primitive data types.
+
 //Task 1.1
 #include <iostream>
 void swap(int& a, int& b)
@@ -454,31 +456,7 @@ int main() {
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Task 4
+//Task 3.2
 #include <iostream>
 long long absVal(long long n)
 {
@@ -502,83 +480,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 5
-#include <iostream>
-size_t myStrLen(const char* str)
-{
-	size_t len;
-	for (len = 0; str[len] != '\0'; len++) {}
-	return len;
-}
-bool isDigit(const char symbol)
-{
-	return (symbol >= '0' && symbol <= '9');
-}
-bool checkDate(const char* text)
-{
-	size_t len = myStrLen(text);
-	if (len != 5) return false;
-	if (!isDigit(text[0]) || !isDigit(text[1])) return false;
-	if (text[2] != '.') return false;
-	if (!isDigit(text[3]) || !isDigit(text[4])) return false;
-
-	size_t days = (text[0] - '0') * 10 + text[1] - '0';
-	size_t months = ((text[3] - '0') * 10 + text[4] - '0');
-	if (months < 1 || months>12) return false;
-	size_t maxDaysPerMonth[] =
-	{
-		0,
-		31, 29, 31, 30, 31, 30,
-		31, 31, 30, 31, 30, 31
-	};
-	return days <= maxDaysPerMonth[months];
-}
-int main()
-{
-	const char* str1 = "22.12";
-	const char* str2 = "31.02";
-		
-	std::cout << checkDate(str1)<<std::endl;
-	std::cout << checkDate(str2) << std::endl;
-	return 0;
-}
---------------------------------------------------------------------------------------------------------------------------------
-//Task 6
-#include <iostream> 
-size_t strLen(const char* text)
-{
-	size_t len;
-	for (len = 0; text[len] != '\0'; len++) {}
-	return len;
-}
-int subString(const char* subStr, const char* str)
-{
-	size_t lenSubStr = strLen(subStr);
-	size_t lenStr = strLen(str);
-	if (lenSubStr > lenStr) return -1;
-
-	for (size_t i = 0; i <= lenStr - lenSubStr; i++) {
-		size_t j;
-		/* For current index i, check for pattern match */
-		for (j = 0; j < lenSubStr; j++)
-			if (str[i + j] != subStr[j])
-				break;
-		if (j == lenSubStr)
-			return i;
-	}
-	return -1;
-}
-int main()
-{
-	const char* s1 = "hub";
-	const char* s2 = "www.github.com";
-	int res = subString(s1, s2);
-	if (res == -1) std::cout << "Not present";
-	else std::cout << "Present at index " << res;
-	return 0;
-}
---------------------------------------------------------------------------------------------------------------------------------
-//Task 7 
+//Task 3.3 
 #include <iostream>
 #include <cmath>
 size_t numLen1(long long num)
@@ -648,34 +550,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 8
-#include <iostream>
-size_t strLen(char* text)
-{	
-	size_t len;
-	for ( len= 0; text[len] != '\0'; len++){}
-	return len;
-}
-void revert(char* text)
-{
-	size_t len = strLen(text);
-	for (size_t i = 0; i < len; i++)
-	{
-		bool isCapital = text[i] >= 'A' && text[i] <= 'Z';
-		bool isLowercase = text[i] >= 'a' && text[i] <= 'z';
-		text[i] += isCapital * 32 + isLowercase * (-32);
-	}
-}
-int main()
-{
-	char text[10] = "asd&ASD";
-	std::cout << text << std::endl;
-	revert(text);
-	std::cout << text << std::endl;
-	return 0;
-}
---------------------------------------------------------------------------------------------------------------------------------
-//Task 9
+//Task 3.4
 #include <iostream>
 double sqrt_x(double x, double eps)
 { // Babylonian method
@@ -689,54 +564,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 10
-#include <iostream>
-double karPow(double x, int n)
-{ // Karatsuba algorithm
-	if (n == 0)		return 1;
-	if (n == 1)		return x;
-	if (n > 0)
-	{
-		if (n % 2 == 0) return karPow(x, n / 2)*karPow(x, n / 2);
-		else return x * karPow(x, n - 1);
-	}
-	else return 1 / karPow(x, abs(n));	
-}
-int main()
-{
-	std::cout << karPow(3, -2) << std::endl;
-	return 0;
-}
---------------------------------------------------------------------------------------------------------------------------------
-//Task 11
-#include <iostream>
-int countWords(char* text)
-{
-	for (size_t i = 0; text[i] != '\0'; i++)
-	{
-		int count = 0;
-		bool inWord = false;
-		for (size_t i = 0; text[i] != '\0'; i++)
-		{
-			if (text[i] != '\t'&&text[i] != '\n'&&text[i] != ' ')
-			{
-				if (!inWord) count++;				
-				inWord = true;
-			}
-			else inWord = false;
-		}
-		return count;
-	}
-	return-1;
-}
-int main()
-{
-	char text[20] = " git\thub\n ";
-	std::cout << countWords(text) << std::endl;
-	return 0;
-}
---------------------------------------------------------------------------------------------------------------------------------
-//Task 12
+//Task 3.5
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -784,7 +612,167 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 13 
+//Task 4.1
+#include <iostream>
+size_t myStrLen(const char* str)
+{
+	size_t len;
+	for (len = 0; str[len] != '\0'; len++) {}
+	return len;
+}
+bool isDigit(const char symbol)
+{
+	return (symbol >= '0' && symbol <= '9');
+}
+bool checkDate(const char* text)
+{
+	size_t len = myStrLen(text);
+	if (len != 5) return false;
+	if (!isDigit(text[0]) || !isDigit(text[1])) return false;
+	if (text[2] != '.') return false;
+	if (!isDigit(text[3]) || !isDigit(text[4])) return false;
+
+	size_t days = (text[0] - '0') * 10 + text[1] - '0';
+	size_t months = ((text[3] - '0') * 10 + text[4] - '0');
+	if (months < 1 || months>12) return false;
+	size_t maxDaysPerMonth[] =
+	{
+		0,
+		31, 29, 31, 30, 31, 30,
+		31, 31, 30, 31, 30, 31
+	};
+	return days <= maxDaysPerMonth[months];
+}
+int main()
+{
+	const char* str1 = "22.12";
+	const char* str2 = "31.02";
+		
+	std::cout << checkDate(str1)<<std::endl;
+	std::cout << checkDate(str2) << std::endl;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+//Task 6.1
+#include <iostream>
+size_t strLen(char* text)
+{	
+	size_t len;
+	for ( len= 0; text[len] != '\0'; len++){}
+	return len;
+}
+void revert(char* text)
+{
+	size_t len = strLen(text);
+	for (size_t i = 0; i < len; i++)
+	{
+		bool isCapital = text[i] >= 'A' && text[i] <= 'Z';
+		bool isLowercase = text[i] >= 'a' && text[i] <= 'z';
+		text[i] += isCapital * 32 + isLowercase * (-32);
+	}
+}
+int main()
+{
+	char text[10] = "asd&ASD";
+	std::cout << text << std::endl;
+	revert(text);
+	std::cout << text << std::endl;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+//Task 6.2
+#include <iostream> 
+size_t strLen(const char* text)
+{
+	size_t len;
+	for (len = 0; text[len] != '\0'; len++) {}
+	return len;
+}
+int subString(const char* subStr, const char* str)
+{
+	size_t lenSubStr = strLen(subStr);
+	size_t lenStr = strLen(str);
+	if (lenSubStr > lenStr) return -1;
+
+	for (size_t i = 0; i <= lenStr - lenSubStr; i++) {
+		size_t j;
+		/* For current index i, check for pattern match */
+		for (j = 0; j < lenSubStr; j++)
+			if (str[i + j] != subStr[j])
+				break;
+		if (j == lenSubStr)
+			return i;
+	}
+	return -1;
+}
+int main()
+{
+	const char* s1 = "hub";
+	const char* s2 = "www.github.com";
+	int res = subString(s1, s2);
+	if (res == -1) std::cout << "Not present";
+	else std::cout << "Present at index " << res;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+//Task 6.3
+#include <iostream>
+int countWords(char* text)
+{
+	for (size_t i = 0; text[i] != '\0'; i++)
+	{
+		int count = 0;
+		bool inWord = false;
+		for (size_t i = 0; text[i] != '\0'; i++)
+		{
+			if (text[i] != '\t'&&text[i] != '\n'&&text[i] != ' ')
+			{
+				if (!inWord) count++;				
+				inWord = true;
+			}
+			else inWord = false;
+		}
+		return count;
+	}
+	return-1;
+}
+int main()
+{
+	char text[20] = " git\thub\n ";
+	std::cout << countWords(text) << std::endl;
+	return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+//Task 7.1
+#include <iostream>
+double karPow(double x, int n)
+{ // Karatsuba algorithm
+	if (n == 0)		return 1;
+	if (n == 1)		return x;
+	if (n > 0)
+	{
+		if (n % 2 == 0) return karPow(x, n / 2)*karPow(x, n / 2);
+		else return x * karPow(x, n - 1);
+	}
+	else return 1 / karPow(x, abs(n));	
+}
+int main()
+{
+	std::cout << karPow(3, -2) << std::endl;
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+//Task 7.2 
 #include <iostream>
 #include <cmath>
 size_t fib1(size_t n)
@@ -820,7 +808,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 14 
+//Task 7.3 
 #include <iostream>
 #include <cmath>
 size_t seq1(size_t n)
@@ -856,7 +844,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 15
+//Task 7.4
 #include <iostream>
 long long factorial(size_t m)
 { // recursive function for calculating m!
@@ -884,7 +872,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 16
+//Task 7.5
 #include <iostream>
 #include <cmath>
 #define k 5
@@ -933,11 +921,8 @@ int main()
 	std::cout << solSys2(n) << std::endl;
 	return 0;
 }
-
-
-
 --------------------------------------------------------------------------------------------------------------------------------
-//Task 20
+//Task 8.1
 #include <iostream>
 #include <ctime>
 #include <string>
@@ -961,4 +946,3 @@ int main()
 	}
 	return 0;
 }
---------------------------------------------------------------------------------------------------------------------------------
