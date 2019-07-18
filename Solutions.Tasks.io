@@ -197,7 +197,7 @@ int main()
 #include <cmath>
 int main()
 {
-	double x, y, k;
+	double x, y, k(0);
 	std::cin >> x >> y;
 	if (x*y == 0)
 	{
@@ -207,7 +207,6 @@ int main()
 			if (x > 0) std::cout << "Point P(" << x << ',' << y << ") lies on the abscissa.";
 			else std::cout << "Point P(" << x << ',' << y << ") lies on the ordinate.";
 		}
-		return 0;
 	}
 	else
 	{
@@ -222,17 +221,22 @@ int main()
 			else k = 2;
 		}
 	}
-	std::cout << "Point P(" << x << ',' << y << ") is located in " << k << " quadrant";
+	if (k != 0)
+	{
+		std::cout << "Point P(" << x << ',' << y << ") is located in " << k << " quadrant";
+	}
+	if (abs(x) < 0.5 && abs(y) < 0.5)
+		std::cout << "\n~inside the given unit square.";
+	else if ((abs(x) == 0.5 && abs(y) <= 0.5) || (abs(y) == 0.5 && abs(x) <= 0.5))
+		std::cout << "\n~on the perimeter of the given unit square.";
+	else std::cout << "\n~outside the given unit square.";
+
 	if ((x - 0.5)*(x - 0.5) + (y - 0.5)*(y - 0.5) < 1 * 1)
 		std::cout << "\n~inside the given unit circle.";
 	else if ((x - 0.5)*(x - 0.5) + (y - 0.5)*(y - 0.5) == 1 * 1)
 		std::cout << "\n~on the perimeter of the given unit circle.";
 	else std::cout << "\n~outside the given unit circle.";
-	if (abs(x) + abs(y) < 1)
-		std::cout << "\n~inside the given unit square.";
-	else if (abs(x) + abs(y) == 1)
-		std::cout << "\n~on the perimeter of the given unit square.";
-	else std::cout << "\n~outside the given unit square.";
+
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
