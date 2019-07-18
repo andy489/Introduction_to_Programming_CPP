@@ -1,7 +1,7 @@
 # TASKS
 Personal collection of exercise tasks.
   
-## Simple operations and calculations. Primitive data types.
+## 1. Simple operations and calculations. Primitive data types.
 **1.1.)** Write a program which initializes 2 variables and then swaps their values.
 
 **1.2.)** Write a program which asks the user for his age and then prints the number of seconds, days, weeks, months he has lived on the Earth.
@@ -20,7 +20,7 @@ Personal collection of exercise tasks.
 
 Print a single number on the console: the money that Andy needs to pay for the bill, formatted to the second digit after the floating point.
 
-## Conditional statements (if/else if/else/switch). Nested conditional statements 
+## 2. Conditional statements (if/else if/else/switch). Nested conditional statements 
 
 **2.1.)** Write a program which asks the user to enter 3 numbers and prints whether there exist a triangle. If so, print the type of the triangle:
 
@@ -142,7 +142,7 @@ normal | 44
 11 | 
 6 | 
 
-## Loops (while/for/do while). Nested loops. 
+## 3. Loops (while/for/do while). Nested loops. 
 
 **3.1.)** Fizz buzz is a group word game for children to teach them about division. Players take turns to count incrementally, replacing any number divisible by three with the word "fizz", and any number divisible by five with the word "buzz". Numbers divisible by 15, which is both become fizz buzz. For example, a typical round of fizz buzz would start as follows:
 
@@ -164,15 +164,15 @@ Writing a program to output the first 100 FizzBuzz numbers.
 
 • the same number in hex.
 
-## Arrays
+## 4. Arrays
 
 **4.1.)** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
 
-## Matrices
+## 5. Matrices
 
 **5.1.)** 
 
-## Strings
+## 6. Strings
 
 **6.1.)** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
 lowercase Latin alphabets with uppercase and reverse. Do not use the built-in string library.
@@ -181,7 +181,7 @@ lowercase Latin alphabets with uppercase and reverse. Do not use the built-in st
 
 **6.3.)** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
 
-## Functions and recursion
+## 7. Functions and recursion
 
 **7.1.)** Write a function which by a given real number x and a non-negative integer n returns x raised to the n-th power. Use Karatsuba multiplication method (recursion).
    
@@ -202,7 +202,7 @@ input | output
 32 | 5
 100 | 249000
 
-## Other tasks  
+## 8. Other tasks  
 
 **8.1.)** Write a program which by given two days of any year computes the number of days between them. Hint:
 
