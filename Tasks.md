@@ -27,51 +27,61 @@ Print a single number on the console: the money that Andy needs to pay for the b
    a) scalene, isoscles or equaterial
 
    b) obtuse, right-angled or acute.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-**2.** Write a program which asks the user for a number n and prints whether n is a leap year.
 
-**2.** Write a program wchich assigns to the variable k the number of the quadrant in which the point P(x, y) is located. 
+**2.2.)** Write a program which asks the user for a number n and prints whether n is a leap year.
 
-**2.** Manufacturers of vending machines like to make their machines return as little as possible coins change. Write down a program that accepts a sum - the change that has to be returned and calculates the smallest number of coins with which this action can take place.
+**2.3.)** Manufacturers of vending machines like to make their machines return as little as possible coins change. Write down a program that accepts a sum - the change that has to be returned and calculates the smallest number of coins with which this action can take place.
 
 input | output | explanation
 ------------ | ------------- | -------------
 0.88 | 6 | 0.50+0.20+0.10+0.05+0.02+0.01 
 1.55 | 3 | 1.00+0.50+0.05
 2.63 | 5 | 2.00+0.50+0.10+0.02+0.01
+
+**2.4.)** Write a program wchich assigns to the variable k the number of the quadrant in which the point P(x, y) is located.
+And checks if point P(x, y) lies in the:
+
+• unit square with center O(0,0);
+
+• unit circle with center O(0,5;0,5);
+
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+
+
+
 
 **2.** Write a program whick converts a decimal number lying between 1 and 3999 to Roman numerals.
 
