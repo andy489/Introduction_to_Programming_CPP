@@ -46,7 +46,7 @@ And checks if point P(x, y) lies in the:
 • unit circle with center O(0,5;0,5);
 
 
-**2.5.** Write a program whick converts a decimal number lying between 1 and 3999 to Roman numerals (string allowed).
+**2.5.)** Write a program whick converts a decimal number lying between 1 and 3999 to Roman numerals (string allowed).
 
 input | output
 ------------ | -------------
@@ -54,7 +54,7 @@ input | output
 1111 | MCXI
 2018 | MMXVIII
 
-**2.6.** Write a program which asks the user to enter a **3-digit** number and then prints its English name (string allowed).   
+**2.6.)** Write a program which asks the user to enter a **3-digit** number and then prints its English name (string allowed).   
    
    
    
