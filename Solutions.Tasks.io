@@ -312,7 +312,7 @@ std::string tens(size_t number)
 }
 int main()
 {
-	std::cout << "Enter a number (0-999): ";
+	std::cout << "Enter a number [0-999]: ";
 	size_t num;
 	std::cin >> num;
 	size_t lastDigit = num % 10;
@@ -324,10 +324,15 @@ int main()
 		std::cout << "zero";
 		return 0;
 	}
-	if (firstDigit) std::cout << oneThroughNineteen(firstDigit) << " hundred ";
-	if (lastTwoDigits > 0 && lastTwoDigits / 20 == 0) std::cout << oneThroughNineteen(lastTwoDigits);
-	else if (lastTwoDigits % 10 == 0) std::cout << tens(midDigit);
-	else std::cout << tens(midDigit) << ' ' << oneThroughNineteen(lastDigit);
+	if (num > 999) std::cout << "Number " << num << " not in [0-999].";
+	else
+	{
+		if (firstDigit) std::cout << oneThroughNineteen(firstDigit) << " hundred ";
+		if (lastTwoDigits > 0 && lastTwoDigits / 20 == 0) std::cout << oneThroughNineteen(lastTwoDigits);
+		else if (lastTwoDigits % 10 == 0) std::cout << tens(midDigit);
+		else std::cout << tens(midDigit) << ' ' << oneThroughNineteen(lastDigit);
+	}
+
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
@@ -371,8 +376,50 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+//Task 2.8.
+#include <iostream>
+#include <iomanip>
 
+int main()
+{
+	size_t hExam, mExam, hArr, mArr;
+	std::cin >> hExam >> mExam >> hArr >> mArr;
 
+	size_t totalMinExam = hExam * 60 + mExam;
+	size_t totalMinArr = hArr * 60 + mArr;
+
+	int diff = totalMinExam - totalMinArr;
+
+	if (diff < 0)
+	{
+		std::cout << "Late" << std::endl;
+		if (abs(diff) < 60) std::cout << -diff << " minutes after the start" << std::endl;
+		else
+		{
+			std::cout << -diff / 60 << ':';
+			std::cout << std::setw(2) << std::setfill('0') << -diff % 60 << " hours after the start";
+		}
+	}
+	else if (totalMinExam - totalMinArr <= 30)
+	{
+		std::cout << "On time" << std::endl;
+		if (diff == 0) return 0;
+		std::cout << diff << " minutes before the start";
+	}
+	else if (diff > 0)
+	{
+		std::cout << "Early" << std::endl;
+		if (diff >= 60)
+		{
+			std::cout << diff / 60 << ':';
+			std::cout << std::setw(2) << std::setfill('0') << diff % 60 << " hours before the start";
+
+		}
+		else std::cout << diff << " minutes before the start" << std::endl;
+	}
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
 
 
 
