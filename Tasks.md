@@ -62,27 +62,62 @@ input | output
 ------------ | ------------- 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=3,b=2,c=1,p=-1,q=2"> | <img src="https://latex.codecogs.com/svg.latex?\Large&space;max=17.00;min=0.67">
 
-**2.8.)** A student must go to an exam at a specific time (for example at 9:30). He comes to the exam room in a given arrival time (e.g. 9:40). It is believed that the student came in time if he arrived at the exact beginning time of the exam or up to half an hour before. If he had arrived earlier than 30 minutes, he came early. If he came after the exact beginning of the exam, he is late. Write a program that reads exam time (beginning of the exam) and time on arrival and prints whether the student has arrived on time, whether he has arrived early or is late and how many hours or minutes has came before or after the exam.
+**2.8.)** A student must go to an exam at a specific time (for example at 9:30). He comes to the exam room in a given arrival time (e.g. 9:40). It is believed that the student came in time if he arrived at the start of the exam or up to half an hour before. If he come earlier than 30 minutes, he is early. If he come after the start of the exam, he is late. Write a program that reads the begining of the exam and time on arrival and prints whether the student has arrived on time, whether he has arrived early or is late and how many hours or minutes has came before or after the exam.
    
 Input
+
 The concole reads 4 unsigned integer numbers (one in each row), entered by the user:
+
 •  The first row contains an exam hour - an integer from 0 to 23.
+
 •  The second row contains an exam minute - an integer from 0 to 59.
+
 •  The third row contains an arrival hour - an integer from 0 to 23.
+
 •  The forth row contains an arrival minute - an integer from 0 to 59.
+
 Output
+
 On the first row print:
+
 •   “Late”, if the student arrives after the hour of the exam.
+
 •   “On time”, if the student arrives at the exact time of the exam or 30 minutes earlier.
+
 •   “Early”, if the student arrives 30 or more minutes after the hour of the exam.
+
 If the student arrives with at least one minute difference frm the exact exam beginning, print:
+
 •   “mm minutes before the start” for arriving earlier with less than hour.
+
 •   “hh:mm hours before the start” for arriving earliar with 1 hour ot more. 
+
 •   “mm minutes after the start” for under hour delay.
+
 •   “hh:mm hours after the start” for more than 1 hour or more delay. 
+
 Always print the minutes with two digits, for exammple: "1:05".
    
-   
+input | output
+------------ | -------------
+14 | On time
+00 | 5 minutes before the start
+13 | 
+55 |  
+
+input | output
+------------ | -------------
+16 | Early
+00 | 1:00 hours before the start
+15 | 
+00 |
+
+input | output
+------------ | -------------
+14 | On time
+00 | 
+14 | 
+00 |  
    
    
    
