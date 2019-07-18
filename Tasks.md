@@ -144,32 +144,19 @@ normal | 44
 
 ## Loops (while/for/do while). Nested loops. 
 
-**3.1.** Fizz buzz is a group word game for children to teach them about division. Players take turns to count incrementally, replacing any number divisible by three with the word "fizz", and any number divisible by five with the word "buzz". Numbers divisible by 15, which is both become fizz buzz. For example, a typical round of fizz buzz would start as follows:
+**3.1.)** Fizz buzz is a group word game for children to teach them about division. Players take turns to count incrementally, replacing any number divisible by three with the word "fizz", and any number divisible by five with the word "buzz". Numbers divisible by 15, which is both become fizz buzz. For example, a typical round of fizz buzz would start as follows:
 
     1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, ...  
 
 Writing a program to output the first 100 FizzBuzz numbers.
 
+**3.2.)** Write a program which calculates the arithmetic mean of the digits of a given integer long long number, formatted to the second digit after the decimal point.
 
+**3.3.)** Write a function with signature int digitPos(long long num, int k), which returns the k-th digit of the number num or -1 if such position does not exist. It starts counting from left to right and from 1. For example: digitPos(1234, 3) returns 3.
 
+**3.4.)** Write a function with signature double sqrt_x(double x, double eps), which calculates a square root of x with an epsilon (eps) precision.
 
-
-
-
-
-
-**3.** Write a program which calculates the arithmetic mean of the digits of a given integer long long number, formatted to the second digit after the decimal point.
-
-**3.** Write a function with signature int digitPos(long long num, int k), which returns the k-th digit of the number num or -1 if such position does not exist. It starts counting from left to right and from 1. For example: digitPos(1234, 3) returns 3.
-
-**3.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
-lowercase Latin alphabets with uppercase and reverse. Do not use the built-in string library.
-
-**3.** Write a function with signature double sqrt_x(double x, double eps), which calculates a square root of x with an epsilon (eps) precision.
-   
-**3.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
-
-**3.** Write a program which asks the user for a long long number and then prints:	
+**3.5.)** Write a program which asks the user for a long long number and then prints:	
 
 • the same number in binary;
 
@@ -177,30 +164,34 @@ lowercase Latin alphabets with uppercase and reverse. Do not use the built-in st
 
 • the same number in hex.
 
-**3.** Write a program which asks the user for a non-negative integer n and gives the n-th number of Fibonacci.
-
-**3.** Write a program which asks the user for a non-negative integer n and gives the n-th number of the sequence <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_{n+2}=5a_{n+1}-6a_n+6^n">, with <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0=0"> <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=1">.
-
 ## Arrays
 
-**4.** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
+**4.1.)** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
 
 ## Matrices
 
-**5**
+**5.1.)** 
 
 ## Strings
 
-**6.** Write a function which checks whether a string is а substring in another string. If true, the functions must return the index to the first position the substring is located in the string, else return -1.
+**6.1.)** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
+lowercase Latin alphabets with uppercase and reverse. Do not use the built-in string library.
+
+**6.2.)** Write a function which checks whether a string is а substring in another string. If true, the functions must return the index to the first position the substring is located in the string, else return -1.
+
+**6.3.)** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
 
 ## Functions and recursion
+
+**7.1.)** Write a function which by a given real number x and a non-negative integer n returns x raised to the n-th power. Use Karatsuba multiplication method (recursion).
    
-**7.** Write a function which by a given real number x and a non-negative integer n returns x raised to the n-th power. Use Karatsuba multiplication method (recursion).
+**7.2.)** Write a program which asks the user for a non-negative integer n and gives the n-th number of Fibonacci.
 
-**7.** Write a program which asks the user for the numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;0\leq{k}\leq{n}"> and prints the number of combinations <img src="https://latex.codecogs.com/svg.latex?\Large&space;\binom{n}{k}">. Hints: <img src="https://latex.codecogs.com/svg.latex?\Large&space;\binom{n}{k}=\frac{n!}{k!(n-k)!}=C_{n}^{k}"> , also <img src="https://latex.codecogs.com/svg.latex?\Large&space;C_{n}^{0}=C_{n}^{n}=1"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;C_{n}^{k}=C_{n-1}^{k}+C_{n-1}^{k-1}">.
+**7.3.).** Write a program which asks the user for a non-negative integer n and gives the n-th number of the sequence <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_{n+2}=5a_{n+1}-6a_n+6^n">, with <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0=0"> <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=1">.
 
+**7.4.)** Write a program which asks the user for the numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;0\leq{k}\leq{n}"> and prints the number of combinations <img src="https://latex.codecogs.com/svg.latex?\Large&space;\binom{n}{k}">. Hints: <img src="https://latex.codecogs.com/svg.latex?\Large&space;\binom{n}{k}=\frac{n!}{k!(n-k)!}=C_{n}^{k}"> , also <img src="https://latex.codecogs.com/svg.latex?\Large&space;C_{n}^{0}=C_{n}^{n}=1"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;C_{n}^{k}=C_{n-1}^{k}+C_{n-1}^{k-1}">.
 
-**7.** Write a function which by given n, finds the number of solutions of the system in natural numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{N}\cup{0}">:
+**7.5).** Write a function which by given n, finds the number of solutions of the system in natural numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{N}\cup{0}">:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\left\{\begin{array}{l}x_1+x_2+x_3+x_4+x_5=n\\x_1<10\\10\leq{x_2}<30\\x_4>20\\x_5<30\end{array}\right."> 
 
@@ -210,10 +201,10 @@ input | output
 31 | 1
 32 | 5
 100 | 249000
-  
+
 ## Other tasks  
 
-**8.** Write a program which by given two days of any year computes the number of days between them. Hint:
+**8.1.)** Write a program which by given two days of any year computes the number of days between them. Hint:
 
 struct tm
 
