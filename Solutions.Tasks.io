@@ -1,5 +1,3 @@
-## Simple operations and calculations. Primitive data types.
-
 //Task 1.1
 #include <iostream>
 void swap(int& a, int& b)
