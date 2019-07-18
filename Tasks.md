@@ -54,7 +54,7 @@ input | output
 1111 | MCXI
 2018 | MMXVIII
 
-**2.6.)** Write a program which asks the user to enter a **3-digit** number and then prints its English name (string allowed).
+**2.6.)** Write a program which asks the user to enter a number up to **3-digits** and then prints its English name (string allowed).
 
 **2.7.)** Write a program which asks the user for 5 numbers - a, b, c, p, q and prints the maximum and minimum value of the quadratic function  <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x)=ax^2+bx+c">  in the range <img src="https://latex.codecogs.com/svg.latex?\Large&space;[p;q]">.
 
