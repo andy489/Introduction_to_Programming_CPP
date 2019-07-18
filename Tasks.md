@@ -117,8 +117,31 @@ input | output
 14 | On time
 00 | 
 14 | 
-00 |  
-   
+00 |   
+
+**2.9.)** Kaloyan is a student who lives in Sofia and walks from time to time to his hometown. He is very keen on football but busy during business days and playing football only on weekends and holidays. Kaloyan plays in Sofia avery Saturday when he is not at work and does not travel to his hometown, as well as in 2/3 of festive days. He travels to his hometown h times in the year where he plays football with his old friends on Sunday. Kaloyan is not at work 3/4 of the weekends he's in Sofia. On the other hand, through the leap years, Kaloyan plays with 15% more football than normal. We assume that the year has exactly 48 weekends, suitable for football.
+
+Write a program which calculates how many times Kaloyan has played football during the year. Round up the result down to the nearest integer (for example, 2.15 → 2; 9.95 → 9). The input data is entered by the user as follows:
+
+
+•   The first line contains the word “leap” (leap year) or “normal” (normal year).
+
+•   The second row contains an integer number p - number of holidays in the year (which are not Saturday and Sunday).
+
+•    The third line contains an integer number h - the number of weekends in which Kaloyan travels to his hometown.
+
+input | output
+------------ | -------------
+leap | 45
+5 | 
+2 | 
+
+input | output
+------------ | -------------
+normal | 44
+11 | 
+6 | 
+
    
    
    
