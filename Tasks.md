@@ -193,7 +193,7 @@ Example input | Example output
 
 **3.10.** Wtire a program which asks the user for a number n and then prints a square with numbers with as many rows as n. Align all numbers in the square!
 
-• For n=3, the output must be;     • For n=4, the output must be
+• For n=3, the output must be;     • For n=4, the output must be (note how all columns are aligned)
 
     1 2 3                       1  2  3  4
     4 5 6                       5  6  7  8 
