@@ -697,7 +697,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-// Task 3.06 & 3.07 & 3.08
+// Task 3.06 & 3.07 & 3.08 & 3.09
 #include <iostream>
 #include <cmath>
 bool isPrime(size_t n)
@@ -726,19 +726,36 @@ void factoringNum(size_t n)
 			i = 1;
 		}
 	}
+	std::cout << std::endl;
+}
+bool sumOfTwoPrimes(size_t n, size_t& j)
+{ //3.09
+	for (size_t i = 2; i <= sqrt(n); i++)
+	{
+		if (isPrime(i) && isPrime(n - i))
+		{
+			j = i;
+			return true;
+		}
+	}
+	return false;
 }
 int main()
 {
 	size_t n;
 	std::cin >> n;
-	if (isPrime(n)) std::cout << "prime\n";
-	else std::cout << "compose\n";
+	if (isPrime(n)) std::cout <<n<< " is prime\n";
+	else std::cout << n<<" is compose\n";
 	printAllPrimesToNum(n);
 	factoringNum(n);
+	size_t j;
+	if (sumOfTwoPrimes(n, j)) std::cout << j << '+' << n - j << '=' << n << '\n';
+	else std::cout << n << " cannot be epressed as sum of two primes\n";
+
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 3.09
+//Task 3.10
 #include <iostream>
 #include <cmath>
 void printSquare(size_t n)
