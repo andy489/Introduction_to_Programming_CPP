@@ -180,7 +180,7 @@ Writing a program to output the first 100 FizzBuzz numbers.
 
 **3.06.** Write a program which asks the user for a number n and then prints whether n is a prime number or not.
 
-**4.07.** Write a program which asks the user for a number n and then prints all prime factors of n.
+**3.07.** Write a program which asks the user for a number n and then prints all prime factors of n.
 
 Example input | Example output
 ------------ | -------------
