@@ -199,6 +199,18 @@ Example input | Example output
     4 5 6                       5  6  7  8 
     7 8 9                       9  10 11 12
                                 13 14 15 16
+                                
+**3.11.** Wtire a program which asks the user for a number n and then prints a triangle with numbers with as many rows as n. Align all numbers in the square!
+
+• For n=4, the output must be;     • For n=7, the output must be
+
+    1                           1  
+    2 3                         2  3 
+    4 5 6                       4  5  6
+    7 8 9 10                    7  8  9 10
+                                11 12 13 14 15
+                                16 17 18 19 20 21
+                                22 23 24 25 26 27 28
               
 ## 4. Arrays
 
