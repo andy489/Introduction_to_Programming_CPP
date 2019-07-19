@@ -189,7 +189,9 @@ Example input | Example output
 225 | 3.3.5.5
 31668 | 2.2.3.7.13.29
 
-**3.09.** Wtire a program which asks the user for a number n and then prints a square with numbers with as many rows as n. Align all numbers in the square!
+**3.09.** Write a program which checks whether a number can be expressed as a sum of two prime numbers.
+
+**3.10.** Wtire a program which asks the user for a number n and then prints a square with numbers with as many rows as n. Align all numbers in the square!
 
 • For n=3, the output must be;     • For n=4, the output must be
 
