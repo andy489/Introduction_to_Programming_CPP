@@ -180,6 +180,13 @@ Writing a program to output the first 100 FizzBuzz numbers.
 
 **3.06.** Write a program which asks the user for a number n and then prints whether n is a prime number or not.
 
+**4.07.** Write a program which asks the user for a number n and then prints all prime factors of n.
+
+Example input | Example output
+------------ | -------------
+225 | 3.3.5.5
+31668 | 2.3.7.13.29
+
 ## 4. Arrays
 
 **4.1.** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
