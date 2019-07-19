@@ -795,6 +795,29 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+// Task 3.11
+#include <iostream>
+void printTriangle(size_t n)
+{
+	size_t k = 1;
+	for (size_t rows = 1; rows <= n; rows++)
+	{
+		for (size_t j = 1; j <= rows; j++)
+		{	
+			std::cout << k << ' ';
+			k++;
+		}
+		std::cout <<std::endl;
+	}
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
+	printTriangle(n);
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
 //Task 4.01
 #include <iostream>
 size_t myStrLen(const char* str)
