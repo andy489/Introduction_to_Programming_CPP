@@ -185,7 +185,7 @@ Writing a program to output the first 100 FizzBuzz numbers.
 Example input | Example output
 ------------ | -------------
 225 | 3.3.5.5
-31668 | 2.3.7.13.29
+31668 | 2.2.3.7.13.29
 
 ## 4. Arrays
 
