@@ -376,7 +376,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 2.08.
+//Task 2.08
 #include <iostream>
 #include <iomanip>
 
@@ -697,21 +697,26 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 3.05 & 3.06
+// Task 3.06 & 3.07 & 3.08
 #include <iostream>
 #include <cmath>
 
 bool isPrime(size_t n)
-{
+{ //3.06
 	bool isPrime = true;
 	for (size_t i = 2; i <= sqrt(n); i++)
 		if (n%i == 0) isPrime = false;
 	return isPrime;
 }
-int main()
-{
-	size_t n;
-	std::cin >> n;
+void printAllPrimesToNum(size_t n)
+{ //3.07
+	std::cout << 1;
+	for (size_t i = 2; i <= n; i++)
+		if (isPrime(i)) std::cout << ", " << i;
+	std::cout << std::endl;
+}
+void factoringNum(size_t n)
+{ //3.08
 	for (size_t i = 2; i <= n; i++)
 	{
 		if (isPrime(i) && n%i == 0)
@@ -722,6 +727,15 @@ int main()
 			i = 1;
 		}
 	}
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
+	if (isPrime(n)) std::cout << "prime\n";
+	else std::cout << "compose\n";
+	printAllPrimesToNum(n);
+	factoringNum(n);
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
