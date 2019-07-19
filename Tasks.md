@@ -189,6 +189,15 @@ Example input | Example output
 225 | 3.3.5.5
 31668 | 2.2.3.7.13.29
 
+**3.09.** Wtire a program which asks the user for a number n and then prints a square with numbers with as many rows as n. Align all numbers in the square!
+
+• For n=3, the output must be;     • For n=4, the output must be
+
+    1 2 3                       1  2  3  4
+    4 5 6                       5  6  7  8 
+    7 8 9                       9  10 11 12
+                                13 14 15 16
+              
 ## 4. Arrays
 
 **4.1.** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
