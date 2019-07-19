@@ -700,7 +700,6 @@ int main()
 // Task 3.06 & 3.07 & 3.08
 #include <iostream>
 #include <cmath>
-
 bool isPrime(size_t n)
 { //3.06
 	bool isPrime = true;
@@ -736,6 +735,46 @@ int main()
 	else std::cout << "compose\n";
 	printAllPrimesToNum(n);
 	factoringNum(n);
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 3.09
+#include <iostream>
+#include <cmath>
+void printSquare(size_t n)
+{
+	size_t k = 1;
+	for (size_t i = 0; i < n; i++)
+	{
+		for (size_t j = 0; j < n; j++)
+		{
+			if (n < sqrt(10))
+			{
+				std::cout << k << ' ';
+				k++;
+			}
+			else if (n < sqrt(100))
+			{
+				if (k <= 9)std::cout << k << "  ";
+				else std::cout << k << ' ';
+				k++;
+			}
+			else if (n<sqrt(1000))
+			{
+				if (k <= 9)std::cout << k << "   ";
+				else if(k<=99) std::cout << k << "  ";
+				else std::cout << k << ' ';
+				k++;
+			}//etc...			
+		}
+		std::cout << std::endl;
+	}
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
+	printSquare(n);
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
