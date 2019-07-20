@@ -978,6 +978,38 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 3.16
+#include <iostream>
+#include <string>
+int main()
+{
+	size_t guess = 512;
+	size_t nextIncr = 512;
+	size_t countQuestion(1);
+	std::string answer;
+	while (nextIncr != 1 || answer != "that's the number!")
+	{
+		std::cout << countQuestion << ". Is your number bigger than " << guess << " ?\n";
+		std::getline(std::cin, answer);
+		nextIncr /= 2;
+		countQuestion++;
+		if (answer == "yes")
+		{
+			guess += nextIncr;
+		}
+		else if (answer == "no")
+		{
+			guess -= nextIncr;
+		}
+		else if (answer == "that's the number")
+		{
+			std::cout << "the number written on the sheet is: " << guess << "\n";
+			return 0;
+		}
+	}
+	return 0;
+} //extra question answer: 10; The program will always quess the number in no more than 10 guesses, because 2^10=1024>1000.
+-------------------------------------------------------------------------------------------------------------------------------
 //Task 4.01
 #include <iostream>
 size_t myStrLen(const char* str)
