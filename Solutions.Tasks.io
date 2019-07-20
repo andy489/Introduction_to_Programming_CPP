@@ -863,7 +863,7 @@ size_t getRow(size_t n)
 size_t getCol(size_t n)
 { /* having already found the row and knowing that every n-th row starts
 with n(n-1)/2+1 and ends with n(n+1)/2, just count the columns and when you
-meet the number (and that surely will happen, just return the column and you're done)*/
+meet the number (and that surely will happen), just return the column and you're done*/
 	size_t col(1);
 	size_t r = getRow(n);
 	for (size_t j = r * (r - 1) / 2 + 1; j <= r * (r + 1) / 2; j++)
