@@ -213,6 +213,8 @@ Example input | Example output
                                 22 23 24 25 26 27 28
 
 **3.12.** Consider the sequence: <img src="https://latex.codecogs.com/svg.latex?\Large&space;1;2+3;4+5+6;7+8+9+10;...">. In other words, the n-th term of the sequence is the "sum of the next n natural numbers" - Felice Russo. Write a program which prints the first n terms of the sequence.
+
+**3.13.** Write a program which checks to which row and column in the Floyd triangle the number n belongs.
               
 ## 4. Arrays
 
