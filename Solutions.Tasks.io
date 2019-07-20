@@ -842,6 +842,48 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 3.13
+#include <iostream>
+size_t getRow(size_t n)
+{ // just count the rows, and when you meet the number, return the row
+	size_t row(0), k(1);
+	for (row = 1; row <= n; row++)
+	{
+		for (size_t j = 1; j <= row; j++)
+		{
+			if (k == n)
+			{
+				goto end;
+			}
+			k++;
+		}
+	}
+	end:return row;
+}
+size_t getCol(size_t n)
+{ /* having already found the row and knowing that every n-th row starts
+with n(n-1)/2+1 and ends with n(n+1)/2, just count the columns and when you
+meet the number (and that surely will happen, just return the column and you're done)*/
+	size_t col(1);
+	size_t r = getRow(n);
+	for (size_t j = r * (r - 1) / 2 + 1; j <= r * (r + 1) / 2; j++)
+	{
+		if (j == n)
+		{
+			break;
+		}
+		col++;
+	}
+	return col;
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
+	std::cout << "Number " << n << " lies in row " << getRow(n) << ", column " << getCol(n) << " of the Floyd's triangle.\n";
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
 //Task 4.01
 #include <iostream>
 size_t myStrLen(const char* str)
