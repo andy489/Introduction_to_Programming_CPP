@@ -200,7 +200,7 @@ Example input | Example output
     7 8 9                       9  10 11 12
                                 13 14 15 16
                                 
-**3.11.** Wtire a program which asks the user for a number n and then prints a triangle with numbers with as many rows as n. Align all numbers in the square!
+**3.11.** Wtire a program which asks the user for a number n and then prints a triangle with numbers with as many rows as n. Align all numbers in the triangle!
 
 • For n=4, the output must be;     • For n=7, the output must be (note how all columns are aligned)
 
@@ -211,6 +211,8 @@ Example input | Example output
                                 11 12 13 14 15
                                 16 17 18 19 20 21
                                 22 23 24 25 26 27 28
+
+**3.12.** Consider the sequence: <img src="https://latex.codecogs.com/svg.latex?\Large&space;1;2+3;4+5+6;7+8+9+10;...">. In other words, the n-th term of the sequence is the "sum of the next n natural numbers" - Felice Russo. Write a program which prints the first n terms of the sequence.
               
 ## 4. Arrays
 
