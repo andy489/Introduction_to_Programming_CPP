@@ -908,6 +908,34 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 3.14
+#include <iostream>
+void printChar(char a, size_t n)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		std::cout << a;
+	}
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
+	if (n % 2 == 0) std::cout << "error";
+	else
+	{
+		for (size_t i = 1; i <= n / 2 + 1; i++)
+		{
+			printChar(' ', n / 2 - i + 1);
+			printChar('*', 2 * i - 1);
+			std::cout << std::endl;
+		}
+		printChar(' ', n / 2);
+		std::cout << '*';
+	}
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
 //Task 4.01
 #include <iostream>
 size_t myStrLen(const char* str)
