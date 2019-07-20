@@ -755,43 +755,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 3.10
-#include <iostream>
-size_t numLen(size_t n)
-{
-	size_t len = 0;
-	while (n != 0)
-	{
-		n /= 10;
-		len++;
-	}
-	return len;
-}
-void printSpaces(size_t n)
-{
-	for (size_t i = 1; i <= n; i++)
-	{
-		std::cout << ' ';
-	}
-}
-int main()
-{
-	size_t n;
-	std::cin >> n;
 
-	size_t k = 1;
-	for (size_t i = 1; i <= n; i++)
-	{
-		for (size_t j = 1; j <= n; j++)
-		{
-			std::cout << k;
-			printSpaces(numLen(n*n) - numLen(k) + 1);
-			k++;
-		}
-		std::cout << std::endl;
-	}
-	return 0;
-}
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 4.01
 #include <iostream>
