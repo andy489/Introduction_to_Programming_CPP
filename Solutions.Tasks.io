@@ -917,10 +917,8 @@ void printChar(char a, size_t n)
 		std::cout << a;
 	}
 }
-int main()
+void printChristmasTree(size_t n)
 {
-	size_t n;
-	std::cin >> n;
 	if (n % 2 == 0) std::cout << "error";
 	else
 	{
@@ -933,6 +931,50 @@ int main()
 		printChar(' ', n / 2);
 		std::cout << '*';
 	}
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
+	printChristmasTree(n);
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 3.15
+#include <iostream>
+void printChar(char a, size_t n)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		std::cout << a;
+	}
+}
+void printHeart(size_t n)
+{
+	if (n % 2 == 0) std::cout << "error";
+	else
+	{
+		for (size_t i = 1; i <= n; i += 2)
+		{
+			printChar(' ', (n - i) / 2);
+			printChar('*', i);
+			printChar(' ', n - i + 1);
+			printChar('*', i);
+			std::cout << std::endl;
+		}
+		for (size_t i = 1; i <= n; i++)
+		{
+			printChar(' ', i);
+			printChar('*', 2 * (n - i) + 1);
+			std::cout << std::endl;
+		}
+	}
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
+	printHeart(n);
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
