@@ -1,6 +1,6 @@
 ### SOME HARD INTERVIEW QUESTIONS
 
-**01.** Do **100 000 consequtive composite** numbers exist? If no, argument your answer. Otherwise give an example.      
+**01.** Do ***100000 consequtive composite*** numbers exist? If no, argument your answer. Otherwise give an example.      
 *(1-2 minutes)*
 
 <details><summary>ANSWER</summary>
