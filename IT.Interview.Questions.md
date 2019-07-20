@@ -13,3 +13,25 @@ Note that we cannot tell whether <img src="https://latex.codecogs.com/svg.latex?
 
 </p>
 </details>
+
+
+**02.** What will be displayed on the console after executing the following code:
+  
+    #include <iostream>
+    #include <cmath>
+    int main()
+    {
+	    float a(0), b(0);
+	    std::cout << pow(a, b);
+	    return 0;
+    } 
+  Argument your answer.
+
+
+<details><summary>ANSWER</summary>
+<p>
+Zero to the power of zero, denoted by <img src="https://latex.codecogs.com/svg.latex?\Large&space;0^0">, is a mathematical expression with no agreed-upon value. But in our case floating point numbers in the memory are represented as approximation because the memory is limited. So we can look for an answer to the equivalent question: <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lim_{x\rightarrow{0}}(x^x)">, which is 0. 
+  
+</p>
+</details>
+
