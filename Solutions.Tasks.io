@@ -1198,7 +1198,6 @@ int main()
 #include <iostream>
 #include <ctime>
 #include <string>
-
 int main()
 {
 	struct std::tm a = { 0,0,0,22,11,88 }; /* December 22, 1988 */
