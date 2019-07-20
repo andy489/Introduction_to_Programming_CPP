@@ -215,7 +215,17 @@ Example input | Example output
 **3.12.** Consider the sequence: <img src="https://latex.codecogs.com/svg.latex?\Large&space;1;2+3;4+5+6;7+8+9+10;...">. In other words, the n-th term of the sequence is the "sum of the next n natural numbers" - Felice Russo. Write a program which prints the first n terms of the sequence.
 
 **3.13.** Write a program which checks to which row and column in the Floyd's triangle the number n belongs.
-              
+
+**3.14.** Wtire a program which asks the user for an odd number n and then prints a Christmas tree as wide as n. Print and error if n is not odd!
+
+• For n=5, the output must be;     • For n=7, the output must be (note how all columns are aligned)
+
+      *                              *                     
+     ***                            ***
+    *****                          *****
+      *                           *******
+                                     *
+                                           
 ## 4. Arrays
 
 **4.1.** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
