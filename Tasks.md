@@ -218,13 +218,26 @@ Example input | Example output
 
 **3.14.** Wtire a program which asks the user for an odd number n and then prints a Christmas tree as wide as n. Print and error if n is not odd!
 
-• For n=5, the output must be;     • For n=7, the output must be (note how all columns are aligned)
+• For n=5, the output must be;       • For n=7, the output must be 
 
       *                              *                     
      ***                            ***
     *****                          *****
       *                           *******
                                      *
+
+**3.15.** Wtire a program which asks the user for an odd number n and then prints a Christmas tree as wide as n. Print and error if n is not odd!
+
+• For n=5, the output must be:       • For n=5, the output must be 
+
+       *   *                            *     *
+      *** ***                          ***   ***
+       *****                          ***** *****
+        ***                            *********
+         *                              *******
+                                         *****
+                                          ***
+                                           *
                                            
 ## 4. Arrays
 
