@@ -239,7 +239,7 @@ Example input | Example output
                                      ***
                                       *
 
-**3.16.** * Ask a friend to take a piece of paper and ***write*** down a number from 1 to 1000, without showing it to you. Write a program that guesses the written number only by asking questions like “ ***Is your number bigger than {arbitrary number of your choice}?*** ”, etc. if your question contains the correct answer, then your friend needs to answer with “ ***that's the number!*** ”, otherwise with “ ***yes*** ” or “ ***no*** ”. Assuming your friend is not lying, how many questions will your program ask in the worst case?
+**3.16.** Ask a friend to take a piece of paper and ***write*** down a number from 1 to 1000, without showing it to you. Write a program that guesses the written number only by asking questions like “ ***Is your number bigger than {arbitrary number of your choice}?*** ”, etc. if your question contains the correct answer, then your friend needs to answer with “ ***that's the number!*** ”, otherwise with “ ***yes*** ” or “ ***no*** ”. Assuming your friend is not lying, how many questions will your program ask in the worst case?
                                            
 ## 4. Arrays
 
