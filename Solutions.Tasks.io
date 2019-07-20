@@ -842,7 +842,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 3.13
+//Task 3.13 first way
 #include <iostream>
 size_t getRow(size_t n)
 { // just count the rows, and when you meet the number, return the row
@@ -874,6 +874,30 @@ meet the number (and that surely will happen), just return the column and you're
 		}
 		col++;
 	}
+	return col;
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
+	std::cout << "Number " << n << " lies in row " << getRow(n) << ", column " << getCol(n) << " of the Floyd's triangle.\n";
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 3.13 second way
+#include <iostream>
+#include <cmath>
+size_t getRow(size_t n)
+{ /*knowing the n-th row ends with n*(n+1)/2, we can make quadratic equation and solve it to get row number for given number k.
+  So, n*(n+1)/2=k, or n*n+n-2*k=0 and D=1+8*k.*/
+	size_t D = 1 + 8 * n;
+	size_t row = (size_t)(ceil((-1 + sqrt(D)) / 2));
+	return row;
+}
+size_t getCol(size_t n)
+{
+	size_t r = getRow(n);
+	size_t col = n - r * (r - 1) / 2; //n minus last number form the upper row
 	return col;
 }
 int main()
