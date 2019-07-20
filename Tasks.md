@@ -12,11 +12,11 @@ Personal collection of exercise tasks.
 
 **1.05.** Andy decides to make a party and goes to the alcohol market to buy beer, wine, brandy and whiskey. On the console he inputs the price of the whiskey (lv./liter), and the quantities of the products, which he has to buy (liters). Write a program that calculates how much money he needs to pay for the bill, knowing that:
 
-• the price of the brandy is half-lower than this of the whiskey;
+  - the price of the brandy is half-lower than this of the whiskey;
 
-• the price of the wine is with 40% cheaper than this of the brandy;
+  - the price of the wine is with 40% cheaper than this of the brandy;
 
-• the price of the beer is with 80% cheaper than this of the brandy;
+  - the price of the beer is with 80% cheaper than this of the brandy;
 
 Print a single number on the console: the money that Andy needs to pay for the bill, formatted to the second digit after the floating point.
 
@@ -41,9 +41,9 @@ input | output | explanation
 **2.04.** Write a program wchich assigns to the variable k the number of the quadrant in which the point P(x, y) is located.
 And checks if point P(x, y) lies in the:
 
-• unit square with center O(0,0);
+  - unit square with center O(0,0);
 
-• unit circle with center O(0,5;0,5);
+  - unit circle with center O(0,5;0,5);
 
 
 **2.05.** Write a program whick converts a decimal number lying between 1 and 3999 to Roman numerals (string allowed).
@@ -68,33 +68,33 @@ Input
 
 The concole reads 4 unsigned integer numbers (one in each row), entered by the user:
 
-•  The first row contains an exam hour - an integer from 0 to 23.
+  - The first row contains an exam hour - an integer from 0 to 23.
 
-•  The second row contains an exam minute - an integer from 0 to 59.
+  - The second row contains an exam minute - an integer from 0 to 59.
 
-•  The third row contains an arrival hour - an integer from 0 to 23.
+  - The third row contains an arrival hour - an integer from 0 to 23.
 
-•  The forth row contains an arrival minute - an integer from 0 to 59.
+  - The forth row contains an arrival minute - an integer from 0 to 59.
 
 Output
 
 On the first row print:
 
-•   “Late”, if the student arrives after the hour of the exam.
+  - “Late”, if the student arrives after the hour of the exam.
 
-•   “On time”, if the student arrives at the exact time of the exam or 30 minutes earlier.
+  - “On time”, if the student arrives at the exact time of the exam or 30 minutes earlier.
 
-•   “Early”, if the student arrives 30 or more minutes after the hour of the exam.
+  - “Early”, if the student arrives 30 or more minutes after the hour of the exam.
 
 If the student arrives with at least one minute difference frm the exact exam beginning, print:
 
-•   “mm minutes before the start” for arriving earlier with less than hour.
+  - “mm minutes before the start” for arriving earlier with less than hour.
 
-•   “hh:mm hours before the start” for arriving earliar with 1 hour ot more. 
+  - “hh:mm hours before the start” for arriving earliar with 1 hour ot more. 
 
-•   “mm minutes after the start” for under hour delay.
+  - “mm minutes after the start” for under hour delay.
 
-•   “hh:mm hours after the start” for more than 1 hour or more delay. 
+  - “hh:mm hours after the start” for more than 1 hour or more delay. 
 
 Always print the minutes with two digits, for exammple: "1:05".
    
@@ -123,12 +123,11 @@ input | output
 
 Write a program which calculates how many times Kaloyan has played football during the year. Round up the result down to the nearest integer (for example, 2.15 → 2; 9.95 → 9). The input data is entered by the user as follows:
 
+  - The first line contains the word “leap” (leap year) or “normal” (normal year).
 
-•   The first line contains the word “leap” (leap year) or “normal” (normal year).
+  - The second row contains an integer number p - number of holidays in the year (which are not Saturday and Sunday).
 
-•   The second row contains an integer number p - number of holidays in the year (which are not Saturday and Sunday).
-
-•    The third line contains an integer number h - the number of weekends in which Kaloyan travels to his hometown.
+  - The third line contains an integer number h - the number of weekends in which Kaloyan travels to his hometown.
 
 input | output
 ------------ | -------------
@@ -144,11 +143,11 @@ normal | 44
 
 **2.10.** Write a poker-hand program. It should ask the user to enter 5 cards. The program must then tell the user what hand does he have (e.g. flush, quads, etc.).
 
-   •   use 'S' for spades, 'C' for clubs, 'H' for hearts, 'D' for diamonds
+   - use 'S' for spades, 'C' for clubs, 'H' for hearts, 'D' for diamonds
    
-   •   use the numbers between 2 and 14 for cards values (J=11, Q=12, K=13, A=14).
+   - use the numbers between 2 and 14 for cards values (J=11, Q=12, K=13, A=14).
    
-   •   If you don't know how poker hands work, find a short [tutorial here](https://www.cardplayer.com/rules-of-poker/hand-rankings "Markdown Tutorial") .
+   - If you don't know how poker hands work, find a short [tutorial here](https://www.cardplayer.com/rules-of-poker/hand-rankings "Markdown Tutorial") .
    
 Example input | Example output
 ------------ | -------------
@@ -172,11 +171,11 @@ Writing a program to output the first 100 FizzBuzz numbers.
 
 **3.05.** Write a program which asks the user for a long long number and then prints:	
 
-• the same number in binary;
+   - the same number in binary;
 
-• the same number in oct;
-
-• the same number in hex.
+   - the same number in oct;
+ 
+   - the same number in hex.
 
 **3.06.** Write a program which asks the user for a number n and then prints whether n is a prime number or not.
 
