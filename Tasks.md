@@ -276,7 +276,14 @@ Example input | Example output
    ------------- | -------------- 
    7 1 2 3 4 5 6 7 | 1 2 3
    5 -2 4 -3 6 8  | -2 -3 
+   
+**4.04.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print the maximum and minimum of them.
 
+   Example input | Example output 
+   ------------- | -------------- 
+   6 -2 -1 0 1 3 4 | 4 -2
+   1 4 | 4 4
+   
 **4.12.** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
 
 ## 5. Matrices
