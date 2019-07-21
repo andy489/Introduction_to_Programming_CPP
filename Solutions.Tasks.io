@@ -1106,6 +1106,124 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 4.05
+#include <iostream>
+void fillArr(size_t n, int* arr)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		int num;
+		std::cin >> num;
+		arr[i] = num;
+	}
+}
+bool hacksawFirstType(int a0, int a1, int a2)
+{
+	if (a0<a1&&a1>a2)
+	{
+		return true;
+	}
+	return false;
+}
+bool hacksawSecondType(int a0, int a1, int a2)
+{
+	if (a0 > a1&&a1 < a2)
+	{
+		return true;
+	}
+	return false;
+}
+bool isHacksaw(size_t n, int* arr)
+{
+	if (n == 1) return true;
+	else if (n == 2)
+	{
+		if (arr[0] != arr[1]) return true;
+	}
+	else
+	{
+		bool firstTypeCheck = hacksawFirstType(arr[0], arr[1], arr[2]);
+		bool secondTypeCheck = hacksawSecondType(arr[0], arr[1], arr[2]);
+		if (firstTypeCheck)
+		{
+			for (size_t i = 1; i < n - 1; i++)
+			{
+				if (i % 2 == 1)
+				{
+					if (hacksawFirstType(arr[i - 1], arr[i], arr[i + 1]))
+					{
+						if (i == n - 2)
+						{
+							return true;
+						}
+						continue;
+					}
+				}
+				else
+				{
+					if (hacksawSecondType(arr[i - 1], arr[i], arr[i + 1]))
+					{
+						if (i == n - 2)
+						{
+							return true;
+						}
+						continue;
+					}
+				}
+			}
+		}
+		if (secondTypeCheck)
+		{
+			for (size_t i = 1; i < n - 1; i++)
+			{
+				if (i % 2 == 1)
+				{
+					if (hacksawSecondType(arr[i - 1], arr[i], arr[i + 1]))
+					{
+						if (i == n - 2)
+						{
+							return true;
+						}
+						continue;
+					}
+				}
+				else
+				{
+					if (hacksawFirstType(arr[i - 1], arr[i], arr[i + 1]))
+					{
+						if (i == n - 2)
+						{
+							return true;
+						}
+						continue;
+					}
+				}
+			}
+		}
+	}
+	return false;
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
+	int* arr = new int[n];
+	fillArr(n, arr);
+
+	if (isHacksaw(n, arr))
+	{
+		std::cout << "Hacksaw sequence: YES";
+	}
+	else
+	{
+		std::cout << "Hacksaw sequence: NO";;
+	}
+
+	delete[] arr;
+
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
 //Task 4.12
 #include <iostream>
 size_t myStrLen(const char* str)
