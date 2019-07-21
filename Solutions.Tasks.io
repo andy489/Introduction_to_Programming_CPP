@@ -1043,7 +1043,33 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 4.02
+#include <iostream>
+void fillArr(size_t n, int* arr)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		int num;
+		std::cin >> num;
+		arr[i] = num;
+	}
+}
+void printEvenElements(size_t n, int* arr)
+{
+	for (size_t i = 0; i < n; i++)
+		if (arr[i] % 2 == 0) std::cout << arr[i] << ' ';
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
 
+	int* arr = new int[n];
+
+	fillArr(n, arr);
+	printEvenElements(n, arr);
+	return 0;
+}
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 4.12
 #include <iostream>
