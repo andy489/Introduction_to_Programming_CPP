@@ -1012,6 +1012,41 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 4.01
 #include <iostream>
+
+void fillArr(size_t n, int* arr)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		int num;
+		std::cin >> num;
+		arr[i] = num;
+	}
+}
+void printArrReverse(size_t n, int* arr)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		std::cout << arr[n-i-1] << ' ';
+	}
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
+	int* arr = new int[n];
+
+	fillArr(n, arr);
+	printArrReverse(n, arr);
+
+	delete[] arr;
+
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 4.12
+#include <iostream>
 size_t myStrLen(const char* str)
 {
 	size_t len;
