@@ -89,6 +89,25 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 2.01
 #include <iostream>
+
+int main()
+{
+	double width, length, height, astroHeight;
+	std::cin >> width >> length >> height >> astroHeight;
+
+	double shipVolume = width * length * height;
+	double astroRoom = 2 * 2 * (astroHeight + 0.4);
+
+	size_t astroCount = (size_t)(shipVolume / astroRoom);
+
+	if (astroCount >= 3 && astroCount < 10) std::cout << "The spacecraft holds " << astroCount << " astronauts.";	
+	else if (astroCount < 3) std::cout << "The spacecraft is too small.";	
+	else std::cout << "The spacecraft is too big.";
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 2.02
+#include <iostream>
 #include <cmath>
 size_t firstCriteria(double a, double b, double c)
 {
@@ -155,7 +174,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 2.02
+//Task 2.03
 #include <iostream>
 int main()
 {
@@ -167,7 +186,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-// Task 2.03
+// Task 2.04
 #include <iostream>
 
 int main()
@@ -192,7 +211,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 2.04 
+//Task 2.05 
 #include <iostream>
 #include <cmath>
 int main()
@@ -240,7 +259,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 2.05
+//Task 2.06
 #include <iostream> 
 #include <string>
 void printRoman(size_t number)
@@ -268,7 +287,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 2.06
+//Task 2.07
 #include <iostream>
 #include <string>
 std::string oneThroughNineteen(size_t number)
@@ -336,7 +355,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-// Task 2.07
+// Task 2.08
 #include <iostream>
 double fx(double a, double b, double c, double x)
 { // f(x)=ax^2+bx+c
@@ -376,7 +395,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 2.08
+//Task 2.09
 #include <iostream>
 #include <iomanip>
 
@@ -420,7 +439,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 2.09
+//Task 2.10
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -441,7 +460,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 2.10
+//Task 2.11
 #include <iostream>
 #include <string>
 using namespace std;
