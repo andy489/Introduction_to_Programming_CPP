@@ -1117,19 +1117,21 @@ void fillArr(size_t n, int* arr)
 		arr[i] = num;
 	}
 }
-bool hacksawFirstType(int a0, int a1, int a2)
+bool hacksawNums(int a0, int a1, int a2, size_t rem)
 {
-	if (a0<a1&&a1>a2)
+	if (rem == 1)
 	{
-		return true;
+		if (a0<a1&&a1>a2)
+		{
+			return true;
+		}
 	}
-	return false;
-}
-bool hacksawSecondType(int a0, int a1, int a2)
-{
-	if (a0 > a1&&a1 < a2)
+	else
 	{
-		return true;
+		if (a0 > a1&&a1 < a2)
+		{
+			return true;
+		}
 	}
 	return false;
 }
@@ -1142,33 +1144,19 @@ bool isHacksaw(size_t n, int* arr)
 	}
 	else
 	{
-		bool firstTypeCheck = hacksawFirstType(arr[0], arr[1], arr[2]);
-		bool secondTypeCheck = hacksawSecondType(arr[0], arr[1], arr[2]);
+		bool firstTypeCheck = hacksawNums(arr[0], arr[1], arr[2], 0);
+		bool secondTypeCheck = hacksawNums(arr[0], arr[1], arr[2], 1);
 		if (firstTypeCheck)
 		{
 			for (size_t i = 1; i < n - 1; i++)
 			{
-				if (i % 2 == 1)
+				if (hacksawNums(arr[i - 1], arr[i], arr[i + 1], (i + 1) % 2))
 				{
-					if (hacksawFirstType(arr[i - 1], arr[i], arr[i + 1]))
+					if (i == n - 2)
 					{
-						if (i == n - 2)
-						{
-							return true;
-						}
-						continue;
+						return true;
 					}
-				}
-				else
-				{
-					if (hacksawSecondType(arr[i - 1], arr[i], arr[i + 1]))
-					{
-						if (i == n - 2)
-						{
-							return true;
-						}
-						continue;
-					}
+					continue;
 				}
 			}
 		}
@@ -1176,27 +1164,13 @@ bool isHacksaw(size_t n, int* arr)
 		{
 			for (size_t i = 1; i < n - 1; i++)
 			{
-				if (i % 2 == 1)
+				if (hacksawNums(arr[i - 1], arr[i], arr[i + 1], i % 2))
 				{
-					if (hacksawSecondType(arr[i - 1], arr[i], arr[i + 1]))
+					if (i == n - 2)
 					{
-						if (i == n - 2)
-						{
-							return true;
-						}
-						continue;
+						return true;
 					}
-				}
-				else
-				{
-					if (hacksawFirstType(arr[i - 1], arr[i], arr[i + 1]))
-					{
-						if (i == n - 2)
-						{
-							return true;
-						}
-						continue;
-					}
+					continue;
 				}
 			}
 		}
@@ -1218,7 +1192,6 @@ int main()
 	{
 		std::cout << "Hacksaw sequence: NO";;
 	}
-
 	delete[] arr;
 
 	return 0;
