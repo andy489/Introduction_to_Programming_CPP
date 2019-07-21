@@ -249,6 +249,13 @@ Example input | Example output
    4 2 4 6 8 | 8 6 4 2
    5 1 0 1 0 -1 | -1 0 1 0 1 
 
+**4.02.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print only the even numbers.
+
+   Example input | Example output 
+   ------------- | -------------- 
+   4 1 2 3 -4 | 2 -4
+   5 1 3 0 7 9  | 0 
+
 **4.12.** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
 
 ## 5. Matrices
