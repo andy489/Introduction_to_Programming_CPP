@@ -283,7 +283,18 @@ Example input | Example output
    ------------- | -------------- 
    6 -2 -1 0 1 3 4 | 4 -2
    1 4 | 4 4
-   
+
+**4.05.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and determine if the given array is hacksaw. We call a sequence of numbers hacksaw if the following is true: <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0<a_1>a_2<a_3>a_4<a_5...a_n"> or <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0>a_1<a_2>a_3<a_4>a_5...a_n">
+
+   Example input | Example output 
+   ------------- | -------------- 
+   3   ***1 4 1*** | yes
+   3   ***4 1 4*** | yes
+   6  ***1 3 2 8 9 4*** | no
+   7   ***0 1 0 1 0 1 0*** | yes
+   4   ***4 -8 19 22*** | yes
+   4   ***4 -8 19 19*** | no
+
 **4.12.** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
 
 ## 5. Matrices
