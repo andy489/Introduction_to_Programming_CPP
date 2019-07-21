@@ -1047,11 +1047,13 @@ void printArrReverse(size_t n, int* arr)
 	{
 		std::cout << arr[n-i-1] << ' ';
 	}
+	std::cout << std::endl;
 }
 void printEvenElements(size_t n, int* arr)
 { //Task 4.02
 	for (size_t i = 0; i < n; i++)
 		if (arr[i] % 2 == 0) std::cout << arr[i] << ' ';
+		std::cout << std::endl;
 }
 void printAllLessThanAverage(size_t n, int* arr)
 { //Task 4.3
@@ -1068,6 +1070,7 @@ void printAllLessThanAverage(size_t n, int* arr)
 			std::cout << arr[i] << ' ';
 		}
 	}
+	std::cout << std::endl;
 }
 int main()
 {
