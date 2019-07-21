@@ -1029,11 +1029,11 @@ int main()
 	return 0;
 } //extra question answer: 10; The program will always quess the number in no more than 10 guesses, because 2^10=1024>1000.
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.01 & 4.02 & 4.03
+//Task 4.01 & 4.02 & 4.03 & 4.04
 #include <iostream>
-
+#include <limits>
 void fillArr(size_t n, int* arr)
-{ 
+{
 	for (size_t i = 0; i < n; i++)
 	{
 		int num;
@@ -1043,17 +1043,19 @@ void fillArr(size_t n, int* arr)
 }
 void printArrReverse(size_t n, int* arr)
 { //Task 4.01
+	std::cout << "Elements in reverse order: ";
 	for (size_t i = 0; i < n; i++)
 	{
-		std::cout << arr[n-i-1] << ' ';
+		std::cout << arr[n - i - 1] << ' ';
 	}
 	std::cout << std::endl;
 }
 void printEvenElements(size_t n, int* arr)
 { //Task 4.02
+	std::cout << "Even elements: ";
 	for (size_t i = 0; i < n; i++)
 		if (arr[i] % 2 == 0) std::cout << arr[i] << ' ';
-		std::cout << std::endl;
+	std::cout << std::endl;
 }
 void printAllLessThanAverage(size_t n, int* arr)
 { //Task 4.3
@@ -1063,6 +1065,7 @@ void printAllLessThanAverage(size_t n, int* arr)
 		sum += arr[i];
 	}
 	double average = (double)sum / n;
+	std::cout << "Less than average elements: ";
 	for (size_t i = 0; i < n; i++)
 	{
 		if (arr[i] < average)
@@ -1072,17 +1075,32 @@ void printAllLessThanAverage(size_t n, int* arr)
 	}
 	std::cout << std::endl;
 }
+int minMaxElement(size_t n, int* arr, int& max)
+{ // Task 4.04
+	int minEl = std::numeric_limits<int>::max();
+	int maxEl = std::numeric_limits<int>::min();
+	for (size_t i = 0; i < n; i++)
+	{
+		if (arr[i] > maxEl) maxEl = arr[i];
+		if (arr[i] < minEl) minEl = arr[i];
+	}
+	max = maxEl;
+	return minEl;
+}
 int main()
 {
 	size_t n;
 	std::cin >> n;
 	int* arr = new int[n];
 	fillArr(n, arr);
-	
+
 	printArrReverse(n, arr);
 	printEvenElements(n, arr);
 	printAllLessThanAverage(n, arr);
-	
+
+	int maxEl;
+	std::cout << "Max element: " << maxEl << ". Min element " << minMaxElement(n, arr, maxEl) << ".\n";
+
 	delete[] arr;
 
 	return 0;
