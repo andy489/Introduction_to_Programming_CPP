@@ -270,6 +270,13 @@ Example input | Example output
    4 1 2 3 -4 | 2 -4
    5 1 3 0 7 9  | 0 
 
+**4.03.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print only the numbers that are smaller than the average of all numbers.
+
+   Example input | Example output 
+   ------------- | -------------- 
+   7 1 2 3 4 5 6 7 | 1 2 3
+   5 -2 4 -3 6 8  | -2 -3 
+
 **4.12.** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
 
 ## 5. Matrices
