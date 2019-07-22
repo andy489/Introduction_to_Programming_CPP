@@ -1029,22 +1029,35 @@ int main()
 	return 0;
 } //extra question answer: 10; The program will always quess the number in no more than 10 guesses, because 2^10=1024>1000.
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.01
+//Task 4.01 & 4.02
 #include <iostream>
 void printArr(size_t arrLen, int* arr)
-{
-	for (size_t i = 0; i < arrLen; i++)	
-		std::cout << arr[i] << ' ';	
+{ // Task 4.01
+	for (size_t i = 0; i < arrLen; i++)
+		std::cout << arr[i] << ' ';
+	std::cout << std::endl;
 }
+void reverseArr(size_t n, int* arr)
+{ // Task 4.02
+	for (size_t i = 0; i < n/2; i++)
+	{
+		std::swap(arr[i], arr[n - i - 1]);
+	}
+}
+
 int main()
 {
 	int arr[6] = { -3,4,58,12,-4,9 };
 	size_t arrLen = sizeof(arr) / sizeof(arr[0]);
 	printArr(arrLen, arr);
+
+	reverseArr(arrLen, arr);
+	printArr(arrLen, arr);
+
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.02 & 4.03 & 4.04 & 4.05
+//Task 4.03 & 4.04 & 4.05 & 4.06
 #include <iostream>
 #include <limits>
 void fillArr(size_t n, int* arr)
@@ -1057,7 +1070,7 @@ void fillArr(size_t n, int* arr)
 	}
 }
 void printArrReverse(size_t n, int* arr)
-{ //Task 4.02
+{ //Task 4.03
 	std::cout << "Elements in reverse order: ";
 	for (size_t i = 0; i < n; i++)
 	{
@@ -1066,14 +1079,14 @@ void printArrReverse(size_t n, int* arr)
 	std::cout << std::endl;
 }
 void printEvenElements(size_t n, int* arr)
-{ //Task 4.03
+{ //Task 4.04
 	std::cout << "Even elements: ";
 	for (size_t i = 0; i < n; i++)
 		if (arr[i] % 2 == 0) std::cout << arr[i] << ' ';
 	std::cout << std::endl;
 }
 void printAllLessThanAverage(size_t n, int* arr)
-{ //Task 4.4
+{ //Task 4.05
 	int sum(0);
 	for (size_t i = 0; i < n; i++)
 	{
@@ -1091,7 +1104,7 @@ void printAllLessThanAverage(size_t n, int* arr)
 	std::cout << std::endl;
 }
 int minMaxElement(size_t n, int* arr, int& max)
-{ // Task 4.05
+{ // Task 4.06
 	int minEl = std::numeric_limits<int>::max();
 	int maxEl = std::numeric_limits<int>::min();
 	for (size_t i = 0; i < n; i++)
