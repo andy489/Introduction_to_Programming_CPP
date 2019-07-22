@@ -322,7 +322,7 @@ Type | Description
    Mode | Most frequent value in a data set  
    
 
-[More about Median and Mode of a set of data values](https://www.khanacademy.org/math/in-in-class-7th-math-cbse/in-in-7th-data-handling/in-in-7th-data-handling-mean-median-basics/a/mean-median-and-mode-review?utm_account=Grant&utm_campaignname=Grant_Math_Dynamic&gclid=Cj0KCQjwvdXpBRCoARIsAMJSKqLVAk3oh5QcLGBqsu8gQXeRzaS8axXqg6_6cC5blZb6np86HGShZSYaAhoOEALw_wcB "Markdown Tutorial")
+[More about Median and Mode of a set of data values here](https://www.khanacademy.org/math/in-in-class-7th-math-cbse/in-in-7th-data-handling/in-in-7th-data-handling-mean-median-basics/a/mean-median-and-mode-review?utm_account=Grant&utm_campaignname=Grant_Math_Dynamic&gclid=Cj0KCQjwvdXpBRCoARIsAMJSKqLVAk3oh5QcLGBqsu8gQXeRzaS8axXqg6_6cC5blZb6np86HGShZSYaAhoOEALw_wcB "Markdown Tutorial")
 
 **4.11.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and determine if the given array is hacksaw. We call a sequence of numbers hacksaw if the following is true: <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0<a_1>a_2<a_3>a_4<a_5...a_n"> or <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0>a_1<a_2>a_3<a_4>a_5...a_n">
 
