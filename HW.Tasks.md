@@ -158,4 +158,4 @@
       <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_3=(0,0,10,9)">             
     
   Да не се извежда нищо в конзолата от функцията F (а само от main). Функцията трябва да симулира метода на Карл Фридрих Гаус 
-  за решаване на система линейни уравнения. https://en.wikipedia.org/wiki/Gaussian_elimination                                     
+  за решаване на система линейни уравнения. [More information about the method here](https://en.wikipedia.org/wiki/Gaussian_elimination "Markdown Tutorial")                                       
