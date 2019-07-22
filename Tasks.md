@@ -152,8 +152,6 @@ Write a program which calculates how many times Kaloyan has played football duri
 <details><summary>Example input/output</summary>
 <p>
 
-Input
-
 input | output
 ------------ | -------------
 leap | 45
