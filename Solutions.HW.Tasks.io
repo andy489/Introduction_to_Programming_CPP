@@ -78,7 +78,6 @@ int main()
 	int number;
 	short digit;
 	std::cout << "Enter an integer number: " << std::endl;
-
 	while (!(std::cin >> number))
 	{
 		std::cin.clear(); // reset input
