@@ -306,7 +306,13 @@ Example input | Example output
 
 **4.09** Write a function which takes two arguments - an int array and its size, and returns its median.
 
-**4.10** Write a function which takes two arguments - an int array and its size, and returns its mode(s). Vector and algorithm librariesare allowed, because the modes can be more than one.
+**4.10** Write a function which takes two arguments - an int array and its size, and returns its mode(s). "vector" and "algorithm" libraries are allowed, because the array can have more than one mode.
+
+Example input | Example output 
+   ------------- | -------------- 
+   1 2 3 4 4 5 | 4
+   22 3 11.9 22 3 4.5 -12 3 | 22 3
+   0 1 2 3  | no mode  
 
 **4.11.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and determine if the given array is hacksaw. We call a sequence of numbers hacksaw if the following is true: <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0<a_1>a_2<a_3>a_4<a_5...a_n"> or <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0>a_1<a_2>a_3<a_4>a_5...a_n">
 
