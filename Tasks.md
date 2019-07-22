@@ -288,6 +288,8 @@ Example input | Example output
    6 -2 -1 0 1 3 4 | 4 -2
    1 4 | 4 4
 
+**4.07.** Write a function which takes three arguments - two double arrays - *source* and *destination* and unsigned *s* - size of the source. The function has to copy all elements from *source* to *destination* (assume destination is big enough).
+
 **4.11.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and determine if the given array is hacksaw. We call a sequence of numbers hacksaw if the following is true: <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0<a_1>a_2<a_3>a_4<a_5...a_n"> or <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0>a_1<a_2>a_3<a_4>a_5...a_n">
 
    Example input | Example output 
