@@ -256,28 +256,30 @@ Example input | Example output
                                            
 ## 4. Arrays
 
-**4.01.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print the contents of the array in reverse.
+**4.01.** Write a function which takes two arguments - an array and its size and prints all elements of the array on the console.   
+
+**4.02.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print the contents of the array in reverse.
 
    Example input | Example output 
    ------------- | -------------- 
    4 2 4 6 8 | 8 6 4 2
    5 1 0 1 0 -1 | -1 0 1 0 1 
 
-**4.02.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print only the even numbers.
+**4.03.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print only the even numbers.
 
    Example input | Example output 
    ------------- | -------------- 
    4 1 2 3 -4 | 2 -4
    5 1 3 0 7 9  | 0 
 
-**4.03.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print only the numbers that are smaller than the average of all numbers.
+**4.04.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print only the numbers that are smaller than the average of all numbers.
 
    Example input | Example output 
    ------------- | -------------- 
    7 1 2 3 4 5 6 7 | 1 2 3
    5 -2 4 -3 6 8  | -2 -3 
    
-**4.04.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print the maximum and minimum of them.
+**4.05.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print the maximum and minimum of them.
 
    Example input | Example output 
    ------------- | -------------- 
