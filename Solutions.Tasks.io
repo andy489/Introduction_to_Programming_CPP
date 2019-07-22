@@ -1157,7 +1157,7 @@ int main()
 //Task 4.08
 #include <iostream>
 void bubbleSort(int* arr, size_t n)
-{
+{ //first way
 	while (true)
 	{
 		bool swapped = false;
@@ -1172,6 +1172,17 @@ void bubbleSort(int* arr, size_t n)
 		if (!swapped) break;		
 	}
 }
+void selectionSort(int* arr, size_t n)
+{ //second way
+	for (size_t i = 0; i < n - 1; i++)
+	{
+		size_t min = i;
+		for (size_t j = i + 1; j < n; j++)
+			if (arr[j] < arr[min])
+				min = j;
+		std::swap(arr[i], arr[min]);
+	}
+}
 void printArr(int* arr, size_t n)
 {
 	for (size_t i = 0; i < n; i++)	
@@ -1184,6 +1195,7 @@ int main()
 	size_t arrLen = sizeof(arr) / sizeof(arr[0]);	
 	printArr(arr, arrLen);
 	bubbleSort(arr, arrLen);
+	//selectionSort(arr, arrLen);
 	printArr(arr, arrLen);
 	return 0;
 }
