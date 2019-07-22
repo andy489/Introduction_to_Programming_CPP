@@ -1200,6 +1200,74 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 4.09
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <sstream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+double median(double* arr, size_t n)
+{
+	double median;
+	if (n % 2 == 0) median = (arr[n / 2 - 1] + arr[n / 2]) / 2.0;
+	else median = arr[n / 2];
+	return median;
+}
+vector<double> modes(double* arr, size_t n, vector<double>modes)
+{
+	size_t maxCount(0);
+	double maxCountEl;
+	for (size_t i = 0; i < n; i++)
+	{
+		double currCount(0), currEl(0.0);
+		currEl = arr[i];
+		for (size_t j = 0; j < n; j++)
+		{
+			if (currEl == arr[j]) currCount++;
+		}
+		if (currCount >= maxCount)
+		{
+			if (currCount == maxCount)
+			{				
+					if (std::find(modes.begin(), modes.end(), currEl) != modes.end())
+					{
+						continue;
+					}
+					else
+					{						
+						modes.push_back(currEl);
+					}				
+			}
+			else
+			{
+				modes.clear();
+				modes.push_back(currEl);
+				maxCount = currCount;
+				maxCountEl = arr[i];
+			}
+
+		}
+	}
+	return modes;
+}
+int main()
+{
+	double arr[6] = { 1,2,3,3,5,9 };
+	size_t arrLen = sizeof(arr) / sizeof(arr[0]);
+
+	std::cout << "Median of the statistical order is: " << median(arr, arrLen)
+		<< ";\nMode of the statistical order is: ";
+
+	vector<double> newModes = modes(arr, arrLen, newModes);
+
+	for (size_t i = 0; i < newModes.size(); i++)
+	{
+		std::cout << newModes[i] << ' ';
+	}
+	return 0;
+}
 
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 4.11
