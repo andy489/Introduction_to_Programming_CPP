@@ -1136,7 +1136,7 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 4.07
 #include <iostream>
-void copy(int* firstArr, int* secondArr, size_t firstArrLen)
+void copy(double* firstArr, double* secondArr, size_t firstArrLen)
 {
 	for (size_t i = 0; i < firstArrLen; i++)
 		secondArr[i] = firstArr[i];
@@ -1144,10 +1144,10 @@ void copy(int* firstArr, int* secondArr, size_t firstArrLen)
 }
 int main()
 {
-	int firstArr[6] = { -3,4,58,12,-4,9 };
+	double firstArr[6] = { -3,4,58,12,-4,9 };
 	const size_t s = sizeof(firstArr) / sizeof(firstArr[0]);
 	const size_t secondArrLen = 2 * s;
-	int secondArr[secondArrLen];
+	double secondArr[secondArrLen];
 
 	copy(firstArr, secondArr, s);
 
