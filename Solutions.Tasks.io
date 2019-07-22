@@ -1204,39 +1204,30 @@ int main()
 #include <iostream>
 #include <vector>
 #include <algorithm>
-using namespace std;
 double median(double* arr, size_t n)
-{
+{ //Task 4.09
 	double median;
 	if (n % 2 == 0) median = (arr[n / 2 - 1] + arr[n / 2]) / 2.0;
 	else median = arr[n / 2];
 	return median;
 }
-vector<double> modes(double* arr, size_t n)
-{
-	vector<double>modes;
+std::vector<double> modes(double* arr, size_t n)
+{ //Task 4.10 - brute force method without sorting data
+	std::vector<double>modes;
 	size_t maxCount(0);
 	double maxCountEl;
 	for (size_t i = 0; i < n; i++)
 	{
-		double currCount(0), currEl(0.0);
+		size_t currCount(0); double currEl(0.0);
 		currEl = arr[i];
 		for (size_t j = 0; j < n; j++)
-		{
 			if (currEl == arr[j]) currCount++;
-		}
 		if (currCount >= maxCount)
 		{
 			if (currCount == maxCount)
 			{
-				if (std::find(modes.begin(), modes.end(), currEl) != modes.end())
-				{
-					continue;
-				}
-				else
-				{
-					modes.push_back(currEl);
-				}
+				if (std::find(modes.begin(), modes.end(), currEl) != modes.end()) continue;
+				else modes.push_back(currEl);
 			}
 			else
 			{
@@ -1245,25 +1236,20 @@ vector<double> modes(double* arr, size_t n)
 				maxCount = currCount;
 				maxCountEl = arr[i];
 			}
-
 		}
 	}
 	return modes;
 }
 int main()
 {
-	double arr[6] = { 1,2,3,4,5,9 };
+	double arr[5] = { 1,2,3,5,1};
 	size_t arrLen = sizeof(arr) / sizeof(arr[0]);
 
 	std::cout << "Median of the statistical order is: " << median(arr, arrLen)
 		<< ";\n";
+	std::vector<double> newModes = modes(arr, arrLen);
 
-	vector<double> newModes = modes(arr, arrLen);
-
-	if (newModes.size() == 1)
-	{
-		std::cout << "Mode of the statistical order is : " << newModes[0]<<'.';
-	}
+	if (newModes.size() == 1) std::cout << "Mode of the statistical order is : " << newModes[0] << '.';
 	else if (newModes.size() < arrLen)
 	{
 		std::cout << "Modes of the statistical order are : ";
@@ -1278,16 +1264,79 @@ int main()
 		}
 		std::cout << '.';
 	}
-	else
-	{
-		std::cout << "The statistical order has no modes.";
-	}
-
+	else std::cout << "The statistical order has no modes.";
 	return 0;
 }
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 4.10 second way - sorting the data
+#include <iostream>
+void bubbleSort(double* arr, size_t n)
+{
+	while (true)
+	{
+		bool swapped = false;
+		for (size_t i = 0; i < n - 1; i++)
+		{
+			if (arr[i] > arr[i + 1])
+			{
+				std::swap(arr[i], arr[i + 1]);
+				swapped = true;
+			}
+		}
+		if (!swapped) break;
+	}
+}
+void modes(double* arr, size_t n)
+{
+	double* modes = new double[n]; // maximum n-1 modes (if n modes, then no mode)
+	size_t indexModes = 0;
+	bubbleSort(arr, n); // sorting the aray
+	size_t maxCount(0), currCount(0);
+	double maxCountEl, currCountEl;
 
-
-
+	for (size_t i = 0; i < n; i++)
+	{
+		for (size_t j = i; j < n; j++)
+		{
+			if (arr[i] == arr[j])
+			{
+				currCountEl = arr[i];
+				currCount++;
+			}
+			else break;
+		}
+		if (currCount >= maxCount)
+		{
+			maxCountEl = currCountEl;
+			if (currCount > maxCount)
+			{
+				indexModes = 0;
+				maxCount = currCount;				
+				modes[indexModes] = maxCountEl;
+				indexModes++;
+			}
+			else
+			{
+				modes[indexModes] = maxCountEl;
+				indexModes++;
+			}
+		}
+		i = i + currCount-1;
+		currCount = 0;
+	}
+	for (size_t i = 0; i < indexModes; i++)
+	{
+		std::cout << modes[i] << ' ';
+	}
+	delete[] modes;
+}
+int main()
+{
+	double arr[6] = { 2,-3,4.5,6,4.5,2 };
+	size_t arrLen = sizeof(arr) / sizeof(arr[0]);
+	modes(arr, arrLen);
+	return 0;
+}
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 4.11
 #include <iostream>
