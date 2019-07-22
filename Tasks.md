@@ -149,6 +149,11 @@ Write a program which calculates how many times Kaloyan has played football duri
 
   - The third line contains an integer number h - the number of weekends in which Kaloyan travels to his hometown.
 
+<details><summary>Example input/output</summary>
+<p>
+
+Input
+
 input | output
 ------------ | -------------
 leap | 45
@@ -160,6 +165,9 @@ input | output
 normal | 44
 11 | 
 6 | 
+
+</p>
+</details>
 
 **2.11.** Write a poker-hand program. It should ask the user to enter 5 cards. The program must then tell the user what hand does he have (e.g. flush, quads, etc.).
 
