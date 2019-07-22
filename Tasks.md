@@ -77,7 +77,10 @@ input | output
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=3,b=2,c=1,p=-1,q=2"> | <img src="https://latex.codecogs.com/svg.latex?\Large&space;max=17.00;min=0.67">
 
 **2.09.** A student must go to an exam at a specific time (for example at 9:30). He comes to the exam room in a given arrival time (e.g. 9:40). It is believed that the student came in time if he arrived at the start of the exam or up to half an hour before. If he come earlier than 30 minutes, he is early. If he come after the start of the exam, he is late. Write a program that reads the begining of the exam and time on arrival and prints whether the student has arrived on time, whether he has arrived early or is late and how many hours or minutes has came before or after the exam.
-   
+
+<details><summary>Input/Output explanation</summary>
+<p>
+
 Input
 
 The concole reads 4 unsigned integer numbers (one in each row), entered by the user:
@@ -132,6 +135,9 @@ input | output
 00 | 
 14 | 
 00 |   
+
+</p>
+</details>
 
 **2.10.** Kaloyan is a student who lives in Sofia and walks from time to time to his hometown. He is very keen on football but busy during business days and playing football only on weekends and holidays. Kaloyan plays in Sofia avery Saturday when he is not at work and does not travel to his hometown, as well as in 2/3 of festive days. He travels to his hometown h times in the year where he plays football with his old friends on Sunday. Kaloyan is not at work 3/4 of the weekends he's in Sofia. On the other hand, through the leap years, Kaloyan plays with 15% more football than normal. We assume that the year has exactly 48 weekends, suitable for football.
 
