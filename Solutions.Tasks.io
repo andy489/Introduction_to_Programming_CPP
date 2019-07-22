@@ -1178,7 +1178,7 @@ void selectionSort(int* arr, size_t n)
 	{
 		size_t min = i;
 		for (size_t j = i + 1; j < n; j++)
-			if (arr[j] < arr[min])
+			if (arr[j] < arr[min]) // if descending ">"
 				min = j;
 		std::swap(arr[i], arr[min]);
 	}
