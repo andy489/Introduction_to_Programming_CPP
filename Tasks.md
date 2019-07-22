@@ -32,7 +32,7 @@ Print a single number on the console: the money that Andy needs to pay for the b
     
 Print on the console one line: 
    
-   - The number of astronauts is between 3 and 10: "The spacecraft holds {number of astronauts} astronauts." 
+   - The number of astronauts is between 3 and 10: "The spacecraft holds `{number of astronauts}` astronauts." 
    - If the number of astronauts is less than 3: "The spacecraft is too small." 
    - If the number of astronauts is greater than 10: "The spacecraft is too big."
 
