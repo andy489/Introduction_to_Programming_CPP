@@ -1228,15 +1228,15 @@ vector<double> modes(double* arr, size_t n)
 		if (currCount >= maxCount)
 		{
 			if (currCount == maxCount)
-			{				
-					if (std::find(modes.begin(), modes.end(), currEl) != modes.end())
-					{
-						continue;
-					}
-					else
-					{						
-						modes.push_back(currEl);
-					}				
+			{
+				if (std::find(modes.begin(), modes.end(), currEl) != modes.end())
+				{
+					continue;
+				}
+				else
+				{
+					modes.push_back(currEl);
+				}
 			}
 			else
 			{
@@ -1252,25 +1252,40 @@ vector<double> modes(double* arr, size_t n)
 }
 int main()
 {
-	double arr[6] = { 1,3,3,4,9,9 };
+	double arr[6] = { 1,2,3,4,5,9 };
 	size_t arrLen = sizeof(arr) / sizeof(arr[0]);
 
 	std::cout << "Median of the statistical order is: " << median(arr, arrLen)
-		<< ";\nMode of the statistical order is: ";
+		<< ";\n";
 
 	vector<double> newModes = modes(arr, arrLen);
 
-	for (size_t i = 0; i < newModes.size(); i++)
+	if (newModes.size() == 1)
 	{
-		if (i==newModes.size()-1)
-		{
-			std::cout << newModes[i];
-			break;
-		}
-		std::cout << newModes[i] << ", ";
+		std::cout << "Mode of the statistical order is : " << newModes[0]<<'.';
 	}
+	else if (newModes.size() < arrLen)
+	{
+		std::cout << "Modes of the statistical order are : ";
+		for (size_t i = 0; i < newModes.size(); i++)
+		{
+			if (i == newModes.size() - 1)
+			{
+				std::cout << newModes[i];
+				break;
+			}
+			std::cout << newModes[i] << ", ";
+		}
+		std::cout << '.';
+	}
+	else
+	{
+		std::cout << "The statistical order has no modes.";
+	}
+
 	return 0;
 }
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------
