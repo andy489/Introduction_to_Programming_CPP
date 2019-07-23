@@ -348,7 +348,7 @@ Type | Description
    -4 -2 8 9 0 1 2 3 -4 2| -4 2 8 9
    3 9 0 2 1 3 4 6 9  | 1 3 4 6 9 
 
-**4.15.** Write a function which prints all the combinations of elements from an array of integers arr with sum equal to a natural number N.
+**4.15.** Write a function which prints all the combinations of elements from an array of integers arr, with sum equals to a natural number N.
 
 ## 5. Matrices
 
