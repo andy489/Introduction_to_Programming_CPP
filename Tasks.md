@@ -350,7 +350,7 @@ Type | Description
 
 **4.15.** Write a function which prints all the combinations of elements from an array of integers arr, with sum equals to a natural number N.
 
-**4.16.** Write a function with signature *size_t* checkNums(long num1, long num2)* , which returns a pointer to an array containing all the digits encountered both in num1 and num2. 
+**4.16.** Write a function with signature *size_t checkNums(long num1, long num2)* , which returns a pointer to an array containing all the digits encountered both in num1 and num2. 
 
 ## 5. Matrices
 
