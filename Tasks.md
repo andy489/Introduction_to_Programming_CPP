@@ -265,6 +265,8 @@ Example input | Example output
                                       *
 
 **3.16.** Ask a friend to take a piece of paper and ***write*** down a number from 1 to 1000, without showing it to you. Write a program that guesses the written number only by asking questions like “ ***Is your number bigger than {arbitrary number of your choice}?*** ”, etc. if your question contains the correct answer, then your friend needs to answer with “ ***that's the number!*** ”, otherwise with “ ***yes*** ” or “ ***no*** ”. Assuming your friend is not lying, how many questions will your program ask in the worst case?
+
+**3.17.** Write a function whith signature *double calc(double a, double b, double eps, long end)*, which calculates <img src="https://latex.codecogs.com/svg.latex?\Large&space;x_k=\frac{1}{5}\left(x_{k-1}+\frac{x_{k-1}}{x_{k-2}}\right),k=3,4,...;x_1=a>0,x_2=b">. The calculations end when <img src="https://latex.codecogs.com/svg.latex?\Large&space;|x_k-x_{k-1}|<\epsilon">. If k becomes greater than n - the function must return a code for error.
                                            
 ## 4. Arrays
 
