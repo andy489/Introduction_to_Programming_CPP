@@ -341,6 +341,11 @@ Type | Description
 
 **4.14.** Write a program which prints on the console the elements of the longest strictly increasing subsequence in a locally defined array. In case there are two sequences with the same length, print the first one.
 
+   Example input | Example output 
+   ------------- | -------------- 
+   -4 -2 8 9 0 1 2 3 -4 2| -4 2 8 9
+   3 9 0 2 1 3 4 6 9  | 1 3 4 6 9 
+
 ## 5. Matrices
 
 **5.01.** 
