@@ -352,6 +352,8 @@ Type | Description
 
 **4.16.** Write a function with signature *size_t checkNums(long num1, long num2)* , which returns a pointer to an array containing all the digits encountered both in num1 and num2. 
 
+**4.17.** Write a bool function which chechs whether a set is a subset of another set.
+
 ## 5. Matrices
 
 **5.01.** 
