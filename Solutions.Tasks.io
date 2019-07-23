@@ -1517,9 +1517,10 @@ size_t indexLongestIncreasingSubsequence(int* arr, size_t arrLen, size_t& len)
 	for (size_t i = 0; i < arrLen; i++)
 	{
 		currIndex = i;
-		for (size_t j = i; j < arrLen - maxCount; j++)
+		for (size_t j = i; j < arrLen; j++)
 		{
-			if (arr[j] < arr[j + 1]) currCount++;			
+			if (arrLen - i <= maxCount) goto end; // optimization
+			if (arr[j] < arr[j + 1]) currCount++;
 			else
 			{
 				i = j;
@@ -1534,18 +1535,18 @@ size_t indexLongestIncreasingSubsequence(int* arr, size_t arrLen, size_t& len)
 		currIndex = 0;
 		currCount = 0;
 	}
-	len = maxCount;
+end:len = maxCount;
 	return maxIndex;
 }
 void print(int* arr, size_t s, size_t e)
 {
 	for (size_t i = s; i <= s + e; i++)
 		std::cout << arr[i] << ' ';
-	std::cout<<std::endl;
+	std::cout << std::endl;
 }
 int main()
 {
-	int arr[] = { -2,3,4,3,1,3,4,45,2,-5,43,3,2,7,8,12,3,535 };
+	int arr[] = { 1,2,3,1,2,3,4,5,1,2,3,4};
 	size_t arrLen = sizeof(arr) / sizeof(arr[0]);
 
 	size_t end;
