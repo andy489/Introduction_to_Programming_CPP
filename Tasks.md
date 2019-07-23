@@ -1,5 +1,5 @@
 # TASKS
-Personal collection of exercise tasks.
+*Exercise tasks*
   
 ## 1. Simple operations and calculations. Primitive data types.
 **1.01.** Write a program which initializes 2 variables and then swaps their values.
@@ -10,7 +10,7 @@ Personal collection of exercise tasks.
  
 **1.04.** Write a program which asks the user for three numbers a, d and n and prints the sum of the first n numbers of arithmetic progression with starting number a and difference d.
 
-**1.05.** Andy decides to make a party and goes to the alcohol market to buy beer, wine, brandy and whiskey. On the console he inputs the price of the whiskey (lv./liter), and the quantities of the products, which he has to buy (liters). Write a program that calculates how much money he needs to pay for the bill, knowing that:
+**1.05.** Yana decides to make a party and goes to the alcohol market to buy beer, wine, brandy and whiskey. On the console she inputs the price of the whiskey (lv./liter), and the quantities of the products, which she has to buy (liters). Write a program that calculates how much money she needs to pay for the bill, knowing that:
 
   - the price of the brandy is half-lower than this of the whiskey;
 
@@ -18,7 +18,7 @@ Personal collection of exercise tasks.
 
   - the price of the beer is with 80% cheaper than this of the brandy;
 
-Print a single number on the console: the money that Andy needs to pay for the bill, formatted to the second digit after the floating point.
+Print a single number on the console: the money that Yana needs to pay for the bill, formatted to the second digit after the floating point.
 
 
 ## 2. Conditional statements (if/else if/else/switch). Nested conditional statements 
@@ -225,7 +225,7 @@ Example input | Example output
     7 8 9                       9  10 11 12
                                 13 14 15 16
                                 
-**3.11.** Wtire a program which asks the user for a number n and then prints a triangle with numbers with as many rows as n. Align all numbers in the triangle!
+**3.11.** Wtire a program which asks the user for a number n and then prints a triangle with numbers with as many rows as n. This triangle is named after [Robert Floyd](https://en.wikipedia.org/wiki/Floyd%27s_triangle "Markdown Tutorial") . Align all numbers in the triangle!
 
 • For n=4, the output must be;     • For n=7, the output must be (note how all columns are aligned)
 
