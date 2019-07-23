@@ -409,3 +409,5 @@ Conversion (function) | Do
 ------------ | -------------
 asctime | Convert tm structure to string
 ctime | Convert time_t value to string
+
+**8.02.** Write a program which prints all subsets of a set.
