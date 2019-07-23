@@ -1029,6 +1029,32 @@ int main()
 	return 0;
 } //extra question answer: 10; The program will always quess the number in no more than 10 guesses, because 2^10=1024>1000.
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 3.17
+#include <iostream>
+double myAbs(double a)
+{
+	return a < 0 ? -a : a;
+}
+double calc(double a, double b,	double eps, long end)
+{
+	double xk1 = a;
+	double xk2 = b;
+	double xk = 0;
+	for (long k = 3; myAbs(xk1 - xk2) >= eps; k++)
+	{
+		xk = (1.0/5) * (xk1 + xk1 / xk2);
+		xk2 = xk1;
+		xk1 = xk;
+		if (k > end) return -1;		
+	}
+	return xk;
+}
+int main()
+{
+	std::cout << calc(2, 3, 0.001, 100);
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
 //Task 4.01 & 4.02
 #include <iostream>
 void printArr(size_t arrLen, int* arr)
