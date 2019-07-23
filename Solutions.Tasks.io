@@ -17,6 +17,30 @@ int main()
 }
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 1.02
+#include <iostream>
+#include <cmath>
+double medianLen(double a, double b, double c)
+{
+	double median = (1.0 / 2)*sqrt(2 * pow(c, 2) + 2 * pow(b, 2) - pow(a, 2));
+	return median;
+}
+int main()
+{
+	double a, b, c;
+	std::cin >> a >> b >> c;
+
+	double m_A = medianLen(a, b, c);
+	double m_B = medianLen(b, c, a);
+	double m_C = medianLen(c, a, b);
+
+	double m_a = medianLen(m_A, m_B, m_C);
+	double m_b = medianLen(m_B, m_C, m_A);
+	double m_c = medianLen(m_C, m_A, m_B);
+
+	std::cout << m_a << "\n" << m_b << "\n" << m_c << "\n";
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 1.03
 #include <iostream> 
 int main()
 {
@@ -33,7 +57,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 1.03
+//Task 1.04
 #include <iostream> 
 #include <cmath>
 int main()
@@ -47,7 +71,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 1.04
+//Task 1.05
 #include <iostream> 
 int main()
 {
@@ -61,7 +85,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 1.5
+//Task 1.06
 #include <iostream> 
 int main()
 {
