@@ -1079,6 +1079,31 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 3.18
+#include <iostream>
+double myAbs(double a) { return a > 0 ? a : -a; }
+double calcNepierConst(double x, double eps)
+{
+	double x1(1), S(1);
+	size_t i(0);
+	while (myAbs(x1) >= eps)
+	{
+		i++;
+		x1 *= x / i; // building collectible
+		S += x1; // adding collectible to the sum "S"
+	}
+	return S;
+}
+int main()
+{
+	double x, eps;
+	std::cin >> x >> eps;
+
+	std::cout << calcNepierConst(x, eps) << std::endl;
+	//for finding aproximation of e, just put x=1, eps=0.00001
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
 //Task 4.01 & 4.02
 #include <iostream>
 void printArr(size_t arrLen, int* arr)
