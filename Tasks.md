@@ -362,7 +362,7 @@ Type | Description
 
 ## 5. Matrices
 
-**5.01.** We say that in the elements of the matrix <img src="https://latex.codecogs.com/svg.latex?A_{nXm}"> there is a local minimum(<img src="https://latex.codecogs.com/svg.latex?a_{ij}">) for <img src="https://latex.codecogs.com/svg.latex?A">, if the elements that stay on it's left, right, up and down position are bigger than it. Write a program that finds and outputs all the elements of the matrix <img src="https://latex.codecogs.com/svg.latex?A"> for which <img src="https://latex.codecogs.com/svg.latex?A"> has a local minimum.
+**5.01.** We say that in the elements of the matrix <img src="https://latex.codecogs.com/svg.latex?A_{nXm}"> there is a local minimum (<img src="https://latex.codecogs.com/svg.latex?a_{ij}">) for <img src="https://latex.codecogs.com/svg.latex?A">, if the elements that stay on it's left, right, up and down position are bigger than it. Write a program that finds and outputs all the elements of the matrix <img src="https://latex.codecogs.com/svg.latex?A"> for which <img src="https://latex.codecogs.com/svg.latex?A"> has a local minimum.
 
 ## 6. Strings
 
