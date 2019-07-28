@@ -1849,6 +1849,79 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 4.19
+#include <iostream>
+#include <cmath>
+double* definePoly(char& symbol, char& coef, int& k)
+{
+	std::cout << "deg(" << symbol << "(x)) = ";
+	std::cin >> k;
+	symbol++;
+	double* a = new double[k];
+	for (int i = k; i >= 0; i--)
+	{
+		std::cout << coef << "_{" << i << "} = ";
+		std::cin >> a[i];
+	}
+	coef++;
+	return a;
+}
+void printPoly(int n, double* P, char& symbol)
+{
+	std::cout << "\n";
+	std::cout << symbol << "(x)=";
+	for (int i = n; i >= 0; i--)
+	{
+		if (P[i] != 0)
+		{
+			if (P[i] > 0)
+			{
+				std::cout << '+';
+			}
+			std::cout.setf(std::ios::fixed);
+			std::cout.precision(2);
+			std::cout << P[i] << ".x^{" << i << "}";
+		}
+	}
+	std::cout << "\n\n";
+}
+double* sumPoly(double* a, int n, double* b, int m)
+{
+	double* c = new double[(n + m + abs(n - m)) / 2];
+	if (n > m)
+	{
+		for (int i = 0; i <= m; i++) c[i] = a[i] + b[i];
+		for (int i = m + 1; i <= n; i++) c[i] = a[i];
+	}
+	else if (n < m)
+	{
+		for (int i = 0; i <= n; i++) c[i] = a[i] + b[i];
+		for (int i = n + 1; i <= m; i++) c[i] = a[i];
+	}
+	else for (int i = 0; i <= n; i++)c[i] = a[i] + b[i];
+	return c;
+}
+int main()
+{
+	int n, m;
+	char symbol('P'), coef('a');
+
+	double* firstPoly = definePoly(symbol, coef, n);
+	symbol--;
+	printPoly(n, firstPoly, symbol);
+	symbol++;
+	double* secondPoly = definePoly(symbol, coef, m);
+	symbol--;
+	printPoly(m, secondPoly, symbol);
+
+	double* thirdPoly = sumPoly(firstPoly, n, secondPoly, m);
+
+	symbol++;
+	printPoly((n + m + abs(n - m)) / 2, sumPoly(firstPoly, n, secondPoly, m), symbol);
+
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
 //Task 5.01
 #define ROWS 6
 #define COLUMNS 6
