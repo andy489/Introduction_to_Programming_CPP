@@ -1849,7 +1849,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.19
+//Task 4.19 & 4.20
 #include <iostream>
 #include <cmath>
 double* definePoly(char& symbol, char& coef, int& k)
@@ -1868,7 +1868,7 @@ double* definePoly(char& symbol, char& coef, int& k)
 }
 void printPoly(int n, double* P, char& symbol)
 {
-	std::cout << "\n";
+	symbol--;
 	std::cout << symbol << "(x)=";
 	for (int i = n; i >= 0; i--)
 	{
@@ -1883,10 +1883,12 @@ void printPoly(int n, double* P, char& symbol)
 			std::cout << P[i] << ".x^{" << i << "}";
 		}
 	}
-	std::cout << "\n\n";
+	std::cout << "\n";
+	symbol++;
 }
-double* sumPoly(double* a, int n, double* b, int m)
-{
+double* sumPoly(double* a, int n, double* b, int m, char& symbol)
+{ // Task 4.19
+	symbol++;
 	double* c = new double[(n + m + abs(n - m)) / 2];
 	if (n > m)
 	{
@@ -1896,10 +1898,23 @@ double* sumPoly(double* a, int n, double* b, int m)
 	else if (n < m)
 	{
 		for (int i = 0; i <= n; i++) c[i] = a[i] + b[i];
-		for (int i = n + 1; i <= m; i++) c[i] = a[i];
+		for (int i = n + 1; i <= m; i++) c[i] = b[i];
 	}
 	else for (int i = 0; i <= n; i++)c[i] = a[i] + b[i];
 	return c;
+}
+double* prodPoly(double* a, int n, double* b, int m, char& symbol)
+{ // Task 4.20
+	symbol++;
+	double* d = new double[n + m];
+	for (int p = 0; p <= n + m; p++)
+	{
+		d[p] = 0;
+		for (int i = 0; i <= n; i++)
+			for (int j = 0; j <= m; j++)
+				if (i + j == p) d[p] = d[p] + a[i] * b[j];
+	}
+	return d;
 }
 int main()
 {
@@ -1907,20 +1922,33 @@ int main()
 	char symbol('P'), coef('a');
 
 	double* firstPoly = definePoly(symbol, coef, n);
-	symbol--;
 	printPoly(n, firstPoly, symbol);
-	symbol++;
+
 	double* secondPoly = definePoly(symbol, coef, m);
-	symbol--;
 	printPoly(m, secondPoly, symbol);
 
-	double* thirdPoly = sumPoly(firstPoly, n, secondPoly, m);
+	double* sum = sumPoly(firstPoly, n, secondPoly, m, symbol);
+	std::cout << "Sum:\n";
+	printPoly((n + m + abs(n - m)) / 2, sum, symbol);
 
-	symbol++;
-	printPoly((n + m + abs(n - m)) / 2, sumPoly(firstPoly, n, secondPoly, m), symbol);
+	double* prod = prodPoly(firstPoly, n, secondPoly, m, symbol);
+	std::cout << "Product:\n";
+	printPoly(n + m, prod, symbol);
+
+	delete[] firstPoly;
+	delete[] secondPoly;
+	delete[] sum;
+	delete[] prod;
 
 	return 0;
 }
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 5.01
 #define ROWS 6
