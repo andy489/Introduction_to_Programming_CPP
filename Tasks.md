@@ -360,6 +360,8 @@ Type | Description
 
 **4.18.** Given two sequences (of numbers) <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1,b_2,...,b_m"> sorted in ascending order. Write a function that merges the two sequences in one new sequence with ascendingly ordered elements <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_1,c_2,..."> consisting of the elements of the first two sequences. Do not use sorting algorithms. Use the condition that the first two sequences are sorted in ascending order. *The complexity of your function must be <img src="https://latex.codecogs.com/svg.latex?\Theta{(n+m)}">*.
 
+**4.19.** Write a program which finds the sum of the polynomials <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q_m(x)=b_n.x^n+b_{n-1}.x^{n-1}+...+b_1.x+b_0">.
+
 ## 5. Matrices
 
 **5.01.** We say that in the elements of the matrix <img src="https://latex.codecogs.com/svg.latex?A_{nXm}"> there is a local minimum (<img src="https://latex.codecogs.com/svg.latex?a_{ij}">) for <img src="https://latex.codecogs.com/svg.latex?A">, if the elements that stay on it's left, right, up and down position are bigger than it. Write a program that finds and outputs all the elements of the matrix <img src="https://latex.codecogs.com/svg.latex?A"> for which <img src="https://latex.codecogs.com/svg.latex?A"> has a local minimum.
