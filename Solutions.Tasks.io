@@ -1857,7 +1857,7 @@ double* definePoly(char& symbol, char& coef, int& k)
 	std::cout << "deg(" << symbol << "(x)) = ";
 	std::cin >> k;
 	symbol++;
-	double* a = new double[k];
+	double* a = new double[k + 1];
 	for (int i = k; i >= 0; i--)
 	{
 		std::cout << coef << "_{" << i << "} = ";
@@ -1889,7 +1889,7 @@ void printPoly(int n, double* P, char& symbol)
 double* sumPoly(double* a, int n, double* b, int m, char& symbol)
 { // Task 4.19
 	symbol++;
-	double* c = new double[(n + m + abs(n - m)) / 2];
+	double* c = new double[(n + m + abs(n - m)) / 2 + 1];
 	if (n > m)
 	{
 		for (int i = 0; i <= m; i++) c[i] = a[i] + b[i];
@@ -1906,7 +1906,7 @@ double* sumPoly(double* a, int n, double* b, int m, char& symbol)
 double* prodPoly(double* a, int n, double* b, int m, char& symbol)
 { // Task 4.20
 	symbol++;
-	double* d = new double[n + m];
+	double* d = new double[n + m + 1];
 	for (int p = 0; p <= n + m; p++)
 	{
 		d[p] = 0;
