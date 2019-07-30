@@ -2020,48 +2020,44 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-
-
-
-//asd
-
+//Task 5.03
 #include <iostream>
-int** inputMatrix(size_t& rows, size_t& cols)
-{
-	std::cin >> rows >> cols;
-
-	int** matrix = new int*[rows];
-	for (size_t i = 0; i < rows; i++)
+double** inputMatrix(size_t n)
+{ // a)
+	double** matrix = new double*[n];
+	for (size_t i = 0; i < n; i++)
 	{
-		matrix[i] = new int[cols];
+		matrix[i] = new double[n];
 	}
-	for (size_t i = 0; i < rows; i++)
+	for (size_t i = 0; i < n; i++)
 	{
-		for (size_t j = 0; j < cols; j++)
+		for (size_t j = 0; j < n; j++)
 		{
 			std::cin >> matrix[i][j];
 		}
 	}
 	return matrix;
 }
-void printArr(double* arr, size_t len)
-{
-	for (size_t i = 0; i < len; i++)
+double* constructVec(double** matrix, size_t n)
+{ // b)
+	double* vec = new double[n*n];
+	size_t k = 0;
+	for (size_t j = 0; j < n; j++)
 	{
-		std::cout << arr[i] << ' ';
+		for (size_t i = 0; i < n; i++)
+		{
+			vec[k] = matrix[i][j];
+			k++;
+		}
 	}
-	std::cout << std::endl;
+	return vec;
 }
-int main()
-{
-	double arr[] = { 11,0,3,9,5,6,12,4 };
-	size_t len = sizeof(arr) / sizeof(arr[0]);
-
-	size_t p;
-	double min;
-
+void sortVec(double* arr, size_t len)
+{ // c)
 	for (size_t i = 0; i < len - 1; i++)
 	{
+		size_t p;
+		double min;
 		p = i; min = arr[i];
 		size_t j = i + 1;
 		do
@@ -2075,21 +2071,71 @@ int main()
 		} while (j < len);
 		std::swap(arr[p], arr[i]);
 	}
-	printArr(arr, len);
+}
+double** constructMatrix(double* vec, size_t n)
+{ // d)
+	double** matrix = new double*[n];
+	for (size_t i = 0; i < n; i++)
+	{
+		matrix[i] = new double[n];
+	}
+	size_t k = 0;
+	for (size_t i = 0; i < n; i++)
+	{
+		for (size_t j = 0; j < n; j++)
+		{
+			matrix[i][j] = vec[k];
+			k++;
+		}
+	}
+	return matrix;
+}
+void printVec(double* arr, size_t len)
+{
+	for (size_t i = 0; i < len; i++)
+	{
+		std::cout << arr[i] << ' ';
+	}
+	std::cout << std::endl;
+}
+void printMatrix(double** matrix, size_t n)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		for (size_t j = 0; j < n; j++)
+		{
+			std::cout << matrix[i][j] << ' ';
+		}
+		std::cout << std::endl;
+	}
+}
+void releaseMatrix(double** matrix, size_t rows)
+{
+	for (size_t i = 0; i < rows; i++)
+	{
+		delete[] matrix[i];
+	}
+	delete[] matrix;
+}
+int main()
+{
+	size_t n;
+	std::cin >> n;
+	double** A = inputMatrix(n);
+	double* vec = constructVec(A, n);
+	sortVec(vec, n*n);
+	// printVec(vec, n*n);
+	double** B = constructMatrix(vec, n);
+	
+	printMatrix(B, n);
+
+	releaseMatrix(B, n);
+	delete[] vec;
+	releaseMatrix(A, n);
+
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+-------------------------------------------------------------------------------------------------------------------------------
 
 
 -------------------------------------------------------------------------------------------------------------------------------
