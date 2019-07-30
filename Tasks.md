@@ -378,7 +378,7 @@ Type | Description
 
  c) sorts in ascending order the elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">;
  
- d) constructs a new square mamtrix <img src="https://latex.codecogs.com/svg.latex?C"> with size <img src="https://latex.codecogs.com/svg.latex?NxN">, where the elements from the first row coinside with the first <img src="https://latex.codecogs.com/svg.latex?N"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">, the elements from the second row coinside with the second <img src="https://latex.codecogs.com/svg.latex?N"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">, etc., the elements from the last row coinside with the last <img src="https://latex.codecogs.com/svg.latex?N"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">;
+ d) constructs a new square matrix <img src="https://latex.codecogs.com/svg.latex?C"> with size <img src="https://latex.codecogs.com/svg.latex?NxN">, where the elements from the first row coinside with the first <img src="https://latex.codecogs.com/svg.latex?N"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">, the elements from the second row coinside with the second <img src="https://latex.codecogs.com/svg.latex?N"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">, etc., the elements from the last row coinside with the last <img src="https://latex.codecogs.com/svg.latex?N"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">;
  
   e) prints matrix <img src="https://latex.codecogs.com/svg.latex?C"> by rows.
  
