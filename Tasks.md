@@ -374,8 +374,14 @@ Type | Description
 
  a) inputs the elements of a square real matrix <img src="https://latex.codecogs.com/svg.latex?A"> with size <img src="https://latex.codecogs.com/svg.latex?NxN"> by rows ;
  
- b) from the matrix A constructs a vector <img src="https://latex.codecogs.com/svg.latex?\vec{B}=(b_1,b_2,...,b_m)">, where <img src="https://latex.codecogs.com/svg.latex?m=n^2"> and the first <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}"> coincide with the first column of <img src="https://latex.codecogs.com/svg.latex?A">, the second <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?B"> with the second column of <img src="https://latex.codecogs.com/svg.latex?A"> and etc., the last <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?B"> coincide with the last column of <img src="https://latex.codecogs.com/svg.latex?A">;
+ b) from the matrix <img src="https://latex.codecogs.com/svg.latex?A"> constructs a vector <img src="https://latex.codecogs.com/svg.latex?\vec{B}=(b_1,b_2,...,b_m)">, where <img src="https://latex.codecogs.com/svg.latex?m=n^2"> and the first <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}"> coincide with the first column of <img src="https://latex.codecogs.com/svg.latex?A">, the second <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?B"> with the second column of <img src="https://latex.codecogs.com/svg.latex?A"> and etc., the last <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?B"> coincide with the last column of <img src="https://latex.codecogs.com/svg.latex?A">;
 
+ c) sortsin ascending order the elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">;
+ 
+ d) constructs a new square mamtrix <img src="https://latex.codecogs.com/svg.latex?C"> with size <img src="https://latex.codecogs.com/svg.latex?NxN">, where the elements from the first row coinside with the first <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">, the elements from the second row coinside with the second <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">, etc., the elements from the last row coinside with the last <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">;
+ 
+  e) prints matrix <img src="https://latex.codecogs.com/svg.latex?C"> by rows.
+ 
 ## 6. Strings
 
 **6.01.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
