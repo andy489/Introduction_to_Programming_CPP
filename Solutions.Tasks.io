@@ -2099,7 +2099,7 @@ void printVec(double* arr, size_t len)
 	std::cout << std::endl;
 }
 void printMatrix(double** matrix, size_t n)
-{
+{ // e)
 	for (size_t i = 0; i < n; i++)
 	{
 		for (size_t j = 0; j < n; j++)
