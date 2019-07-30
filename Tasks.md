@@ -370,6 +370,12 @@ Type | Description
 
 **5.02.** Write a program which checks and prints the numbers of those rows of a matrix containing at least one negative element.
 
+**5.03.** Write a program which:
+
+ a) inputs the elements of a square real matrix <img src="https://latex.codecogs.com/svg.latex?A"> with size <img src="https://latex.codecogs.com/svg.latex?NxN"> by rows ;
+ 
+ b) from the matrix A constructs a <img src="https://latex.codecogs.com/svg.latex?\vec{B}=(b_1,b_2,...,b_m)">, where <img src="https://latex.codecogs.com/svg.latex?m=n^2"> and the first <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}"> coincide with the first column of <img src="https://latex.codecogs.com/svg.latex?A">, the second <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?B"> with the second column of <img src="https://latex.codecogs.com/svg.latex?A"> and etc., the last <img src="https://latex.codecogs.com/svg.latex?n"> elements of <img src="https://latex.codecogs.com/svg.latex?B"> coincide with the last column of <img src="https://latex.codecogs.com/svg.latex?A">;
+
 ## 6. Strings
 
 **6.01.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
