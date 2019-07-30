@@ -2023,6 +2023,62 @@ int main()
 
 
 
+//asd
+
+#include <iostream>
+int** inputMatrix(size_t& rows, size_t& cols)
+{
+	std::cin >> rows >> cols;
+
+	int** matrix = new int*[rows];
+	for (size_t i = 0; i < rows; i++)
+	{
+		matrix[i] = new int[cols];
+	}
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			std::cin >> matrix[i][j];
+		}
+	}
+	return matrix;
+}
+void printArr(double* arr, size_t len)
+{
+	for (size_t i = 0; i < len; i++)
+	{
+		std::cout << arr[i] << ' ';
+	}
+	std::cout << std::endl;
+}
+int main()
+{
+	double arr[] = { 11,0,3,9,5,6,12,4 };
+	size_t len = sizeof(arr) / sizeof(arr[0]);
+
+	size_t p;
+	double min;
+
+	for (size_t i = 0; i < len - 1; i++)
+	{
+		p = i; min = arr[i];
+		size_t j = i + 1;
+		do
+		{
+			if (arr[j] < min)
+			{
+				min = arr[j];
+				p = j;
+			}
+			j++;
+		} while (j < len);
+		std::swap(arr[p], arr[i]);
+	}
+	printArr(arr, len);
+	return 0;
+}
+
 
 
 
