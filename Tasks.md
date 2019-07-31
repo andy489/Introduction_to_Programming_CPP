@@ -393,6 +393,18 @@ Type | Description
  d) constructs a new square matrix <img src="https://latex.codecogs.com/svg.latex?C"> with size <img src="https://latex.codecogs.com/svg.latex?NxN">, where the elements from the first row coinside with the first <img src="https://latex.codecogs.com/svg.latex?N"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">, the elements from the second row coinside with the second <img src="https://latex.codecogs.com/svg.latex?N"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">, etc., the elements from the last row coinside with the last <img src="https://latex.codecogs.com/svg.latex?N"> elements of <img src="https://latex.codecogs.com/svg.latex?\vec{B}">;
  
   e) prints matrix <img src="https://latex.codecogs.com/svg.latex?C"> by rows.
+  
+  **5.04.** Let A be a n-th order square matrix. Write a program which finds:
+  
+  a) the sum of the elements over the main diagonal;
+  
+  b) the product of the elements under the main diagonal;
+  
+  c) the sum of the positive elements from the main diagonal;
+  
+  d) the product of the elements from the secondary diagonal;
+  
+  e) the sum of the elements outside the secondary diagonal.
  
 ## 6. Strings
 
