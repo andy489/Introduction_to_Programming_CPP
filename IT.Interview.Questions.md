@@ -40,7 +40,7 @@ Zero to the power of zero, denoted by <img src="https://latex.codecogs.com/svg.l
 <details><summary>ANSWER</summary>
 <p>
 
-We have the operator "&" which is bitwise "AND". And knowing that a binary power of two is of the form 100...000 and subtracting one will give you 111...111. Then, when you AND those together, you get zero, such as with:
+We have the operator "&", which is bitwise "AND". Knowing that a binary power of two is of the form 100...000 and subtracting one will give you 111...111. Then, when you AND those together, you get zero, such as with:
  
 	  1000 0000 0000 0000
 	&  111 1111 1111 1111
