@@ -406,8 +406,8 @@ Type | Description
   
   e) the sum of the elements outside the secondary diagonal.
   
-**5.05.** Write a program which erases the k-th column of the matrix <img src="https://latex.codecogs.com/svg.latex?A_{nXm}">.
- 
+**5.05.** Write a program which erases the k-th column of the matrix <img src="https://latex.codecogs.com/svg.latex?A_{nXm}">. Deleting means moving the columns with one to the left and reducing the number of columns by one.
+
 ## 6. Strings
 
 **6.01.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
