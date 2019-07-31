@@ -394,7 +394,7 @@ Type | Description
  
   e) prints matrix <img src="https://latex.codecogs.com/svg.latex?C"> by rows.
   
-  **5.04.** Let A be a n-th order square matrix. Write a program which finds:
+**5.04.** Let A be a n-th order square matrix. Write a program which finds:
   
   a) the sum of the elements over the main diagonal;
   
@@ -405,6 +405,8 @@ Type | Description
   d) the product of the elements from the secondary diagonal;
   
   e) the sum of the elements outside the secondary diagonal.
+  
+**5.05.** Write a program which erases the k-th column of the matrix <img src="https://latex.codecogs.com/svg.latex?A_{nXm}">.
  
 ## 6. Strings
 
