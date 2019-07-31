@@ -452,4 +452,4 @@ ctime | Convert time_t value to string
 
 b) are perfect squares;
 
-c) are Fibonacci's numbers;
+c) are Fibonacci's numbers.
