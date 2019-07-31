@@ -2020,6 +2020,7 @@ int main()
 }
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 4.24 & 4.25 & 4.26
+//Task 4.24 & 4.25
 #include <iostream>
 #include <cmath>
 double* definePoly(char& symbol, char& coef, int& k)
@@ -2144,9 +2145,13 @@ int main()
 	std::cout << "Product:\n";
 	printPoly(n + m, prod, symbol);
 
-	double* pow = powPoly(firstPoly, n, m, symbol);
+	size_t k;
+	std::cout << "Enter power:\n";
+	std::cin >> k;
+
+	double* pow = powPoly(firstPoly, n, k, symbol);
 	std::cout << "Power:\n";
-	printPoly(m*n, pow, symbol);
+	printPoly(n*k, pow, symbol);
 
 	delete[] firstPoly;
 	delete[] secondPoly;
