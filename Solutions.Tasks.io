@@ -2019,7 +2019,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.24 & 4.25
+//Task 4.24 & 4.25 & 4.26
 #include <iostream>
 #include <cmath>
 double* definePoly(char& symbol, char& coef, int& k)
@@ -2086,9 +2086,48 @@ double* prodPoly(double* a, int n, double* b, int m, char& symbol)
 	}
 	return d;
 }
+double* powPoly(double* a, int n, int m, char& symbol)
+{ // Task 4.26
+	symbol++;
+	if (m == 0)
+	{
+		double* powPoly = new double[1];
+		powPoly[0] = 1;
+		return powPoly;
+	}
+	else if (m == 1)
+	{
+		double* powPoly = new double[n + 1];
+		for (int i = 0; i < n + 1; i++)
+		{
+			powPoly[i] = a[i];
+		}
+		return powPoly;
+	}
+	else
+	{
+		double* tempPoly = new double[m*n + 1];
+		for (int i = m * n; i > 0; i--)
+		{
+			tempPoly[i] = 0;
+		}
+		tempPoly[0] = 1;
+
+		double* powPoly = nullptr;
+
+		for (int i = 0; i < m; i++)
+		{
+			powPoly = prodPoly(tempPoly, m*n + 1, a, n, symbol);
+			delete[] tempPoly;
+			tempPoly = powPoly;
+		}
+		return powPoly;
+	}
+}
 int main()
 {
-	int n, m;
+	int n;
+	int m;
 	char symbol('P'), coef('a');
 
 	double* firstPoly = definePoly(symbol, coef, n);
@@ -2105,10 +2144,15 @@ int main()
 	std::cout << "Product:\n";
 	printPoly(n + m, prod, symbol);
 
+	double* pow = powPoly(firstPoly, n, m, symbol);
+	std::cout << "Power:\n";
+	printPoly(m*n, pow, symbol);
+
 	delete[] firstPoly;
 	delete[] secondPoly;
 	delete[] sum;
 	delete[] prod;
+	delete[] pow;
 
 	return 0;
 }
