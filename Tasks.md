@@ -374,7 +374,7 @@ Type | Description
 
 **4.25.** Write a program which finds the product of the polynomials <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q_m(x)=b_n.x^n+b_{n-1}.x^{n-1}+...+b_1.x+b_0">.
 
-**4.26.** Write a program which finds the n-th power of the polynomial <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0">.
+**4.26.** Write a program which finds the k-th power of the polynomial <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0">, where  <img src="https://latex.codecogs.com/svg.latex?\Large&space;k=0,1,2,..."> is a given number.;
 
 ## 5. Matrices
 
