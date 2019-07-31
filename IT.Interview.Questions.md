@@ -41,36 +41,35 @@ Zero to the power of zero, denoted by <img src="https://latex.codecogs.com/svg.l
 <p>
 
 We have the operator "&" which is bitwise "AND". And knowing that a binary power of two is of the form 100...000 and subtracting one will give you 111...111. Then, when you AND those together, you get zero, such as with:
-`` 
-  1000 0000 0000 0000
-&  111 1111 1111 1111
-  ==== ==== ==== ====
-= 0000 0000 0000 0000
-``
+ 
+	  1000 0000 0000 0000
+	&  111 1111 1111 1111
+	  ==== ==== ==== ====
+	= 0000 0000 0000 0000
+
 Any non-power-of-two input value (other than zero) will not give you zero when you perform that operation.
 
 For example, let's try all the 4-bit combinations:
 
-``   <----- binary ---->
- n      n    n-1   n&(n-1)
---   ----   ----   -------
- 0   0000   0111    0000 *
- 1   0001   0000    0000 *
- 2   0010   0001    0000 *
- 3   0011   0010    0010
- 4   0100   0011    0000 *
- 5   0101   0100    0100
- 6   0110   0101    0100
- 7   0111   0110    0110
- 8   1000   0111    0000 *
- 9   1001   1000    1000
-10   1010   1001    1000
-11   1011   1010    1010
-12   1100   1011    1000
-13   1101   1100    1100
-14   1110   1101    1100
-15   1111   1110    1110
-``
+n  |    n |   n-1 |  n&(n-1)
+---- |  ----  |  ----  | ----
+ 0  | 0000 |  0111  |  0000 *
+ 1 |  0001 |  0000  |  0000 *
+ 2 |  0010 |  0001  |  0000 *
+ 3 |  0011 |  0010  |  0010
+ 4 |  0100 |  0011  |  0000 *
+ 5 |  0101 |  0100  |  0100
+ 6 |  0110 |  0101  |  0100
+ 7 |  0111 |  0110  |  0110
+ 8 |  1000 |  0111  |  0000 *
+ 9 |  1001 |  1000  |  1000
+10 |  1010 |  1001  |  1000
+11 |  1011 |  1010  |  1010
+12 |  1100 |  1011  |  1000
+13 |  1101 |  1100  |  1100
+14 |  1110 |  1101  |  1100
+15 |  1111 |  1110   | 1110
+
 You can see that only 0 and the powers of two (1, 2, 4 and 8) result in a 0000/false bit pattern, all others are non-zero or true.  
 
 ***So the answer is that n is neither power of two nor zero.***
