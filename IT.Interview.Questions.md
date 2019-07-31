@@ -35,3 +35,4 @@ Zero to the power of zero, denoted by <img src="https://latex.codecogs.com/svg.l
 </p>
 </details>
 
+**03.** What can we say about a number <img src="https://latex.codecogs.com/svg.latex?\Large&space;x"> if <img src="https://latex.codecogs.com/svg.latex?\Large&space;x&(x-1)">.
