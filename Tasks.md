@@ -314,6 +314,8 @@ Example input | Example output
 
 **4.10.** Two sequences of numbers are given. Write a program that detects how many times the second sequence contains the first one.
 
+**4.11.** Each subsequence of equal numbers in an array is called a train. Write a program that finds the beginning and length of the longest train in an array.
+
 **4.11.** Write a function which takes two arguments - an int array and its size, and sorts the array (in ascending or descending order).
 
 **4.12** Write a function which takes two arguments - an int array and its size, and returns its median.
