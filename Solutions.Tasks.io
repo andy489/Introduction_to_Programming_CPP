@@ -2384,6 +2384,14 @@ void printMatrix(int** matrix, size_t m)
 		std::cout << std::endl;
 	}
 }
+void releaseMatrix(int** A, size_t m)
+{
+	for (size_t i = 0; i < m; i++)
+	{
+		delete[] A[i];
+	}
+	delete[] A;
+}
 int sumOverMainDiagonal(int** A, size_t m)
 { // a)
 	int sum = 0;
@@ -2469,6 +2477,9 @@ int main()
 
 	int sumOutSecDiag = sumElementsOutOfSecDiag(A, n);
 	std::cout << "Sum of elements out of the second diagonal is: " << sumOutSecDiag << "\n";
+
+
+	releaseMatrix(A, n);
 
 	return 0;
 }
