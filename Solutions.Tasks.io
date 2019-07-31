@@ -1377,6 +1377,30 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 4.12
 #include <iostream>
+bool isArrSymetric(char* arr, size_t len)
+{
+	for (size_t i = 0; i < (size_t)(len / 2); i++)
+	{
+		if (arr[i] != arr[len - i - 1])
+		{
+			return false;
+		}
+	}
+	return true;
+}
+int main()
+{
+	char arr[] = { 1,2,4,5,4,2,1 };
+	size_t len = sizeof(arr) / sizeof(arr[0]);
+
+	isArrSymetric(arr, len) ? std::cout << "array is symetric\n" :
+		std::cout << "array is not symetric\n";
+
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 4.13
+#include <iostream>
 void bubbleSort(int* arr, size_t n)
 { //first way
 	while (true)
@@ -1421,19 +1445,19 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.13 & 4.14
+//Task 4.14 & 4.15
 #include <iostream>
 #include <vector>
 #include <algorithm>
 double median(double* arr, size_t n)
-{ //Task 4.13
+{ //Task 4.14
 	double median;
 	if (n % 2 == 0) median = (arr[n / 2 - 1] + arr[n / 2]) / 2.0;
 	else median = arr[n / 2];
 	return median;
 }
 std::vector<double> modes(double* arr, size_t n)
-{ //Task 4.14 - brute force method without sorting data
+{ //Task 4.15 - brute force method without sorting data
 	std::vector<double>modes;
 	size_t maxCount(0);
 	double maxCountEl;
@@ -1489,7 +1513,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.14 second way - sorting the data
+//Task 4.15 second way - sorting the data
 #include <iostream>
 void bubbleSort(double* arr, size_t n)
 {
@@ -1559,7 +1583,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.15
+//Task 4.16
 #include <iostream>
 void fillArr(size_t n, int* arr)
 {
@@ -1650,7 +1674,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.16
+//Task 4.17
 #include <iostream>
 size_t myStrLen(const char* str)
 {
@@ -1691,7 +1715,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.17 
+//Task 4.18 
 #include <iostream> 
 int binarySearch1(int arr[], int l, int r, int x)
 {/* A iterative binary search function. It returns location of x
@@ -1730,7 +1754,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.18 first way
+//Task 4.19 first way
 #include <iostream>
 size_t indexLongestIncreasingSubsequence(int* arr, size_t arrLen, size_t& len)
 {
@@ -1777,7 +1801,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.18 second way
+//Task 4.19 second way
 #include <iostream>
 struct Range
 {
@@ -1809,7 +1833,7 @@ int main()
 	std::cout << std::endl;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.19
+//Task 4.20
 #include <iostream>
 void printArr(int* arr, int length)
 {
@@ -1861,7 +1885,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.20
+//Task 4.21
 #include <iostream>
 size_t* checkNums(long num1, long num2, size_t& commonDigitsLength)
 {
@@ -1906,7 +1930,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.21
+//Task 4.22
 #include <iostream>
 bool isSubset(int arr1[], size_t n1, int arr2[], size_t n2)
 {
@@ -1936,7 +1960,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.22
+//Task 4.23
 #include <iostream>
 void printArr(int* arr, size_t len)
 {
@@ -1995,7 +2019,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 4.23 & 4.24
+//Task 4.24 & 4.25
 #include <iostream>
 #include <cmath>
 double* definePoly(char& symbol, char& coef, int& k)
@@ -2033,7 +2057,7 @@ void printPoly(int n, double* P, char& symbol)
 	symbol++;
 }
 double* sumPoly(double* a, int n, double* b, int m, char& symbol)
-{ // Task 4.23
+{ // Task 4.24
 	symbol++;
 	double* c = new double[(n + m + abs(n - m)) / 2 + 1];
 	if (n > m)
@@ -2050,7 +2074,7 @@ double* sumPoly(double* a, int n, double* b, int m, char& symbol)
 	return c;
 }
 double* prodPoly(double* a, int n, double* b, int m, char& symbol)
-{ // Task 4.24
+{ // Task 4.25
 	symbol++;
 	double* d = new double[n + m + 1];
 	for (int p = 0; p <= n + m; p++)
