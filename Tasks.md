@@ -445,3 +445,11 @@ asctime | Convert tm structure to string
 ctime | Convert time_t value to string
 
 **8.02.** Write a program which prints all subsets of a set.
+
+**8.03.** Display on the console the characters of those elements of a text, which indexes fulfill at least one of the conditions:
+
+а) are powers of 2;
+
+b) are perfect squares;
+
+c) are Fibonacci's numbers;
