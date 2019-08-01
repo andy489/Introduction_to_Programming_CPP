@@ -410,6 +410,8 @@ Type | Description
 
 **5.06.** Write a program which finds the sum of the squares of those elements in a real square matrix of order n, which are special. A special element is element for which the following inequality is true: <img src="https://latex.codecogs.com/svg.latex?a[i,j]\geq\frac{a[i-1,j]+a[i,j-1]+a[i,j+1]+a[i+1,j]}{4}">.
 
+**5.07.** It is given the set <img src="https://latex.codecogs.com/svg.latex?M"> of pairs <img src="https://latex.codecogs.com/svg.latex?M={(x_1,y_1),(x_2,y_2),...,(x_n,y_n)}">, where <img src="https://latex.codecogs.com/svg.latex?x_i"> and <img src="https://latex.codecogs.com/svg.latex?y_i">, <img src="https://latex.codecogs.com/svg.latex?i=1,...,n"> are integer numbers. Write a program which checks whether the set M defines a function. Hint: The set M defines a function whenever for every <img src="https://latex.codecogs.com/svg.latex?x_i=x_j"> is satisfied <img src="https://latex.codecogs.com/svg.latex?y_i=y_j">.
+
 ## 6. Strings
 
 **6.01.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
