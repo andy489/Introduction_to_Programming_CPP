@@ -408,6 +408,8 @@ Type | Description
   
 **5.05.** Write a program which erases the k-th column of the matrix <img src="https://latex.codecogs.com/svg.latex?A_{nXm}">. Deleting means moving the columns with one to the left and reducing the number of columns by one.
 
+**5.06.** Write a program which finds the sum of the squares of those elements in a real square matrix of order n, which are special. A special element is element for which the following inequality is true: <img src="https://latex.codecogs.com/svg.latex?a[i,j]\geq\frac{a[i-1,j]+a[i,j-1]+a[i,j+1]+a[i+1,j]}{4}">.
+
 ## 6. Strings
 
 **6.01.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
