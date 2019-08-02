@@ -271,7 +271,9 @@ Example input | Example output
 **3.17.** Write a function whith signature *double calc(double a, double b, double eps, long end)*, which calculates <img src="https://latex.codecogs.com/svg.latex?\Large&space;x_k=\frac{1}{5}\left(x_{k-1}+\frac{x_{k-1}}{x_{k-2}}\right),k=3,4,...;x_1=a>0,x_2=b">. The calculations end when <img src="https://latex.codecogs.com/svg.latex?\Large&space;|x_k-x_{k-1}|<\epsilon">. If k becomes greater than n - the function must return a code for error.
 
 **3.18.** Write a program which calculates the sum  <img src="https://latex.codecogs.com/svg.latex?\Large&space;e^x=1+\frac{x}{1!}+\frac{x^2}{2!}+..."> and find the [Napier's constant](https://en.wikipedia.org/wiki/E_(mathematical_constant)). The approximation continues until the absolute value of the last collectible becomes less than <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon"> (where <img src="https://latex.codecogs.com/svg.latex?\Large&space;x"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon"> are given real numbers).
-                                           
+          
+**3.19.** Find the smallest number expressible as the sum of two cubes in two different ways. [Hardy–Ramanujan number](https://en.wikipedia.org/wiki/1729_(number))  
+          
 ## 4. Arrays
 
 **4.01.** Write a function which takes two arguments - an array and its size and prints all elements of the array on the console.  
