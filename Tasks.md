@@ -272,7 +272,7 @@ Example input | Example output
 
 **3.18.** Write a program which calculates the sum  <img src="https://latex.codecogs.com/svg.latex?\Large&space;e^x=1+\frac{x}{1!}+\frac{x^2}{2!}+..."> and find the [Napier's constant](https://en.wikipedia.org/wiki/E_(mathematical_constant)). The approximation continues until the absolute value of the last collectible becomes less than <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon"> (where <img src="https://latex.codecogs.com/svg.latex?\Large&space;x"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon"> are given real numbers).
           
-**3.19.** Find the smallest number expressible as the sum of two cubes in two different ways. [Hardy–Ramanujan number](https://en.wikipedia.org/wiki/1729_(number))  
+**3.19.** Find the smallest number expressible as the sum of two cubes in two different ways and print the expressions. [Hardy–Ramanujan number](https://en.wikipedia.org/wiki/1729_(number))  
           
 ## 4. Arrays
 
