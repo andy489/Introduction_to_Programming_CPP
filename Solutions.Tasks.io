@@ -1120,19 +1120,18 @@ int main()
 			{
 				if (pow(i, 3) + pow(j, 3) == n)
 				{
-					if (count ==2)
+					if (count == 0)
 					{
 						curri = i; currj = j;
 					}
 					count++;
-					if (count == 4)
+					if (count == 3)
 					{
-						std::cout << "The smallest number,\n";
-						std::cout << "expressible as the sum of two cubes in two different ways is:\n";
-						std::cout << n << "\n";
-						std::cout << n << " = " << j << "^{3}+" << i << "^{3}\n";
-						std::cout << n << " = " << currj << "^{3}+" << curri << "^{3}\n";
-						return 0;
+					        std::cout << "The smallest number,\n";
+					        std::cout << "expressible as the sum of two cubes in two different ways is:\n";
+					        std::cout << n <<"\n";						
+					        std::cout << n <<"="<<curri<<"^{3}+"<<currj<<"^{3}="<<j<<"^{3}+"<<i<<"^{3}\n";
+					        return 0;
 					}
 				}
 			}
