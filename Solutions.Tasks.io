@@ -1104,6 +1104,44 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 3.19
+#include <iostream>
+#include <cmath>
+int main()
+{
+	size_t n = 1;
+	while (true)
+	{
+		size_t curri, currj;
+		size_t count(0);
+		for (size_t i = 1; i <= std::pow(n, 1.0 / 3); i++)
+		{
+			for (size_t j = 1; j <= std::pow(n, 1.0 / 3); j++)
+			{
+				if (pow(i, 3) + pow(j, 3) == n)
+				{
+					if (count ==2)
+					{
+						curri = i; currj = j;
+					}
+					count++;
+					if (count == 4)
+					{
+						std::cout << "The smallest number,\n";
+						std::cout << "expressible as the sum of two cubes in two different ways is:\n";
+						std::cout << n << "\n";
+						std::cout << n << " = " << j << "^{3}+" << i << "^{3}\n";
+						std::cout << n << " = " << currj << "^{3}+" << curri << "^{3}\n";
+						return 0;
+					}
+				}
+			}
+		}
+		n++;
+	}
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
 //Task 4.01 & 4.02
 #include <iostream>
 void printArr(size_t arrLen, int* arr)
