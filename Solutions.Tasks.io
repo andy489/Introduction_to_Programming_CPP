@@ -2723,10 +2723,10 @@ double sumSquaresSpecEl(double A[][n], size_t m)
 int main()
 {
 	double A[n][n] = { 2.5, 4.1, 10.1, -9  , -21,
-					  17  ,-2.2, -1  ,  0  ,  3,
-					  14  , 0.6,  8  ,  5.9,  1.2,
-					  17  ,18  ,  0.3, 14  ,  1.9,
-					   0  , 0.7,  7  ,  9  , 17 };
+			   7  ,-2.2, -1  ,  0  ,  3,
+		          14  , 0.6,  8  ,  5.9,  1.2,
+		          17  ,18  ,  0.3, 14  ,  1.9,
+		           0  , 0.7,  7  ,  9  , 17 };
 	double sum = sumSquaresSpecEl(A, n);
 	std::cout << "The sum of squares of all special elements is: " << sum << "\n";
 	return 0;
