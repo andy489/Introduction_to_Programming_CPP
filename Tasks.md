@@ -417,9 +417,13 @@ Type | Description
 **5.07.** It is given the set <img src="https://latex.codecogs.com/svg.latex?M"> of pairs:  <img src="https://latex.codecogs.com/svg.latex?M=\{(x_1,y_1),(x_2,y_2),...,(x_n,y_n)\}">, where <img src="https://latex.codecogs.com/svg.latex?x_i"> and <img src="https://latex.codecogs.com/svg.latex?y_i">, <img src="https://latex.codecogs.com/svg.latex?i=1,...,n"> are integer numbers. Write a program which checks whether the set M defines a function. Hint: The set M defines a function whenever for every <img src="https://latex.codecogs.com/svg.latex?x_i=x_j"> is satisfied <img src="https://latex.codecogs.com/svg.latex?y_i=y_j">.
 
 **5.08.** Let A,B,C be three matrices and X, Y be two vectors. Write a program which finds:
+
 a) <img src="https://latex.codecogs.com/svg.latex?C=A+B">;
+
 b) <img src="https://latex.codecogs.com/svg.latex?Y=A.X">;
+
 c) <img src="https://latex.codecogs.com/svg.latex?C=A.B">;
+
 d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https://latex.codecogs.com/svg.latex?A^T"> is the transposed matrix of A.
 
 ## 6. Strings
