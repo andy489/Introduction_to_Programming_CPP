@@ -2793,6 +2793,168 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 5.08
+#include <iostream>
+int* inputVector(size_t k)
+{
+	int* newVec = new int[k];
+	for (size_t i = 0; i < k; i++)
+	{
+		std::cin >> newVec[i];
+	}
+	return newVec;
+}
+int** inputMatrix(size_t n, size_t m)
+{
+	int** matrix = new int*[n];
+	for (size_t i = 0; i < n; i++)
+	{
+		matrix[i] = new int[m];
+	}
+	for (size_t rows = 0; rows < n; rows++)
+	{
+		for (size_t cols = 0; cols < m; cols++)
+		{
+			std::cin >> matrix[rows][cols];
+		}
+	}
+	return matrix;
+}
+void releaseMatrix(int** matrix, size_t n, size_t m)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		delete[] matrix[i];
+	}
+	delete[] matrix;
+}
+int** sumMatrix(int** A, size_t n1, size_t m1, int** B, size_t n2, size_t m2)
+{
+	int** sum = new int*[n1];
+	for (size_t i = 0; i < n1; i++)
+	{
+		sum[i] = new int[m1];
+	}
+	for (size_t i = 0; i < n1; i++)
+	{
+		for (size_t j = 0; j < m1; j++)
+		{
+			sum[i][j] = A[i][j] + B[i][j];
+		}
+	}
+	return sum;
+}
+int* prodMatrixVector(int** A, size_t n, size_t m, int* arr, size_t k)
+{
+	int* resultVec = new int[k];
+	for (size_t i = 0; i < k; i++)
+	{
+		resultVec[i] = 0;
+	}
+	for (size_t i = 0; i < n; i++)
+	{
+		for (size_t j = 0; j < m; j++)
+		{
+			resultVec[i] += A[i][j] * arr[j];
+		}
+	}
+	return resultVec;
+}
+int** prodMatrix(int** A, size_t n1, size_t m1, int**B, size_t n2, size_t m2)
+{
+	int** prod = new int*[n1];
+	for (size_t i = 0; i < n1; i++)
+	{
+		prod[i] = new  int[m2];
+	}
+	for (size_t i = 0; i < n1; i++)
+	{
+		for (size_t j = 0; j < m2; j++)
+		{
+			prod[i][j] = 0;
+		}
+	}
+
+
+	//TODO
+
+}
+void printVec(int* arr, size_t n)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		std::cout << arr[i] << ' ';
+	}
+	std::cout << std::endl;
+}
+void printMatrix(int** matrix, size_t n, size_t m)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		for (size_t j = 0; j < m; j++)
+		{
+			std::cout << matrix[i][j] << ' ';
+		}
+		std::cout << std::endl;
+	}
+}
+int main()
+{
+	size_t n1, m1, n2, m2, k;
+	std::cout << "Rows A: ";
+	std::cin >> n1;
+	std::cout << "Cols A: ";
+	std::cin >> m1;
+	std::cout << "Rows B: ";
+	std::cin >> n2;
+	std::cout << "Cols B: ";
+	std::cin >> m2;
+
+	std::cout << "Vector length: ";
+	std::cin >> k;
+
+	int** A = inputMatrix(n1, m1);
+	int** B = inputMatrix(n2, m2);
+	int* vec = inputVector(k);
+
+	if (n1 != n2 || m1 != m2)
+	{
+		std::cout << "Cannot add matrices of different sizes.\n";
+	}
+	else
+	{
+		std::cout << "Sum:\n";
+		int** sum = sumMatrix(A, n1, m1, B, n2, m2);
+		printMatrix(sum, n1, m2);
+		releaseMatrix(sum, n1, m1);
+	}
+
+	if (m1 != k)
+	{
+		std::cout << "Cannot multiply matrix with number of columns different by the size of the vector\n";
+	}
+	else
+	{
+		std::cout << "Matrix . vector:\n";
+		int* resultVec = prodMatrixVector(A, n1, m1, vec, k);
+		printVec(resultVec, k);
+		delete[] resultVec;
+	}
+
+
+
+
+
+
+
+
+	releaseMatrix(A, n1, m1);
+	releaseMatrix(B, n2, m2);
+	delete[] vec;
+
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
 
 
 
