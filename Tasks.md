@@ -429,46 +429,62 @@ d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https
 **5.08.** Write a program which asks the user for a natural number <img src="https://latex.codecogs.com/svg.latex?n"> and ***generates*** (also prints) eight <img src="https://latex.codecogs.com/svg.latex?nXn"> matrices in the pattern of the given example:
 - for <img src="https://latex.codecogs.com/svg.latex?n=4"> (note how all the numbers are aligned!):
 
-  - a) 0 0 0 0
+  - a) 
+  ````
+       0 0 0 0
        0 1 0 0
        0 0 2 0
        0 0 0 3
-
-  - b)  1  2  3  4
-        5  6  7  8
-        9 10 11 12
-       13 14 15 16
-
-  - c) 1 5  9 13
+  ````
+  - b)  
+  ````
+       1  2  3  4        
+       5  6  7  8        
+       9 10 11 12        
+      13 14 15 16
+  ````   
+  - c) 
+  ````
+       1 5  9 13
        2 6 10 14
        3 7 11 15
        4 8 12 16
-
-  - d) 1 2 3 4
+  ````
+  - d) 
+  ````
+       1 2 3 4
        0 1 2 3
        0 0 1 2
        0 0 0 1
-       
-  - e) 1 8  9 16
+  ````
+  - e) 
+  ````
+       1 8  9 16
        2 7 10 15
        3 6 11 14
        4 5 12 13
-  
-  - f) 1  3  6 10
+  ````
+  - f)    
+  ````     
+       1  3  6 10
        2  5  9 13
        4  8 12 15
        7 11 14 16
-  
-  - g) 7 11 14 16
+  ````
+  - g) 
+  ````
+       7 11 14 16
        4  8 12 15
        2  5  9 13
        1  3  6 10
-  
-  - h) 1  2  3  4
+  ````
+  - h) 
+  ````
+       1  2  3  4
        12 13 14 5
        11 16 15 6
        10 9  8  7
-
+   ````
 ## 6. Strings
 
 **6.01.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
