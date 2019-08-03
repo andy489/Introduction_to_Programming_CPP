@@ -3016,14 +3016,40 @@ void printSpaces(size_t n)
 		std::cout << ' ';
 	}
 }
-void printMatrix(int** A, size_t rows, size_t cols)
+void printMatrix1(int** A, size_t rows, size_t cols)
 {
 	for (size_t i = 0; i < rows; i++)
 	{
 		for (size_t j = 0; j < cols; j++)
 		{
-			std::cout << A[i][j] << ' ';
+			printSpaces(numLen(rows-1) - numLen(A[i][j]));
+			std::cout << A[i][j] << ' ';			
+		}
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+}
+void printMatrix2(int** A, size_t rows, size_t cols)
+{
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
 			printSpaces(numLen(rows*cols) - numLen(A[i][j]));
+			std::cout << A[i][j] << ' ';
+		}
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+}
+void printMatrix3(int** A, size_t rows, size_t cols)
+{
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			printSpaces(numLen(rows) - numLen(A[i][j]));
+			std::cout << A[i][j] << ' ';
 		}
 		std::cout << std::endl;
 	}
@@ -3170,8 +3196,8 @@ int** seventhMatrix(size_t n)
 		while (i < n)
 		{
 			G[i][j] = w++;
-			i = i++;
-			j = j++;
+			i++;
+			j++;
 		}
 	}
 	for (size_t k = 1; k < n; k++)
@@ -3239,35 +3265,35 @@ int main()
 	std::cout << std::endl;
 
 	int** A = firstMatrix(n);
-	printMatrix(A, n, n);
+	printMatrix1(A, n, n);
 	releaseMatrix(A, n);
 
 	int** B = secondMatrix(n);
-	printMatrix(B, n, n);
+	printMatrix2(B, n, n);
 	releaseMatrix(B, n);
 
 	int** C = thirdMatrix(n);
-	printMatrix(C, n, n);
+	printMatrix2(C, n, n);
 	releaseMatrix(C, n);
 
 	int** D = forthMatrix(n);
-	printMatrix(D, n, n);
+	printMatrix3(D, n, n);
 	releaseMatrix(D, n);
 
 	int** E = fifthMatrix(n);
-	printMatrix(E, n, n);
+	printMatrix2(E, n, n);
 	releaseMatrix(E, n);
 
 	int** F = sixthMatrix(n);
-	printMatrix(F, n, n);
+	printMatrix2(F, n, n);
 	releaseMatrix(F, n);
 
 	int** G = seventhMatrix(n);
-	printMatrix(G, n, n);
+	printMatrix2(G, n, n);
 	releaseMatrix(G, n);
 
 	int** H = eighthMatrix(n);
-	printMatrix(H, n, n);
+	printMatrix2(H, n, n);
 	releaseMatrix(H, n);
 
 	return 0;
