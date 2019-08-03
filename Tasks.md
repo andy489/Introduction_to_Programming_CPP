@@ -485,6 +485,15 @@ d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https
        11 16 15 6
        10 9  8  7
    ````
+**5.10.** Game of Life (***Conway's Game of Life***) is a game for zero :disappointed: players and consists of a surface, devided in cells. Every cell is dead or alive. The game is played in turns. Every turn depends on the state of the game in the previous turn following these rules:
+
+  - Every cell with less than two living neighbours dies (of loneliness);
+  - Every living cell with more than three living neighbours dies (too crowded);
+  - Every living cell with two or three living neighbours stays alive for the next turn;
+  - Every dead cell with exactly three living neighbours comes back to live.
+
+Your task is to simulate this game. The initial state of the surface should be hard-coded. On every turn the state of the cells should be written to the console: 'X' for a living cell, 'O' for a dead cell.
+
 ## 6. Strings
 
 **6.01.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
