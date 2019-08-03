@@ -426,7 +426,7 @@ c) <img src="https://latex.codecogs.com/svg.latex?C=A.B">;
 
 d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https://latex.codecogs.com/svg.latex?A^T"> is the transposed matrix of <img src="https://latex.codecogs.com/svg.latex?A">.
 
-**5.08.** Write a program which asks the user for a natural number <img src="https://latex.codecogs.com/svg.latex?n"> and ***generates*** (also prints) eight <img src="https://latex.codecogs.com/svg.latex?nXn"> matrices in the pattern of the given example:
+**5.09.** Write a program which asks the user for a natural number <img src="https://latex.codecogs.com/svg.latex?n"> and ***generates*** (also prints) eight <img src="https://latex.codecogs.com/svg.latex?nXn"> matrices in the pattern of the given example:
 - for <img src="https://latex.codecogs.com/svg.latex?n=4"> (note how all the numbers are aligned!):
 
   - a) 
