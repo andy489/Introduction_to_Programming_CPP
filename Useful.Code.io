@@ -65,3 +65,19 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+• CONSOLE COLOR
+
+#include <iostream>
+int main()
+{
+	system("color A"); // sets the color of the text in red
+
+	std::cout << "You can change the color of text in the console\n";
+	std::cout << "For more info try \"system(color G)\"\n";
+
+	system("color G"); // color info
+
+	system("color fc"); // produces light red on bright white
+	
+	return 0;
+}
