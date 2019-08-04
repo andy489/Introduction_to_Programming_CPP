@@ -494,6 +494,22 @@ d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https
 
 Your task is to simulate this game. The initial state of the surface should be hard-coded. On every turn the state of the cells should be written to the console: 'X' for a living cell, 'O' for a dead cell.
 
+**5.11.** You are given a numbers <img src="https://latex.codecogs.com/svg.latex?n,m"> and a <img src="https://latex.codecogs.com/svg.latex?nxm"> matrix that consists of numbers 0 through 9. Your task is to create a program that says ***how many*** islands and peninsulas are there. These are the ***rules***:
+- 0 is water;
+- 1-9 is the height of the ground;
+- Islands are pieces of land connected by different grounds. Example of an island:
+````
+0000000000000000
+0000000110000000
+0000001211000000
+0000012321100000
+0000123432110000
+0000012332211000
+0000001211000000
+0000000100000000
+0000000000000000
+````
+
 ## 6. Strings
 
 **6.01.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
