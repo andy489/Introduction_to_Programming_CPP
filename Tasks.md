@@ -549,7 +549,7 @@ lowercase Latin alphabets with uppercase and reverse. Do not use the built-in st
 
 **7.02.** Write a function which takes a character and returns if the character is either digit or letter.
 
-**7.03.** Write a function which takes four numbers - coordinates of two <img src="https://latex.codecogs.com/svg.latex?2D"> points - <img src="https://latex.codecogs.com/svg.latex?A(x1,y1)">, <img src="https://latex.codecogs.com/svg.latex?B(x2,y2)"> and returns the distance between <img src="https://latex.codecogs.com/svg.latex?A"> and <img src="https://latex.codecogs.com/svg.latex?B">.
+**7.03.** Write a function which takes four numbers - coordinates of two <img src="https://latex.codecogs.com/svg.latex?2D"> points - <img src="https://latex.codecogs.com/svg.latex?A(x_1,y_1)">, <img src="https://latex.codecogs.com/svg.latex?B(x_2,y_2)"> and returns the distance between <img src="https://latex.codecogs.com/svg.latex?A"> and <img src="https://latex.codecogs.com/svg.latex?B">.
 
 **7.** Write a function which by a given real number x and a non-negative integer n returns x raised to the n-th power. Use Karatsuba multiplication method (recursion).
    
