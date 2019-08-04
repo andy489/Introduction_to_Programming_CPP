@@ -3467,6 +3467,43 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 7.01
 #include <iostream>
+#include <cmath>
+int abs(int a)
+{
+	return a > 0 ? a : -a;
+}
+int min(int a, int b)
+{
+	return (a + b - abs(a - b)) / 2;
+}
+int min(int a, int b, int c)
+{
+	return min(min(a, b), min(b, c));
+}
+bool isPrime(int a)
+{
+	int num = abs(a);
+	for (int i = 2; i <=sqrt(num); i++)
+		if (a%i == 0)
+			return false;
+	return true;
+}
+bool func(int a, int b, int c)
+{
+	return isPrime(min(a, b, c));
+}
+int main()
+{
+	int a, b, c;
+	std::cin >> a >> b >> c;
+
+	func(a, b, c) ? std::cout << "smallest number is prime" : std::cout << "smallest number is not prime";
+
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 7.
+#include <iostream>
 double karPow(double x, int n)
 { // Karatsuba algorithm
 	if (n == 0)		return 1;
@@ -3484,7 +3521,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 7.02 
+//Task 7.
 #include <iostream>
 #include <cmath>
 size_t fib1(size_t n)
@@ -3520,7 +3557,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 7.03 
+//Task 7.
 #include <iostream>
 #include <cmath>
 size_t seq1(size_t n)
@@ -3556,7 +3593,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 7.04
+//Task 7.
 #include <iostream>
 long long factorial(size_t m)
 { // recursive function for calculating m!
@@ -3584,7 +3621,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 7.05
+//Task 7.
 #include <iostream>
 #include <cmath>
 #define k 5
