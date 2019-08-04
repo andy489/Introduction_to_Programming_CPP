@@ -547,6 +547,8 @@ lowercase Latin alphabets with uppercase and reverse. Do not use the built-in st
 
 **7.01.** Write a function which takes three numbers and returns if the smallest one of them is prime.
 
+**7.02.** Write a function which takes a character and returns if the character is either digit or letter.
+
 **7.** Write a function which by a given real number x and a non-negative integer n returns x raised to the n-th power. Use Karatsuba multiplication method (recursion).
    
 **7.** Write a program which asks the user for a non-negative integer n and gives the n-th number of Fibonacci.
