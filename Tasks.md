@@ -499,16 +499,28 @@ Your task is to simulate this game. The initial state of the surface should be h
 - 1-9 is the height of the ground;
 - Islands are pieces of land connected by different grounds. Example of an island:
 ````
-0000000000000000
-0000000110000000
-0000001211000000
-0000012321100000
-0000123432110000
-0000012332211000
-0000001211000000
-0000000100000000
-0000000000000000
+00000000000000000
+00000000110000000
+00000001211000000
+00000012321100000
+00000123432110000
+00000012332211000
+00000001211000000
+00000000100000000
+00000000000000000
 ````
+-Peninsulas are like islands but on the edge of the ***map***. Example of a peninsula:
+````
+
+98620000000000
+76542110000000
+84321000000000
+52321100000000
+32100000000000
+21000000000000
+10000000000000
+````
+-Note that we don't actually care if the land is an island or peninsula. We care about the number of different connected lands.
 
 ## 6. Strings
 
