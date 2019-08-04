@@ -553,7 +553,7 @@ lowercase Latin alphabets with uppercase and reverse. Do not use the built-in st
 
 **7.04.** Write a function which takes six numbers - coordinates of three points in  <img src="https://latex.codecogs.com/svg.latex?2D">, and returns if they lie on a straight line.
 
-**7.04** Write a function which takes three numbers - coordinates of a <img src="https://latex.codecogs.com/svg.latex?3D"> vector, and returns the length of the vector.
+**7.05.** Write a function which takes three numbers - coordinates of a <img src="https://latex.codecogs.com/svg.latex?3D"> vector, and returns the length of the vector.
 
 **7.** Write a function which by a given real number x and a non-negative integer n returns x raised to the n-th power. Use Karatsuba multiplication method (recursion).
    
