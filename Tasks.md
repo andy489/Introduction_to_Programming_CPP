@@ -509,7 +509,7 @@ Your task is to simulate this game. The initial state of the surface should be h
 00000000100000000
 00000000000000000
 ````
--Peninsulas are like islands but on the edge of the ***map***. Example of a peninsula:
+- Peninsulas are like islands but on the edge of the ***map***. Example of a peninsula:
 ````
 
 98620000000000
@@ -520,7 +520,7 @@ Your task is to simulate this game. The initial state of the surface should be h
 21000000000000
 10000000000000
 ````
--Note that we don't actually care if the land is an island or peninsula. We care about the number of different connected lands.
+- Note that we don't actually care if the land is an island or peninsula. We care about the number of different connected lands.
 
 ## 6. Strings
 
