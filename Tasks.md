@@ -522,6 +522,18 @@ Your task is to simulate this game. The initial state of the surface should be h
 ````
 - Note that we don't actually care if the land is an island or peninsula. We care about the number of different connected lands.
 
+Example input:
+````
+10 5
+
+4321000131
+3210010010
+2100121000
+2100010000
+1000000001
+````
+Output should be: 4.
+
 ## 6. Strings
 
 **6.01.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
