@@ -586,7 +586,7 @@ input | output
 
 ## 8. Other tasks  
 
-**8.01.** Write a program which by given two days of any year computes the number of days between them. Hint:
+**8.01.** Write a function which by given two days of any year computes the number of days between them. Hint:
 
 struct tm
 
