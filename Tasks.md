@@ -557,7 +557,9 @@ lowercase Latin alphabets with uppercase and reverse. Do not use the built-in st
 
 **7.06.** Write a function which by a given real number x and a non-negative integer n returns x raised to the n-th power. Use Karatsuba multiplication method (recursion).
    
-**7.07.** Write a program which asks the user for a non-negative integer n and gives the n-th number of Fibonacci.
+**7.07.** Write a program which asks the user for a non-negative integer <img src="https://latex.codecogs.com/svg.latex?n"> and gives the <img src="https://latex.codecogs.com/svg.latex?n"> number of Fibonacci.
+
+**7.08.** Write a program which asks the user for a number <img src="https://latex.codecogs.com/svg.latex?n"> and prints the first <img src="https://latex.codecogs.com/svg.latex?n"> numbers of ***Tribonacci***.
 
 **7.** Write a program which asks the user for a non-negative integer n and gives the n-th number of the sequence <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_{n+2}=5a_{n+1}-6a_n+6^n">, with <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0=0"> <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=1">.
 
