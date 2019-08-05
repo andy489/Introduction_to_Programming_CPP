@@ -493,6 +493,10 @@ d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https
   - Every dead cell with exactly three living neighbours comes back to live.
 
 Your task is to simulate this game. The initial state of the surface should be hard-coded. On every turn the state of the cells should be written to the console: 'X' for a living cell, 'O' for a dead cell.
+[Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life "Markdown Tutorial")
+[Simulation](https://bitstorm.org/gameoflife/ "Markdown Tutorial")
+
+
 
 **5.11.** You are given numbers <img src="https://latex.codecogs.com/svg.latex?n,m"> and a <img src="https://latex.codecogs.com/svg.latex?nXm"> matrix that consists of numbers 0 through 9. Your task is to create a program that says ***how many*** islands and peninsulas are there. These are the ***rules***:
 - 0 is water;
@@ -567,7 +571,7 @@ lowercase Latin alphabets with uppercase and reverse. Do not use the built-in st
 
 **7.11.** Write a program which asks the user for the numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;0\leq{k}\leq{n}"> and prints the number of combinations <img src="https://latex.codecogs.com/svg.latex?\Large&space;\binom{n}{k}">. Hints: <img src="https://latex.codecogs.com/svg.latex?\Large&space;\binom{n}{k}=\frac{n!}{k!(n-k)!}=C_{n}^{k}"> , also <img src="https://latex.codecogs.com/svg.latex?\Large&space;C_{n}^{0}=C_{n}^{n}=1"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;C_{n}^{k}=C_{n-1}^{k}+C_{n-1}^{k-1}">.
 
-**7.** Write a function which by given n, finds the number of solutions of the system in natural numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{N}\cup{0}">:
+**7.12** Write a function which by given n, finds the number of solutions of the system in natural numbers <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{N}\cup{0}">:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\left\{\begin{array}{l}x_1+x_2+x_3+x_4+x_5=n\\x_1<10\\10\leq{x_2}<30\\x_4>20\\x_5<30\end{array}\right."> 
 
@@ -577,6 +581,8 @@ input | output
 31 | 1
 32 | 5
 100 | 249000
+
+**7.13.** Write a program which takes two integers, which are not all zero, and returns the largest positive integer that divides each of the integers (***greatest common divisor***). For example, the ***GCD*** of 8 and 12 is 4. Use [Euclid's algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm "Markdown Tutorial").
 
 ## 8. Other tasks  
 
