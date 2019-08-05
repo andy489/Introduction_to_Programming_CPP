@@ -582,11 +582,11 @@ input | output
 32 | 5
 100 | 249000
 
-**7.13.** Write a program which takes two integers, which are not all zero, and returns the largest positive integer that divides each of the integers (***greatest common divisor***). For example, the ***GCD*** of 8 and 12 is 4. Use [Euclid's algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm "Markdown Tutorial").
+**7.13.** Write a function which takes two integers, which are not all zero, and returns the largest positive integer that divides each of the integers (***greatest common divisor***). For example, the ***GCD*** of 8 and 12 is 4. Use [Euclid's algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm "Markdown Tutorial").
 
 ## 8. Other tasks  
 
-**8.01.** Write a function which by given two days of any year computes the number of days between them. Hint:
+**8.01.** Write a program which by given two days of any year computes the number of days between them. Hint:
 
 struct tm
 
