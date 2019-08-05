@@ -540,12 +540,18 @@ Output should be: 4.
 
 ## 6. Strings
 
-**6.01.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
+**6.01.** Write an implementation of:
+- strlen;
+- strcmp;
+- strcat;
+- strcpy.
+
+**6.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
 lowercase Latin alphabets with uppercase and reverse. Do not use the built-in string library.
 
-**6.02.** Write a function which checks whether a string is а substring in another string. If true, the functions must return the index to the first position the substring is located in the string, else return -1.
+**6.** Write a function which checks whether a string is а substring in another string. If true, the functions must return the index to the first position the substring is located in the string, else return -1.
 
-**6.03.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
+**6.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
 
 ## 7. Functions and recursion
 
