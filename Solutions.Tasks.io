@@ -3376,13 +3376,13 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 6.01
 #include <iostream>
-size_t strlen(const char* str)
+size_t myStrlen(const char* str)
 {
 	size_t len;
 	for (len = 0; str[len] != '\0'; len++) {}
 	return len;
 }
-int strcmp(const char* str1, const char* str2)
+int myStrcmp(const char* str1, const char* str2)
 {
 	while (*str1 && (*str1 == *str2))
 	{
@@ -3391,9 +3391,9 @@ int strcmp(const char* str1, const char* str2)
 	}
 	return *(const unsigned char*)str1 - *(const unsigned char*)str2;
 }
-char* strcat(char *source, char *destination)
+const char*  myStrcat(const char *source, const char *destination)
 {
-	size_t resLen = strlen(source) + strlen(destination) + 1;
+	size_t resLen = myStrlen(source) + myStrlen(destination) + 1;
 	char *result = (char*)malloc(resLen);
 	size_t ptr(0), temp(0);
 
@@ -3404,19 +3404,35 @@ char* strcat(char *source, char *destination)
 	result[resLen - 1] = '\0';
 	return result;
 }
+char*  myStrcpy(char *dest, const char *src)
+{
+	if (dest == nullptr) return nullptr;
+	char* ptr = dest;
+	while ((*dest++ = *src++) != '\0')
+		*dest = '\0';
+	return ptr;
+}
 int main()
 {
 	const char* str1 = "test string";
 	const char* str2 = "second string";
-	std::cout << strlen(str1) << std::endl;
-	std::cout << strcmp(str1, str2) << std::endl;
+	std::cout << myStrlen(str1) << std::endl;
 
-	char str3[] = "these strings ";
-	char str4[] = "are concatenated";
-	char* res = strcat(str3, str4);
+	std::cout << myStrcmp(str1, str2) << std::endl;
+
+	const char* str3 = "these strings ";
+	const char* str4 = "are concatenated";
+	const char* res = myStrcat(str3, str4);
 	std::cout << res << std::endl;
-	std::cout << strlen(res) << std::endl;
-	delete[] strcat(str3, str4);
+
+	std::cout << myStrlen(res) << std::endl;
+
+	delete[] myStrcat(str3, str4);
+
+	char destination[] = "some longer text";
+	char* copyStr = myStrcpy(destination, str1);
+
+	std::cout << copyStr << std::endl;
 }
 -------------------------------------------------------------------------------------------------------------------------------
 
