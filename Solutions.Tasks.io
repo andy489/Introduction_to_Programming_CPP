@@ -3479,6 +3479,24 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 6.03
 #include <iostream>
+#include <cstring>
+bool isPalindrome(const char* str)
+{
+	size_t len = strlen(str);
+	for (size_t i = 0; i < len / 2; i++)
+		if (str[i] != str[len - i - 1])	return false;
+	return true;
+}
+int main()
+{
+	const char* str = "civic";
+	//isPalindrome1(str) ? std::cout << "palindrome" : std::cout << "not palindrome";
+	std::cout << isPalindrome(str);
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 6.04
+#include <iostream>
 size_t strLen(char* text)
 {	
 	size_t len;
@@ -3504,7 +3522,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.04
+//Task 6.05
 #include <iostream> 
 size_t strLen(const char* text)
 {
@@ -3539,7 +3557,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.05
+//Task 6.06
 #include <iostream>
 int countWords(char* text)
 {
@@ -3567,7 +3585,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.06
+//Task 6.07
 
 
 
