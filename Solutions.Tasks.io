@@ -3376,6 +3376,54 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 6.01
 #include <iostream>
+size_t strlen(const char* str)
+{
+	size_t len;
+	for (len = 0; str[len] != '\0'; len++) {}
+	return len;
+}
+int strcmp(const char* str1, const char* str2)
+{
+	while (*str1 && (*str1 == *str2))
+	{
+		str1++;
+		str2++;
+	}
+	return *(const unsigned char*)str1 - *(const unsigned char*)str2;
+}
+char* strcat(char *source, char *destination)
+{
+	size_t resLen = strlen(source) + strlen(destination) + 1;
+	char *result = (char*)malloc(resLen); 
+	size_t ptr(0), temp(0);                
+
+	while (source[temp] != '\0') result[ptr++] = source[temp++];
+	temp=0;
+	while (destination[temp] != '\0') result[ptr++] = destination[temp++];
+	
+	result[resLen-1] = '\0';
+	return result;
+}
+int main()
+{
+	const char* str1 = "test string";
+	const char* str2 = "second string";
+	std::cout << strlen(str1)<<std::endl;
+	std::cout << strcmp(str1, str2) << std::endl;
+
+	char str3[] = "these strings ";
+	char str4[] = "are concatenated";
+
+	std::cout << strcat(str3, str4);
+	delete[] strcat(str3, str4);
+}
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 6.
+#include <iostream>
 size_t strLen(char* text)
 {	
 	size_t len;
@@ -3401,7 +3449,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.02
+//Task 6.
 #include <iostream> 
 size_t strLen(const char* text)
 {
@@ -3436,7 +3484,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.03
+//Task 6.
 #include <iostream>
 int countWords(char* text)
 {
@@ -3463,7 +3511,6 @@ int main()
 	std::cout << countWords(text) << std::endl;
 	return 0;
 }
-
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 7.01
 #include <iostream>
