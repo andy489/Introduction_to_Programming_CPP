@@ -559,6 +559,12 @@ abcd;ef  | 4 2; abcdf; ebcd af
 
 **6.03.** Write a function that checks whether a given word is a palindrome.
 
+Example input | Output 
+------------- | -------------- 
+civic  | 1
+palindrome  | 0
+kapak | 1
+
 **6.04.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
 lowercase Latin alphabets with uppercase and reverse. Do not use the built-in string library.
 
