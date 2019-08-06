@@ -48,7 +48,7 @@ Print on the console one line:
 
 **2.04.** Manufacturers of vending machines like to make their machines return as little as possible coins change. Write down a program that accepts a sum - the change that has to be returned and calculates the smallest number of coins with which this action can take place.
 
-input | output | explanation
+Example input | Output | Explanation
 ------------ | ------------- | -------------
 0.88 | 6 | 0.50+0.20+0.10+0.05+0.02+0.01 
 1.55 | 3 | 1.00+0.50+0.05
@@ -64,7 +64,7 @@ And checks if point P(x, y) lies in the:
 
 **2.06.** Write a program whick converts a decimal number lying between 1 and 3999 to Roman numerals (string allowed).
 
-input | output
+Example input | Output
 ------------ | -------------
 44 | XLIV
 1111 | MCXI
@@ -74,7 +74,7 @@ input | output
 
 **2.08.** Write a program which asks the user for 5 numbers - a, b, c, p, q and prints the maximum and minimum value of the quadratic function  <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x)=ax^2+bx+c">  in the range <img src="https://latex.codecogs.com/svg.latex?\Large&space;[p;q]">.
 
-input | output 
+Example input | Output 
 ------------ | ------------- 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=3,b=2,c=1,p=-1,q=2"> | <img src="https://latex.codecogs.com/svg.latex?\Large&space;max=17.00;min=0.67">
 
@@ -117,21 +117,21 @@ If the student arrives with at least one minute difference frm the exact exam be
 
 Always print the minutes with two digits, for exammple: "1:05".
    
-input | output
+Example input | Output
 ------------ | -------------
 14 | On time
 00 | 5 minutes before the start
 13 | 
 55 |  
 
-input | output
+Example input | Output
 ------------ | -------------
 16 | Early
 00 | 1:00 hours before the start
 15 | 
 00 |
 
-input | output
+Example input | Output
 ------------ | -------------
 14 | On time
 00 | 
@@ -154,13 +154,13 @@ Write a program which calculates how many times Kaloyan has played football duri
 <details><summary>Example input/output</summary>
 <p>
 
-input | output
+Example input | Output
 ------------ | -------------
 leap | 45
 5 | 
 2 | 
 
-input | output
+Example input | Output
 ------------ | -------------
 normal | 44
 11 | 
@@ -177,7 +177,7 @@ normal | 44
    
    - If you don't know how poker hands work, find a short [tutorial here](https://www.cardplayer.com/rules-of-poker/hand-rankings "Markdown Tutorial") .
    
-Example input | Example output
+Example input | Output
 ------------ | -------------
 C8 C7 C6 C5 C4 | straight flush
 H11 D11 S11 C11 D7 | four of a kind
@@ -211,7 +211,7 @@ Writing a program to output the first 100 FizzBuzz numbers.
 
 **3.08.** Write a program which asks the user for a number n and then prints all prime factors of n.
 
-Example input | Example output
+Example input | Output
 ------------ | -------------
 225 | 3.3.5.5
 31668 | 2.2.3.7.13.29
@@ -282,28 +282,28 @@ Example input | Example output
 
 **4.03.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print the contents of the array in reverse.
 
-   Example input | Example output 
+   Example input | Output 
    ------------- | -------------- 
    4 2 4 6 8 | 8 6 4 2
    5 1 0 1 0 -1 | -1 0 1 0 1 
 
 **4.04.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print only the even numbers.
 
-   Example input | Example output 
+   Example input | Output 
    ------------- | -------------- 
    4 1 2 3 -4 | 2 -4
    5 1 3 0 7 9  | 0 
 
 **4.05.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print only the numbers that are smaller than the average of all numbers.
 
-   Example input | Example output 
+   Example input | Output 
    ------------- | -------------- 
    7 1 2 3 4 5 6 7 | 1 2 3
    5 -2 4 -3 6 8  | -2 -3 
    
 **4.06.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and print the maximum and minimum of them.
 
-   Example input | Example output 
+   Example input | Output 
    ------------- | -------------- 
    6 -2 -1 0 1 3 4 | 4 -2
    1 4 | 4 4
@@ -326,7 +326,7 @@ Example input | Example output
 
 **4.15** Write a function which takes two arguments - an int array and its size, and returns its mode(s). "vector" and "algorithm" libraries are allowed, because the array can have more than one mode.
 
-Example input | Example output 
+Example input | Output 
    ------------- | -------------- 
    1 2 3 4 4 5 | 4
    22 3 11.9 22 3 4.5 -12 3 | 22 3
@@ -344,7 +344,7 @@ Type | Description
 
 **4.16.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and determine if the given array is hacksaw. We call a sequence of numbers hacksaw if the following is true: <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0<a_1>a_2<a_3>a_4<a_5...a_n"> or <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0>a_1<a_2>a_3<a_4>a_5...a_n">
 
-   Example input | Example output 
+   Example input | Output 
    ------------- | -------------- 
    3   ***1 4 1*** | yes
    3   ***4 1 4*** | yes
@@ -359,7 +359,7 @@ Type | Description
 
 **4.19.** Write a program which prints on the console the elements of the longest strictly increasing subsequence in a locally defined array. In case there are two sequences with the same length, print the first one.
 
-   Example input | Example output 
+   Example input | Output 
    ------------- | -------------- 
    -4 -2 8 9 0 1 2 3 -4 2| -4 2 8 9
    3 9 0 2 1 3 4 6 9  | 1 3 4 6 9 
@@ -551,12 +551,20 @@ Output should be: 4.
 - In the second line print the string produced by concatenating a and b;
 - In the third line print two strings separated by a space, a' and b'. a' and b' are the same as a and b, respectively, except that their first characters are swapped;
 
-**6.03.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
+Example input | Output 
+------------- | -------------- 
+abcd;ef  | 4 2; abcdf; ebcd af
+
+`; steads for new line`
+
+**6.03.** Write a function that checks whether a given word is a palindrome.
+
+**6.04.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
 lowercase Latin alphabets with uppercase and reverse. Do not use the built-in string library.
 
-**6.04.** Write a function which checks whether a string is а substring in another string. If true, the functions must return the index to the first position the substring is located in the string, else return -1.
+**6.05.** Write a function which checks whether a string is а substring in another string. If true, the functions must return the index to the first position the substring is located in the string, else return -1.
 
-**6.05.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
+**6.06.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
 
 ## 7. Functions and recursion
 
