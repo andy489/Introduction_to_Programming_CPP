@@ -631,7 +631,7 @@ Example input | Output
 
 ## 8. Complex tasks
 
-**8.01.** Mr. Nullptr wants to play ***Bulls and Cows***, but he is confused by the rules, so he needs our help. We have to write a program that reads two integer numbers A and B in the range [0,9999] from the console and prints back the number of bulls and cows for these numbers. Numbers smaller than 1000 we should pad with zeros, for example 19 should be interpreted as 0019.
+**8.01.** Tisho wants to play ***Bulls and Cows***, but he is confused by the rules, so he needs our help. We have to write a program that reads two integer numbers A and B in the range [0,9999] from the console and prints back the number of bulls and cows for these numbers. Numbers smaller than 1000 we should pad with zeros, for example 19 should be interpreted as 0019.
 
 Example input | Output
 ------------ | -------------
@@ -639,6 +639,8 @@ Example input | Output
 0 1 | 3 0
 9988 1234 | 0 0
 1010 1001 | 2 2
+
+**8.02.** Tisho really enjoyed our help and he needs us again. Now he asked us to do the following: Given a number <img src="https://latex.codecogs.com/svg.latex?\Large&space;A"> - Tisho's suggestion for his opponent's number, <img src="https://latex.codecogs.com/svg.latex?\Large&space;b"> - number of bulls and <img src="https://latex.codecogs.com/svg.latex?\Large&space;c">- number of cows, we have to print every number <img src="https://latex.codecogs.com/svg.latex?\Large&space;N"> that has <img src="https://latex.codecogs.com/svg.latex?\Large&space;b"> bulls and <img src="https://latex.codecogs.com/svg.latex?\Large&space;c"> cows with the number <img src="https://latex.codecogs.com/svg.latex?\Large&space;A">. 
 
 ## 9. Other tasks  
 
