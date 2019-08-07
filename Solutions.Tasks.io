@@ -3994,14 +3994,6 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 8.01
 #include <iostream>
-void printArr(int* arr)
-{
-	for (int i = 0; i < 4; i++)
-	{
-		std::cout << arr[i];
-	}
-	std::cout << std::endl;
-}
 int* numIntoArr(int num)
 {
 	int* arr = new int[4];
