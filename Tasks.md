@@ -576,27 +576,19 @@ lowercase Latin alphabets with uppercase and reverse. Do not use the built-in st
 
 - Input: aaaabb
 - Output:
-a - 4
-b - 2
+  - a - 4
+  - b - 2
 
 - Input: randomness
 - Output:
-
-r - 1
-
-a - 1
-
-n - 2
-
-d - 1
-
-o - 1
-
-m - 1
-
-e - 1
-
-s - 2
+  - r - 1
+  - a - 1
+  - n - 2
+  - d - 1
+  - o - 1
+  - m - 1
+  - e - 1
+  - s - 2
 
 NOTE: The order of the output is irrelevant. The only importance is the histogram accuracy.
 
