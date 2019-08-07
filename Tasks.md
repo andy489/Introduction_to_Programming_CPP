@@ -572,6 +572,27 @@ lowercase Latin alphabets with uppercase and reverse. Do not use the built-in st
 
 **6.06.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
 
+**6.07.** Write a function which takes a string and prints out a char histogram of that string. Each string will consist of lower case Latin characters ('a'-'z').
+
+- Input: aaaabb
+- Output:
+a - 4
+b - 2
+
+- Input: randomness
+- Output:
+
+r - 1
+a - 1
+n - 2
+d - 1
+o - 1
+m - 1
+e - 1
+s - 2
+
+NOTE: The order of the output is irrelevant. The only importance is the histogram accuracy.
+
 ## 7. Functions and recursion
 
 **7.01.** Write a function which takes three numbers and returns if the smallest one of them is prime.
