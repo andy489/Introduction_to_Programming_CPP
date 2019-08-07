@@ -620,7 +620,7 @@ NOTE: The order of the output is irrelevant. The only importance is the histogra
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\left\{\begin{array}{l}x_1+x_2+x_3+x_4+x_5=n\\x_1<10\\10\leq{x_2}<30\\x_4>20\\x_5<30\end{array}\right."> 
 
-input | output
+Example input | Output
 ------------ | -------------
 30 | 0
 31 | 1
@@ -629,9 +629,20 @@ input | output
 
 **7.13.** Write a function which takes two integers, which are not all zero, and returns the largest positive integer that divides each of the integers (***greatest common divisor***). For example, the ***GCD*** of 8 and 12 is 4. Use [Euclid's algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm "Markdown Tutorial").
 
-## 8. Other tasks  
+## 8. Complex tasks
 
-**8.01.** Write a program which by given two days of any year computes the number of days between them. Hint:
+**8.01** Mr. Nullptr wants to play ***Bulls and Cows***, but he is confused by the rules, so he needs our help. We have to write a program that reads two integer numbers A and B in the range [0,9999] from the console and prints back the number of bulls and cows for these numbers. Numbers smaller than 1000 we should pad with zeros, for example 19 should be interpreted as 0019.
+
+Example input | Output
+------------ | -------------
+1001 2010 | 1 2
+0 1 | 3 0
+9988 1234 | 0 0
+1010 1001 | 2 2
+
+## 9. Other tasks  
+
+**9.01.** Write a program which by given two days of any year computes the number of days between them. Hint:
 
 struct tm
 
@@ -653,9 +664,9 @@ Conversion (function) | Do
 asctime | Convert tm structure to string
 ctime | Convert time_t value to string
 
-**8.02.** Write a program which prints all subsets of a set.
+**9.02.** Write a program which prints all subsets of a set.
 
-**8.03.** Display on the console the characters of those elements of a text, which indexes fulfill at least one of the conditions:
+**9.03.** Display on the console the characters of those elements of a text, which indexes fulfill at least one of the conditions:
 
 а) are powers of 2;
 
