@@ -631,7 +631,7 @@ Example input | Output
 
 ## 8. Complex tasks
 
-**8.01** Mr. Nullptr wants to play ***Bulls and Cows***, but he is confused by the rules, so he needs our help. We have to write a program that reads two integer numbers A and B in the range [0,9999] from the console and prints back the number of bulls and cows for these numbers. Numbers smaller than 1000 we should pad with zeros, for example 19 should be interpreted as 0019.
+**8.01.** Mr. Nullptr wants to play ***Bulls and Cows***, but he is confused by the rules, so he needs our help. We have to write a program that reads two integer numbers A and B in the range [0,9999] from the console and prints back the number of bulls and cows for these numbers. Numbers smaller than 1000 we should pad with zeros, for example 19 should be interpreted as 0019.
 
 Example input | Output
 ------------ | -------------
