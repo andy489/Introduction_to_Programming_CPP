@@ -640,7 +640,7 @@ Example input | Output
 9988 1234 | 0 0
 1010 1001 | 2 2
 
-**8.02.** Tisho really enjoyed our help and he needs us again. Now he asked us to do the following: Given a number <img src="https://latex.codecogs.com/svg.latex?\Large&space;A"> - Tisho's suggestion for his opponent's number, <img src="https://latex.codecogs.com/svg.latex?\Large&space;b"> - number of bulls and <img src="https://latex.codecogs.com/svg.latex?\Large&space;c">- number of cows, we have to print every number <img src="https://latex.codecogs.com/svg.latex?\Large&space;N"> that has <img src="https://latex.codecogs.com/svg.latex?\Large&space;b"> bulls and <img src="https://latex.codecogs.com/svg.latex?\Large&space;c"> cows with the number <img src="https://latex.codecogs.com/svg.latex?\Large&space;A">. 
+**8.02.** Tisho really enjoyed our help and he needs us again. Now he asked us to do the following: Given a number <img src="https://latex.codecogs.com/svg.latex?\Large&space;A"> - Tisho's suggestion for his opponent's number, <img src="https://latex.codecogs.com/svg.latex?\Large&space;b"> - number of bulls and <img src="https://latex.codecogs.com/svg.latex?\Large&space;c"> - number of cows, we have to print every number <img src="https://latex.codecogs.com/svg.latex?\Large&space;N"> that has <img src="https://latex.codecogs.com/svg.latex?\Large&space;b"> bulls and <img src="https://latex.codecogs.com/svg.latex?\Large&space;c"> cows with the number <img src="https://latex.codecogs.com/svg.latex?\Large&space;A">. 
 
 ## 9. Other tasks  
 
