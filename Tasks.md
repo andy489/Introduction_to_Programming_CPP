@@ -642,6 +642,15 @@ Example input | Output
 
 **8.02.** Tisho really enjoyed our help and he needs us again. Now he asked us to do the following: Given a number <img src="https://latex.codecogs.com/svg.latex?\Large&space;A"> - Tisho's suggestion for his opponent's number, <img src="https://latex.codecogs.com/svg.latex?\Large&space;b"> - number of bulls and <img src="https://latex.codecogs.com/svg.latex?\Large&space;c"> - number of cows, we have to print every number <img src="https://latex.codecogs.com/svg.latex?\Large&space;N"> that has <img src="https://latex.codecogs.com/svg.latex?\Large&space;b"> bulls and <img src="https://latex.codecogs.com/svg.latex?\Large&space;c"> cows with the number <img src="https://latex.codecogs.com/svg.latex?\Large&space;A">. 
 
+**8.03.** Strahil and Pesho really love hamburgers and they have a game which they play in rounds - they try to eat as much as they can. And since it is very hard to overeat, they can't remember how many burgers they ate, so they write the result in a single number B with the following property: the sum of the left digits of B gives the number of burgers Strahil ate, and the sum of the right digits gives the number of burgers Pesho ate. For example 3489 means that Strahil ate 3 + 4 = 7 and Pesho ate 8 + 9 = 17. If the number B has odd number of digits, then the one in the middle is shared between them both. For example 324 means 3 + 2 = 5 for Strahil and 2 + 4 = 6 for Pesho. The number B will never be more than 9 digits long. Your task is to help them decide who is better and print who won the game and how many burgers he ate. If they have equal results, print that the result is even.
+
+Example input | Output
+------------ | -------------
+1221 | Even
+23 | Pesho 3
+6543 | Strahil 11
+489 | Pesho 17
+
 ## 9. Other tasks  
 
 **9.01.** Write a program which by given two days of any year computes the number of days between them. Hint:
