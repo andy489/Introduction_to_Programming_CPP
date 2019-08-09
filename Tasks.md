@@ -682,7 +682,7 @@ Example input | Output
 
 - Output: False
 
-**8.05.** Write a program which by a given random text, displays all the different words in the text one by one in a row arranged lexicographically, starting from the smallest one. For a word we consider every string containing only lowercase and uppercase symbols from the Latin alphabet. Consider all other characters as separators between the words. Implement the code of the program without using libraries other than <iostream>. Еach memory the program uses must be dynamically allocated to the exact size.
+**8.05.** Write a program which by a given random text, displays all the different words in the text one by one in a row arranged lexicographically, starting from the smallest one. For a word we consider every string containing only lowercase and uppercase symbols from the Latin alphabet. Consider all other characters as separators between the words. Implement the code of the program without using libraries other than <img src="https://latex.codecogs.com/svg.latex?\Large&space;<iostream>">. Еach memory the program uses must be dynamically allocated to the exact size and correctly released.
 
 ## 9. Other tasks  
 
