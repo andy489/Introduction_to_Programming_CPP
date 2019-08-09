@@ -66,7 +66,7 @@ unsigned progress(int a[], unsigned n)
 	{
 		t.begin = first;
 		while (++first != last)
-			if (*(first - 1) > *first) break; // проверка за растене на подредицата чрез поинтъри
+		if (*(first - 1) > *first) break; // проверка за растене на подредицата чрез поинтъри
 		t.end = first;
 		if (r.len() < t.len()) r = t; // избираме максималната дължина
 	}
