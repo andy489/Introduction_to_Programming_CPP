@@ -107,7 +107,7 @@ bool reachable(int A[N][N], int n, int x, int y, int target)
 	}
 	if (x + 1 < n && A[x][y] <= A[x + 1][y]) // ако е възможен преход надолу
 	{
-		if (reachable(A, n, x + 1, y, target))return true;
+		if (reachable(A, n, x + 1, y, target)) return true;
 	}
 	return false; // не съществува възможен преход
 }
