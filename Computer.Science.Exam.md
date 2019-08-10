@@ -43,7 +43,6 @@ int main()
 	unsigned n = sizeof(a) / sizeof(a[0]); // намираме дължината на масива
 
 	std::cout << progression(a, n);
-
 	return 0;
 }
 ````
@@ -75,8 +74,10 @@ unsigned progress(int a[], unsigned n)
 int main()
 {
 	int a[] = {1,3,1,2,3,1 };
-	unsigned n = sizeof(a) / sizeof(a[0]);	
+	unsigned n = sizeof(a) / sizeof(a[0]);
+	
 	std::cout << progress(a,n);
+	return 0;
 }
 ````
 **Задача 2.** (6 т.) Нека е дадена квадратната матрица <img src="https://latex.codecogs.com/svg.latex?\Large&space;A"> от цели числа <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{N}">x<img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbb{N}">, <img src="https://latex.codecogs.com/svg.latex?\Large&space;2\leq\mathbb{N}\leq{100}">, представляваща „лабиринт“. Елементите на матрицата със стойност по-гпляма от числото 0 смятаме за „проходими“, а всички останали - за „непроходими“. „Низходящ път“ в лабиринта наричаме всяка последователност от проходими елементи на матрицата, в която всеки следващ елемент е или вдясно, или под предишния.
@@ -118,6 +119,7 @@ int main()
 			{50,20,50,50},
 			{40, 0,40,60} };
 	std::cout << reachable(A, N, 0, 0, 8);
+	return 0;
 }
 ````
 **Задача 3.** (6 т.) Да се дефинита подходяща структура ***Planet***, описваща планетно тяло в система с една звезда със следните параметри (пренебрегваме влиянието на всички други тела, освен на звездата):
