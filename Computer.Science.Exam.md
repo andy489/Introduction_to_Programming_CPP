@@ -98,29 +98,25 @@ int main()
 #include <iostream>
 bool reachable(int A[N][N], int n, int x, int y, int target)
 {
-	if (x < 0 || y < 0 || x >= n || y >= n) return false; // ако излезе извън лабиринта
-	if (A[x][y] == target) return true; // ако достигне целта	
+	if (x < 0 || y < 0 || x >= n || y >= n) return false;
+	if (A[x][y] == target) return true;
 
-	if (A[x][y] <= A[x][y + 1]) // ако може да се придвижим надолу
+	if (y + 1 < n && A[x][y] <= A[x][y + 1]) // ако е възможен преход надясно
 	{
 		if (reachable(A, n, x, y + 1, target)) return true;
-		else return false;
 	}
-	if (A[x][y] <= A[x + 1][y]) // ако може да се придвижим надясно
+	if (x + 1 < n && A[x][y] <= A[x + 1][y]) // ако е възможен преход надолу
 	{
-		if (reachable(A, n, x + 1, y, target)) return true;
-		else return false;		
+		if (reachable(A, n, x + 1, y, target))return true;
 	}
-	/* и в двата случая if-овете, в които се извиква рекурсивната функция са 
-	независими и следователно без приоритет */
-	return true;
+	return false; // не съществува възможен преход
 }
 int main()
 {
 	int A[N][N] = { { 1, 0, 2, 0},
 			{10,15, 2, 2},
 			{50,20,50,50},
-			{40, 0,40,60} };
-	std::cout << reachable(A, N, 0, 0, 60);
+			{40,0,40,60} };
+	std::cout << reachable(A, N, 0, 0, 40);
 }
 ````
