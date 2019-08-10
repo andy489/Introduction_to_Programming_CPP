@@ -221,7 +221,8 @@ Planet::Planet(double x, double y, double z, double d, bool life, char name[20])
 }
 void printPlanet(Planet p[])
 {
-	std::cout << p->name << " with coordinates (" << p->x << ", " << p->y << ", " << p->z << "), diameter " << p->d << " and ";
+	std::cout << p->name << " with coordinates (" << p->x << ", " << p->y << ", " << p->z 
+	<< "), diameter " << p->d << " and ";
 	(p->life) ? std::cout << "life existence." : std::cout << "no life existence.";
 	std::cout << std::endl;
 }
