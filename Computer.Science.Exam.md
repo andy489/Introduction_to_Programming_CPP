@@ -111,7 +111,8 @@ bool reachable(int A[N][N], int n, int x, int y, int target)
 		if (reachable(A, n, x + 1, y, target)) return true;
 		else return false;		
 	}
-	/* и в двата случая if-овете, в които се извиква рекурсивната функция са независими и следователно без приоритет */
+	/* и в двата случая if-овете, в които се извиква рекурсивната функция са 
+	независими и следователно без приоритет */
 	return true;
 }
 int main()
