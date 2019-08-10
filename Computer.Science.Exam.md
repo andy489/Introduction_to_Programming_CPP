@@ -118,9 +118,9 @@ bool reachable(int A[N][N], int n, int x, int y, int target)
 int main()
 {
 	int A[N][N] = { { 1, 0, 2, 0},
-					{10,15, 2, 2},
-					{50,20,50,50},
-					{40, 0,40,60} };
+			{10,15, 2, 2},
+			{50,20,50,50},
+			{40, 0,40,60} };
 	std::cout << reachable(A, N, 0, 0, 60);
 }
 ````
