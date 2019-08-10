@@ -90,3 +90,35 @@ int main()
 **10**|**15**|**1**|**1**
 **50**|**20**|**50**|**50**
 **40**|**0**|**40**|**60**
+
+
+***Решение:***
+````cpp
+#define N 4
+#include <iostream>
+bool reachable(int A[N][N], int n, int x, int y, int target)
+{
+	if (x < 0 || y < 0 || x >= n || y >= n) return false; //ако излезе извън лабиринта
+	if (A[x][y] == target) return true; // ако достигне целта	
+
+	if (A[x][y] <= A[x][y + 1])
+	{
+		if (reachable(A, n, x, y + 1, target)) return true;
+		else return false;
+	}
+	if (A[x][y] <= A[x + 1][y])
+	{
+		if (reachable(A, n, x + 1, y, target)) return true;
+		else return false;		
+	}
+	return true;
+}
+int main()
+{
+	int A[N][N] = { { 1, 0, 2, 0},
+					{10,15, 2, 2},
+					{50,20,50,50},
+					{40, 0,40,60} };
+	std::cout << reachable(A, N, 0, 0, 60);
+}
+````
