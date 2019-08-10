@@ -157,7 +157,6 @@ struct Planet
 	Planet();
 	Planet(double x, double y, double z, double d, bool life, char name[20]);
 };
-
 void printPlanet(Planet p[]);
 void printPlanets(Planet planets[], unsigned n);
 Planet findPlanet(Planet planets[], unsigned n, char type);
