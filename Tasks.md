@@ -492,7 +492,7 @@ d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https
   - Every living cell with two or three living neighbours stays alive for the next turn;
   - Every dead cell with exactly three living neighbours comes back to live.
 
-Your task is to simulate this game. The initial state of the surface should be hard-coded. On every turn the state of the cells should be written to the console: 'X' for a living cell, 'O' for a dead cell.
+Your task is to simulate this game. The initial state of the surface should be hard-coded. On every turn the state of the cells should be written to the console: 'X' for a living cell, '.' for a dead cell.
 
 - [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life "Markdown Tutorial")
 
