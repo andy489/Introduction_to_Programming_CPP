@@ -498,6 +498,10 @@ Your task is to simulate this game. The initial state of the surface should be h
 
 - [Simulation](https://bitstorm.org/gameoflife/ "Markdown Tutorial")
 
+- *Some configurations:*
+
+![alt text](https://camo.githubusercontent.com/a710386de69bcb8577875246196c7fb07144ff0c/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f3456565a547654717a5252304255774e49482f67697068792e676966)
+
 **5.11.** You are given numbers <img src="https://latex.codecogs.com/svg.latex?n,m"> and a <img src="https://latex.codecogs.com/svg.latex?nXm"> matrix that consists of numbers 0 through 9. Your task is to create a program that says ***how many*** islands and peninsulas are there. These are the ***rules***:
 - 0 is water;
 - 1-9 is the height of the ground;
