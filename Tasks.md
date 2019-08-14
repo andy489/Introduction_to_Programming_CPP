@@ -428,7 +428,9 @@ d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https
 
 **5.09.** Write a program which finds the maximum number, which occurs int a given <img src="https://latex.codecogs.com/svg.latex?n-th"> order matrix <img src="https://latex.codecogs.com/svg.latex?A"> more than once.
 
-**5.10.** Write a program which asks the user for a natural number <img src="https://latex.codecogs.com/svg.latex?n"> and ***generates*** (also prints) eight <img src="https://latex.codecogs.com/svg.latex?nXn"> matrices in the pattern of the given example:
+**5.10.** We say that two columns of a matrix are *alike* if the sets of numbers that make up the collumns are equal. Write a program that finds the numbers of all the columns of matrix <img src="https://latex.codecogs.com/svg.latex?A"> with size <img src="https://latex.codecogs.com/svg.latex?N">x<img src="https://latex.codecogs.com/svg.latex?N"> that are *alike*.
+
+**5.11.** Write a program which asks the user for a natural number <img src="https://latex.codecogs.com/svg.latex?n"> and ***generates*** (also prints) eight <img src="https://latex.codecogs.com/svg.latex?nXn"> matrices in the pattern of the given example:
 - for <img src="https://latex.codecogs.com/svg.latex?n=4"> (note how all the numbers are aligned!):
 
   - a) 
@@ -487,7 +489,7 @@ d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https
        11 16 15 6
        10 9  8  7
    ````
-**5.11.** Game of Life (***Conway's Game of Life***) is a game for zero :disappointed: players and consists of a surface, devided in cells. Every cell is dead or alive. The game is played in turns. Every turn depends on the state of the game in the previous turn following these rules:
+**5.12.** Game of Life (***Conway's Game of Life***) is a game for zero :disappointed: players and consists of a surface, devided in cells. Every cell is dead or alive. The game is played in turns. Every turn depends on the state of the game in the previous turn following these rules:
 
   - Every cell with less than two living neighbours dies (of loneliness);
   - Every living cell with more than three living neighbours dies (too crowded);
