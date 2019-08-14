@@ -3075,8 +3075,129 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.10
+//Task 5.10 first approach
+#include <iostream>
+bool isSubset(int* set1, int* set2, const size_t rows)
+{
+	for (size_t i = 0; i < rows; i++)
+	{
+		double curr = set2[i];
+		for (size_t j = 0; j < rows; j++)
+		{
+			if (curr == set1[j]) break;
+			if (j == rows - 1) return false;
+		}
+	}
+	return true;
+}
+int main()
+{
+	const size_t rows = 5;
+	const size_t cols = 6;
+	int  matrix[][cols] = { 1,2,3,3,5,1,
+							2,3,4,2,6,1,
+							2,5,5,1,2,3,
+							2,3,5,1,3,1,
+							3,4,2,1,8,2 };
+	for (size_t i = 0; i < cols; i++)
+	{
+		std::cout << "alike column numbers to column " << i + 1 << " are: ";
+		int currSet[rows];
+		for (size_t j = 0; j < rows; j++) currSet[j] = matrix[j][i]; //fill the current column to an array
+		bool count(0);
+		for (size_t k = 0; k < cols; k++)
+		{
+			int setToCheck[rows];
+			for (size_t l = 0; l < rows; l++) setToCheck[l] = matrix[l][k]; // fill the column to an array to compare			
+			if (i != k && isSubset(currSet, setToCheck, rows) && isSubset(setToCheck, currSet, rows))
+			{
+				std::cout << k + 1 << ' ';
+				count=true;
+			}
+		}
+		if (!count) std::cout << "this column is unique!";		
+		count = 0;
+		std::cout << std::endl;
+	}
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 5.10 second approach
+#include <iostream>
+void findSimilarRows(int** matrix, size_t rows);
+bool isSubset(int** matrix, size_t firstColumn, size_t secondColumn, size_t rows);
+bool isContained(int **matrix, size_t column, size_t searchedElement, size_t rows);
 
+int main()
+{
+	std::cout << "Enter number of rows and columns: ";
+	size_t rows;
+	std::cin >> rows;
+
+	std::cout << "Enter the elements of the matrix: " << std::endl;
+	int** matrix = new int*[rows];
+
+	// matrix allocation and initialization
+	for (size_t i = 0; i < rows; i++)
+	{
+		matrix[i] = new int[rows];
+		for (size_t j = 0; j < rows; j++) std::cin >> matrix[i][j];
+	}
+	std::cout << std::endl;
+
+	//print matrix
+	std::cout << "The matrix is: " << std::endl;
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < rows; j++) std::cout << matrix[i][j] << " ";		
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+
+	findSimilarRows(matrix, rows);
+
+	// deleting matrix
+	for (size_t i = 0; i < rows; i++) delete[] matrix[i];	
+	delete[] matrix;
+
+	return 0;
+}
+// checks if two columns are similar
+void findSimilarRows(int** matrix, size_t rows)
+{
+	bool areSimilarColumns = false;
+
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = i + 1; j < rows; j++)
+		{
+			if (isSubset(matrix, i, j, rows) && isSubset(matrix, i, j, rows))
+			{
+				std::cout << "Columns " << i << " and " << j << " are similar" << std::endl;
+				areSimilarColumns = true;
+			}
+		}
+	}
+	if (!areSimilarColumns) std::cout << "There are no similar columns" << std::endl;
+}
+// checks if the elements of secondColumn are contained in firstColumn
+bool isSubset(int** matrix, size_t firstColumn, size_t secondColumn, size_t rows)
+{
+	for (size_t i = 0; i < rows; i++)
+	{
+		if (!isContained(matrix, firstColumn, matrix[i][secondColumn], rows)) return false;		
+	}
+	return true;
+}
+// checks if searchedElement is contained in the column
+bool isContained(int **matrix, size_t column, size_t searchedElement, size_t rows)
+{
+	for (size_t i = 0; i < rows; i++)
+	{
+		if (matrix[i][column] == searchedElement) return true;		
+	}
+	return false;
+}
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 5.11
 #include <iostream>
