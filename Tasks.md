@@ -446,7 +446,7 @@ d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https
 
 **5.16.** It's given a real square matrix <img src="https://latex.codecogs.com/svg.latex?A">, <img src="https://latex.codecogs.com/svg.latex?N">x<img src="https://latex.codecogs.com/svg.latex?N">, where <img src="https://latex.codecogs.com/svg.latex?2\le{N}\le{10}">. Write a program which checks if <img src="https://latex.codecogs.com/svg.latex?A"> is *ortonormal*, where we define a matrix to be *ortonormal* if the *scalar product* of any two different rows of <img src="https://latex.codecogs.com/svg.latex?A"> is equal to 0 and the *scalar product* of any row with itself is equal to 1.
 
-**5.17.** Write a program which determines whether the square matrix <img src="https://latex.codecogs.com/svg.latex?A"> is a magic square, i.e. such that the sum of the elements of all rows and columns is the same.
+**5.17.** Write a program which determines whether the square matrix <img src="https://latex.codecogs.com/svg.latex?A"> is a *magic square*, i.e. such that the sum of the elements of all rows and columns is the same.
 
 **5.18.** Write a program which asks the user for a natural number <img src="https://latex.codecogs.com/svg.latex?n"> and ***generates*** (also prints) eight <img src="https://latex.codecogs.com/svg.latex?nXn"> matrices in the pattern of the given example:
 - for <img src="https://latex.codecogs.com/svg.latex?n=4"> (note how all the numbers are aligned!):
