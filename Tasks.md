@@ -440,7 +440,17 @@ d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https
 
 <img src="https://latex.codecogs.com/svg.latex?A'=\begin{pmatrix}a_1&a_2&a_3&...&a_{n-2}&a_{n-1}&a_n\\a_2&-a_3&a_4&...&a_{n-1}&a_n&a_1\\a_3&a_4&a_5&...&a_n&a_1&a_2\\...\\a_{n-2}&a_{n-1}&a_n&...&a_{n-5}&a_{n-4}&a_{n-3}\\a_{n-1}&a_n&a_1&...&a_{n-4}&a_{n-3}&a_{n-2}\\a_{n}&a_1&a_2&...&a_{n-3}&a_{n-2}&a_{n-1}\end{pmatrix}">
 
-**5.15.** Write a program which asks the user for a natural number <img src="https://latex.codecogs.com/svg.latex?n"> and ***generates*** (also prints) eight <img src="https://latex.codecogs.com/svg.latex?nXn"> matrices in the pattern of the given example:
+**5.15.** Given a real square matrix <img src="https://latex.codecogs.com/svg.latex?A"> of order <img src="https://latex.codecogs.com/svg.latex?N">. Write a program which finds:
+
+ <img src="https://latex.codecogs.com/svg.latex?a)\underset{1\le{i}\le{n}}{\mathrm{\max}}\{\underset{1\le{j}\le{n}}{\mathrm{\min{a_{ij}}}}\}">
+
+  <img src="https://latex.codecogs.com/svg.latex?b)\underset{1\le{j}\le{n}}{\mathrm{\max}}\{\underset{1\le{i}\le{n}}{\mathrm{\min{a_{ij}}}}\}">
+
+  <img src="https://latex.codecogs.com/svg.latex?c)\underset{1\le{i}\le{n}}{\mathrm{\min}}\{\underset{1\le{j}\le{n}}{\mathrm{\max{a_{ij}}}}\}">
+
+  <img src="https://latex.codecogs.com/svg.latex?d)\underset{1\le{j}\le{n}}{\mathrm{\max}}\{\underset{1\le{i}\le{n}}{\mathrm{\min{a_{ij}}}}\}">
+
+**5.16.** Write a program which asks the user for a natural number <img src="https://latex.codecogs.com/svg.latex?n"> and ***generates*** (also prints) eight <img src="https://latex.codecogs.com/svg.latex?nXn"> matrices in the pattern of the given example:
 - for <img src="https://latex.codecogs.com/svg.latex?n=4"> (note how all the numbers are aligned!):
 
   - a) 
@@ -499,7 +509,7 @@ d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https
        11 16 15 6
        10 9  8  7
    ````
-**5.16.** Game of Life (***Conway's Game of Life***) is a game for zero :disappointed: players and consists of a surface, devided in cells. Every cell is dead or alive. The game is played in turns. Every turn depends on the state of the game in the previous turn following these rules:
+**5.17.** Game of Life (***Conway's Game of Life***) is a game for zero :disappointed: players and consists of a surface, devided in cells. Every cell is dead or alive. The game is played in turns. Every turn depends on the state of the game in the previous turn following these rules:
 
   - Every cell with less than two living neighbours dies (of loneliness);
   - Every living cell with more than three living neighbours dies (too crowded);
@@ -516,7 +526,7 @@ Your task is to simulate this game. The initial state of the surface should be h
 
 ![alt text](https://camo.githubusercontent.com/a710386de69bcb8577875246196c7fb07144ff0c/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f3456565a547654717a5252304255774e49482f67697068792e676966)
 
-**5.17.** You are given numbers <img src="https://latex.codecogs.com/svg.latex?n,m"> and a <img src="https://latex.codecogs.com/svg.latex?nXm"> matrix that consists of numbers 0 through 9. Your task is to create a program that says ***how many*** islands and peninsulas are there. These are the ***rules***:
+**5.18.** You are given numbers <img src="https://latex.codecogs.com/svg.latex?n,m"> and a <img src="https://latex.codecogs.com/svg.latex?nXm"> matrix that consists of numbers 0 through 9. Your task is to create a program that says ***how many*** islands and peninsulas are there. These are the ***rules***:
 - 0 is water;
 - 1-9 is the height of the ground;
 - Islands are pieces of land connected by different grounds. Example of an island:
