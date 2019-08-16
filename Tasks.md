@@ -442,7 +442,7 @@ d) <img src="https://latex.codecogs.com/svg.latex?A=A^T">, where <img src="https
 
 **5.15.** Given a real square matrix <img src="https://latex.codecogs.com/svg.latex?A"> of order <img src="https://latex.codecogs.com/svg.latex?N">. Write a program which finds:
 
- <img src="https://latex.codecogs.com/svg.latex?a)\underset{1\le{i}\le{n}}{\mathrm{\max}}\{\underset{1\le{j}\le{n}}{\mathrm{\min{a_{ij}}}}\}">;  <img src="https://latex.codecogs.com/svg.latex?b)\underset{1\le{j}\le{n}}{\mathrm{\max}}\{\underset{1\le{i}\le{n}}{\mathrm{\min{a_{ij}}}}\}">; <img src="https://latex.codecogs.com/svg.latex?c)\underset{1\le{i}\le{n}}{\mathrm{\min}}\{\underset{1\le{j}\le{n}}{\mathrm{\max{a_{ij}}}}\}">;  <img src="https://latex.codecogs.com/svg.latex?d)\underset{1\le{j}\le{n}}{\mathrm{\max}}\{\underset{1\le{i}\le{n}}{\mathrm{\min{a_{ij}}}}\}">
+ <img src="https://latex.codecogs.com/svg.latex?a)\underset{1\le{i}\le{n}}{\mathrm{\max}}\{\underset{1\le{j}\le{n}}{\mathrm{\min{a_{ij}}}}\}">;  <img src="https://latex.codecogs.com/svg.latex?b)\underset{1\le{j}\le{n}}{\mathrm{\max}}\{\underset{1\le{i}\le{n}}{\mathrm{\min{a_{ij}}}}\}">; <img src="https://latex.codecogs.com/svg.latex?c)\underset{1\le{i}\le{n}}{\mathrm{\min}}\{\underset{1\le{j}\le{n}}{\mathrm{\max{a_{ij}}}}\}">;  <img src="https://latex.codecogs.com/svg.latex?d)\underset{1\le{j}\le{n}}{\mathrm{\max}}\{\underset{1\le{i}\le{n}}{\mathrm{\min{a_{ij}}}}\}">.
 
 **5.16.** Write a program which asks the user for a natural number <img src="https://latex.codecogs.com/svg.latex?n"> and ***generates*** (also prints) eight <img src="https://latex.codecogs.com/svg.latex?nXn"> matrices in the pattern of the given example:
 - for <img src="https://latex.codecogs.com/svg.latex?n=4"> (note how all the numbers are aligned!):
