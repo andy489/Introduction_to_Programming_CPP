@@ -7,3 +7,12 @@
 а) проверява дали от дадена стартова позиция в лабиринта с координати <img src="https://latex.codecogs.com/svg.latex?\Large&space;(x,y)">, може да се достигне до съкровище;
 
 б) намира броя на всички съкровища, до които може да се достигне от дадена позиция с координати <img src="https://latex.codecogs.com/svg.latex?\Large&space;(x,y)">.
+ 
+Пример: На фигурата по-долу съществува път до съкровище от позиция с координати **(4,1)**, но не и от позиция с координати **(0,0)**. Също така, броя на съкровищата, до които може да се достигне от позиция с координати **(4,1)** е **3**, а от позиция с координати **(2,0)** е **1**.
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">|$|<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">|<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">| |
+---- | ---- | ---- | ---- | ---- |
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">| |**$**| | |
+**$**|<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">|<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">|<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">| |
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">| | | | |
+| | |<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">|<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">|**$**|
