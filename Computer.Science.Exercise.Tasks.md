@@ -17,6 +17,8 @@
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;*">| | | | |
 | | |<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">|<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">|**$**|
 
+*(Трифон Трифонов)*
+
 ***Решение:***
 - а)
 ```cpp
