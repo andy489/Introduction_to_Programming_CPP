@@ -1,5 +1,5 @@
 **Задача 1.** (*ЛАБИРИНТ*) Дадена е правоъгълна символна матрица <img src="https://latex.codecogs.com/svg.latex?\Large&space;A"> с размери <img src="https://latex.codecogs.com/svg.latex?\Large&space;N">x<img src="https://latex.codecogs.com/svg.latex?\Large&space;M">, която представлява „лабиринт“. Лабиринта се състои единствено от символите <img src="https://latex.codecogs.com/svg.latex?\Large&space;*">,$ и празната клетка.
-- <img src="https://latex.codecogs.com/svg.latex?\Large&space;*"> е лава, през която не може да се преминава и върху която не може да се стъпва;
+- <img src="https://latex.codecogs.com/svg.latex?\Large&space;*"> е лава, през която не може да се премине и върху която не може да се стъпи;
 - $ е съкровище;
 - празната клетка е проходим път.
 
