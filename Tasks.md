@@ -564,6 +564,11 @@ Example input:
 ````
 Output should be: 4.
 
+**5.21.** We are given the coefficients <img src="https://latex.codecogs.com/svg.latex?a_{ij}(1\le{i}\le{n},1\le{j}\le{n})"> and
+<img src="https://latex.codecogs.com/svg.latex?b_i(i=1,...,n)">. Write a program which solves the system of linear equations:
+          
+<img src="https://latex.codecogs.com/svg.latex?\begin{cases}a_{11}x_1+a_{12}x_2+a_{13}x_3+...+a_{1n}x_n=b_1\\a_{21}x_1+a_{22}x_2+a_{23}x_3+...+a_{2n}x_n=b_2\\a_{31}x_1+a_{32}x_2+a_{33}x_3+...+a_{3n}x_n=b_3\\...\\a_{n1}x_1+a_{n2}x_2+a_{n3}x_3+...+a_{nn}x_n=b_n\end{cases}">
+
 ## 6. Strings
 
 **6.01.** Write an implementation of:
