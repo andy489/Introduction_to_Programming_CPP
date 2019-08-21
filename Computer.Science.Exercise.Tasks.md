@@ -370,3 +370,80 @@ int main()
 	return 0;
 }
 ```
+Задачата може да се обобщи още повече като се разшири функционолността и по следния начин: Да се образуват всички <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерни вектори с компоненти <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k">, където <img src="https://latex.codecogs.com/svg.latex?\Large&space;k"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> са дадени естествени числа, <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k"> са различни елементи.
+
+За да реализираме и тази програма, трябва да съобразим, че в предишната задача, редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;a[1],a[2],...,a[n]"> е една вариация с повторение на елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,...,k-1">. Тогава редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;a[1]+1,a[2]+1,...,a[n]+1"> е една вариация с повторение на елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;1,2,...,k">, които са индекси на редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k">.
+
+Ще е необходимо да променим фунцкията за печатане на конзолата като <img src="https://latex.codecogs.com/svg.latex?\Large&space;std::cout << a[i];"> се замени с <img src="https://latex.codecogs.com/svg.latex?\Large&space;std::cout<<v[a[i]+1];">, както и редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k"> да се въведе в главната програма.
+
+```cpp
+#include <iostream>
+#include <cmath>
+#include <string>
+template<typename T>
+void printArr(int* a, size_t n, T * v)
+{
+	std::cout << '(';
+	for (size_t i = 1; i <= n; i++)
+	{
+		std::cout << v[a[i] + 1];
+		if (i != n)
+		{
+			std::cout << ',';
+		}
+	}
+	std::cout << ')';
+	std::cout << std::endl;
+}
+int main()
+{
+	int n, m, k;
+	std::cout << "n = ";
+	std::cin >> n;
+	/*std::cout << "k = ";
+	std::cin >> k;*/
+	k = 3;
+	int a[30];
+
+	/*char* v = new char[k+1];
+	for (int i = 1; i <= k; i++)
+	{
+		v[i] = (char)(96 + i);
+	}*/
+
+	std::string* v = new std::string[k + 1];
+	v[1] = "tik";
+	v[2] = "tak";
+	v[3] = "toe";
+
+	for (int i = 1; i <= n; i++)
+	{
+		a[i] = 0;
+	}
+	printArr(a, n, v);
+	for (int i = 1; i <= pow(k, n) - 1; i++)
+	{
+		if (a[n] < k - 1)
+		{
+			a[n] = a[n] + 1;
+			printArr(a, n, v);
+		}
+		else
+		{
+			m = n;
+			while (a[m] == k - 1)
+			{
+				m = m - 1;
+			}
+			a[m] = a[m] + 1;
+			for (int i = m + 1; i <= n; i++)
+			{
+				a[i] = 0;
+			}
+			printArr(a, n, v);
+		}
+	}
+	delete[] v;
+	return 0;
+}
+```
