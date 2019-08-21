@@ -370,7 +370,7 @@ int main()
 	return 0;
 }
 ```
-Задачата може да се обобщи още повече като се разшири функционолността и по следния начин: Да се образуват всички <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерни вектори с компоненти <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k">, където <img src="https://latex.codecogs.com/svg.latex?\Large&space;k"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> са дадени естествени числа, <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k"> са различни елементи.
+Задачата може да се обобщи още повече като се разшири функционолността ѝ по следния начин: Да се образуват всички <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерни вектори с компоненти <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k">, където <img src="https://latex.codecogs.com/svg.latex?\Large&space;k"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> са дадени естествени числа, <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k"> са различни елементи.
 
 За да реализираме и тази програма, трябва да съобразим, че в предишната задача, редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;a[1],a[2],...,a[n]"> е една вариация с повторение на елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,...,k-1">. Тогава редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;a[1]+1,a[2]+1,...,a[n]+1"> е една вариация с повторение на елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;1,2,...,k">, които са индекси на редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k">.
 
