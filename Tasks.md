@@ -660,7 +660,7 @@ Example input | Output
 
 **7.13.** Write a function which takes two integers, which are not all zero, and returns the largest positive integer that divides each of the integers (***greatest common divisor***). For example, the ***GCD*** of 8 and 12 is 4. Use [Euclid's algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm "Markdown Tutorial").
 
-**7.14.** Write a function which calculates the value of a given polynomial using ![Horner's method](https://en.wikipedia.org/wiki/Horner%27s_method "Markdown Tutorial").
+**7.14.** Write a function which calculates the value of a given polynomial using [Horner's method](https://en.wikipedia.org/wiki/Horner%27s_method "Markdown Tutorial").
 
 ## 8. Complex tasks
 
