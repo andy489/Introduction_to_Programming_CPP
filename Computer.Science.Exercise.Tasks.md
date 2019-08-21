@@ -313,3 +313,60 @@ int main()
   - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i'=0,i=m+1,...,n">
 - ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=a_2=...=a_n=k-1">, то 
   - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1'=a_2'=...=a_n'=0">
+
+```cpp
+#include <iostream>
+#include <cmath>
+void printArr(int* a, size_t n)
+{
+	std::cout << '(';
+	for (size_t i = 1; i <= n; i++)
+	{
+		std::cout << a[i];
+		if (i != n)
+		{
+			std::cout << ',';
+		}
+	}
+	std::cout << ')';
+	std::cout << std::endl;
+}
+int main()
+{
+	int n, m, k;
+	std::cout << "n = ";
+	std::cin >> n;
+	std::cout << "k = ";
+	std::cin >> k;
+	int a[30];
+
+	for (int i = 1; i <= n; i++)
+	{
+		a[i] = 0;
+	}
+	printArr(a, n);
+	for (int i = 1; i <= pow(k, n) - 1; i++)
+	{
+		if (a[n] < k - 1)
+		{
+			a[n] = a[n] + 1;
+			printArr(a, n);
+		}
+		else
+		{
+			m = n;
+			while (a[m] == k - 1)
+			{
+				m = m - 1;
+			}
+			a[m] = a[m] + 1;
+			for (int i = m + 1; i <= n; i++)
+			{
+				a[i] = 0;
+			}
+			printArr(a, n);
+		}
+	}
+	return 0;
+}
+```
