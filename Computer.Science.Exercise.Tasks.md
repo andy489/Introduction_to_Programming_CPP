@@ -196,6 +196,11 @@ int main()
 
 **Дефиниция**. Нека <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=(a_1,a_2,...,a_n)"> e произволен <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерен вектор с компоненти 0 и 1. **Сумата по модул 2** на вектора <img src="https://latex.codecogs.com/svg.latex?\Large&space;a"> с <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерния единичен вектор <img src="https://latex.codecogs.com/svg.latex?\Large&space;e=(0,0,...,0,1)"> е вектор <img src="https://latex.codecogs.com/svg.latex?\Large&space;a'=(a_1',a_2',...,a_n')">, чиито компоненти се образуват съгласно следните правила:
 - ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n=0">, то <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i'=a_i,i-1,2,...,n-1"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n'=1">.
+- ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n=a_{n-1}=...=a_{m+1}=1,a_m=0,1\le{m}<n">, то 
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i'=a_i,i=1,...,m-1">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;a_m'=1">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i'=0,i=m+1,...,n">
 
 - а) 
 
