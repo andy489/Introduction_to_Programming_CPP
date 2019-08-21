@@ -660,6 +660,8 @@ Example input | Output
 
 **7.13.** Write a function which takes two integers, which are not all zero, and returns the largest positive integer that divides each of the integers (***greatest common divisor***). For example, the ***GCD*** of 8 and 12 is 4. Use [Euclid's algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm "Markdown Tutorial").
 
+**7.14.** Write a function which calculates the value of a given polynomial using ![Horner's method](https://en.wikipedia.org/wiki/Horner%27s_method "Markdown Tutorial").
+
 ## 8. Complex tasks
 
 **8.01.** Tisho wants to play ***Bulls and Cows***, but he is confused by the rules, so he needs our help. We have to write a program that reads two integer numbers A and B in the range [0,9999] from the console and prints back the number of bulls and cows for these numbers. Numbers smaller than 1000 we should pad with zeros, for example 19 should be interpreted as 0019.
