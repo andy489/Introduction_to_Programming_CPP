@@ -447,3 +447,20 @@ int main()
 	return 0;
 }
 ```
+
+**Вариации без повторения**
+
+**Дефиниция**. Ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k"> са <img src="https://latex.codecogs.com/svg.latex?\Large&space;k"> на брой различни елементи <img src="https://latex.codecogs.com/svg.latex?\Large&space;(k\ge{1}),n"> е произволно естествено число <img src="https://latex.codecogs.com/svg.latex?\Large&space;n\le{k}">, всяка редица от точно <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> елемента от дадените, като всеки елемент може да участва не повече от веднъж, се нарича **вариация без повторения от дадените k елемента от n-ти клас.**
+
+**Пример**: Нека <img src="https://latex.codecogs.com/svg.latex?\Large&space;k=3,v_1=0,v_2=1,v_3=2">, а <img src="https://latex.codecogs.com/svg.latex?\Large&space;n=2">.
+
+Следните редици <img src="https://latex.codecogs.com/svg.latex?\Large&space;(0,1),(0,2),(1,0),(1,2),(2,0),(2,1)"> са вариациите без повторения на елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_3"> от втори клас.
+
+**Задача 3.** (*ВАРИАЦИИ БЕЗ ПОВТОРЕНИЯ*) Нека <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;k"> са дадени естествени числа <img src="https://latex.codecogs.com/svg.latex?\Large&space;(n\le{k})">. Да се напише програма, която намира всички вариации без повторение от елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,...,k-1"> от <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-ти клас.
+
+За решаването на тази задача е необходимо в предходната задача с вариациите да се извършат следните промени:
+- а) да се провери дали <img src="https://latex.codecogs.com/svg.latex?\Large&space;(n\le{k})">;
+- б) да се изведат само онези <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-орки, които се състоят от различни елементи. За целта ще използваме булевата функция *bool diff()*, Която проверява дали редицата от <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> естествени числа <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,а_n"> се състои от различни елементи.
+
+
+
