@@ -374,7 +374,7 @@ int main()
 
 За да реализираме и тази програма, трябва да съобразим, че в предишната задача, редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;a[1],a[2],...,a[n]"> е една вариация с повторение на елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,...,k-1">. Тогава редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;a[1]+1,a[2]+1,...,a[n]+1"> е една вариация с повторение на елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;1,2,...,k">, които са индекси на редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k">.
 
-Ще е необходимо да променим фунцкията за печатане на конзолата като <img src="https://latex.codecogs.com/svg.latex?\Large&space;std::cout << a[i];"> се замени с <img src="https://latex.codecogs.com/svg.latex?\Large&space;std::cout<<v[a[i]+1];">, както и редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k"> да се въведе в главната програма.
+Ще е необходимо да променим фунцкията за печатане на конзолата като <img src="https://latex.codecogs.com/svg.latex?\Large&space;std::cout<<a[i];"> се замени с <img src="https://latex.codecogs.com/svg.latex?\Large&space;std::cout<<v[a[i]+1];">, както и редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k"> да се въведе в главната програма.
 
 ```cpp
 #include <iostream>
