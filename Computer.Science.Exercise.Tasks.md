@@ -296,6 +296,7 @@ int main()
 
 За целта ще направим обобщение на операцията събиране по модул 2, като определим операцията **събиране по модул <img src="https://latex.codecogs.com/svg.latex?\Large&space;k">**.
 
-**Дефиниция**. Нека
+**Дефиниция**. Нека <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=(a_1,a_2,...,a_n)"> е произволен <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерен вектор с компоненти <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,...,k-1">, a <img src="https://latex.codecogs.com/svg.latex?\Large&space;e=(0,...,0,1)"> е единичния <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерен вектор. **Сумата по модул <img src="https://latex.codecogs.com/svg.latex?\Large&space;k">** на вектора <img src="https://latex.codecogs.com/svg.latex?\Large&space;a"> с вектор <img src="https://latex.codecogs.com/svg.latex?\Large&space;e"> е векторът <img src="https://latex.codecogs.com/svg.latex?\Large&space;a'=(a_1',a_2',...,a_n')">, чиито компоненти се образуват съгласно следните правила:
+
 
 
