@@ -246,10 +246,16 @@ int main()
 #include <cmath>
 void printArr(int* a, size_t n)
 {
+	std::cout << '(';
 	for (size_t i = 0; i < n; i++)
 	{
-		std::cout << a[i] << ' ';
+		std::cout << a[i];
+		if (i != n - 1)
+		{
+			std::cout << ',';
+		}
 	}
+	std::cout << ')';
 	std::cout << std::endl;
 }
 int main()
@@ -264,9 +270,9 @@ int main()
 	{
 		a[i] = 0;
 	}
-	for (size_t i = 0; i < pow(2,n); i++)
+	for (size_t i = 0; i < pow(2, n); i++)
 	{
-		if (a[n]==0)
+		if (a[n] == 0)
 		{
 			a[n] = 1;
 			printArr(a, n);
@@ -279,7 +285,7 @@ int main()
 				m = m - 1;
 			}
 			a[m] = 1;
-			for (size_t i = m+1; i < n; i++)
+			for (size_t i = m + 1; i < n; i++)
 			{
 				a[i] = 0;
 			}
