@@ -210,11 +210,12 @@ int main()
 
 ```cpp
 #include <iostream>
-void bin(unsigned n)
+#include <cmath>
+void bin(unsigned n,unsigned k)
 {
 	unsigned i;
 	std::cout << '(';
-	for (i = 1 << 2; i > 0; i = i / 2)
+	for (i = 1 << k-1; i > 0; i = i / 2)
 	{
 		(n & i) ? std::cout << "1" : std::cout << "0";
 		if (i != 1)
@@ -224,11 +225,14 @@ void bin(unsigned n)
 	}
 	std::cout << ')';
 }
+
 int main()
 {
-	for (size_t i = 0; i < 8; i++)
+	unsigned n;
+	std::cin >> n;
+	for (size_t i = 0; i < pow(2,n); i++)
 	{
-		bin(i);
+		bin(i,n);
 		std::cout << std::endl;
 	}
 	return 0;
