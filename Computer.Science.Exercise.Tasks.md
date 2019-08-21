@@ -211,24 +211,21 @@ int main()
 ```cpp
 #include <iostream>
 #include <cmath>
-void bin(unsigned n,unsigned k)
+void bin(size_t n,size_t k)
 {
 	unsigned i;
 	std::cout << '(';
 	for (i = 1 << k-1; i > 0; i = i / 2)
 	{
 		(n & i) ? std::cout << "1" : std::cout << "0";
-		if (i != 1)
-		{
-			std::cout << ',';
-		}
+		if (i != 1) std::cout << ',';		
 	}
 	std::cout << ')';
 }
 
 int main()
 {
-	unsigned n;
+	size_t n;
 	std::cin >> n;
 	for (size_t i = 0; i < pow(2,n); i++)
 	{
@@ -250,26 +247,17 @@ void printArr(int* a, size_t n)
 	for (size_t i = 0; i < n; i++)
 	{
 		std::cout << a[i];
-		if (i != n - 1)
-		{
-			std::cout << ',';
-		}
+		if (i != n - 1)	std::cout << ',';		
 	}
-	std::cout << ')';
-	std::cout << std::endl;
-}
+	std::cout << ")\n";
+	}
 int main()
 {
 	size_t n, m;
 	std::cout << "n = ";
 	std::cin >> n;
-
 	int a[30];
-
-	for (size_t i = 0; i < n; i++)
-	{
-		a[i] = 0;
-	}
+	for (size_t i = 0; i < n; i++) a[i] = 0;	
 	for (size_t i = 0; i < pow(2, n); i++)
 	{
 		if (a[n] == 0)
@@ -280,15 +268,9 @@ int main()
 		else
 		{
 			m = n;
-			while (a[m] == 1)
-			{
-				m = m - 1;
-			}
+			while (a[m] == 1) m--;			
 			a[m] = 1;
-			for (size_t i = m + 1; i < n; i++)
-			{
-				a[i] = 0;
-			}
+			for (size_t i = m + 1; i < n; i++) a[i] = 0;			
 			printArr(a, n);
 		}
 	}
@@ -317,35 +299,27 @@ int main()
 ```cpp
 #include <iostream>
 #include <cmath>
-void printArr(int* a, size_t n)
+void printArr(size_t* a, size_t n)
 {
 	std::cout << '(';
 	for (size_t i = 1; i <= n; i++)
 	{
 		std::cout << a[i];
-		if (i != n)
-		{
-			std::cout << ',';
-		}
+		if (i != n) std::cout << ',';
 	}
-	std::cout << ')';
-	std::cout << std::endl;
+	std::cout << ")\n";
 }
 int main()
 {
-	int n, m, k;
+	size_t n, m, k;
 	std::cout << "n = ";
 	std::cin >> n;
 	std::cout << "k = ";
 	std::cin >> k;
-	int a[30];
-
-	for (int i = 1; i <= n; i++)
-	{
-		a[i] = 0;
-	}
+	size_t a[30];
+	for (size_t i = 1; i <= n; i++) a[i] = 0;
 	printArr(a, n);
-	for (int i = 1; i <= pow(k, n) - 1; i++)
+	for (size_t i = 1; i <= pow(k, n) - 1; i++)
 	{
 		if (a[n] < k - 1)
 		{
@@ -355,15 +329,9 @@ int main()
 		else
 		{
 			m = n;
-			while (a[m] == k - 1)
-			{
-				m = m - 1;
-			}
+			while (a[m] == k - 1) m --;			
 			a[m] = a[m] + 1;
-			for (int i = m + 1; i <= n; i++)
-			{
-				a[i] = 0;
-			}
+			for (size_t i = m + 1; i <= n; i++) a[i] = 0;
 			printArr(a, n);
 		}
 	}
@@ -381,47 +349,35 @@ int main()
 #include <cmath>
 #include <string>
 template<typename T>
-void printArr(int* a, size_t n, T * v)
+void printArr(size_t* a, size_t n, T * v)
 {
 	std::cout << '(';
 	for (size_t i = 1; i <= n; i++)
 	{
 		std::cout << v[a[i] + 1];
-		if (i != n)
-		{
-			std::cout << ',';
-		}
+		if (i != n) std::cout << ',';
 	}
-	std::cout << ')';
-	std::cout << std::endl;
+	std::cout << ")\n";
 }
 int main()
 {
-	int n, m, k;
+	size_t n, m, k;
 	std::cout << "n = ";
 	std::cin >> n;
 	/*std::cout << "k = ";
 	std::cin >> k;*/
 	k = 3;
-	int a[30];
-
+	size_t a[30];
 	/*char* v = new char[k+1];
 	for (int i = 1; i <= k; i++)
 	{
 		v[i] = (char)(96 + i);
 	}*/
-
 	std::string* v = new std::string[k + 1];
-	v[1] = "tik";
-	v[2] = "tak";
-	v[3] = "toe";
-
-	for (int i = 1; i <= n; i++)
-	{
-		a[i] = 0;
-	}
+	v[1] = "tik"; v[2] = "tak"; v[3] = "toe";
+	for (size_t i = 1; i <= n; i++) a[i] = 0;
 	printArr(a, n, v);
-	for (int i = 1; i <= pow(k, n) - 1; i++)
+	for (size_t i = 1; i <= pow(k, n) - 1; i++)
 	{
 		if (a[n] < k - 1)
 		{
@@ -431,15 +387,9 @@ int main()
 		else
 		{
 			m = n;
-			while (a[m] == k - 1)
-			{
-				m = m - 1;
-			}
+			while (a[m] == k - 1)m --;
 			a[m] = a[m] + 1;
-			for (int i = m + 1; i <= n; i++)
-			{
-				a[i] = 0;
-			}
+			for (size_t i = m + 1; i <= n; i++)	a[i] = 0;			
 			printArr(a, n, v);
 		}
 	}
@@ -468,83 +418,53 @@ int main()
 #include <iostream>
 #include <cmath>
 #include <string>
-
-void printArr(int* a, size_t n)
+void printArr(size_t* a, size_t n)
 {
 	std::cout << '(';
 	for (size_t i = 1; i <= n; i++)
 	{
 		std::cout << a[i];
-		if (i != n)
-		{
-			std::cout << ',';
-		}
+		if (i != n)	std::cout << ',';
 	}
-	std::cout << ')';
-	std::cout << std::endl;
+	std::cout << ")\n";
 }
-bool diff(int* a, int n)
+bool diff(size_t* a, int n)
 {
 	for (int i = 1; i <= n; i++)
 	{
 		int curr = a[i];
-		for (int j = i+1; j <= n; j++)
-		{
-			if (a[i]==a[j])
-			{
-				return false;
-			}
-		}
+		for (int j = i + 1; j <= n; j++) if (a[i] == a[j]) return false;		
 	}
 	return true;
 }
 int main()
 {
-	int n, m, k;
+	size_t n, m, k;
 	std::cout << "n = ";
 	std::cin >> n;
 	std::cout << "k = ";
 	std::cin >> k;
-
-	int a[30];
-
+	size_t a[30];
 	if (n <= k)
 	{
-		for (int i = 1; i <= n; i++)
-		{
-			a[i] = 0;
-		}
-		for (int i = 1; i <= pow(k, n) - 1; i++)
+		for (size_t i = 1; i <= n; i++) a[i] = 0;
+		for (size_t i = 1; i <= pow(k, n) - 1; i++)
 		{
 			if (a[n] < k - 1)
 			{
 				a[n] = a[n] + 1;
-				if (diff(a, n))
-				{
-					printArr(a, n);
-				}
-
+				if (diff(a, n))	printArr(a, n);
 			}
 			else
 			{
 				m = n;
-				while (a[m] == k - 1)
-				{
-					m = m - 1;
-				}
+				while (a[m] == k - 1) m--;
 				a[m] = a[m] + 1;
-				for (int i = m + 1; i <= n; i++)
-				{
-					a[i] = 0;
-				}
-				if (diff(a, n))
-				{
-					printArr(a, n);
-				}
+				for (size_t i = m + 1; i <= n; i++) a[i] = 0;
+				if (diff(a, n))	printArr(a, n);
 			}
 		}
 	}
-
 	return 0;
 }
 ```
