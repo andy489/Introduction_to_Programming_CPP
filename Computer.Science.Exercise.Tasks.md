@@ -556,7 +556,7 @@ int main()
 
 **Дефиниция.** Ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;v_1,v_2,...,v_k"> са <img src="https://latex.codecogs.com/svg.latex?\Large&space;k">  на брой различни елементи <img src="https://latex.codecogs.com/svg.latex?\Large&space;(k\ge{1})">, а <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> е дадено естествено число <img src="https://latex.codecogs.com/svg.latex?\Large&space;(n\le{k})">, всяка редица от точно <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> елемента от дадените, като всеки елемент може да участва не повече от веднъж и мястото на елемента в редицата не е от значение, се нарича **комбинация от k-елемента от n-ти клас**.
 
-Пример: Ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;k=4,v_1=1,v_2=2,v_3=3,v_4=4">, а <img src="https://latex.codecogs.com/svg.latex?\Large&space;n=2">, всички комбинации от тези елементи от 2-ри клас се получават от вариациите с повторение от 1,2,3 и 4 от 2-ри клас
+*Пример:* Ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;k=4,v_1=1,v_2=2,v_3=3,v_4=4">, а <img src="https://latex.codecogs.com/svg.latex?\Large&space;n=2">, всички комбинации от тези елементи от 2-ри клас се получават от вариациите с повторение от 1,2,3 и 4 от 2-ри клас
 
 (1,1) (2,1) (3,1) (4,1)
 
