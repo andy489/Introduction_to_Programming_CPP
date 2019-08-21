@@ -301,7 +301,7 @@ int main()
 - ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n<k-1">, то 
   - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i'=a_i,i-1,2,...,n-1"> 
   - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n'=a_n+1">.
-- ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n=a_{n-1}=...=a_{m+1}=k-1,a_m<к-1,1\le{m}<n">, то 
+- ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n=a_{n-1}=...=a_{m+1}=k-1,a_m<k-1,1\le{m}<n">, то 
   - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i'=a_i,i=1,...,m-1">
   - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_m'=a_m+1">
   - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i'=0,i=m+1,...,n">
