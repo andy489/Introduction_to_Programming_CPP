@@ -462,5 +462,89 @@ int main()
 - а) да се провери дали <img src="https://latex.codecogs.com/svg.latex?\Large&space;(n\le{k})">;
 - б) да се изведат само онези <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-орки, които се състоят от различни елементи. За целта ще използваме булевата функция *bool diff()*, Която проверява дали редицата от <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> естествени числа <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,а_n"> се състои от различни елементи.
 
+***Решение:***
 
+```cpp
+#include <iostream>
+#include <cmath>
+#include <string>
 
+void printArr(int* a, size_t n)
+{
+	std::cout << '(';
+	for (size_t i = 1; i <= n; i++)
+	{
+		std::cout << a[i];
+		if (i != n)
+		{
+			std::cout << ',';
+		}
+	}
+	std::cout << ')';
+	std::cout << std::endl;
+}
+bool diff(int* a, int n)
+{
+	for (int i = 1; i <= n; i++)
+	{
+		int curr = a[i];
+		for (int j = i+1; j <= n; j++)
+		{
+			if (a[i]==a[j])
+			{
+				return false;
+			}
+		}
+	}
+	return true;
+}
+int main()
+{
+	int n, m, k;
+	std::cout << "n = ";
+	std::cin >> n;
+	std::cout << "k = ";
+	std::cin >> k;
+
+	int a[30];
+
+	if (n <= k)
+	{
+		for (int i = 1; i <= n; i++)
+		{
+			a[i] = 0;
+		}
+		for (int i = 1; i <= pow(k, n) - 1; i++)
+		{
+			if (a[n] < k - 1)
+			{
+				a[n] = a[n] + 1;
+				if (diff(a, n))
+				{
+					printArr(a, n);
+				}
+
+			}
+			else
+			{
+				m = n;
+				while (a[m] == k - 1)
+				{
+					m = m - 1;
+				}
+				a[m] = a[m] + 1;
+				for (int i = m + 1; i <= n; i++)
+				{
+					a[i] = 0;
+				}
+				if (diff(a, n))
+				{
+					printArr(a, n);
+				}
+			}
+		}
+	}
+
+	return 0;
+}
+```
