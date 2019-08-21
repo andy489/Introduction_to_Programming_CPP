@@ -184,10 +184,48 @@ int main()
 - (1,1,0)
 - (1,1,1)
 
+Решете задачата по два начина:
+
+а) с помощта на бинарни оператори и представянето на всяко число в двоична бройна система;
+
+б) без да използвате бинарни оператори.
+
 ***Решение:***
 
-За решаването на тази задача трябва да се образуват всички вариации (*комбинации с повторения*) на числата 0 и 1 от <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-ти клас. За целта ще използваме операцията **събиране на вектори по модул 2**.
+За решаването на тази задача трябва да се образуват всички вариации (*комбинации с повторения*) на числата 0 и 1 от <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-ти клас. За целта ще използваме операцията **събиране на вектори по модул 2**. В подточка а) това събиране може да се замести от побитовия оператор &, но в подточка б) нямамв право да използваме такива. За нея ще трябва да напишем как работи оператора.
 
 **Дефиниция**. Нека <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=(a_1,a_2,...,a_n)"> e произволен <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерен вектор с компоненти 0 и 1. **Сумата по модул 2** на вектора <img src="https://latex.codecogs.com/svg.latex?\Large&space;a"> с <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерния единичен вектор <img src="https://latex.codecogs.com/svg.latex?\Large&space;e=(0,0,...,0,1)"> е вектор <img src="https://latex.codecogs.com/svg.latex?\Large&space;a'=(a_1',a_2',...,a_n')">, чиито компоненти се образуват съгласно следните правила:
+- ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n=0">, то <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i'=a_i,i-1,2,...,n-1"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n'=1">.
 
-а)
+- а) 
+
+```cpp
+#include <iostream>
+void bin(unsigned n)
+{
+	unsigned i;
+	std::cout << '(';
+	for (i = 1 << 2; i > 0; i = i / 2)
+	{
+		(n & i) ? std::cout << "1" : std::cout << "0";
+		if (i != 1)
+		{
+			std::cout << ',';
+		}
+	}
+	std::cout << ')';
+}
+int main()
+{
+	for (size_t i = 0; i < 8; i++)
+	{
+		bin(i);
+		std::cout << std::endl;
+	}
+	return 0;
+}
+```
+
+- б)
+
+
