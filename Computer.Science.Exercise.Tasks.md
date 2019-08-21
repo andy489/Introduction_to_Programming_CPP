@@ -298,5 +298,12 @@ int main()
 
 **Дефиниция**. Нека <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=(a_1,a_2,...,a_n)"> е произволен <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерен вектор с компоненти <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,...,k-1">, a <img src="https://latex.codecogs.com/svg.latex?\Large&space;e=(0,...,0,1)"> е единичния <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерен вектор. **Сумата по модул <img src="https://latex.codecogs.com/svg.latex?\Large&space;k">** на вектора <img src="https://latex.codecogs.com/svg.latex?\Large&space;a"> с вектор <img src="https://latex.codecogs.com/svg.latex?\Large&space;e"> е векторът <img src="https://latex.codecogs.com/svg.latex?\Large&space;a'=(a_1',a_2',...,a_n')">, чиито компоненти се образуват съгласно следните правила:
 
-
-
+- ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n<k-1">, то 
+  - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i'=a_i,i-1,2,...,n-1"> 
+  - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n'=a_n+1">.
+- ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_n=a_{n-1}=...=a_{m+1}=k-1,a_m<к-1,1\le{m}<n">, то 
+  - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i'=a_i,i=1,...,m-1">
+  - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_m'=a_m+1">
+  - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i'=0,i=m+1,...,n">
+- ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1=a_2=...=a_n=k-1">, то 
+  - <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1'=a_2'=...=a_n'=0">
