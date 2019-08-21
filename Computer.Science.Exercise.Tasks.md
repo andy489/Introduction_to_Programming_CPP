@@ -290,9 +290,9 @@ int main()
 }
 ```
 
-**Нека се опитаме да обобщим по-горната задача, като я зададем по следния начин:**
+***Нека се опитаме да обобщим по-горната задача, като я зададем по следния начин:***
 
-Да се напише програма, която генерира всички <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерни вектори с компоненти числата <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,...,к-1">, където <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;k"> са дадени естествени числа.
+Да се напише програма, която генерира всички <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерни вектори с компоненти числата <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,...,k-1">, където <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;k"> са дадени естествени числа.
 
 За целта ще направим обобщение на операцията събиране по модул 2, като определим операцията **събиране по модул <img src="https://latex.codecogs.com/svg.latex?\Large&space;k">**.
 
