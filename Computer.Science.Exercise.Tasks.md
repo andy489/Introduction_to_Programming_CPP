@@ -512,5 +512,4 @@ bool mon(size_t* a, int n)
 Ще използваме алгоритъма за генериране на всички <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерни вектори от елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,2...,9">, като първата компонента на векторите трябва да е различна от 0.
 
 
-***Решение:***
 
