@@ -71,9 +71,9 @@ int main()
 ```
 **Зад. 4.** Да се напишат итеративна и рекурсивна функция за изчисляване стойността на полинома на [Ермит](https://en.wikipedia.org/wiki/Hermite_polynomials "Markdown Tutorial") <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_n(x)">(<img src="https://latex.codecogs.com/svg.latex?\Large&space;x"> е реална, а <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> е цяла променлива <img src="https://latex.codecogs.com/svg.latex?\Large&space;n\ge{0}">), дефиниран по следния начин:
 
-- <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_0{x}=1">
-- <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_1{x}=2x">
-- <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_n{x}=2x.h_{n-1}(x)-2(n-1).h_{n-2}(x),n>1.">
+- <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_0(x)=1">
+- <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_1(x)=2x">
+- <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_n(x)=2x.h_{n-1}(x)-2(n-1).h_{n-2}(x),n>1.">
 
 Да се сравнят двата кода.
 
@@ -136,3 +136,28 @@ int main()
 ```
 Очевидно имплементацията на рекурсивната функция е в пъти по-кратка от итеративната, но дали е по интуитивна?
 
+**Зад. 5.** Да се напише програма, която въвежда редица от символи с произволна дължина. Въвеждането да продължи до въвеждане на символа '!'. Програмата да извежда редицата от символи в обратен ред (Да не се използва масив).
+
+Пример: 
+
+вход | изход
+---- | ----
+recursion!| !noisrucer
+
+*Решение:*
+
+```cpp
+#include <iostream>
+void rev()
+{
+	char ch;
+	std::cin >> ch;
+	if (ch != '!') rev();
+	std::cout << ch;
+}
+int main()
+{
+	rev();
+	return 0;
+}
+```
