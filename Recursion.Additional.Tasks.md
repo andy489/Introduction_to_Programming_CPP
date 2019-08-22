@@ -73,8 +73,66 @@ int main()
 
 - <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_0{x}=1">
 - <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_1{x}=2x">
-- <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_n{x}=2x.h_{n-1}(x)-2(n-1)/h_{n-2}(x),n>1.">
+- <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_n{x}=2x.h_{n-1}(x)-2(n-1).h_{n-2}(x),n>1.">
 
+Да се сравнят двата кода.
 
 *Решение:*
+
+- а) итеративна функция
+
+```cpp
+#include <iostream>
+double Hermit(size_t n, double x)
+{
+	double h0, h1, h;
+	if (n == 0)return 1;
+	else
+	{
+		if (n == 1)return 2 * x;
+		else
+		{
+			h0 = 1;
+			h1 = 2 * x;
+			for (size_t i = 1; i <= n - 1; i++)
+			{
+				h = 2 * x*h1 - 2 * i*h0;
+				h0 = h1;
+				h1 = h;
+			}
+			return h1;
+		}
+	}
+}
+```
+
+- б) рекурсивна функция
+
+```cpp
+double Hermit(size_t n, double x)
+{
+	if (n==0) return 1;
+	else
+	{
+		if (n==1) return 2 * x;		
+		else return 2 * x*Hermit(n - 1, x) - 2 * (n - 1)*Hermit(n - 2, x);		
+	}
+}
+```
+и в двата случая за *main()* функция може да използваме:
+
+```cpp
+int main()
+{
+	size_t n;
+	std::cout << "n = ";
+	std::cin >> n;
+	double x;
+	std::cout << "x = ";
+	std::cin >> x;
+	std::cout << Hermit(n, x);
+	return 0;
+}
+```
+Очевидно имплементацията на рекурсивната функция е в пъти по-кратка от итеративната, но дали е по интуитивна?
 
