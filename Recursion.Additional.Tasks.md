@@ -1,18 +1,17 @@
 ## РЕКУРСИЯ
 
-**Зад. 1** Да се напише рекурсивна функция *int min(size_t n, int* a)*, която намира минималния елемент на вектора <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=(a_1,a_2,...,a_n)">.
+**Зад. 1** Да се напише рекурсивна функция *int min(size_t n, int a[])*, която намира минималния елемент на вектора <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=(a_1,a_2,...,a_n)">.
 
 *Решение:*
 
 ```cpp
 #include <iostream>
-int min(size_t n, int* a)
-{
-	int b;
+int min(size_t n, int a[])
+{	
 	if (n == 1) return a[0];
 	else
 	{
-		b = min(n - 1, a);
+		int b = min(n - 1, a);
 		if (b < a[n - 1]) return  b;		
 		else return a[n - 1];		
 	}
@@ -25,3 +24,24 @@ int main()
 	return 0;
 }
 ```
+
+**Зад. 2** Да се напише рекурсивна функция *int sum(size_t n, int a[])*, която намира сумата от елементите на вектора <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=(a_1,a_2,...,a_n)">.
+
+*Решение:*
+
+```cpp
+#include <iostream>
+int sum(size_t n, int a[])
+{
+	if (n == 1) return a[0];	
+	else return sum(n - 1, a) + a[n - 1];	
+}
+int main()
+{
+	int a[] = { 1,2,3,4,5,-4,-3,-2,-1 };
+	size_t n = sizeof(a) / sizeof(a[0]);
+	std::cout << sum(n, a);
+	return 0;
+}
+```
+
