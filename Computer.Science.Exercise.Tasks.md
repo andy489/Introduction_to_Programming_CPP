@@ -417,7 +417,6 @@ int main()
 ```cpp
 #include <iostream>
 #include <cmath>
-#include <string>
 void printArr(size_t* a, size_t n)
 {
 	std::cout << '(';
@@ -487,3 +486,31 @@ int main()
 ***(1,4)*** ***(2,4)*** ***(3,4)*** (4,4)
 
 се изберат редиците с растящи стойности например. Означени са удебелено и наклонено (Редиците (1,2) и (2,1);(1,4) и (4,1) и т.н. са еквивалентни).
+
+**Задача 4.** (*КОМБИНАЦИИ*) Да се напише програма, която намира всички комбинации от елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,...,k-1"> от <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-ти клас <img src="https://latex.codecogs.com/svg.latex?\Large&space;n\le{k}">.
+
+***Решение:***
+
+Трябва да бъдат генерирани всички вариации с повторение от елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,...,k-1"> и се изведат онези, които образуват например строго монотонно растящи редици.
+
+За целта може да се използва функцията *bool mon()*, която установява дали дадена редица от цели числа е строго монотонно растяща.
+
+```cpp
+bool mon(size_t* a, int n)
+{
+	for (int i = 1; i <= n; i++)
+	{
+		int curr = a[i];
+		for (int j = i + 1; j <= n; j++) if (a[i] >= a[j]) return false;
+	}
+	return true;
+```
+**Задача 5.** (*КОМБИНАТОРНИ АЛГОРИТМИ*) Да се напише програма, която намира всички <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-цифрени естествени числа (<img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> е дадено естествено число).
+
+***Решение:***
+
+Ще използваме алгоритъма за генериране на всички <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">-мерни вектори от елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;0,1,2...,9">, като първата компонента на векторите трябва да е различна от 0.
+
+
+***Решение:***
+
