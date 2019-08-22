@@ -21,9 +21,7 @@ int main()
 {
 	int a[] = { 2,4,0,-19,5,8,-22,1 };
 	size_t n = sizeof(a) / sizeof(a[0]);
-
 	std::cout << min(n, a);
-
 	return 0;
 }
 ```
