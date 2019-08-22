@@ -1,6 +1,6 @@
 ## РЕКУРСИЯ
 
-**Зад. 1)** Да се напише рекурсивна функция *int min(size_t n, int a[])*, която намира минималния елемент на вектора <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=(a_1,a_2,...,a_n)">.
+**Зад. 1.** Да се напише рекурсивна функция *int min(size_t n, int a[])*, която намира минималния елемент на вектора <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=(a_1,a_2,...,a_n)">.
 
 *Решение:*
 
@@ -25,7 +25,7 @@ int main()
 }
 ```
 
-**Зад. 2)** Да се напише рекурсивна функция *int sum(size_t n, int a[])*, която намира сумата от елементите на вектора <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=(a_1,a_2,...,a_n)">.
+**Зад. 2.** Да се напише рекурсивна функция *int sum(size_t n, int a[])*, която намира сумата от елементите на вектора <img src="https://latex.codecogs.com/svg.latex?\Large&space;a=(a_1,a_2,...,a_n)">.
 
 *Решение:*
 
@@ -45,6 +45,28 @@ int main()
 }
 ```
 
-**Зад. 3)** Да се напише рекурсивна функция, която по дадено естествено число <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> пресмята произведението на естествените числа от 1 до <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> със стъпка 3, т.е. <img src="https://latex.codecogs.com/svg.latex?\Large&space;P=1.4.7.10...n">.
+**Зад. 3.** Да се напише рекурсивна функция, която по дадено естествено число <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> пресмята произведението на естествените числа от 1 до <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> със стъпка 3, т.е. <img src="https://latex.codecogs.com/svg.latex?\Large&space;P=1.4.7.10...n">.
 
 *Решение:*
+
+```cpp
+#include <iostream>
+size_t P(size_t n)
+{
+	if (n == 1) return 1;
+	else
+	{
+		if (n % 3 == 1)	return P(n - 1)*n;
+		else return P(n - 1);		
+	}
+}
+int main()
+{
+	size_t n;
+	std::cout << "n = ";
+	std::cin >> n;
+	std::cout << P(n);
+	return 0;
+}
+```
+
