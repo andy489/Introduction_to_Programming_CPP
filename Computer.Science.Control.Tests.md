@@ -31,6 +31,53 @@ int main()
 
 *Бонус*: да се намери колко са на брой елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i">, за които е изпълнено, че <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i=a_j+...+a_{i-1}"> за <img src="https://latex.codecogs.com/svg.latex?\Large&space;j<i-1">.
 
+*Решение:*
+
+```cpp
+#include <iostream>
+int main()
+{
+	unsigned n;
+	std::cout << "n = ";
+	std::cin >> n;
+
+	unsigned* arr = new unsigned[n];
+	unsigned sum = 0;
+	unsigned count = 0;
+
+	for (size_t i = 0; i < n; i++)
+	{
+		std::cout << "a[" << i << "] = ";
+		std::cin >> arr[i];
+
+		if (sum == arr[i]) count++;		
+		sum += arr[i];
+	}
+
+	std::cout << "Answer: " << count << '\n';
+
+	unsigned bonusCount = 0;
+	size_t i = 1;
+	for (i; i < n; i++)
+	{
+		int curr = arr[i];
+		for (int j = i - 1; j >= 0; j--)
+		{
+			curr -= arr[j];
+			if (curr == 0)
+			{
+				bonusCount++;
+				break;
+			}
+			else if (curr < 0) break;			
+		}
+	}
+	std::cout << "Bonus answer: " << bonusCount << '\n';
+	delete[] arr;
+	return 0;
+}
+```
+
 ## Второ контролно по Увод в програмирането
 
  *СУ  „Климент Охридски“, ФМИ, спец. Компютърни науки, 14.12.2018 г. Вариант Б*
