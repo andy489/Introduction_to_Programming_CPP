@@ -161,3 +161,10 @@ int main()
 	return 0;
 }
 ```
+**Зад. 6.** Дадена е матрица <img src="https://latex.codecogs.com/svg.latex?\Large&space;А(n">x<img src="https://latex.codecogs.com/svg.latex?\Large&space;n)">. Да се напише рекурсивна програма, която развива матрицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;А"> по спирала в посока по часовниковата стрелка.
+
+Например ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;А"> има вида
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;A=\begin{matrix}A_{11}&A_{12}&A_{13}\\A_{21}&A_{22}&A_{23}\\\\A_{31}&A_{32}&A_{33}\end{matrix})">
+
+да се конструира редицата <img src="https://latex.codecogs.com/svg.latex?\Large&space;B=(A_{11},A_{12},A_{13},A_{23},A_{33},A_{32},A_{31},A_{21},A_{22})">
