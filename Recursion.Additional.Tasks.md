@@ -347,8 +347,8 @@ char web[N][M] = {
 		' ','a','a','a','a',' ',' ',' ',' ',' ',' ','a','a',
 		' ',' ',' ','a',' ',' ',' ',' ',' ',' ',' ',' ',' ',
 		' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',
-		'a',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','a',
-		'a','a',' ',' ','a',' ',' ',' ',' ',' ','a','a','a',
+		'a',' ',' ',' ',' ',' ','a',' ',' ',' ',' ',' ','a',
+		'a','a',' ',' ','a','a','a',' ',' ',' ','a','a','a',
 		'a','a',' ',' ',' ',' ',' ',' ',' ',' ','a','a','a'
 };
 void printWeb(); // функция за принтиране на мрежата имплементирана по-долу
@@ -367,7 +367,7 @@ int countAreas(int x, int y)
 		{
 			count = 0;
 		}
-		/* в този случай не сме извън мрежата и не сме стъпили на празна клетка следователно 
+		/* в този случай не сме извън мрежата и не сме стъпили на празна клетка следователно
 		сме стъпили на запълнена и започваме да броим размера на областта*/
 		else
 		{
@@ -382,18 +382,19 @@ int countAreas(int x, int y)
 }
 int main()
 {
+	std::cout << "The starting web:\n";
 	printWeb();
-	unsigned br(0);
+	unsigned br(0); // брояч за номер на област
 	for (int i = 0; i < N; i++)
 	{
 		for (int j = 0; j < M; j++)
 		{
 			if (web[i][j] != ' ')
 			{
-			      br++;
-			      std::cout << "~The area of region " << br << " is " << countAreas(i, j) << "\n";
-			      std::cout << "\n~Matrix after counting region " << br << ":\n";
-			      printWeb();
+				br++;
+				std::cout << "~The area of region " << br << " is " << countAreas(i, j);
+				std::cout << "\n~Web after counting region " << br << ":\n";
+				printWeb();
 			}
 		}
 	}
