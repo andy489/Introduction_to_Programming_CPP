@@ -325,7 +325,7 @@ void releaseSequence(int* B)
 
 **Анализ на задачата:**
 
-Ще дефинираме функция *unsigned countAreas()*, която преброява клетките в областта, съдържаща дадена клетка <img src="https://latex.codecogs.com/svg.latex?\Large&space;(X,Y)">. Функцията има два параметъра <img src="https://latex.codecogs.com/svg.latex?\Large&space;X"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;Y"> - координатите на точката и реализира следния алгоритъм:
+Ще дефинираме функция *int countAreas()*, която преброява клетките в областта, съдържаща дадена клетка <img src="https://latex.codecogs.com/svg.latex?\Large&space;(X,Y)">. Функцията има два параметъра <img src="https://latex.codecogs.com/svg.latex?\Large&space;X"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;Y"> - координатите на точката и реализира следния алгоритъм:
 
 *а)* Ако клетката с координати <img src="https://latex.codecogs.com/svg.latex?\Large&space;X"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;Y"> е извън мрежата, приемаме, че броят е равен на 0.
 
