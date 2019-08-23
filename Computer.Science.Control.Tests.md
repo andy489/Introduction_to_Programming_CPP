@@ -7,6 +7,25 @@
 
 *Пример:* За **c1**='Y' и **c2**='G' резултатът е *false*.
 
+*Решение:*
+
+```cpp
+#include <iostream>
+int main()
+{
+	char c1, c2;
+	std::cout << "c1 = ";
+	std::cin >> c1;
+	std::cout << "c2 = ";
+	std::cin >> c2;
+
+	bool logicStatement = ('a' <= c1 && c1 <= 'z'&&'A' <= c2 && c2 <= 'Z' && 'z' - c1 < 'Z' - c2);
+	logicStatement ? std::cout << "true" : std::cout << "false";
+
+	return 0;
+}
+```
+
 ## Второ контролно по Увод в програмирането
 
  *СУ  „Климент Охридски“, ФМИ, спец. Компютърни науки, 14.12.2018 г. Вариант Б*
