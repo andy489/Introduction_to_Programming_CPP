@@ -327,13 +327,13 @@ void releaseSequence(int* B)
 
 Ще дефинираме функция *unsigned countAreas()*, която преброява клетките в областта, съдържаща дадена клетка <img src="https://latex.codecogs.com/svg.latex?\Large&space;(X,Y)">. Функцията има два параметъра <img src="https://latex.codecogs.com/svg.latex?\Large&space;X"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;Y"> - координатите на точката и реализира следния алгоритъм:
 
-а) Ако клетката с координати <img src="https://latex.codecogs.com/svg.latex?\Large&space;X"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;Y"> е извън мрежата, приемаме, че броят е равен на 0.
+*а)* Ако клетката с координати <img src="https://latex.codecogs.com/svg.latex?\Large&space;X"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;Y"> е извън мрежата, приемаме, че броят е равен на 0.
 
-б) Ако клетката с координати <img src="https://latex.codecogs.com/svg.latex?\Large&space;X"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;Y"> е празна, приемаме, че броят е равен на 0.
+*б)* Ако клетката с координати <img src="https://latex.codecogs.com/svg.latex?\Large&space;X"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;Y"> е празна, приемаме, че броят е равен на 0.
 
-в) В останалите случаи, броят на клетките от областта е равен на сумата от 1 и броя на клетките на всяка област, на която принадлежат осемте съседни клетки на клетката с координати <img src="https://latex.codecogs.com/svg.latex?\Large&space;(X,Y)">.
+*в)* В останалите случаи, броят на клетките от областта е равен на сумата от 1 и броя на клетките на всяка област, на която принадлежат осемте съседни клетки на клетката с координати <img src="https://latex.codecogs.com/svg.latex?\Large&space;(X,Y)">.
 
-От подточка в) следва, че функцията *unsigned count()* е рекурсивна. За да избегнем зацикляне, трябва преди рекурсивното обръщение да направим клетката <img src="https://latex.codecogs.com/svg.latex?\Large&space;(X,Y)"> празна.
+От подточка *в)* следва, че функцията *unsigned count()* е рекурсивна. За да избегнем зацикляне, трябва преди рекурсивното обръщение да направим клетката <img src="https://latex.codecogs.com/svg.latex?\Large&space;(X,Y)"> празна.
 
 ```cpp
 #define N 8
