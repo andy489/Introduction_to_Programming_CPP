@@ -314,7 +314,6 @@ int* createSequence(int n)
 	int* B = new int[n*n];
 	return B;
 }
-
 void releaseSequence(int* B)
 {
 	delete[] B;
