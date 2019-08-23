@@ -391,8 +391,8 @@ int main()
 			if (web[i][j] != ' ')
 			{
 			      br++;
-			      std::cout << " ~ The area of region " << br << " is " << countAreas(i, j) << "\n\n";
-			      std::cout << " ~ Matrix after counting region " << br << ":\n";
+			      std::cout << "~The area of region " << br << " is " << countAreas(i, j) << "\n";
+			      std::cout << "\n~Matrix after counting region " << br << ":\n";
 			      printWeb();
 			}
 		}
