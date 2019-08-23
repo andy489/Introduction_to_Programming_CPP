@@ -29,7 +29,7 @@ int main()
 
 *Пример:* за редицата **0**,1,**1**,5,**7**, програмата ще изведе 3 (съответните елементи са с **bold** шрифт).
 
-*Бонус*: да се намери колко са на брой елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i">, за които е изпълнено, че <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i=a_j+...+a_{j-1}"> за <img src="https://latex.codecogs.com/svg.latex?\Large&space;j<i-1">.
+*Бонус*: да се намери колко са на брой елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i">, за които е изпълнено, че <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i=a_j+...+a_{i-1}"> за <img src="https://latex.codecogs.com/svg.latex?\Large&space;j<i-1">.
 
 ## Второ контролно по Увод в програмирането
 
