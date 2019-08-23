@@ -174,3 +174,146 @@ int main()
 Ще използваме рекурсивната функция  *void razv(unsigned k)*, която развива по спирала частта <img src="https://latex.codecogs.com/svg.latex?\Large&space;А'"> на <img src="https://latex.codecogs.com/svg.latex?\Large&space;А">
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A=\begin{pmatrix}a_{k,k}&a_{k,k+1}&...&a_{k,n-k+1}\\a_{k+1,k}&a_{k+1,k+1}&...&a_{k+1,n-k+1}\\...\\a_{n-k+1,k}&a_{n-k+1,k+1}&...&a_{n-k+1,n-k+1}\end{pmatrix}">
+
+```cpp
+#include <iostream>
+
+int** createMatrix(unsigned n);
+void fillMatrix(int** &A, unsigned n);
+void releaseMatrix(int** A, unsigned n);
+void printMatrix(int** A, unsigned n);
+void printSequence(int* B, unsigned n);
+int* createSequence(unsigned n);
+void releaseSequence(int* &B);
+
+void razv(int** A, int k, const int n, int* &B, unsigned& c)
+{
+	int i, j;
+	// развиване на k-ти ред
+	i = k;
+	for (j = k; j <= n - 1 - k; j++)
+	{
+		B[c] = A[i][j];
+		c++;
+	}
+	// развиване на n-k-ви стълб
+	j = n - 1 - k;
+	for (i = k + 1; i < n - k; i++)
+	{
+		B[c] = A[i][j];
+		c++;
+	}
+	// развиване на n-k-ви ред
+	i = n - 1 - k;
+	for (j = n - 1 - k - 1; j >= k; j--)
+	{
+		B[c] = A[i][j];
+		c++;
+	}
+	// развиване на k-ти стълб
+	j = k;
+	for (i = n - 1 - k - 1; i > k; i--)
+	{
+		B[c] = A[i][j];
+		c++;
+	}
+	// преминаваме на развиване на вътрешността на А'
+	k++;// променяме k (много важен момент)
+	if (k == n - k)
+	{
+		// остава само един елемент за развиване
+		B[c] = A[k][k];
+		c++;
+	}
+	else
+	{
+		if (k < n - k)
+		{
+			// има още спирали за развиване
+			razv(A, k, n, B, c);
+		}
+	}
+}
+
+int main()
+{
+	const int n = 5;
+
+	int** A = createMatrix(n);
+	fillMatrix(A, n);
+	std::cout << "The matrix is:\n";
+	printMatrix(A, n);
+
+	int* B = createSequence(n);
+
+	unsigned c(0); // counter for the position in the sequence
+	razv(A, 0, n, B, c); // recursive function for spiral sequence
+
+	printSequence(B, n*n);
+
+	releaseMatrix(A, n);
+	releaseSequence(B);
+
+	return 0;
+}
+
+int** createMatrix(unsigned n)
+{
+	int** A = new int*[n];
+	for (size_t i = 0; i < n; i++)
+	{
+		A[i] = new int[n];
+	}
+	return A;
+}
+void fillMatrix(int** &A, unsigned n)
+{
+	std::cout << "Fill the matrix with size " << n << 'x' << n << ":\n";
+	for (size_t i = 0; i < n; i++)
+	{
+		for (size_t j = 0; j < n; j++)
+		{
+			std::cout << "a[" << i << "][" << j << "] = ";
+			std::cin >> A[i][j];
+		}
+		std::cout << std::endl;
+	}
+}
+void releaseMatrix(int** A, unsigned n)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		delete[] A[i];
+	}
+	delete[] A;
+}
+void printMatrix(int** A, unsigned n)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		for (size_t j = 0; j < n; j++)
+		{
+			std::cout << A[i][j] << ' ';
+		}
+		std::cout << std::endl;
+	}
+}
+void printSequence(int* B, unsigned n)
+{
+	std::cout << "The sequence is:\n";
+	for (size_t i = 0; i < n; i++)
+	{
+		std::cout << B[i] << ' ';
+	}
+	std::cout << std::endl;
+}
+int* createSequence(unsigned n)
+{
+	int* B = new int[n*n];
+	return B;
+}
+void releaseSequence(int* &B)
+{
+	delete[] B;
+}
+```
