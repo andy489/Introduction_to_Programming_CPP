@@ -173,4 +173,4 @@ int main()
 
 Ще използваме рекурсивната функция *razv()*, която развива по спирала частта <img src="https://latex.codecogs.com/svg.latex?\Large&space;А'"> на <img src="https://latex.codecogs.com/svg.latex?\Large&space;А">
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;N=3,A"> има вида <img src="https://latex.codecogs.com/svg.latex?\Large&space;A=\begin{pmatrix}a_{k,k}&a_{k,k+1}&...&a_{k,n-k+1}\\a_{k+1,k}&a_{k+1,k+1}&...&a_{k+1,n-k+1}\\...\\a_{n-k+1,k}&a_{n-k+1,k+1}&...&a_{n-k+1,n-k+1}\end{pmatrix}">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;A=\begin{pmatrix}a_{k,k}&a_{k,k+1}&...&a_{k,n-k+1}\\a_{k+1,k}&a_{k+1,k+1}&...&a_{k+1,n-k+1}\\...\\a_{n-k+1,k}&a_{n-k+1,k+1}&...&a_{n-k+1,n-k+1}\end{pmatrix}">
