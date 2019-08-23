@@ -27,7 +27,7 @@ int main()
 ```
 **Задача 2.** От клавиатурата се въвежда естествено число <img src="https://latex.codecogs.com/svg.latex?\Large&space;n">, следвано от други <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> на брой естествени числа <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0,a_1,a_2,...,a_{n-1}">. Да се напише програма, която извежда на стандартния изход колко на брой от елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i(0\le{i}<n)"> на редицата е изпълнено, че <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i=a_0+a_1+...+a_{i-1}">.
 
-*Пример:* за редицата **0**,1,**1**,5,**7**, програмата ще изведе 3 (съответните елементи са с bold шрифт).
+*Пример:* за редицата **0**,1,**1**,5,**7**, програмата ще изведе 3 (съответните елементи са с **bold** шрифт).
 
 *Бонус*: да се намери колко са на брой елементите <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i">, за които е изпълнено, че <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_i=a_j+...+a_{j-1}"> за <img src="https://latex.codecogs.com/svg.latex?\Large&space;j<i-1">.
 
