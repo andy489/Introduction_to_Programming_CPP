@@ -420,6 +420,8 @@ void printWeb()
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;(0\le{i}\le{n},0\le{j}\le{n})">. Да се напише програма, която установява дали съществува път между два произволно зададени града. (Приемаме, че ако от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j"> има път, то има път от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> също).
 
+Да се изведе намерения път.
+
 *Решение:*
 
 **Анализ на задачата:**
@@ -431,9 +433,21 @@ void printWeb()
 - Ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;i\neq{j}"> и има пряк път от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j">, има път между двата града.
 - В останалите случаи има път от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j">, тогава и само тогава, когато съществува град <img src="https://latex.codecogs.com/svg.latex?\Large&space;k">, с който град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> е свързан с пряк път, и от който до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j"> има път.
 
+Пътят се записва в едномерен масив *int path[100]*, а дължината му се записва в променлива *s*.
+
 ```cpp
 #include <iostream>
 #define N 10
+void printPath(unsigned* path, unsigned c)
+{
+	if (c != 0) std::cout << " - ";	
+	for (size_t i = 0; i < c; i++)
+	{
+		std::cout << path[i];
+		if (i != c - 1)	std::cout << " - ";		
+	}
+	std::cout << "\n\n";
+}
 void printNeighborhoodМatrix(size_t neighborhoodМatrix[N][N], unsigned n)
 {
 	for (size_t i = 0; i < n; i++)
@@ -442,13 +456,19 @@ void printNeighborhoodМatrix(size_t neighborhoodМatrix[N][N], unsigned n)
 		std::cout << std::endl;
 	}
 }
+unsigned path[100];
+unsigned c(0);
 bool way(size_t i, size_t j, size_t A[N][N])
 {
 	int k = -1;
 	bool b = false;
-
 	if (i == j)return true;
-	if (A[i][j] == 1 || A[j][i] == 1) return true;
+	if (A[i][j] == 1 || A[j][i] == 1)
+	{
+		path[c] = j;
+		c++;
+		return true;
+	}
 	if (i < 0 || i >= N || j < 0 || j >= N) return false;
 	else
 	{
@@ -457,6 +477,8 @@ bool way(size_t i, size_t j, size_t A[N][N])
 			k++;
 			if (A[i][k] == 1)/* от град i до град k има пряк път */
 			{
+				path[c] = k;
+				c++;
 				/* унищожаване пътя между градове i и k*/
 				A[i][k] = 0; A[k][i] = 0;
 				/*проверка има ли път от град k до град j*/
@@ -473,19 +495,21 @@ int main()
 	size_t A[N][N];
 	memset(A, 0, sizeof(A));
 	/* сетваме всички клетки да са 0 в матрицата на съседства */
-	/* очевидно, ако град i е свързан с град j, то и град j ще е свързан с град i, 
+	/* очевидно, ако град i е свързан с град j, то и град j ще е свързан с град i,
 	за това ако A[i][j]=1, то и A[j][i]=1 */
 
 	/* поставяме пътища на произволни места в матрицата на съседства */
-	A[3][2] = 1; A[3][4] = 1; A[1][7] = 1; A[4][5] = 1; A[5][6] = 1; A[6][7] = 1;
-	A[2][3] = 1; A[4][3] = 1; A[7][1] = 1; A[5][4] = 1; A[6][5] = 1; A[7][6] = 1;
+	A[3][2] = 1; A[3][5] = 1; A[1][7] = 1; A[5][6] = 1; A[6][7] = 1;
+	A[2][3] = 1; A[5][3] = 1; A[7][1] = 1; A[6][5] = 1; A[7][6] = 1;
 
 	/* финализираме матрицата на съседства */
 	for (size_t i = 0; i < N; i++)
 		for (size_t j = 0; j < N; j++)
-			if (A[i][j] == 1||i==j) A[j][i] = 1;
-
-	printNeighborhoodМatrix(A, N); 
+		{
+			if (A[i][j] == 1) A[j][i] = 1;
+			if (i == j) A[j][i] = 0;
+		}
+	printNeighborhoodМatrix(A, N);
 	/* принтираме матрицата на съседства, за да видим къде сме сетнали да има пътища */
 
 	size_t i(0), j(0);
@@ -495,11 +519,17 @@ int main()
 		std::cin >> i;
 		std::cout << "j = ";
 		std::cin >> j;
-		if (way(i, j, A))	std::cout << "There exist a road between the cities " << i 
-		<< " and " << j << ".\n";
+		if (way(i, j, A))
+		{
+			std::cout << "There exist a road between the cities " << i
+				<< " and " << j << ".\n";
+			std::cout << i;
+			printPath(path, c);
+		}
 		else std::cout << "there is no road between these cities " << i << " and " << j << ".\n";
+		c = 0;
 	} while (i >= 0 && i < N && j >= 0 && j < N);
-	   	 
+
 	return 0;
 }
 ```
