@@ -412,4 +412,4 @@ void printWeb()
 ```
 **Зад. 8<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">.** Дадени са <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> града (<img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> е естествено число <img src="https://latex.codecogs.com/svg.latex?\Large&space;n\ge{1}">) и целочислена матрица <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{nX{n}}">, така че:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{i,j}=\left\{\begin{matrix}1,ако&\\0&\end{matrix}\right.">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{i,j}=\left\{\begin{matrix}1,ako*&\\0,ako**&\end{matrix}\right.">
