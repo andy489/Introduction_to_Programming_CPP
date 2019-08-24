@@ -508,3 +508,18 @@ int main()
 	return 0;
 }
 ```
+**Задача 5.** Да се напише програма, която прочита от стандартния вход число <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> и извежда на стандартния изход елхичка с <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> клонки на най-ниския ред, както е показано по-долу, когато <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> е нечетно и текста "Happy New Year!", ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> е четно. Да не се извеждат интервали в края на редовете. Числото <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> не трябва да надхвърля 52 (броя седмици в годината).
+
+*Примери:*
+
+	*Вход:* 5                        *Вход:* 3               *Вход:* 6
+
+	*Изход:*                         *Изход:*                *Изход:* 
+ 	   +                                +                   Happy New Year!
+ 	 О * О                            О * О
+        О * * О                             |
+       О * * * О                        
+ 	   |
+    
+    
+  
