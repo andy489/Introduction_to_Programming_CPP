@@ -440,11 +440,11 @@ void printWeb()
 #define N 10
 void printPath(unsigned* path, unsigned c)
 {
-	if (c != 0) std::cout << " - ";	
+	if (c != 0) std::cout << " - ";
 	for (size_t i = 0; i < c; i++)
 	{
 		std::cout << path[i];
-		if (i != c - 1)	std::cout << " - ";		
+		if (i != c - 1)	std::cout << " - ";
 	}
 	std::cout << "\n\n";
 }
@@ -499,9 +499,8 @@ int main()
 	за това ако A[i][j]=1, то и A[j][i]=1 */
 
 	/* поставяме пътища на произволни места в матрицата на съседства */
-	A[3][2] = 1; A[3][5] = 1; A[1][7] = 1; A[5][6] = 1; A[6][7] = 1;
-	A[2][3] = 1; A[5][3] = 1; A[7][1] = 1; A[6][5] = 1; A[7][6] = 1;
-
+	A[3][2] = 1; A[3][5] = 1; A[1][7] = 1; A[5][6] = 1; A[6][7] = 1; A[9][1] = 1;
+	
 	/* финализираме матрицата на съседства */
 	for (size_t i = 0; i < N; i++)
 		for (size_t j = 0; j < N; j++)
@@ -529,7 +528,6 @@ int main()
 		else std::cout << "there is no road between these cities " << i << " and " << j << ".\n";
 		c = 0;
 	} while (i >= 0 && i < N && j >= 0 && j < N);
-
 	return 0;
 }
 ```
