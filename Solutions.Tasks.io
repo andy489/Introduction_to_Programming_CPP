@@ -4205,7 +4205,7 @@ int countWords(char* text)
 }
 int main()
 {
-	char text[20] = " git\thub\n ";
+	char text[] = " git\thub\n ";
 	std::cout << countWords(text) << std::endl;
 	return 0;
 }
