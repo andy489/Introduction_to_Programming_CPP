@@ -410,4 +410,4 @@ void printWeb()
 	std::cout << std::endl;
 }
 ```
-**Зад. 8<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">.** Дадени са <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> града (<img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> е естествено число <img src="https://latex.codecogs.com/svg.latex?\Large&space;n\ge{1}">) и целочислена матрица <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{n\x{n}}">, така че:
+**Зад. 8<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">.** Дадени са <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> града (<img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> е естествено число <img src="https://latex.codecogs.com/svg.latex?\Large&space;n\ge{1}">) и целочислена матрица <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{nX{n}}">, така че:
