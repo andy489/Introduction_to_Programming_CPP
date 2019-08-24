@@ -412,11 +412,11 @@ void printWeb()
 ```
 **Зад. 8<img src="https://latex.codecogs.com/svg.latex?\Large&space;*">.** Дадени са <img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> града (<img src="https://latex.codecogs.com/svg.latex?\Large&space;n"> е естествено число <img src="https://latex.codecogs.com/svg.latex?\Large&space;n\ge{1}">) и целочислена матрица <img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{nX{n}}">, така че:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{i,j}=\left\{\begin{matrix}1,ako*&\\0,ako**&\end{matrix}\right.">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;A_{i,j}=\left\{\begin{matrix}1,ako{\ominus}&\\0,ako{\oslash}&\end{matrix}\right.">
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;*"> - има пряк път от <img src="https://latex.codecogs.com/svg.latex?\Large&space;i">-тия до <img src="https://latex.codecogs.com/svg.latex?\Large&space;j">-тия град;
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\ominus"> - има пряк път от <img src="https://latex.codecogs.com/svg.latex?\Large&space;i">-тия до <img src="https://latex.codecogs.com/svg.latex?\Large&space;j">-тия град;
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;**"> - няма пряк път от <img src="https://latex.codecogs.com/svg.latex?\Large&space;i">-тия до <img src="https://latex.codecogs.com/svg.latex?\Large&space;j">-тия град.
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\oslash"> - няма пряк път от <img src="https://latex.codecogs.com/svg.latex?\Large&space;i">-тия до <img src="https://latex.codecogs.com/svg.latex?\Large&space;j">-тия град.
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;(0\le{i}\le{n},0\le{j}\le{n})">. Да се напише програма, която установява дали съществува път между два произволно зададени града (Приемаме, че ако от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j"> има път, то има път от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> също).
 
