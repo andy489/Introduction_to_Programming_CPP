@@ -479,4 +479,4 @@ int main()
 ```
 **Задача 4.** Да се напише функция *oneBit*, която получава като аргументи две цели числа без знак и връща булева стойност, указваща дали техният двоичен запис се различава точно в един бит.
 
-*Примери:* *oneBit(4,5)* <img src="https://latex.codecogs.com/svg.latex?\Large&space;\rightarrow"> *false*
+*Примери:* *oneBit(4,5)* <img src="https://latex.codecogs.com/svg.latex?\Large&space;\rightarrow"> *false*, *oneBit(20,28)* <img src="https://latex.codecogs.com/svg.latex?\Large&space;\rightarrow"> *true*, *oneBit(21,22)* <img src="https://latex.codecogs.com/svg.latex?\Large&space;\rightarrow"> *false*.
