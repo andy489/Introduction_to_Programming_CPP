@@ -418,7 +418,7 @@ void printWeb()
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\oslash"> - няма пряк път от <img src="https://latex.codecogs.com/svg.latex?\Large&space;i">-тия до <img src="https://latex.codecogs.com/svg.latex?\Large&space;j">-тия град.
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;(0\le{i}\le{n},0\le{j}\le{n})">. Да се напише програма, която установява дали съществува път между два произволно зададени града (Приемаме, че ако от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j"> има път, то има път от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> също).
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;(0\le{i}\le{n},0\le{j}\le{n})">. Да се напише програма, която установява дали съществува път между два произволно зададени града. (Приемаме, че ако от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j"> има път, то има път от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> също).
 
 **Анализ на задачата**
 
