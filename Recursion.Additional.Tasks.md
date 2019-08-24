@@ -473,7 +473,8 @@ int main()
 	size_t A[N][N];
 	memset(A, 0, sizeof(A));
 	/* сетваме всички клетки да са 0 в матрицата на съседства */
-	/* очевидно, ако град i е свързан с град j, то и град j ще е свързан с град i, за това ако A[i][j]=1, то и A[j][i]=1 */
+	/* очевидно, ако град i е свързан с град j, то и град j ще е свързан с град i, 
+	за това ако A[i][j]=1, то и A[j][i]=1 */
 
 	/* поставяме пътища на произволни места в матрицата на съседства */
 	A[3][2] = 1; A[3][4] = 1; A[1][7] = 1; A[4][5] = 1; A[5][6] = 1; A[6][7] = 1;
@@ -484,7 +485,8 @@ int main()
 		for (size_t j = 0; j < N; j++)
 			if (A[i][j] == 1||i==j) A[j][i] = 1;
 
-	printNeighborhoodМatrix(A, N); /* принтираме матрицата на съседства, за да видим къде сме сетнали да има пътища */
+	printNeighborhoodМatrix(A, N); 
+	/* принтираме матрицата на съседства, за да видим къде сме сетнали да има пътища */
 
 	size_t i(0), j(0);
 	do
@@ -493,7 +495,8 @@ int main()
 		std::cin >> i;
 		std::cout << "j = ";
 		std::cin >> j;
-		if (way(i, j, A))	std::cout << "There exist a road between the cities " << i << " and " << j << ".\n";
+		if (way(i, j, A))	std::cout << "There exist a road between the cities " << i 
+		<< " and " << j << ".\n";
 		else std::cout << "there is no road between these cities " << i << " and " << j << ".\n";
 	} while (i >= 0 && i < N && j >= 0 && j < N);
 	   	 
