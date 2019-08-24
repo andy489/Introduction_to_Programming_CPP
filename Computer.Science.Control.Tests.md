@@ -437,7 +437,7 @@ int main()
 ```
 **Задача 3.** Да се напише функция *maxOccurs*, която получава като аргумент символен низ и връща броя на срещанията на най-срещаната буква в низа. Ако в низа няма нито една буква, функцията да връща 0. Функцията не трябва да прави разлика между главни и малки букви, т.е. прибавят се към една и съща бройка.
 
-*Пример:* *maxOccurs("OnomatOpoeia")* <img src="https://latex.codecogs.com/svg.latex?\Large&space;\rigtharrow"> 4 (буквата 'О' се среща 4 пъти).
+*Пример:* *maxOccurs("OnomatOpoeia")* <img src="https://latex.codecogs.com/svg.latex?\Large&space;\rightarrow"> 4 (буквата 'О' се среща 4 пъти).
 
 ```cpp
 #include <iostream>
@@ -479,4 +479,4 @@ int main()
 ```
 **Задача 4.** Да се напише функция *oneBit*, която получава като аргументи две цели числа без знак и връща булева стойност, указваща дали техният двоичен запис се различава точно в един бит.
 
-*Примери:* *oneBit(4,5)* <img src="https://latex.codecogs.com/svg.latex?\Large&space;\rigtharrow"> *false*
+*Примери:* *oneBit(4,5)* <img src="https://latex.codecogs.com/svg.latex?\Large&space;\rightarrow"> *false*
