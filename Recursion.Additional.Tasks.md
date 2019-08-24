@@ -422,3 +422,9 @@ void printWeb()
 
 **Анализ на задачата:**
 
+Ще напишем рекурсивна булева функция *way*, която зависи от два параметъра <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;j">, показващи номерата на градовете между които търсим дали съществува път. Функцията ще реализира следния алгоритъм:
+
+- Ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;i=j">, съществува път от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j">.
+- Ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> или <img src="https://latex.codecogs.com/svg.latex?\Large&space;j"> са извън матрицата на съседства, няма път.
+- Ако <img src="https://latex.codecogs.com/svg.latex?\Large&space;i\neq{j}"> и има пряк път от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j">, има път между двата града.
+- В останалите случаи има път от град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j">, тогава и само тогава, когато съществува град <img src="https://latex.codecogs.com/svg.latex?\Large&space;k">, с който град <img src="https://latex.codecogs.com/svg.latex?\Large&space;i"> е свързан с пряк път, и от който до град <img src="https://latex.codecogs.com/svg.latex?\Large&space;j"> има път.
