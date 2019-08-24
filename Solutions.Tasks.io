@@ -487,8 +487,7 @@ int main()
 //Task 2.11
 #include <iostream>
 #include <string>
-using namespace std;
-
+#using namespace std;
 void swap(string& card1, string& card2)
 {
 	string temp = card1;
