@@ -327,3 +327,74 @@ int main()
 	return 0;
 }
  ```
+ 
+## Трето контролно по Увод в програмирането
+
+*СУ  „Климент Охридски“, ФМИ, спец. Информатика, 17.12.2016 г. Вариант А*
+
+ **Задача 1.** Наблюдаваме приближаваща колона от индианци откъм предния ѝ край. За един индианец казваме, че е „видим“, ако всички индианци пред него са по-ниски от него (т.е. пред него няма по-висок или равен по ръст индианец, който да го закрива изцяло). Да се напише функция *visibleIndians*, която приема масив от цели числа, съдържащ височините на индианците в реда, в който са подредени в колоната, и втъща като резултат броя на видимите индианци.
+ 
+ *Пример:*  Ако масивът е {**150**,**163**,158,**180**,173}, видимите индианци са 3 на брой.
+ 
+ ```cpp
+#include <iostream>
+#include <time.h>
+#define MAX 100
+
+struct Indian
+{
+	unsigned height;
+}indians[MAX + 1]; /* Масив от индианци*/
+unsigned n;    /*Брой елементи в масива*/
+
+void initSeq() { n = 0; }  /*Инициализиране на редицата от индианци*/
+
+void insertIndian(unsigned height) /*Добавя нов индианец*/
+{
+	indians[n].height = height;
+	n++;
+}
+void seqPrint() /*Извежда списък с редицата от индианци*/
+{
+	unsigned i;
+	for (i = 0; i < n; i++)
+	{
+		std::cout << "Indian " << i << " with height " << indians[i].height << '\n';
+	}
+}
+
+unsigned visibleIndians(Indian* indians, unsigned n)
+{
+	unsigned visible = 0;
+	unsigned maxHeight = 0; /*за максимална височина може да сложим всяко число под 140 (в нашия случай)*/
+
+	for (size_t i = 0; i < n; i++)
+	{
+		if (indians[i].height > maxHeight)
+		{
+			maxHeight = indians[i].height;
+			visible++;
+		}
+	}
+	return visible;
+}
+
+void randomSequenceIndians(unsigned n)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		insertIndian(140 + rand() % 41); /*Индианците са с височини от 140 до 180*/
+	}
+}
+int main()
+{
+	srand(unsigned(time(0)));
+
+	randomSequenceIndians(25);
+	seqPrint();
+
+	std::cout << "Visible indians: " << visibleIndians(indians, n);
+
+	return 0;
+}
+ ```
