@@ -81,7 +81,69 @@ int main()
 
 *Пример:* за редицата от точки (0,0),(-1,0),(2,1) програмата ще изведе 9.
 
-*Решение:* In progress. Идея --- Трябва да проверим коя е максималната разлика между (най-голямото х и най-малкото х) и (най-голямото y и най-малкото y) и да вземем квадрата ѝ. За целта може да сложим всички x и y в масив и чрез четни и нечетни позиции със стъпка две да намерим максималната разлика между хиксовете и игреците. 
+*Решение:* 
+
+**Анализ на задачата:**
+
+За да открием лицето на квадрата с възможно най-малка площ изпълняващ исканото условие е необходимо да намерим двете най-отдалечени точки спрямо абсцисата и ординатата. За целта ще съхраняваме всички подадени x и y в масив. На четните позиции в масива ще бъдат координатите върху абсцисата, а на нечетните - координатите върху ординатата на съответната точка. Най голямата дистанция по абсцисата ще е разликата между *max_x* и *min_x* и аналогично за y. По-голямата от двете стойности е минималната страна на квадрата.
+
+```cpp
+#include <iostream>
+#include <limits>
+
+double myAbs(double a) { return a > 0 ? a : -a; }
+
+int main()
+{
+	unsigned n;
+	std::cout << "n = ";
+	std::cin >> n;
+
+	double* arr = new double[2 * n];
+	unsigned c = 0;
+
+	for (size_t i = 0; i < n; i++)
+	{
+		double x, y;
+		std::cout << "x" << i << " = ";
+		std::cin >> x;
+		std::cout << "y" << i << " = ";
+		std::cin >> y;
+
+		arr[c] = x;
+		arr[c + 1] = y;
+		c += 2;
+	}
+
+	double min_x = DBL_MAX;	double max_x = DBL_MIN;
+	double min_y = DBL_MAX;	double max_y = DBL_MIN;
+
+	for (size_t i = 0; i < 2 * n; i += 2)
+	{
+		if (arr[i] < min_x) min_x = arr[i];
+		if (arr[i] > max_x) max_x = arr[i];
+	}
+	for (size_t i = 1; i < 2 * n; i += 2)
+	{
+		if (arr[i] < min_y) min_y = arr[i];
+		if (arr[i] > max_y) max_y = arr[i];
+	}
+
+	double diff_x = max_x - min_x;
+	double diff_y = max_y - min_y;
+
+	double sideCoverSquare = (diff_x + diff_y + myAbs(diff_x - diff_y)) / 2;
+
+	double areaSquare = sideCoverSquare * sideCoverSquare;
+
+	std::cout.setf(std::ios::fixed);
+	std::cout.precision(4);
+	std::cout << "Min area of covering square is: " << areaSquare;
+
+	delete[] arr;
+	return 0;
+}
+```
 
 ## Второ контролно по Увод в програмирането
 
