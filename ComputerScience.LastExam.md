@@ -1,15 +1,12 @@
 ## Повишителен изпит по Увод в програмирането
 *СУ  „Климент Охридски“, ФМИ, спец. Компютърни науки, 26.08.2019 г. Вариант А*
 
-**Задача 1.** Дадени са символни низове, съставени от малки латински букви и интервали ( Σ={ 'a' ,'b', ..., 'z', ' ' } ). „Кодиране“ на низ 
-s наричаме функция code_s:
-Σ→Σ, която замества всяка буква от <img src="https://latex.codecogs.com/svg.latex?\Large&space;s"> с произволна буква от Σ, а буквите от 
-Σ, които не се срещат в <img src="https://latex.codecogs.com/svg.latex?\Large&space;s">, оставя непроменени. Да се дефинира функция
+**Задача 1.** Дадени са символни низове, съставени от малки латински букви и интервали ( Σ={ '<img src="https://latex.codecogs.com/svg.latex?\Large&space;a">' ,'<img src="https://latex.codecogs.com/svg.latex?\Large&space;b">', ..., '<img src="https://latex.codecogs.com/svg.latex?\Large&space;z">', ' ' } ). „Кодиране“ на низ 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;s"> наричаме функция code_s:
+Σ→Σ, която замества всяка буква от <img src="https://latex.codecogs.com/svg.latex?\Large&space;s"> с произволна буква от Σ, а буквите от Σ, които не се срещат в <img src="https://latex.codecogs.com/svg.latex?\Large&space;s">, оставя непроменени. Да се дефинира функция
 
-void encode ([подходящ тип] s1, [подходящ тип] r1, [подходящ тип] s2, [подходящ тип] r2),
-
-къдети s1, r1, s2 и r2 са символни низове. Функцията да намира кодирането, което преобразува s1 в r1 и, ако такова съществува, да преобразува със същото кодиране низа s2, 
-като резултата да запише в r2. Ако такова кодиране не съществува, в r2 да се запише празен низ.
+void encode ([подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;s1">, [подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;r1">, [подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;s2">, [подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;r2">
+къдети s1, r1, s2 и r2 са символни низове. Функцията да намира кодирането, което преобразува s1 в r1 и, ако такова съществува, да преобразува със същото кодиране низа <img src="https://latex.codecogs.com/svg.latex?\Large&space;s2">, като резултата да запише в <img src="https://latex.codecogs.com/svg.latex?\Large&space;r2">. Ако такова кодиране не съществува, в <img src="https://latex.codecogs.com/svg.latex?\Large&space;r2"> да се запише празен низ.
 
 *Примери:*
 
