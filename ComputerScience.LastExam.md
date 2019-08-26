@@ -127,13 +127,8 @@ int main()
 {
 	char s1[] = "hello";
 	char r1[] = "worrd";
-
 	char s2[] = "love";
-
-	encode(s1, r1, s2); // четвърти аргумент е излишен
-	
+	encode(s1, r1, s2); // четвърти аргумент е излишен	
 	return 0;
 }
-
-
 ```
