@@ -5,8 +5,9 @@
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;s"> наричаме функция code_s:
 Σ→Σ, която замества всяка буква от <img src="https://latex.codecogs.com/svg.latex?\Large&space;s"> с произволна буква от Σ, а буквите от Σ, които не се срещат в <img src="https://latex.codecogs.com/svg.latex?\Large&space;s">, оставя непроменени. Да се дефинира функция
 
-void encode ([подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;s1">, [подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;r1">, [подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;s2">, [подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;r2">
-къдети s1, r1, s2 и r2 са символни низове. Функцията да намира кодирането, което преобразува s1 в r1 и, ако такова съществува, да преобразува със същото кодиране низа <img src="https://latex.codecogs.com/svg.latex?\Large&space;s2">, като резултата да запише в <img src="https://latex.codecogs.com/svg.latex?\Large&space;r2">. Ако такова кодиране не съществува, в <img src="https://latex.codecogs.com/svg.latex?\Large&space;r2"> да се запише празен низ.
+void encode ([подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;s1">, [подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;r1">, [подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;s2">, [подходящ тип] <img src="https://latex.codecogs.com/svg.latex?\Large&space;r2">),
+
+къдетo s1, r1, s2 и r2 са символни низове. Функцията да намира кодирането, което преобразува s1 в r1 и, ако такова съществува, да преобразува със същото кодиране низа <img src="https://latex.codecogs.com/svg.latex?\Large&space;s2">, като резултата да запише в <img src="https://latex.codecogs.com/svg.latex?\Large&space;r2">. Ако такова кодиране не съществува, в <img src="https://latex.codecogs.com/svg.latex?\Large&space;r2"> да се запише празен низ.
 
 *Примери:*
 
