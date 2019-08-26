@@ -121,8 +121,8 @@ void encode(char s1[], char r1[], char s2[])
 		std::cout << "No such encoding exists!\n";
 		std::cout << "The empty string: " << result << std::endl;
 	}
-	delete[] ptr;
-	delete[] result;
+	delete[] ptr; // изтриваме масива с информацията за декриптирането
+	delete[] result; // изтриваме резултата след като сме го принтирали на конзолата
 }
 
 int main()
