@@ -187,7 +187,7 @@ bool findWord(char C[3][3], char* word, int x, int y, int length)
 //Функция, която проверява дали дадена дума я има в матрицата по дадените правила
 bool matchWord(char C[3][3], char* word)
 {
-	int len = myStrlen(word);;
+	int len = myStrlen(word);
 	// Обхождаме матрицата и търсим съвпадение с първата буква на думата 
 	for (int i = 0; i < N; i++)
 	{
