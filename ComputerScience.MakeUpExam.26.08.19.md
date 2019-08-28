@@ -225,8 +225,8 @@ bool crossword(char C[3][3], char words[][10], unsigned countWords)
 int main()
 {
 	char C[3][3] = { 'c','a','t',
-					 'w','h','o',
-					 'w','i','n' };
+			 'w','h','o',
+			 'w','i','n' };
 	// с дължина 10, за да има място и за терминиращата нула
 	char words[][10] = { "cat",
 			     "what",
@@ -326,12 +326,12 @@ bool crossword(char C[3][3], char words[][10], unsigned countWords)
 int main()
 {
 	char C[3][3] = { 'c','a','t',
-					 'w','h','o',
-					 'w','i','n' };
+			 'w','h','o',
+			 'w','i','n' };
 	// с дължина 10, за да има място и за терминиращата нула
 	char words[][10] = { "cahota",
-						 "what",
-						 "not" };
+			     "what",
+			     "not" };
 	unsigned countWords = sizeof(words) / sizeof(words[0]);
 
 	crossword(C, words, countWords) ? std::cout << "true" : std::cout << "false";
