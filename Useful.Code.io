@@ -9,6 +9,7 @@ _CrtDumpMemoryLeaks(); // before end of program i.e. return 0;
 
 // start debugging with f10 and when you reach "return 0" you will be notified if there is a memory leak
 
+--------------------------------------------------------------------------------------------------------------------------------
 • REGULAR EXPRESSIONS (RegEx)
 
 // Example 1:
