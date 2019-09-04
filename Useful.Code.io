@@ -1,3 +1,14 @@
+• Memory leak tets
+
+// include libraries on top ot rpogram
+#define _CRTDBG_MAP_ALLOC   // required
+#include <stdlib.h>         // to enable MSVC++
+#include <crtdbg.h>         // memory leak detection
+
+_CrtDumpMemoryLeaks(); // before end of program i.e. return 0;
+
+// start debugging with f10 and when you reach "return 0" you will be notified if there is a memory leak
+
 • REGULAR EXPRESSIONS (RegEx)
 
 // Example 1:
