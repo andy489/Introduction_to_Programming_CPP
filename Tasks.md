@@ -76,7 +76,7 @@ Example input | Output
 
 Example input | Output 
 ------------ | ------------- 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;a=3,b=2,c=1,p=-1,q=2"> | <img src="https://latex.codecogs.com/svg.latex?\Large&space;max=17.00;min=0.67">
+3 2 1 -1 2 | max=17.00<br>min=0.67
 
 **2.09.** A student goes to an exam which starts at a specific time (for example at 9:30). He comes to the exam room in a given arrival time (e.g. 9:40). It is believed that the student is in time if he arrives at the start of the exam or up to half an hour before. If he comes earlier with more than 30 minutes, he is early. If he come after the start of the exam, he is late. Write a program that reads the begining of the exam and time of arrival and prints whether the student arrived on time, whether he arrived early or is late and how many hours or minutes he has came before or after the exam.
 
