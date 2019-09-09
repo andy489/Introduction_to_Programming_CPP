@@ -290,7 +290,6 @@ int main()
 ---|---
 4 6<br>10 20 1 500 60 700|91
 
-
 *Решение:*
 
 ```cpp
@@ -342,5 +341,147 @@ int main() {
 	} while (spos < k);
 
 	std::cout << sum;
+}
+```
+### Вариант C
+
+**Задача 1.** Напишете програма, която въвежда две цели, положителни числа <img src="https://latex.codecogs.com/svg.latex?\Large&space;K"> и <img src="https://latex.codecogs.com/svg.latex?\Large&space;N"> и намира и извежда на екрана първите <img src="https://latex.codecogs.com/svg.latex?\Large&space;N"> естествени числа, такива че сумата от цифрите им е равна на <img src="https://latex.codecogs.com/svg.latex?\Large&space;K">. 
+
+вход|изход
+---|---
+12 4|39 48 57 66
+4 12|4 13 22 31 40 103 112 121 130 202 211 220
+
+*Решение:*
+```cpp
+#include <iostream>
+using namespace std;
+typedef unsigned int uint;
+// find first n numbers such that the sum of their digits equals k
+uint gets(uint n) 
+{
+	int res = 0;
+
+	do 
+	{
+		res += n % 10;
+		n /= 10;
+	} while (n);
+	return res;
+};
+
+int main() {
+	uint n, k;
+	cin >> k >> n;
+
+	uint cnum = 1;
+	do 
+	{
+		if (gets(cnum) == k) 
+		{
+			cout << cnum << ' ';
+			n--;
+		}
+		cnum++;
+	} while (n > 0);
+}
+```
+
+**Задача 2.**
+
+Да се напише програма, която създава масив от тип int с 1000 елемента и въвежда от потребителя цяло число <img src="https://latex.codecogs.com/svg.latex?\Large&space;N">, такова че <img src="https://latex.codecogs.com/svg.latex?\Large&space;0\le{N}\le{1000}">. Програмата да попълни масива с първите <img src="https://latex.codecogs.com/svg.latex?\Large&space;N"> естествени числа такива, че сумата от цифрите им е равна на 5. Полученият масив да се изведе на екрана.  
+
+вход|изход
+---|---
+10|5 14 23 32 41 50 104 113 122 131
+
+*Решение:*
+```cpp
+#include <iostream>
+using namespace std;
+typedef unsigned int uint;
+
+uint gets(uint n) 
+{
+	int res = 0;
+	do 
+	{
+		res += n % 10;
+		n /= 10;
+	} while (n);
+	return res;
+};
+
+// find first n numbers such that the sum of their digits
+// equals k and print them 
+
+uint arr[1000];
+
+int main() 
+{
+	uint n, pos = 0;
+	cin >> n;
+
+	uint cnum = 1;
+
+	do {
+		if (gets(cnum) == 5) 
+		{
+			arr[pos++] = cnum;
+			n--;
+		}
+		cnum++;
+	} while (n);
+
+	for (int i = 0; i < pos; i++) 
+	{
+		std::cout << arr[i] << ' ';
+	}
+}
+```
+### Вариант D
+
+**Задача 1.**
+
+Да се напише програма, която извежда на конзолата първите <img src="https://latex.codecogs.com/svg.latex?\Large&space;N"> естествени числа такива, че произведението от цифрите им е равно на <img src="https://latex.codecogs.com/svg.latex?\Large&space;K">. 
+
+вход|изход
+---|---
+5 3|3 6 9 10 13
+
+```cpp
+#include <iostream>
+using namespace std;
+typedef unsigned int uint;
+
+uint getm(uint n) 
+{
+	int res = 1;
+
+	do 
+	{
+		res *= n % 10;
+		n /= 10;
+	} while (n);
+	return res;
+};
+
+// find first n numbers such that the product of their digits 
+// can be divided by k
+
+int main() 
+{
+	uint n = 5;
+	uint k = 1;
+	uint cnum = 1;
+	do 
+	{
+		if (getm(cnum) % k == 0) 
+		{
+			cout << cnum << ' '; 
+			n--;
+		}
+		cnum++;
+	} while (n > 0);
 }
 ```
