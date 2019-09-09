@@ -15,9 +15,7 @@
 
 ```cpp
 #include <iostream>
-
 typedef unsigned int uint;
-
 int main()
 {
 	uint a1, a2, a3, a4;
@@ -62,9 +60,7 @@ int main()
 
 ```cpp
 #include <iostream>
-
 typedef unsigned int uint;
-
 int main() 
 {
 	uint n = 0, cpos = 1;
@@ -107,7 +103,6 @@ int main()
 #include <time.h>
 
 int ary[1000];
-
 /*
  given a sequence of 1000 numbers (we'll generate it)
  clear all elements of the sequence, so that
@@ -169,9 +164,7 @@ int main()
 
 ```cpp
 #include <iostream>
-
 typedef unsigned int uint;
-
 int main() 
 {
 	uint a1, a2, a3;
