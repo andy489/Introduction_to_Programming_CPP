@@ -135,8 +135,8 @@ int main()
 	{
 		if (ary[cnum] < sum) 
 		{
-			//			memcpy(&ary[cnum], &ary[cnum+1], ( sizeof (int) )* (numcount-cnum-1));
-			//			memcpy(ary + cnum, ary + cnum + 1, ( sizeof (int) )* (numcount-cnum-1));
+			//memcpy(&ary[cnum], &ary[cnum+1], ( sizeof (int) )* (numcount-cnum-1));
+			//memcpy(ary + cnum, ary + cnum + 1, ( sizeof (int) )* (numcount-cnum-1));
 			for (int i = cnum; i < numcount - 1; i++) 
 			{
 				ary[i] = ary[i + 1];
