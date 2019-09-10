@@ -80,6 +80,20 @@ int main()
 • CONSOLE COLOR
 
 #include <iostream>
+#include <windows.h>
+int main()
+{
+	for (int i = 0; i < 256; i++)
+	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), i);
+		std::cout << "Text color in use = " << i << "\n";
+	}
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+• CONSOLE COLOR 2
+
+#include <iostream>
 int main()
 {
 	system("color A"); // sets the color of the text in red
