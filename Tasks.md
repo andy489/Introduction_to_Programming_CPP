@@ -273,7 +273,14 @@ Example input | Output
 **3.18.** Write a program which calculates the sum  <img src="https://latex.codecogs.com/svg.latex?\Large&space;e^x=1+\frac{x}{1!}+\frac{x^2}{2!}+..."> and find the [Napier's constant](https://en.wikipedia.org/wiki/E_(mathematical_constant)). The approximation continues until the absolute value of the last collectible becomes less than <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon"> (where <img src="https://latex.codecogs.com/svg.latex?\Large&space;x"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon"> are given real numbers).
           
 **3.19.** Find the smallest number expressible as the sum of two cubes in two different ways and print the expressions. ([Hardy–Ramanujan number](https://en.wikipedia.org/wiki/1729_(number)) )
-          
+     
+**3.20.** Write a program that reads an integer number N and prints how many trailing zeros are present at the end of the number N! (N factorial). Make sure your program works for N up to 50 000. Hint: you don’t need to calculate the actual factorial to count the number of trailing zeroes.
+
+Input|Output|Explanation
+1|0|1!=1, no trailing zeros
+5|1|5!=120, 1 trailing zero
+20|4|20!=2432902008176640000, 4 trailing zeros
+
 ## 4. Arrays
 
 **4.01.** Write a function which takes two arguments - an array and its size and prints all elements of the array on the console.  
