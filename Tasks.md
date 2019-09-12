@@ -330,7 +330,7 @@ Input|Output|Explanation
 
 **4.13.** Write a function which takes two arguments - an int array and its size, and sorts the array (in ascending or descending order).
 
-**4.14.** Write a program which reads an array from the console and prints the product of each of its elements with all elements. E.g. for the array {1, 7, 3}, the result would be {1 * 1, 1 * 7, 1 * 3, 7 * 1, 7 * 7, 7 * 3, 3 * 1, 3 * 7, 3 * 3}, which gives us the array {1, 7, 3, 7, 49, 21, 3, 21, 9}, so for the input {1 7 3} the program should print 1 7 3 7 49 21 3 21 9.
+**4.14.** *(Cartesian Product)* Write a program which reads an array from the console and prints the product of each of its elements with all elements. E.g. for the array {1, 7, 3}, the result would be {1 * 1, 1 * 7, 1 * 3, 7 * 1, 7 * 7, 7 * 3, 3 * 1, 3 * 7, 3 * 3}, which gives us the array {1, 7, 3, 7, 49, 21, 3, 21, 9}, so for the input {1 7 3} the program should print 1 7 3 7 49 21 3 21 9.
 
 *Examples:*
 
