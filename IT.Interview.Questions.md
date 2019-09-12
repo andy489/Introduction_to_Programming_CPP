@@ -90,6 +90,15 @@ int main()
 Explain why.
 <details><summary>ANSWER</summary>
 <p>
-*true*, because 052 is considered from the compilator as octal numeral system, i.e. the base-8 number system, which uses the digits 0 to 7. On the other hand 0x2a or equivalently 0x2A is considered from the compilator as hexadecimal (also base 16, or hex) system to represent numbers with sixteen digits. So <img src="https://latex.codecogs.com/svg.latex?\Large&space;052=8.0^2+8.5^1+8.2^0=48"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;0x2a=0x2A=16.2^1+16.10^0=48">, i.e. is 48 equal to 48 ?
+	
+*true*
+
+052 is considered from the compilator as octal numeral system, i.e. the base-8 number system, which uses the digits 0 to 7. On the other hand 0x2a or equivalently 0x2A is considered from the compilator as hexadecimal (also base 16, or hex) system to represent numbers with sixteen digits. So 
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;052=8.0^2+8.5^1+8.2^0=48"> and 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;0x2a=0x2A=16.2^1+16.10^0=48">,
+
+i.e. is 48 equal to 48 ?
+
 </p>
 </details>
