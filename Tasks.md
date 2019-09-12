@@ -384,7 +384,7 @@ Type | Description
 
 Input|Output|Explanation
 ---|---|---
-12<br>**4** 1 1 **4** 2 3 **4 4** 1 **4** 9 3|4|The number **4** is the most frequent (occurs 5 times)
+12<br>**4** 1 1 **4** 2 3 **4 4** 1 **4** 9 3|**4**|The number **4** is the most frequent (occurs 5 times)
 8<br>**2 2 2 2** 1 **2 2 2**| **2**|	The number **2** is the most frequent (occurs 7 times)
 11<br>**7 7 7** 0 **2 2 2** 0 **9 9 9**|	**2 7 9**|	The numbers **2**, **7** and **9** have the same maximal frequence (each occurs 3 times).
 
