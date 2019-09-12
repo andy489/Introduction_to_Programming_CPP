@@ -1,4 +1,4 @@
-### SOME HARD INTERVIEW QUESTIONS
+### SOME INTERVIEW QUESTIONS
 
 **01.** Do ***100000 consequtive composite*** numbers exist? If “no”, argument your answer. Otherwise give an example.      
 *(1-2 minutes)*
@@ -74,5 +74,21 @@ You can see that only 0 and the powers of two (1, 2, 4 and 8) result in a 0000/f
 
 ***So the answer is that n is neither power of two nor zero.***
 
+</p>
+</details>
+
+**04.** What will be displayed on the console after executing the following code:
+```cpp
+#include <iostream> 
+int main()
+{
+	(052 == 0x2a) ? std::cout << "true" : std::cout << "false";
+	return 0;
+}
+```
+Explain why.
+<details><summary>ANSWER</summary>
+<p>
+*true*, because 052 is considered from the compilator as octal numeral system, i.e. the base-8 number system, which uses the digits 0 to 7. On the other hand 0x2a or equivalently 0x2A is considered from the compilator as hexadecimal (also base 16, or hex) system to represent numbers with sixteen digits. So <img src="https://latex.codecogs.com/svg.latex?\Large&space;052=8.0^2+8.5^1+8.2^0=48"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;0x2a=0x2A=16.2^1+16.10^0=48">, i.e. is 48 equal to 48 ?
 </p>
 </details>
