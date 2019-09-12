@@ -277,6 +277,7 @@ Example input | Output
 **3.20.** Write a program that reads an integer number N and prints how many trailing zeros are present at the end of the number N! (N factorial). Make sure your program works for N up to 50 000. Hint: you don’t need to calculate the actual factorial to count the number of trailing zeroes.
 
 Input|Output|Explanation
+---|---|---
 1|0|1!=1, no trailing zeros
 5|1|5!=120, 1 trailing zero
 20|4|20!=2432902008176640000, 4 trailing zeros
