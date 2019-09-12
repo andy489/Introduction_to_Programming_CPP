@@ -340,9 +340,17 @@ Input|Output
 2<br>-1 4	| 1 -4 -4 16
 1<br>42	| 1764
 
-**4.15** Write a function which takes two arguments - an int array and its size, and returns its median.
+**4.15.** (*Closest Numbers*) Write a program which finds the two closest (by value) integer numbers in an array and prints the absolute difference between them.
+*Examples:*
+Input|Output|Explanation
+---|---|---
+5<br>1 105 10 100 3	|2|	The closest numbers are 1 and 3, abs(1 – 3) = 2
+9<br>1 2 3 4 5 6 7 8 9	|1|	All numbers are exactly 1 unit apart
+5<br>-1 -105 -10 -100 3	|4|	The closest numbers are -1 and 3, abs(-1 – 3) = 4, or equivalently abs(3 – (-1)) = abs(3 + 1) = 4
 
-**4.16** Write a function which takes two arguments - an int array and its size, and returns its mode(s). "vector" and "algorithm" libraries are allowed, because the array can have more than one mode.
+**4.16** Write a function which takes two arguments - an int array and its size, and returns its median.
+
+**4.17** Write a function which takes two arguments - an int array and its size, and returns its mode(s). "vector" and "algorithm" libraries are allowed, because the array can have more than one mode.
 
 Example input | Output 
    ------------- | -------------- 
@@ -360,7 +368,7 @@ Type | Description
 
 [More about Median and Mode of a set of data values here](https://www.khanacademy.org/math/in-in-class-7th-math-cbse/in-in-7th-data-handling/in-in-7th-data-handling-mean-median-basics/a/mean-median-and-mode-review?utm_account=Grant&utm_campaignname=Grant_Math_Dynamic&gclid=Cj0KCQjwvdXpBRCoARIsAMJSKqLVAk3oh5QcLGBqsu8gQXeRzaS8axXqg6_6cC5blZb6np86HGShZSYaAhoOEALw_wcB "Markdown Tutorial")
 
-**4.17.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and determine if the given array is hacksaw. We call a sequence of numbers hacksaw if the following is true: <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0<a_1>a_2<a_3>a_4<a_5...a_n"> or <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0>a_1<a_2>a_3<a_4>a_5...a_n">
+**4.18.** Write a program which asks the user to enter n - the number of numbers he will enter. Then the program should ask for n numbers and determine if the given array is hacksaw. We call a sequence of numbers hacksaw if the following is true: <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0<a_1>a_2<a_3>a_4<a_5...a_n"> or <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_0>a_1<a_2>a_3<a_4>a_5...a_n">
 
    Example input | Output 
    ------------- | -------------- 
@@ -371,24 +379,24 @@ Type | Description
    4   ***4 -8 19 22*** | yes
    4   ***4 -8 19 19*** | no
 
-**4.18.** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
+**4.19.** Write a function with signature bool checkDate(const char* text), which verifies if the input parameter is a correct date in DD.MM format. Do not use string.
 
-**4.19.** Write a function which takes four arguments - an int array, first index and last index of the searched interval and wanted value x. Using the algorithm binary search, the function should return the index of x if it exists in the array, or -1 if it does not exist.
+**4.20.** Write a function which takes four arguments - an int array, first index and last index of the searched interval and wanted value x. Using the algorithm binary search, the function should return the index of x if it exists in the array, or -1 if it does not exist.
 
-**4.20.** Write a program which prints on the console the elements of the longest strictly increasing subsequence in a locally defined array. In case there are two sequences with the same length, print the first one.
+**4.21.** Write a program which prints on the console the elements of the longest strictly increasing subsequence in a locally defined array. In case there are two sequences with the same length, print the first one.
 
    Example input | Output 
    ------------- | -------------- 
    -4 -2 8 9 0 1 2 3 -4 2| -4 2 8 9
    3 9 0 2 1 3 4 6 9  | 1 3 4 6 9 
 
-**4.21.** Write a function which prints all the combinations of elements from an array of integers arr, with sum equals to a natural number N.
+**4.22.** Write a function which prints all the combinations of elements from an array of integers arr, with sum equals to a natural number N.
 
-**4.22.** Write a function with signature *size_t checkNums(long num1, long num2)* , which returns a pointer to an array containing all the digits encountered both in num1 and num2. 
+**4.23.** Write a function with signature *size_t checkNums(long num1, long num2)* , which returns a pointer to an array containing all the digits encountered both in num1 and num2. 
 
-**4.23.** Write a bool function which chechs whether a set is a subset of another set.
+**4.24.** Write a bool function which chechs whether a set is a subset of another set.
 
-**4.24.** Write a program that finds the most frequent number in a given sequence of numbers. In case of multiple numbers with the same maximal frequency, print all of them, ordered from smallest to largest, separated by spaces.
+**4.25.** Write a program that finds the most frequent number in a given sequence of numbers. In case of multiple numbers with the same maximal frequency, print all of them, ordered from smallest to largest, separated by spaces.
 
 *Examples:*
 
@@ -398,15 +406,15 @@ Input|Output|Explanation
 8<br>**2 2 2 2** 1 **2 2 2**| **2**|	The number **2** is the most frequent (occurs 7 times)
 11<br>**7 7 7** 0 **2 2 2** 0 **9 9 9**|	**2 7 9**|	The numbers **2**, **7** and **9** have the same maximal frequence (each occurs 3 times).
 
-**4.25.** Given two sequences (of numbers) <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1,b_2,...,b_m"> sorted in ascending order. Write a function that merges the two sequences in one new sequence with ascendingly ordered elements <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_1,c_2,..."> consisting of the elements of the first two sequences. Do not use sorting algorithms. Use the condition that the first two sequences are sorted in ascending order. *The complexity of your function must be <img src="https://latex.codecogs.com/svg.latex?\Theta{(n+m)}">*.
+**4.26.** Given two sequences (of numbers) <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1,b_2,...,b_m"> sorted in ascending order. Write a function that merges the two sequences in one new sequence with ascendingly ordered elements <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_1,c_2,..."> consisting of the elements of the first two sequences. Do not use sorting algorithms. Use the condition that the first two sequences are sorted in ascending order. *The complexity of your function must be <img src="https://latex.codecogs.com/svg.latex?\Theta{(n+m)}">*.
 
-**4.26.** In number theory, a Carmichael number is a composite number n which satisfies the modular arithmetic congruence relation: <img src="https://latex.codecogs.com/svg.latex?\Large&space;b^n\equiv{b}(mod_n)"> for all integers b which are relatively prime to n. They are named after [Robert Carmichael](https://en.wikipedia.org/wiki/Robert_Daniel_Carmichael "Markdown Tutorial"). An alternative and equivalent definition of Carmichael numbers is given by [Korselt's criterion](https://en.wikipedia.org/wiki/Carmichael_number "Markdown Tutorial"): A positive composite integer n is a Carmichael number if and only if n is square-free (a square-free integer is an integer which is divisible by no perfect square other than 1), and for all prime divisors p of n, it is true that <img src="https://latex.codecogs.com/svg.latex?\Large&space;p-1\mid{n-1}">. Write a program that chechs if a positive integer is a Carmichael number using Korselt's criterion.
+**4.27.** In number theory, a Carmichael number is a composite number n which satisfies the modular arithmetic congruence relation: <img src="https://latex.codecogs.com/svg.latex?\Large&space;b^n\equiv{b}(mod_n)"> for all integers b which are relatively prime to n. They are named after [Robert Carmichael](https://en.wikipedia.org/wiki/Robert_Daniel_Carmichael "Markdown Tutorial"). An alternative and equivalent definition of Carmichael numbers is given by [Korselt's criterion](https://en.wikipedia.org/wiki/Carmichael_number "Markdown Tutorial"): A positive composite integer n is a Carmichael number if and only if n is square-free (a square-free integer is an integer which is divisible by no perfect square other than 1), and for all prime divisors p of n, it is true that <img src="https://latex.codecogs.com/svg.latex?\Large&space;p-1\mid{n-1}">. Write a program that chechs if a positive integer is a Carmichael number using Korselt's criterion.
 
-**4.27.** Write a program which finds the sum of the polynomials <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q_m(x)=b_n.x^n+b_{n-1}.x^{n-1}+...+b_1.x+b_0">.
+**4.28.** Write a program which finds the sum of the polynomials <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q_m(x)=b_n.x^n+b_{n-1}.x^{n-1}+...+b_1.x+b_0">.
 
-**4.28.** Write a program which finds the product of the polynomials <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q_m(x)=b_n.x^n+b_{n-1}.x^{n-1}+...+b_1.x+b_0">.
+**4.29.** Write a program which finds the product of the polynomials <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q_m(x)=b_n.x^n+b_{n-1}.x^{n-1}+...+b_1.x+b_0">.
 
-**4.29.** Write a program which finds the k-th power of the polynomial <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0">, where  <img src="https://latex.codecogs.com/svg.latex?\Large&space;k=0,1,2,..."> is a given number.;
+**4.30.** Write a program which finds the k-th power of the polynomial <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0">, where  <img src="https://latex.codecogs.com/svg.latex?\Large&space;k=0,1,2,..."> is a given number.;
 
 ## 5. Matrices
 
