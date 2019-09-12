@@ -349,7 +349,7 @@ Input|Output|Explanation
 ---|---|---
 5<br>1 105 10 100 3|2|The closest numbers are 1 and 3, abs(1 – 3) = 2
 9<br>1 2 3 4 5 6 7 8 9|1|All numbers are exactly 1 unit apart
-5<br>-1 -105 -10 -90 3	|4|The closest numbers are -1 and 3, abs(-1 – 3) = 4, or equivalently abs(3 – (-1)) = abs(3 + 1) = 4
+5<br>-1 -25 -10 -90 3	|4|The closest numbers are -1 and 3, abs(-1 – 3) = 4, or equivalently abs(3 – (-1)) = abs(3 + 1) = 4
 
 **4.16** Write a function which takes two arguments - an int array and its size, and returns its median.
 
