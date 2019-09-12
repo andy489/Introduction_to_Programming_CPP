@@ -378,15 +378,25 @@ Type | Description
 
 **4.22.** Write a bool function which chechs whether a set is a subset of another set.
 
-**4.23.** Given two sequences (of numbers) <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1,b_2,...,b_m"> sorted in ascending order. Write a function that merges the two sequences in one new sequence with ascendingly ordered elements <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_1,c_2,..."> consisting of the elements of the first two sequences. Do not use sorting algorithms. Use the condition that the first two sequences are sorted in ascending order. *The complexity of your function must be <img src="https://latex.codecogs.com/svg.latex?\Theta{(n+m)}">*.
+**4.23.** Write a program that finds the most frequent number in a given sequence of numbers. In case of multiple numbers with the same maximal frequency, print all of them, ordered from smallest to largest, separated by spaces.
 
-**4.24.** In number theory, a Carmichael number is a composite number n which satisfies the modular arithmetic congruence relation: <img src="https://latex.codecogs.com/svg.latex?\Large&space;b^n\equiv{b}(mod_n)"> for all integers b which are relatively prime to n. They are named after [Robert Carmichael](https://en.wikipedia.org/wiki/Robert_Daniel_Carmichael "Markdown Tutorial"). An alternative and equivalent definition of Carmichael numbers is given by [Korselt's criterion](https://en.wikipedia.org/wiki/Carmichael_number "Markdown Tutorial"): A positive composite integer n is a Carmichael number if and only if n is square-free (a square-free integer is an integer which is divisible by no perfect square other than 1), and for all prime divisors p of n, it is true that <img src="https://latex.codecogs.com/svg.latex?\Large&space;p-1\mid{n-1}">. Write a program that chechs if a positive integer is a Carmichael number using Korselt's criterion.
+*Examples:*
 
-**4.25.** Write a program which finds the sum of the polynomials <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q_m(x)=b_n.x^n+b_{n-1}.x^{n-1}+...+b_1.x+b_0">.
+Input|Output|Explanation
+---|---|---
+13<br>**4** 1 1 **4** 2 3 **4 4** 1 2 **4** 9 3|4|The number **4** is the most frequent (occurs 5 times)
+8<br>**2 2 2 2** 1 **2 2 2**| **2**|	The number **2** is the most frequent (occurs 7 times)
+11<br>**7 7 7** 0 **2 2 2** 0 **9 9 9**|	**2 7 9**|	The numbers **2**, **7** and **9** have the same maximal frequence (each occurs 3 times).
 
-**4.26.** Write a program which finds the product of the polynomials <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q_m(x)=b_n.x^n+b_{n-1}.x^{n-1}+...+b_1.x+b_0">.
+**4.24.** Given two sequences (of numbers) <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_1,a_2,...,a_n"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;b_1,b_2,...,b_m"> sorted in ascending order. Write a function that merges the two sequences in one new sequence with ascendingly ordered elements <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_1,c_2,..."> consisting of the elements of the first two sequences. Do not use sorting algorithms. Use the condition that the first two sequences are sorted in ascending order. *The complexity of your function must be <img src="https://latex.codecogs.com/svg.latex?\Theta{(n+m)}">*.
 
-**4.27.** Write a program which finds the k-th power of the polynomial <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0">, where  <img src="https://latex.codecogs.com/svg.latex?\Large&space;k=0,1,2,..."> is a given number.;
+**4.25.** In number theory, a Carmichael number is a composite number n which satisfies the modular arithmetic congruence relation: <img src="https://latex.codecogs.com/svg.latex?\Large&space;b^n\equiv{b}(mod_n)"> for all integers b which are relatively prime to n. They are named after [Robert Carmichael](https://en.wikipedia.org/wiki/Robert_Daniel_Carmichael "Markdown Tutorial"). An alternative and equivalent definition of Carmichael numbers is given by [Korselt's criterion](https://en.wikipedia.org/wiki/Carmichael_number "Markdown Tutorial"): A positive composite integer n is a Carmichael number if and only if n is square-free (a square-free integer is an integer which is divisible by no perfect square other than 1), and for all prime divisors p of n, it is true that <img src="https://latex.codecogs.com/svg.latex?\Large&space;p-1\mid{n-1}">. Write a program that chechs if a positive integer is a Carmichael number using Korselt's criterion.
+
+**4.26.** Write a program which finds the sum of the polynomials <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q_m(x)=b_n.x^n+b_{n-1}.x^{n-1}+...+b_1.x+b_0">.
+
+**4.27.** Write a program which finds the product of the polynomials <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0"> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q_m(x)=b_n.x^n+b_{n-1}.x^{n-1}+...+b_1.x+b_0">.
+
+**4.28.** Write a program which finds the k-th power of the polynomial <img src="https://latex.codecogs.com/svg.latex?\Large&space;P_n(x)=a_n.x^n+a_{n-1}.x^{n-1}+...+a_1.x+a_0">, where  <img src="https://latex.codecogs.com/svg.latex?\Large&space;k=0,1,2,..."> is a given number.;
 
 ## 5. Matrices
 
