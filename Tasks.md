@@ -341,12 +341,15 @@ Input|Output
 1<br>42	| 1764
 
 **4.15.** (*Closest Numbers*) Write a program which finds the two closest (by value) integer numbers in an array and prints the absolute difference between them.
+
 *Examples:*
+
+
 Input|Output|Explanation
 ---|---|---
-5<br>1 105 10 100 3	|2|	The closest numbers are 1 and 3, abs(1 – 3) = 2
-9<br>1 2 3 4 5 6 7 8 9	|1|	All numbers are exactly 1 unit apart
-5<br>-1 -105 -10 -100 3	|4|	The closest numbers are -1 and 3, abs(-1 – 3) = 4, or equivalently abs(3 – (-1)) = abs(3 + 1) = 4
+5<br>1 105 10 100 3|2|The closest numbers are 1 and 3, abs(1 – 3) = 2
+9<br>1 2 3 4 5 6 7 8 9|1|All numbers are exactly 1 unit apart
+5<br>-1 -105 -10 -90 3	|4|The closest numbers are -1 and 3, abs(-1 – 3) = 4, or equivalently abs(3 – (-1)) = abs(3 + 1) = 4
 
 **4.16** Write a function which takes two arguments - an int array and its size, and returns its median.
 
