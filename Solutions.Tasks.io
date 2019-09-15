@@ -4893,6 +4893,29 @@ int main()
 	std::cout << GCD3(a, b) << std::endl;
 }
 -------------------------------------------------------------------------------------------------------------------------------
+//Task 7.13 
+int brute_force_gcd(int a, int b)
+{
+  // We'll assume that a > b
+  int g = 0;
+  for (int d = 1; (long long)d * d <= b; d++)
+  {
+    if (b % d == 0)
+    {
+      // If d divides b, there are two divisors to check
+      // d and b/d
+      if (a % d == 0)
+      {
+        g = max(g, a);
+      }
+      if (a % (b / d) == 0)
+      {
+        g = max(g, b/d);
+      }
+    }
+  }
+}
+-------------------------------------------------------------------------------------------------------------------------------
 //Task 7.14 
 #include <iostream> 
 // returns value of poly[0]x(n-1) + poly[1]x(n-2) + .. + poly[n-1] 
