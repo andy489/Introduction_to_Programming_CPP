@@ -623,9 +623,7 @@ Output should be: 4.
 
 Example input | Output 
 ------------- | -------------- 
-abcd;ef  | 4 2; abcdf; ebcd af
-
-`; steads for new line`
+abcd<br>ef  | 4 2<br> abcdef<br> ebcd af
 
 **6.03.** Write a function that checks whether a given word is a palindrome.
 
