@@ -321,9 +321,125 @@ The total running time of your program should be no more than **0.05s** <br>
 The total memory allowed for use by your program is **5MB** <br>
 #### Example Input/Output
 Example Input|Expected Output 
+---|---
 chug a mug of mead and another mug mead chug another mug of mead warrior .<br>2 <br>3 0 <br>2 1 <br>|mead <br>chug 
  
  #### Solution
  ```cpp
- int main()
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+int containWord(std::string word, std::vector<std::pair<std::string, size_t>> words)
+{
+	size_t SIZE = words.size();
+	for (size_t i = 0; i < SIZE; i++)
+	{
+		if (word == words[i].first)
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+
+void print(std::vector<std::pair<std::string, size_t>> words)
+{
+	size_t SIZE = words.size();
+	for (size_t i = 0; i < SIZE; i++)
+	{
+		std::cout << words[i].first << ' ' << words[i].second << '\n';
+	}
+	std::cout << '\n';
+}
+
+//chug a mug of mead and another mug mead chug another mug of mead warrior . 
+std::vector<std::pair<std::string, size_t>> getWords(const std::string& sentence)
+{
+	std::vector <std::pair<std::string, size_t>> words;
+	size_t senLen = sentence.length();
+
+	std::string word("");
+
+	for (size_t i = 0; i < senLen; i++)
+	{
+		char currChar = sentence[i];
+		if (currChar != ' ')
+		{
+			word += sentence[i];
+		}
+		else
+		{
+			if (sentence[i+1]=='.')
+			{
+				break;
+			}
+			if (word.length() != 0)
+			{
+				int pos = containWord(word, words);
+				if (pos == -1)
+				{
+					std::pair<std::string, size_t> pair;
+					pair.first = word; pair.second = 1;
+					words.push_back(pair);
+				}
+				else
+				{
+					words[pos].second++;
+				}
+			}
+			word = "";
+		}
+	}
+	return words;
+}
+
+std::string searchForWordWithOccurancesAndIndex(size_t countOccurances, size_t index, const std::vector<std::pair<std::string, size_t>>& words)
+{
+	size_t SIZE = words.size();
+	size_t count(0);
+	for (size_t i = 0; i < SIZE; i++)
+	{
+		if (words[i].second == countOccurances)
+		{
+			if (count < index)
+			{
+				count++;
+			}
+			else
+			{
+				return words[i].first;
+			}
+		}
+		else
+		{
+			count = 0;
+		}
+	}
+	return ".";
+}
+
+int main()
+{
+	std::string sentence;
+	std::getline(std::cin, sentence);
+
+	std::vector<std::pair<std::string, size_t>> words = getWords(sentence);
+	//print(words);
+
+	sort(words.begin(), words.end());
+	//print(words);
+
+	size_t N;
+	std::cin >> N;
+	for (size_t i = 0; i < N; i++)
+	{
+		size_t countOccurances, index;
+		std::cin >> countOccurances >> index;
+		std::cout << searchForWordWithOccurancesAndIndex(countOccurances, index, words) << '\n';
+	}
+
+	return 0;
+}
  ```
