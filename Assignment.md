@@ -19,4 +19,77 @@ Example Input|Expected Output
 3<br>A -1 -1<br>B -4 -1<br>C -3 -2|B-C 
 4<br>A 1 1<br>B 2 1<br>C 2 2<br>D 1 2|A-B 
  
- 
+## Solution
+```cpp
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <vector>
+
+struct Town
+{
+	std::string town;
+	int x, y;
+};
+
+float getDistance(const Town& A, const Town& B)
+{
+	float distance = (float)sqrt((pow(A.x - B.x, 2) + pow(A.y - B.y, 2)));
+	return distance;
+}
+
+void releaseVectorOfPointers(std::vector<Town*> &vec)
+{
+	size_t SIZE = vec.size();
+	for (size_t i = 0; i < SIZE; i++)
+	{
+		delete vec[i];
+	}
+	vec.clear();
+}
+
+std::vector<Town*> readInput(size_t N)
+{
+	std::vector<Town*> cities;
+
+	for (size_t i = 0; i < N; i++)
+	{
+		Town* city = new Town();
+		std::cin >> city->town;
+		std::cin >> city->x >> city->y;
+		cities.push_back(city);
+	}
+	return cities;
+}
+
+void printMinDistance(const std::vector<Town*>& cities)
+{
+	Town *A = nullptr; Town *B = nullptr;
+	float minDistance = FLT_MAX;
+	size_t N = cities.size();
+	for (size_t i = 0; i < N; i++)
+	{
+		for (size_t j = i + 1; j < N; j++)
+		{
+			float distance = getDistance(*cities[i], *cities[j]);
+			if (distance < minDistance)
+			{
+				minDistance = distance;
+				A = cities[i];
+				B = cities[j];
+			}
+		}
+	}
+	std::cout << A->town << '-' << B->town << '\n';
+}
+
+int main()
+{
+	size_t N;
+	std::cin >> N;
+	std::vector<Town*> cities = readInput(N);
+	printMinDistance(cities);	
+	releaseVectorOfPointers(cities);
+	return 0;
+}
+```
