@@ -303,7 +303,7 @@ The message has been converted to a sequence of English words (containing charac
 Your task is to write a program, which answers queries about the message in the form **occurrenceCount index** by finding all words which appear an **occurenceCount** number of times in the transmission, and printing out the word at position index in the lexicographical order of the (unique) words. If there are no words with that **occurenceCount**, print the dot character **(".")**. <br>
 For example, if we have the message string:<br> 
 **"chug a mug of mead and another mug mead chug another mug of mead warrior ."**<br> 
-(*What? Nobody said the aliens can’t be from Skyrim…*) 
+(*What? Nobody said the aliens can’t be from Skyrim…*) <br>
 and type in **3 0**, the program should output **mead** – the words **mead** and **mug** each appear **3** times in the message, and ordered lexicographically they form the array **{"mead", "mug"}**, in which the element at the **0** index is the word **mead**.<br> 
 If we instead type in **2 1**, the program should output **chug** – the words that appear **2** times in the message are chug and another. If we sort them lexicographically we get **{"another", "chug"}**, and index **1** in that array is **chug**.<br> 
 If we instead type in **4 0**, the program should output **.** (a single dot character) – there is no word that appears **4** times in the text. <br>
