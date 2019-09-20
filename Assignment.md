@@ -1,4 +1,208 @@
-## Task 1 – Near Cities
+## Task 1 - Divisible by 45
+Your task is to write a program which finds all the numbers, which are divisible by 45, inside a specified range. 
+#### Input 
+Exactly **2** lines, each containing a single integer number – with an arbitrary length, but no more than **100** digits.<br>   
+The first line contains the start of the range (inclusive) **S** <br> 
+The second line contains the end of the range (exclusive) **E** <br> 
+#### Output 
+One or more lines, with a single integer number each, representing the numbers divisible by 45 in the given range, in ascending order (i.e. start from the smallest number divisible by 45 in the range and print each of them on a separate line). 
+#### Restrictions 
+The range will be such that total numbers divisible by 45 will be no more than **100**<br> 
+The number of digits in the numbers specifying the range will NOT exceed **100** <br> 
+**0 < S < E - 1**<br>  
+The total running time of your program should be no more than **0.1s**<br> 
+The total memory allowed for use by your program is **5MB** <br> 
+#### Example Input/Output
+Example Input|Expected Output
+---|---
+1<br>100|45<br>90 
+1<br>90|45
+450000000000000000000000000000000000000013<br>450000000000000000000000000000000000000100|450000000000000000000000000000000000000045<br>450000000000000000000000000000000000000090 
+
+## Solution
+- BigInt.h
+
+```cpp
+#pragma once
+#include <iostream>
+#include<string>
+#include<sstream>
+#include<cmath>
+#include <algorithm>
+
+class BigInt
+{
+protected:
+	std::string digits;
+public:
+	BigInt() : digits("0") {}
+
+	BigInt(std::string digits) : digits(trimLeadingZeroes(digits)) {}
+
+	BigInt(int number) : digits(intToString(number)) {}
+
+	std::string getDigits() const
+	{
+		return this->digits;
+	}
+
+	BigInt& operator+=(const BigInt & other) 
+	{
+		*this = *this + other;
+		return *this;
+	}
+
+	BigInt operator+(const BigInt & other) const 
+	{
+		int maxTotalDigits = 1 + std::max(this->digits.size(), other.digits.size());
+
+		std::string thisDigits = getPaddedWithZeroes(this->digits, maxTotalDigits);
+		std::string otherDigits = getPaddedWithZeroes(other.digits, maxTotalDigits);
+
+		std::string resultDigits(maxTotalDigits, '0');
+
+		int carry = 0;
+		for (int i = resultDigits.size() - 1; i >= 0; i--) 
+		{
+			int thisDigit = thisDigits[i] - '0';
+			int otherDigit = otherDigits[i] - '0';
+
+			int sum = thisDigit + otherDigit + carry;
+			carry = sum / 10;
+			int sumDigit = sum - carry * 10;
+
+			resultDigits[i] = sumDigit + '0';
+		}
+
+		return BigInt(resultDigits);
+	}
+
+	friend std::ostream& operator<<(std::ostream& stream, const BigInt &number);
+
+	bool operator<(const BigInt& other) const 
+	{
+		std::string thisStr = this->digits;
+		std::string otherStr = other.digits;
+
+		if (thisStr.size() < otherStr.size()) 
+		{
+			thisStr = getPaddedWithZeroes(thisStr, otherStr.size());
+		}
+		else if (thisStr.size() > otherStr.size()) 
+		{
+			otherStr = getPaddedWithZeroes(otherStr, thisStr.size());
+		}
+
+		return thisStr < otherStr;
+	}
+
+private:
+	static std::string trimLeadingZeroes(std::string number) 
+	{
+		std::string resultDigitsTrimmed;
+		for (size_t i = 0; i < number.size(); i++) 
+		{
+			if (number[i] != '0') {
+				resultDigitsTrimmed = number.substr(i);
+				break;
+			}
+		}
+
+		return resultDigitsTrimmed.empty() ? "0" : resultDigitsTrimmed;
+	}
+
+
+	static std::string intToString(int number) 
+	{
+		std::ostringstream str;
+		str << number;
+		return str.str();
+	}
+
+	static std::string getPaddedWithZeroes(std::string s, size_t widthNeeded) 
+	{
+		if (s.size() < widthNeeded) 
+		{
+			return std::string(widthNeeded - s.size(), '0') + s;
+		}
+		else 
+		{
+			return s;
+		}
+	}
+};
+
+inline std::ostream& operator<<(std::ostream& stream, const BigInt &number) 
+{
+	stream << number.digits;
+	return stream;
+}
+```
+- BigInt.cpp
+
+```cpp
+#include "BigInt.h"
+
+size_t findSumOfDigitsUtil(std::string number)
+{	/* utility function to find sum of digits*/
+	size_t len = number.length();
+	size_t sum(0);
+	for (size_t i = 0; i < len; i++)
+	{
+		sum += number[i] - '0';
+	}
+	return sum;
+}
+
+bool isMultipleOf9(int num)
+{   /* function that checks whether a given number is multiply of 9 */
+	if (num == 0 || num == 9) return true; // base
+	if (num < 9)    return false;
+	// if the number is greater than 9
+	return isMultipleOf9((int)(num >> 3) - (int)(num & 7)); //recur
+}
+
+bool isMultipleOf5(std::string num)
+{
+	size_t len = num.length();
+	size_t lastDigit = num[len - 1];
+	if (lastDigit == '0' || lastDigit == '5')
+	{
+		return true;
+	}
+	return false;
+}
+
+int main()
+{
+	std::string S, E;
+	std::cin >> S >> E;
+
+	BigInt A(S); BigInt B(E);
+	
+	/*size_t sumDigits1 = findSumOfDigitsUtil(A.getDigits());
+	size_t sumDigits2 = findSumOfDigitsUtil(B.getDigits());
+
+	std::cout << sumDigits1 << '\n';
+	std::cout << sumDigits2 << '\n';;
+
+	isMultipleOf9(sumDigits1) ? std::cout << "yes\n" : std::cout << "no\n";
+	isMultipleOf9(sumDigits2) ? std::cout << "yes\n" : std::cout << "no\n";*/
+
+	
+	for (BigInt i(S); i < B; i += 1)
+	{
+		if (isMultipleOf9(findSumOfDigitsUtil(i.getDigits()))&& isMultipleOf5(i.getDigits()))
+		{
+			std::cout << i << '\n';
+		}
+	}
+	
+	return 0;
+}
+```
+
+## Task 2 – Near Cities
 You are given information about towns. Each town has a name and a position represented by a point in 2 dimensional Euclidean space (i.e. the “normal” 2D space you are used to). 
 
 Write a program, which, given the names and coordinates of a set of towns, finds the two closest towns (the two towns with the smallest distance between them). 
