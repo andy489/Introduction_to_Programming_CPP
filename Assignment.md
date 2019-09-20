@@ -297,3 +297,33 @@ int main()
 	return 0;
 }
 ```
+## Task 3 – Transmission
+You are part of a SETI (*that thing that’s supposed to find aliens but never does*) team and you have just detected messages from a distant star system. The signal has been verified to indeed come from a star system, not from an Earth-orbiting satellite or any other sort of interference, and your team is certain the source is artificial. Your team wants to analyze the message, and for that they need to first identify the most-commonly encountered signals in the message. <br>
+The message has been converted to a sequence of English words (containing characters **a-z** and digits **0-9**), separated by spaces. The message ends with a dot, preceded by a space **(" .")**. <br>
+Your task is to write a program, which answers queries about the message in the form **occurrenceCount index** by finding all words which appear an **occurenceCount** number of times in the transmission, and printing out the word at position index in the lexicographical order of the (unique) words. If there are no words with that **occurenceCount**, print the dot character **(".")**. <br>
+For example, if we have the message string:<br> 
+**"chug a mug of mead and another mug mead chug another mug of mead warrior ."**<br> 
+(*What? Nobody said the aliens can’t be from Skyrim…*) 
+and type in **3 0**, the program should output **mead** – the words **mead** and **mug** each appear **3** times in the message, and ordered lexicographically they form the array **{"mead", "mug"}**, in which the element at the **0** index is the word **mead**.<br> 
+If we instead type in **2 1**, the program should output **chug** – the words that appear **2** times in the message are chug and another. If we sort them lexicographically we get **{"another", "chug"}**, and index **1** in that array is **chug**.<br> 
+If we instead type in **4 0**, the program should output **.** (a single dot character) – there is no word that appears **4** times in the text. <br>
+Write a program which reads in a message in the above-mentioned format, and queries in the above-mentioned format, and prints out the results for those queries. <br>
+#### Input 
+The first line of the input will contain the message – a string containing English characters **a-z**, digits **0-9**, spaces, and ending with a space and a dot **(" .")**. Words in that string are considered sequences of characters and/or digits separated by spaces. <br>
+The next line will contain a single integer **N** – the number of queries. <br>
+Each of the following lines will contain two positive integer numbers, separated by a single space – the **occurrenceCount** and **index** values of the query. <br>
+#### Output 
+**N** lines, each containing a single word, representing the answers to the queries in the same order the queries were given. 
+#### Restrictions 
+**0 < N < 500;**<br>
+The total number of words will be at most **1000**. Of those, no more than **50** will be unique. Each word will be at most **20** symbols. <br>
+The total running time of your program should be no more than **0.05s** <br>
+The total memory allowed for use by your program is **5MB** <br>
+#### Example Input/Output
+Example Input|Expected Output 
+chug a mug of mead and another mug mead chug another mug of mead warrior .<br>2 <br>3 0 <br>2 1 <br>|mead <br>chug 
+ 
+ #### Solution
+ ```cpp
+ int main()
+ ```
