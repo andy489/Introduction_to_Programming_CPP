@@ -17,7 +17,7 @@ Example Input|Expected Output
 ---|---
 1<br>100|45<br>90 
 1<br>90|45
-450000000000000000000000000000000000000013<br>450000000000000000000000000000000000000100|450000000000000000000000000000000000000045<br>450000000000000000000000000000000000000090 
+45000000000000000000000000000000000000013<br>45000000000000000000000000000000000000100|45000000000000000000000000000000000000045<br>45000000000000000000000000000000000000090 
 
 ## Solution
 - BigInt.h
@@ -395,7 +395,8 @@ std::vector<std::pair<std::string, size_t>> getWords(const std::string& sentence
 	return words;
 }
 
-std::string searchForWordWithOccurancesAndIndex(size_t countOccurances, size_t index, const std::vector<std::pair<std::string, size_t>>& words)
+std::string searchForWordWithOccurancesAndIndex(size_t countOccurances, size_t index, 
+const std::vector<std::pair<std::string, size_t>>& words)
 {
 	size_t SIZE = words.size();
 	size_t count(0);
