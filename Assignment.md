@@ -158,6 +158,100 @@ int main()
 }
 ```
 
+## Task 3 – Bus 
+Captain Grant needs your help. He’s currently on leave, but needs to get back to his ship soon. To do that, he needs to catch a bus to the train station, and from there take a train to the naval base. But captain Grant hates waiting – he has a certain train he has to catch, but can pick from several busses, and he wants to pick a bus which arrives as close to the train departure as possible.
+
+The transport company, which operates the busses to the station and the trains at the station, has a list of bus arrival times at the station, as well as information on the train departure time. Of course, since the company works with the military, the arrival times and the train departure time are in military time format – **4**-digit numbers, the first two digits represent the hours (**00** to **23**), the next two digits represent the minutes (**00** to **59**). For example, two o’clock in the morning is **0200**, twenty minutes past four in the afternoon is **1620**, two minutes to midnight (the time, not the Iron Maiden song) is **2358**, etc.
+
+Write a program which, given a list of bus arrival times and a train departure time, in military time format, finds the minimum amount of time – in minutes – between a bus arrival and the train departure (i.e. the time Grant would have to wait if he picks the “best” bus) and prints the position of the bus in the bus arrival times list. 
+
+Note that **0** waits is possible, but negative wait times aren’t possible.
+
+#### Input
+The first line of the standard input will contain the number **N** – the number of bus arrival times.<br>
+The first line of the standard input will contain a sequence of bus arrival times, in military time format, separated by single spaces.<br>
+The second line of the standard input will contain the train departure time, in military time format.
+#### Output
+A single line containing a single non-negative integer – the number/position of the bus in the input sequence of bus arrival times, for which the wait time is minimal.
+#### Restrictions
+**N** will be at least **1** and at most **20**.
+The input data will be such that there will always be a valid (non-negative) minimum wait time. There will always be a bus that arrives before the train leaves.
+The total running time of your program should be no more than **0.1s**<br>
+The total memory allowed for use by your program is **5MB**<br>
+Example Input/Output
+Example Input|Expected Output|Explanation
+-|-|-
+4<br>2013 0130 0004 0012<br>2122|1|The best bus is the one arriving at 2013 (20:13) – i.e. the 1st bus in the list (NOTE: the answer is the position of the bus in the input, not in their chronological order)
+3<br>1205 1241 1708<br>1241|2|The train leaves at 1241 and the 2nd bus arrives then (0 minutes wait, so it is the best option)
+
+#### Solution
+```cpp
+#include <iostream>
+#include <string>
+
+int myAbs(int a)
+{
+	return a > 0 ? a : -a;
+}
+
+std::string* inputTimes(const size_t N)
+{
+	std::string* times = new std::string[N];
+	for (size_t i = 0; i < N; i++)
+	{
+		std::cin >> times[i];
+	}
+
+	return times;
+}
+
+int convertTime(std::string time)
+{
+	int sec = 10 * (time[0]-'0') * 60 +
+		(time[1]-'0') * 60 +
+		(time[2] - '0') * 10 +
+		(time[3] - '0');
+	return sec;
+}
+
+int main()
+{
+	size_t N;
+	std::cin >> N;
+	std::string* times = inputTimes(N);
+
+	std::string trainLeaves;
+	std::cin >> trainLeaves;
+	int leave = convertTime(trainLeaves);
+
+	int* minutes = new int[N];
+	for (size_t i = 0; i < N; i++)
+	{
+		minutes[i] = convertTime(times[i]);
+	}
+	
+	int  minDiff = 24*60;
+	int indx(0);
+
+	for (size_t i = 0; i < N; i++)
+	{
+		int diff = myAbs(minutes[i] - leave);
+		if (diff < minDiff)
+		{
+			indx = i;
+			minDiff = diff;
+		}
+	}
+
+	std::cout << indx + 1;
+
+	delete[] times;
+	delete[] minutes;
+	return 0;
+}
+```
+
+
 ## Task 5 - Divisible by 45
 Your task is to write a program which finds all the numbers, which are divisible by 45, inside a specified range. 
 #### Input 
