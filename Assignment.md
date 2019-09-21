@@ -1,4 +1,103 @@
-## Task 1 - Divisible by 45a
+## Task 1 - Pipes
+
+## Task 2 - Modulated Sum
+You are given several integer arrays with equal length, as well as an integer modulo. Calculate a weighted sum array, equal in length to those arrays, by summing the arrays together (each element is summed with the elements of the other arrays at that index) and modulating them by the given value – i.e. each value in the result should be the remainder of the sum of the matching elements in the input arrays, divided by the modulo.
+
+That is, if the input arrays are **arr1, arr2, …, arrN**, and the modulo is **mod**, then then for the **result** array:<br>
+**result[i] = (arr1[i] + arr2[i] + … + arrN[i]) % mod**
+#### Input
+The first line of the input contains two integers – **N** and **M**.<br>
+Each of the following **N** lines contains **M** integer numbers – the elements of the input arrays.<br>
+The next lines each contain a single integer number – modulo (**mod**).<br>
+#### Output
+A single line, containing M integer numbers, separated by single spaces – the modulated sum array.
+#### Restrictions
+**0 < N < 100;**<br>
+**0 < M < 100;**<br>
+Elements in the input arrays are integer numbers between **-100** and **100** (inclusive).<br>
+Modulo is a number between **10** and **100** (inclusive).<br>
+The total running time of your program should be no more than **0.1s**<br>
+The total memory allowed for use by your program is **5MB**<br>
+#### Example Input/Output
+Example Input|	Expected Output
+-|-
+3 4<br>1 2 3 4<br>1 2 3 4<br>5 6 7 8<br>10|7 0 3 6
+4 2<br>-1 0<br>2 12<br>7 -42<br>13 13<br>2|1 1
+
+#### Solution
+```cpp
+#include <iostream>
+
+int myAbs(int a)
+{
+	return a > 0 ? a : -a;
+}
+
+int** inputArrays(const size_t N,const size_t M)
+{
+	int** arrays = new int*[N];
+	for (size_t i = 0; i < N; i++)
+	{
+		arrays[i] = new int[M];
+	}
+	for (size_t i = 0; i < N; i++)
+	{
+		for (size_t j = 0; j < M; j++)
+		{
+			std::cin >> arrays[i][j];
+		}
+	}
+	return arrays;
+}
+
+void releaseArrays(const size_t N, int** arrays)
+{
+	for (size_t i = 0; i < N; i++)
+	{
+		delete[] arrays[i];
+	}
+	delete[] arrays;
+}
+
+void printArray(int* arr, size_t N)
+{
+	for (size_t i = 0; i < N; i++)
+	{
+		std::cout << arr[i] << ' ';
+	}
+}
+
+int main()
+{
+	size_t N, M;
+	std::cin >> N >> M;	
+	int** arrays = inputArrays(N, M);
+
+	int mod;
+	std::cin >> mod;
+
+	int* result = new int[M]();
+	
+	for (size_t i = 0; i < M; i++)
+	{
+		for (size_t j = 0; j < N; j++)
+		{
+			result[i] += arrays[j][i];
+		}
+	}
+
+	for (size_t i = 0; i < M; i++)
+	{
+		std::cout << myAbs(result[i]) % mod<<' ';
+	}
+
+	delete[] result;
+	releaseArrays(N,arrays);
+	return 0;
+}
+```
+
+## Task 5 - Divisible by 45
 Your task is to write a program which finds all the numbers, which are divisible by 45, inside a specified range. 
 #### Input 
 Exactly **2** lines, each containing a single integer number – with an arbitrary length, but no more than **100** digits.<br>   
@@ -202,7 +301,7 @@ int main()
 }
 ```
 
-## Task 2 – Near Cities
+## Task 6 – Near Cities
 You are given information about towns. Each town has a name and a position represented by a point in 2 dimensional Euclidean space (i.e. the “normal” 2D space you are used to). 
 
 Write a program, which, given the names and coordinates of a set of towns, finds the two closest towns (the two towns with the smallest distance between them). 
@@ -297,7 +396,7 @@ int main()
 	return 0;
 }
 ```
-## Task 3 – Transmission
+## Task 7 – Transmission
 You are part of a SETI (*that thing that’s supposed to find aliens but never does*) team and you have just detected messages from a distant star system. The signal has been verified to indeed come from a star system, not from an Earth-orbiting satellite or any other sort of interference, and your team is certain the source is artificial. Your team wants to analyze the message, and for that they need to first identify the most-commonly encountered signals in the message. <br>
 The message has been converted to a sequence of English words (containing characters **a-z** and digits **0-9**), separated by spaces. The message ends with a dot, preceded by a space **(" .")**. <br>
 Your task is to write a program, which answers queries about the message in the form **occurrenceCount index** by finding all words which appear an **occurenceCount** number of times in the transmission, and printing out the word at position index in the lexicographical order of the (unique) words. If there are no words with that **occurenceCount**, print the dot character **(".")**. <br>
