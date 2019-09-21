@@ -128,14 +128,6 @@ void releaseArrays(const size_t N, int** arrays)
 	delete[] arrays;
 }
 
-void printArray(int* arr, size_t N)
-{
-	for (size_t i = 0; i < N; i++)
-	{
-		std::cout << arr[i] << ' ';
-	}
-}
-
 int main()
 {
 	size_t N, M;
