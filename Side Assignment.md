@@ -277,8 +277,22 @@ abab1bca98abab1.|bca98
 #### Solution
 
 ```cpp
+#define DNA_LENGTH 6
+#define DOT 46
+#include <iostream>
+int main()
+{
+	char ch, result[DNA_LENGTH]{ 0 };
+	size_t currIndx(0);
+	while ((ch = getchar()) != DOT)
+	{
+		result[currIndx++] ^= ch;
+		if (currIndex == DNA_LENGTH - 1) currIndx = 0;
+	}
+	std::cout << result;
+	return 0;
+}
 ```
-
 ## Task 5 - Divisible by 45
 Your task is to write a program which finds all the numbers, which are divisible by 45, inside a specified range. 
 #### Input 
