@@ -103,7 +103,7 @@ i.e. is 48 equal to 48 ?
 </p>
 </details>
 
-**05.** How does the garbage collector in othen (modern) than C++ languages work?
+**05.** How does the garbage collector in othen (modern) than C++ program languages work?
 <details><summary>ANSWER</summary>
 <p>
 For example it can create a graph of all object initialized in a given scope and search with DFS for all of them which are not referented from another object (which are not connectet to none of the other objects) and after that perform deletion. In that logic it also deletes all non-used connectivity components.	
