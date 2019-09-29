@@ -102,6 +102,7 @@ i.e. is 48 equal to 48 ?
 
 </p>
 </details>
+
 **05** How does the garbage collector in othen (modern) than C++ languages work?
 <details><summary>ANSWER</summary>
 <p>
