@@ -140,7 +140,7 @@ Your task is to simulate this game. The initial state of the surface should be h
 
 - *Some configurations:*
 
-![alt text](https://camo.githubusercontent.com/a710386de69bcb8577875246196c7fb07144ff0c/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f3456565a547654717a5252304255774e49482f67697068792e676966)
+![alt text](https://github.com/andy489/Data_Structures_and_Algorithms_CPP/blob/master/assets/Conway's%20Game%20of%20Life%2001.gif)
 
 **5.20.** You are given numbers <img src="https://latex.codecogs.com/svg.latex?n,m"> and a <img src="https://latex.codecogs.com/svg.latex?nXm"> matrix that consists of numbers 0 through 9. Your task is to create a program that says ***how many*** islands and peninsulas are there. These are the ***rules***:
 - 0 is water;
