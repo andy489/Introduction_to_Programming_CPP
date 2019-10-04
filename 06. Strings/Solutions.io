@@ -204,6 +204,53 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 6.07
 #include <iostream>
+#include <string>
+
+bool isLower(char a)
+{
+	return a >= 'a' && a <= 'z';
+}
+bool isUpper(char a)
+{
+	return a >= 'A' && a <= 'Z';
+}
+
+void titleCase(std::string& exp)
+{
+	size_t length = exp.length();
+
+	bool prevSymbol = true;
+
+	for (size_t i = 0; i < length; i++)
+	{
+		char c = exp[i];
+		if (!(isLower(c) || isUpper(c)))
+		{
+			prevSymbol = true;
+		}
+		else if (prevSymbol)
+		{
+			prevSymbol = false;
+			if (isLower(c))
+			{
+				exp[i] -= ' ';
+			}
+		}
+	}
+}
+
+int main()
+{
+	std::string text;
+	getline(std::cin, text);
+
+	titleCase(text); std::cout << text << '\n';
+
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 6.08
+#include <iostream>
 int countWords(char* text)
 {
 	for (size_t i = 0; text[i] != '\0'; i++)
@@ -230,7 +277,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.08
+//Task 6.09
 #include <iostream>
 #include <cstring>
 void printHisto(int* histo)
