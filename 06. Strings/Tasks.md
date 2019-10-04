@@ -36,6 +36,7 @@ lowercase Latin alphabets with uppercase and reverse. Do not use the built-in st
 **6.06.** Write a function which checks whether a string is а substring in another string. If true, the functions must return the index to the first position the substring is located in the string, else return -1.
 
 **6.07.** Write a program which changes each word in a text to start with a capital letter (don’t bother with the exact title-case rules about not capitalizing things like in, from, etc.). Assume the first letter of a word is an English alphabetical symbol preceded by a non-alphabetical symbol (so in “we will--rock you”, “we”, “will”, “rock” and “you” are all considered words which need to be capitalized). 
+
 Example input|Expected output
 -|-
 On the south Carpathian mountains,a tree is swinging|	On Тhe Сouth Carpathian Мountains,А Тree Is Swinging
