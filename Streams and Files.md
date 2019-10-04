@@ -164,3 +164,33 @@ int main()
 	return 0;
 }
 ```
+### Пример 8
+```cpp
+#include <iostream>
+#include <fstream>
+
+int main()
+{
+	std::ifstream input;
+	// NOTE: the file input.txt should exist in the directory where
+	// the binary file is created and run!
+	input.open("input.txt");
+	
+	// IMPORTANT: always make an error check
+	if (!input.is_open())
+	{
+		std::cerr << "input.txt file could not be found" << std::endl;
+	}
+
+	int a, b;
+	input >> a >> b;
+
+	std::ofstream output;
+	output.open("output.txt",std::ofstream::app);
+
+	output << a + b << std::endl;
+	output.close();
+
+	return 0;
+}
+```
