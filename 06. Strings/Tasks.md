@@ -6,7 +6,14 @@
 - strcat;
 - strcpy.
 
-**6.02.** Write the following program: You are given two strings separated by a new line. Each string will consist of lower case Latin characters ('a'-'z').
+**6.02** Write a program that searchs for start indexes of all occurences of a given substring in a given string.
+
+Example input|Expected output
+-|-
+canary<br>a|1<br>3
+Jake and Jill and their friend have androids.<br>and|5<br>14<br>36
+
+**6.03.** Write the following program: You are given two strings separated by a new line. Each string will consist of lower case Latin characters ('a'-'z').
 - In the first line print two space-separated integers, representing the length of a and b respectively;
 - In the second line print the string produced by concatenating a and b;
 - In the third line print two strings separated by a space, a' and b'. a' and b' are the same as a and b, respectively, except that their first characters are swapped;
@@ -15,7 +22,7 @@ Example input | Output
 ------------- | -------------- 
 abcd<br>ef  | 4 2<br> abcdef<br> ebcd af
 
-**6.03.** Write a function that checks whether a given word is a palindrome.
+**6.04.** Write a function that checks whether a given word is a palindrome.
 
 Example input | Output 
 ------------- | -------------- 
@@ -23,14 +30,14 @@ civic  | 1
 palindrome  | 0
 kapak | 1
 
-**6.04.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
+**6.05.** Write a function with signature void revert(char* text), which converts the given string as a parameter, replacing all 
 lowercase Latin alphabets with uppercase and reverse. Do not use the built-in string library.
 
-**6.05.** Write a function which checks whether a string is а substring in another string. If true, the functions must return the index to the first position the substring is located in the string, else return -1.
+**6.06.** Write a function which checks whether a string is а substring in another string. If true, the functions must return the index to the first position the substring is located in the string, else return -1.
 
-**6.06.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
+**6.07.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
 
-**6.07.** Write a function which takes a string and prints out a char histogram of that string. Each string will consist of lower case Latin characters ('a'-'z').
+**6.08.** Write a function which takes a string and prints out a char histogram of that string. Each string will consist of lower case Latin characters ('a'-'z').
 
 - Example input: aaaabb
 - Output:
