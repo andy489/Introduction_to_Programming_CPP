@@ -61,6 +61,27 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 6.02
 #include <iostream>
+#include <string>
+
+int main()
+{
+	std::string sentence,word;
+	std::getline(std::cin,sentence); 
+	std::cin >> word;
+	size_t wordLen = word.length();
+	size_t foundIndex = sentence.find(word);
+
+	while (foundIndex != std::string::npos)
+	{
+		std::cout << word << " found at " << foundIndex << std::endl;
+		foundIndex = sentence.find(word, foundIndex + wordLen);
+	}
+
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 6.03
+#include <iostream>
 #include <cstring>
 char*  myStrcat(char *source, char *destination)
 {
@@ -101,7 +122,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.03
+//Task 6.04
 #include <iostream>
 #include <cstring>
 bool isPalindrome(const char* str)
@@ -119,7 +140,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.04
+//Task 6.05
 #include <iostream>
 size_t strLen(char* text)
 {	
@@ -146,7 +167,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.05
+//Task 6.06
 #include <iostream> 
 size_t strLen(const char* text)
 {
@@ -181,7 +202,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.06
+//Task 6.07
 #include <iostream>
 int countWords(char* text)
 {
@@ -209,7 +230,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.07
+//Task 6.08
 #include <iostream>
 #include <cstring>
 void printHisto(int* histo)
