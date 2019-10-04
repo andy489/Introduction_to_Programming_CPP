@@ -82,3 +82,32 @@ int main()
 	return 0;
 }
 ```
+### Пример 5
+```cpp
+#include <iostream>
+#include <sstream>
+#include <string>
+
+int main()
+{
+	std::istringstream input("some text here");
+
+	std::string inputLine;
+	getline(input, inputLine);
+	std::cout << inputLine << std::endl;
+
+	std::istringstream inputWithDots("some.text.here");
+
+	std::string inputWithDotsLine;
+	getline(inputWithDots, inputWithDotsLine, '.');
+	std::cout << inputWithDotsLine << std::endl;
+
+	//the first getline has "consumed" part of the stream
+	getline(inputWithDots, inputWithDotsLine, '.');
+	std::cout << inputWithDotsLine << std::endl;
+
+	getline(inputWithDots, inputWithDotsLine, '.');
+	std::cout << inputWithDotsLine << std::endl;
+	return 0;
+}
+```
