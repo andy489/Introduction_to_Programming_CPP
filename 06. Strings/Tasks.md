@@ -35,9 +35,15 @@ lowercase Latin alphabets with uppercase and reverse. Do not use the built-in st
 
 **6.06.** Write a function which checks whether a string is а substring in another string. If true, the functions must return the index to the first position the substring is located in the string, else return -1.
 
-**6.07.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
+**6.07.** Write a program which changes each word in a text to start with a capital letter (don’t bother with the exact title-case rules about not capitalizing things like in, from, etc.). Assume the first letter of a word is an English alphabetical symbol preceded by a non-alphabetical symbol (so in “we will--rock you”, “we”, “will”, “rock” and “you” are all considered words which need to be capitalized). 
+Example input|Expected output
+-|-
+On the south Carpathian mountains,a tree is swinging|	On Тhe Сouth Carpathian Мountains,А Тree Is Swinging
+Write a program which changes each word in|	Write A Program Which Changes Each Word In
 
-**6.08.** Write a function which takes a string and prints out a char histogram of that string. Each string will consist of lower case Latin characters ('a'-'z').
+**6.08.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
+
+**6.09.** Write a function which takes a string and prints out a char histogram of that string. Each string will consist of lower case Latin characters ('a'-'z').
 
 - Example input: aaaabb
 - Output:
