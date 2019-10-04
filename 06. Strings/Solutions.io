@@ -269,6 +269,35 @@ int main()
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 6.08
 #include <iostream>
+#include <string>
+
+void replaceAll(std::string& text, const std::string& search, const std::string& replace)
+{
+	size_t searchLen(search.size()), repLen(replace.size());
+	if (!search.empty())
+	{
+		size_t start(0);
+		for (start; (start = text.find(search, start)) != std::string::npos; start += repLen)
+		{
+			text.replace(start, searchLen, replace);
+		}
+	}
+}
+
+int main()
+{
+	std::string text; getline(std::cin, text);
+	std::string search; getline(std::cin, search);
+	std::string replace; getline(std::cin, replace);
+
+	replaceAll(text, search, replace);
+	std::cout << text << '\n';
+
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 6.09
+#include <iostream>
 int countWords(char* text)
 {
 	for (size_t i = 0; text[i] != '\0'; i++)
@@ -295,7 +324,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.09
+//Task 6.10
 #include <iostream>
 #include <cstring>
 void printHisto(int* histo)
