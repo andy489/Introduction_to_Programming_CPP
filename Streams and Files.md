@@ -111,3 +111,34 @@ int main()
 	return 0;
 }
 ```
+### Пример 6
+
+Example input|Expected output
+-|-
+3<br>3.1415 2.7182 9.8|3.1415<br>2.7182<br>9.8
+
+```cpp
+#include <iostream>
+#include <sstream>
+#include <string>
+int main()
+{
+	size_t numbersCount;
+	std::cin >> numbersCount;
+	std::cin.ignore();
+
+	std::string input;
+	getline(std::cin, input);
+
+	std::istringstream istr(input);
+
+	float number = 0.0f;
+	for (size_t i = 0; i < numbersCount; i++)
+	{
+		istr >> number;
+		std::cout << number << std::endl;
+	}
+
+	return 0;
+}
+```
