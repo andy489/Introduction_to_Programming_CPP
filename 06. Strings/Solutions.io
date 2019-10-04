@@ -122,7 +122,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.04
+//Task 6.04 iterative
 #include <iostream>
 #include <cstring>
 bool isPalindrome(const char* str)
@@ -137,6 +137,24 @@ int main()
 	const char* str = "civic";
 	//isPalindrome1(str) ? std::cout << "palindrome" : std::cout << "not palindrome";
 	std::cout << isPalindrome(str);
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 6.04 recursive
+#include <iostream>
+#include <string>
+
+bool palindrome(const std::string& word, int start, int end)
+{
+	if (start >= end) return true;
+	else if (word[start] != word[end]) return false;
+	return palindrome(word, start + 1, end - 1);
+}
+
+int main()
+{
+	std::string word; std::cin >> word; size_t length = word.length();
+	palindrome(word,0,length-1) ? std::cout << "palindrome\n" : std::cout << "not palindrome\n";
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
