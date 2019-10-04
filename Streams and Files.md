@@ -142,3 +142,25 @@ int main()
 	return 0;
 }
 ```
+### Пример 7
+```cpp
+#include <iostream>
+#include <fstream>
+
+int main()
+{
+	std::ifstream input;
+	input.open("input.txt");
+	int a, b;
+	input >> a >> b;
+	input.close();
+
+	std::ofstream output;
+	output.open("output.txt");
+
+	output << a + b << std::endl;
+	output.close();
+
+	return 0;
+}
+```
