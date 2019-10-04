@@ -233,15 +233,15 @@ bool isUpper(char a)
 	return a >= 'A' && a <= 'Z';
 }
 
-void titleCase(std::string& exp)
+void titleCase(std::string& text)
 {
-	size_t length = exp.length();
+	size_t length = text.length();
 
 	bool prevSymbol = true;
 
 	for (size_t i = 0; i < length; i++)
 	{
-		char c = exp[i];
+		char c = text[i];
 		if (!(isLower(c) || isUpper(c)))
 		{
 			prevSymbol = true;
@@ -251,7 +251,7 @@ void titleCase(std::string& exp)
 			prevSymbol = false;
 			if (isLower(c))
 			{
-				exp[i] -= ' ';
+				text[i] -= ' ';
 			}
 		}
 	}
