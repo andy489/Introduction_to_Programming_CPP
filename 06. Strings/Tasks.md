@@ -43,6 +43,7 @@ On the south Carpathian mountains,a tree is swinging|	On Тhe Сouth Carpathian 
 Write a program which changes each word in|	Write A Program Which Changes Each Word In
 
 **6.08.** Write a program which is given a line of text, another line with a "find" string and another line with a "replace" string. Any part of text which matches the "find" string should be replaced with the "replace" string. Print the resulting text on the console.
+
 Example input|Expected output
 -|-
 I am the night. Dark Night! No, not the knight<br>night<br>day|I am the day. Dark Night! No, not the kday
