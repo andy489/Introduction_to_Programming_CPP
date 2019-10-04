@@ -71,7 +71,7 @@ int main()
 	size_t wordLen = word.length();
 	size_t foundIndex = sentence.find(word);
 
-	while (foundIndex != std::string::npos)
+	while (foundIndex != std::string::npos) // std::string::npos == -1;
 	{
 		std::cout << word << " found at " << foundIndex << std::endl;
 		foundIndex = sentence.find(word, foundIndex + wordLen);
