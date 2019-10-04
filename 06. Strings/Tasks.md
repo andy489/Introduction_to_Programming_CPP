@@ -42,9 +42,14 @@ Example input|Expected output
 On the south Carpathian mountains,a tree is swinging|	On Тhe Сouth Carpathian Мountains,А Тree Is Swinging
 Write a program which changes each word in|	Write A Program Which Changes Each Word In
 
-**6.08.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
+**6.08.** Write a program which is given a line of text, another line with a "find" string and another line with a "replace" string. Any part of text which matches the "find" string should be replaced with the "replace" string. Print the resulting text on the console.
+Example input|Expected output
+-|-
+I am the night. Dark Night! No, not the knight<br>night<br>day|I am the day. Dark Night! No, not the kday
 
-**6.09.** Write a function which takes a string and prints out a char histogram of that string. Each string will consist of lower case Latin characters ('a'-'z').
+**6.09.** Write a function which counts words in char* text. A "word" is defined to be a single or a sequence of characters different from ' ', '\t', '\n'. If the array of characters is empty, the function must return -1.
+
+**6.10.** Write a function which takes a string and prints out a char histogram of that string. Each string will consist of lower case Latin characters ('a'-'z').
 
 - Example input: aaaabb
 - Output:
