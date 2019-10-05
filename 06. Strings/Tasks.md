@@ -34,6 +34,7 @@ kapak | 1
 lowercase Latin alphabets with uppercase and reverse. Do not use the built-in string library.
 
 **6.06.** Write a program which reads a line containing integer numbers, separated by spaces, and prints their sum. In addition to the numbers, each line will contain one or more words (sequences of English letters) – print those words on a separate line, separated by spaces, after the sum, in the order they were in the input.
+
 Example input|Expected	output
 -|-
 1 2 3 invalid 4|10<br>invalid
@@ -60,6 +61,7 @@ I am the night. Dark Night! No, not the knight<br>night<br>day|I am the day. Dar
 **6.11.** Write a function which takes a string and prints out a char histogram of that string. Each string will consist of lower case Latin characters ('a'-'z').
 
 Example input||Expected output
+-|-
 aaaabb|a - 4<br>b - 2
 randomness|r - 1<br>a - 1<br>n - 2<br>d - 1<br>o - 1<br>m - 1<br>e - 1<br>s - 2
 
