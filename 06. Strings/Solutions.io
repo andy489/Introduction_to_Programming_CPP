@@ -186,6 +186,37 @@ int main()
 }
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 6.06
+#include <iostream>
+#include <string>
+#include <sstream>
+
+int main()
+{
+	std::string line; getline(std::cin, line);
+	int sum(0);
+	std::istringstream istr(line);
+
+	std::string words;
+
+	while (istr >> line)
+	{
+		if (isdigit(line[0]) || line[0] == '-' || line[0] == '+')
+		{
+			int num = stoi(line);
+			sum += num;
+		}
+		else
+		{
+			words += line + ' ';
+		}
+	}
+
+	std::cout << sum << std::endl;
+	std::cout << words << std::endl;
+	
+	return 0;
+}------------------------------------------------------------------------------------------------------------
+//Task 6.07
 #include <iostream> 
 size_t strLen(const char* text)
 {
@@ -220,7 +251,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.07
+//Task 6.08
 #include <iostream>
 #include <string>
 
@@ -267,7 +298,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.08
+//Task 6.09
 #include <iostream>
 #include <string>
 
@@ -296,7 +327,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.09
+//Task 6.10
 #include <iostream>
 int countWords(char* text)
 {
@@ -324,7 +355,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 6.10
+//Task 6.11
 #include <iostream>
 #include <cstring>
 void printHisto(int* histo)
