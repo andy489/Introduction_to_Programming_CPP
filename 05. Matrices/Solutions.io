@@ -39,6 +39,62 @@ int main()
 }
 -------------------------------------------------------------------------------------------------------------------------------
 //Task 5.02
+#include <iostream>
+#include <vector>
+#include <sstream>
+
+std::vector<std::vector<int>> inputMatrix(size_t R)
+{	
+	std::vector<std::vector<int>> matrix(R);
+	for (size_t i = 0; i < R; i++)
+	{
+		std::string line; getline(std::cin, line);
+		std::istringstream istr(line);
+		while (istr)
+		{
+			int element; istr >> element;
+			matrix[i].push_back(element);
+		}
+	}
+	return matrix;
+}
+
+bool cmpMat(const std::vector<std::vector<int>>& firstMat, size_t R1,
+	const std::vector<std::vector<int>>& secMat, size_t R2)
+{
+	if (R1 != R2) return false;
+	else
+	{
+		for (size_t i = 0; i < R1; i++)
+		{
+			size_t C1 = firstMat[i].size(); 
+			size_t C2 = secMat[i].size();
+			if (C1 != C2) return false;
+			for (size_t j = 0; j < C1; j++)
+			{
+				if (firstMat[i][j]!=secMat[i][j])
+				{
+					return false;
+				}
+			}
+		}
+	}
+	return true;
+}
+
+int main()
+{
+	size_t R1;std::cin >> R1; std::cin.ignore();
+	std::vector<std::vector<int>> firstMat = inputMatrix(R1);
+	size_t R2;std::cin >> R2; std::cin.ignore();
+	std::vector<std::vector<int>> secMat = inputMatrix(R2);
+
+	cmpMat(firstMat, R1, secMat, R2) ? std::cout << "equal\n" : std::cout << "not equal\n";
+	
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 5.03
 #define ROWS 6
 #define COLUMNS 6
 #include <iostream>
@@ -63,7 +119,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.03
+//Task 5.04
 #include <iostream>
 int** inputMatrix(size_t& rows, size_t& cols)
 {
@@ -115,7 +171,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.04
+//Task 5.05
 #include <iostream>
 double** inputMatrix(size_t n)
 { // a)
@@ -231,7 +287,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.05
+//Task 5.06
 #define n 4
 #include <iostream>
 int** inputMatrix(size_t m)
@@ -361,7 +417,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.06
+//Task 5.07
 #include <iostream>
 int** inputMatrix(size_t rows, size_t cols)
 {
@@ -456,7 +512,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.07
+//Task 5.08
 #define n 5
 #include <iostream>
 double sumSquaresSpecEl(double A[][n], size_t m)
@@ -483,7 +539,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.08
+//Task 5.09
 #include <iostream>
 int** inputPairs(size_t n)
 {
@@ -544,7 +600,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.09
+//Task 5.10
 #include <iostream>
 int* inputVector(size_t k)
 {
@@ -752,7 +808,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.10
+//Task 5.11
 #define N 5
 #include <iostream>
 void countAppearances(int A[N][N], size_t n, bool(&appearances)[N][N])
@@ -826,7 +882,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.11 first approach
+//Task 5.12 first approach
 #include <iostream>
 bool isSubset(int* set1, int* set2, const size_t rows)
 {
@@ -873,7 +929,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.11 second approach
+//Task 5.12 second approach
 #include <iostream>
 void findSimilarRows(int** matrix, size_t rows);
 bool isSubset(int** matrix, size_t firstColumn, size_t secondColumn, size_t rows);
@@ -950,7 +1006,7 @@ bool isContained(int **matrix, size_t column, size_t searchedElement, size_t row
 	return false;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.12 & 5.13
+//Task 5.13 & 5.14
 #define M 5
 #include <iostream>
 int main()
@@ -995,7 +1051,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.14
+//Task 5.15
 #define N 8
 #include <iostream>
 const bool existK(int A[][N], size_t n)
@@ -1024,7 +1080,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.15
+//Task 5.16
 #include <iostream>
 void scrollArr(double arr[], size_t n)
 {
@@ -1057,7 +1113,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.16
+//Task 5.17
 #define N 5
 #include <iostream>
 double maximinj(double A[][N], const size_t n)
@@ -1138,7 +1194,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.17
+//Task 5.18
 #define N 3
 #include <iostream>
 const double scalarProd(double arr1[], double arr2[], size_t n)
@@ -1178,7 +1234,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.18
+//Task 5.19
 #define N 3
 #include <iostream>
 const bool isMagicSquare(double A[][N], size_t n)
@@ -1208,7 +1264,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.19
+//Task 5.20
 #include <iostream>
 #include <cmath>
 int numLen(size_t n)
@@ -1506,10 +1562,10 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.20
+//Task 5.21
 // hidden
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.21
+//Task 5.22
 #define ROWS 5
 #define COLS 10
 #include <iostream>
@@ -1580,7 +1636,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.22
+//Task 5.23
 /*Algorithm: 
 1. Partial pivoting: Find the kth pivot by swapping rows, to move the entry with the largest absolute value 
 	to the pivot position. This imparts computational stability to the algorithm.
@@ -1741,8 +1797,8 @@ int main()
 {
 	/* input matrix */
 	double mat[N][N + 1] = { {1.0, 0.0,2.0, 2.0},
-							 {5.0, 2.0, 2.0, 2.0},
-							 {3.0, -1.0, 4.0, 1.0}
+				 {5.0, 2.0, 2.0, 2.0},
+				 {3.0, -1.0, 4.0, 1.0}
 	};
 
 	gaussianElimination(mat);
