@@ -1,4 +1,44 @@
 //Task 5.01
+#include <iostream>
+#include <vector>
+int main()
+{
+	size_t R, C; std::cin >> R >> C;
+	std::vector<std::vector<int>> matrix(R);
+	for (size_t i = 0; i < R; i++)
+	{
+		matrix[i] = std::vector<int>(C);
+	}
+
+	for (size_t i = 0; i < R; i++)
+	{
+		for (size_t j = 0; j < C; j++)
+		{
+			std::cin >> matrix[i][j];
+		}
+	}
+
+	int searchedNum; std::cin >> searchedNum;
+	bool flag = false;
+	for (size_t i = 0; i < R; i++)
+	{
+		for (size_t j = 0; j < C; j++)
+		{
+			if (matrix[i][j]==searchedNum)
+			{
+				flag = true;
+				std::cout << i << ' ' << j << '\n';
+			}
+		}		
+	}
+	if (!flag)
+	{
+		std::cout << "not found\n";
+	}
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 5.02
 #define ROWS 6
 #define COLUMNS 6
 #include <iostream>
@@ -23,7 +63,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.02
+//Task 5.03
 #include <iostream>
 int** inputMatrix(size_t& rows, size_t& cols)
 {
@@ -75,7 +115,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.03
+//Task 5.04
 #include <iostream>
 double** inputMatrix(size_t n)
 { // a)
@@ -191,7 +231,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.04
+//Task 5.05
 #define n 4
 #include <iostream>
 int** inputMatrix(size_t m)
@@ -321,7 +361,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.05
+//Task 5.06
 #include <iostream>
 int** inputMatrix(size_t rows, size_t cols)
 {
@@ -416,7 +456,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.06
+//Task 5.07
 #define n 5
 #include <iostream>
 double sumSquaresSpecEl(double A[][n], size_t m)
@@ -443,7 +483,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.07
+//Task 5.08
 #include <iostream>
 int** inputPairs(size_t n)
 {
@@ -504,7 +544,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.08
+//Task 5.09
 #include <iostream>
 int* inputVector(size_t k)
 {
@@ -712,7 +752,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.09
+//Task 5.10
 #define N 5
 #include <iostream>
 void countAppearances(int A[N][N], size_t n, bool(&appearances)[N][N])
@@ -786,7 +826,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.10 first approach
+//Task 5.11 first approach
 #include <iostream>
 bool isSubset(int* set1, int* set2, const size_t rows)
 {
@@ -833,7 +873,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.10 second approach
+//Task 5.11 second approach
 #include <iostream>
 void findSimilarRows(int** matrix, size_t rows);
 bool isSubset(int** matrix, size_t firstColumn, size_t secondColumn, size_t rows);
@@ -910,7 +950,7 @@ bool isContained(int **matrix, size_t column, size_t searchedElement, size_t row
 	return false;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.11 & 5.12
+//Task 5.12 & 5.13
 #define M 5
 #include <iostream>
 int main()
@@ -955,7 +995,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.13
+//Task 5.14
 #define N 8
 #include <iostream>
 const bool existK(int A[][N], size_t n)
@@ -984,7 +1024,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.14
+//Task 5.15
 #include <iostream>
 void scrollArr(double arr[], size_t n)
 {
@@ -1017,7 +1057,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.15
+//Task 5.16
 #define N 5
 #include <iostream>
 double maximinj(double A[][N], const size_t n)
@@ -1098,7 +1138,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.16
+//Task 5.17
 #define N 3
 #include <iostream>
 const double scalarProd(double arr1[], double arr2[], size_t n)
@@ -1138,7 +1178,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.17
+//Task 5.18
 #define N 3
 #include <iostream>
 const bool isMagicSquare(double A[][N], size_t n)
@@ -1168,7 +1208,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.18
+//Task 5.19
 #include <iostream>
 #include <cmath>
 int numLen(size_t n)
@@ -1466,10 +1506,10 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.19
-//under construction
--------------------------------------------------------------------------------------------------------------------------------
 //Task 5.20
+// hidden
+-------------------------------------------------------------------------------------------------------------------------------
+//Task 5.21
 #define ROWS 5
 #define COLS 10
 #include <iostream>
@@ -1540,7 +1580,7 @@ int main()
 	return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------
-//Task 5.21
+//Task 5.22
 /*Algorithm: 
 1. Partial pivoting: Find the kth pivot by swapping rows, to move the entry with the largest absolute value 
 	to the pivot position. This imparts computational stability to the algorithm.
