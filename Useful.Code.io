@@ -93,6 +93,27 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+• SPLITTING BY DELIMETER IN WHILE CYLCLE WITH ISTRINGSTREAM
+
+#include <iostream>
+#include <string>
+#include <sstream>
+
+int main()
+{
+	using namespace std;
+	istringstream istr("some.text.here");
+
+	string word;
+	getline(istr, word, '.');
+	while (istr)
+	{		
+		cout << word << endl;
+		getline(istr, word, '.');
+	} 
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
 • MAX AND MIN FROM TWO INTEGERS
 
 #include <iostream>
