@@ -13,7 +13,7 @@ Example input|Expected output
 2 3<br>1 -2 -3<br>4 -5 6<br>5|not found
 
 **5.02.** Write a program that reads two integer matrices (2D arrays) from the console and compares them element by element. For better code reusability, you could do the comparison in a function, which returns **true** if they are equal and **false** if not.<br>
-Each matrix definition on the console will contain a line with a positive integer number **R** – the number of rows in the matrix – followed by R lines containing the numbers in the matrix, separated by spaces (each line will have an equal amount of numbers.<br>
+Each matrix definition on the console will contain a line with a positive integer number **R** – the number of rows in the matrix – followed by R lines containing the numbers in the matrix, separated by spaces.<br>
 The matrices will have at most **10** rows and at most **10** columns.<br>
 Print **equal** if the matrices match, and **not equal** if they don’t match.
 
@@ -21,8 +21,8 @@ Example input|Example output
 -|-
 1<br>1 2 3<br>1<br>1 2 3|equal
 2<br>1 2 3<br>2 1 3|2<br>1 2 3<br>2 1 3|equal
-4<br>1<br>11<br>21<br>31<br>4<br>1<br>11<br>21<br>31|equal
-2<br>1 2 3<br>4 5 6<br>2<br>1 3 2<br>4 5 6|not equal
+2<br>11<br>21<br>2<br>11<br>21|equal
+2<br>1 2<br>4 5 6<br>2<br>1 2<br>4 5 6 7|not equal
 2<br>1 2 3<br>4 5 6<br>2<br>1 2<br>3 4|not equal
 
 **5.03.** We say that in the elements of the matrix <img src="https://latex.codecogs.com/svg.latex?A_{nXm}"> there is a local minimum (<img src="https://latex.codecogs.com/svg.latex?a_{ij}">) for <img src="https://latex.codecogs.com/svg.latex?A">, if the elements that stay on it's left, right, up and down position are bigger than it. Write a program that finds and outputs all the elements of the matrix <img src="https://latex.codecogs.com/svg.latex?A"> for which <img src="https://latex.codecogs.com/svg.latex?A"> has a local minimum.
