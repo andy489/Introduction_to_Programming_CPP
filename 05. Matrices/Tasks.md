@@ -4,7 +4,7 @@
 The matrix definition on the console will contain a line with two positive integer numbers **R** and **C** – the number of rows and columns in the matrix – followed by **R** lines, each containing **C** numbers (separated by spaces), representing each row of the matrix.<br>
 The number you will need to find the positions of will be entered on a single line, after the matrix.<br>
 You should print each position on a single line – first print the row, then the column at which the number appears.<br>
-If the number does not appear in the matrix, print **not found**
+If the number does not appear in the matrix, print **not found**. *Use vectors*.
 
 Example input|Expected output
 -|-
