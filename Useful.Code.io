@@ -62,6 +62,37 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+• SPLITTING BY DELIMETER IN C++
+
+#include <iostream>
+#include <string>
+#include <sstream>
+
+int main() 
+{
+	using namespace std;
+	istringstream input("some text here");
+
+	string inputLine;
+	getline(input, inputLine);
+	cout << inputLine << endl;
+
+	istringstream inputWithDots("some.text.here");
+
+	string inputWithDotsLine;
+	getline(inputWithDots, inputWithDotsLine, '.');
+	cout << inputWithDotsLine << endl;
+
+
+	getline(inputWithDots, inputWithDotsLine, '.');
+	cout << inputWithDotsLine << endl;
+
+	getline(inputWithDots, inputWithDotsLine, '.');
+	cout << inputWithDotsLine << endl;
+
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
 • MAX AND MIN FROM TWO INTEGERS
 
 #include <iostream>
