@@ -20,7 +20,7 @@ Print **equal** if the matrices match, and **not equal** if they don’t match.
 Example input|Example output
 -|-
 1<br>1 2 3<br>1<br>1 2 3|equal
-2<br>1 2 3<br>2 1 3|2<br>1 2 3<br>2 1 3|equal
+2<br>1 2 3<br>2 1 3<br>2<br>1 2 3<br>2 1 3|equal
 2<br>11<br>21<br>2<br>11<br>21|equal
 2<br>1 2<br>4 5 6<br>2<br>1 2<br>4 5 6 7|not equal
 2<br>1 2 3<br>4 5 6<br>2<br>1 2<br>3 4|not equal
