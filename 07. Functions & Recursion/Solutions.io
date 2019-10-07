@@ -400,7 +400,7 @@ int brute_force_gcd(int a, int b)
 #include <iostream> 
 // returns value of poly[0]x(n-1) + poly[1]x(n-2) + .. + poly[n-1] 
 int horner1(int poly[], int n, int x)
-{       //iterative way
+{       //iterative 
 	int result = poly[0];  // Initialize result 
 
 	// Evaluate value of polynomial using Horner's method 
@@ -411,7 +411,7 @@ int horner1(int poly[], int n, int x)
 }
 
 int horner2(int* poly, int k, int x)
-{
+{	//recursive
 	if (k == 1) return poly[k - 1];
 	return poly[k - 1] + (x* (horner2(poly, k - 1, x)));
 }
