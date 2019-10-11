@@ -114,6 +114,41 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
+• SPLITTING BY MORE THAN ONE DELIMETER IN C++
+
+#include <iostream>
+#include <sstream>
+#include <vector>
+
+int main()
+{
+	std::string inputString; getline(std::cin,inputString);
+	std::istringstream stringStream(inputString);
+	std::string line;
+
+	std::vector<std::string>wordVector; wordVector.reserve(10);
+
+	while (std::getline(stringStream, line))
+	{
+		size_t prev(0), pos;
+		while ((pos = line.find_first_of(" ,.", prev)) != std::string::npos)
+		{
+			if (pos > prev)
+				wordVector.push_back(line.substr(prev, pos - prev));
+			prev = pos + 1;
+		}
+		if (prev < line.length())
+			wordVector.push_back(line.substr(prev, std::string::npos));
+	}
+
+	for (auto i : wordVector)
+	{
+		std::cout << i << '\n';
+	}
+
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
 • MAX AND MIN FROM TWO INTEGERS
 
 #include <iostream>
