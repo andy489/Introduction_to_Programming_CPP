@@ -114,7 +114,7 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
-• SPLITTING BY MORE THAN ONE DELIMETER IN C++
+• SPLITTING BY MORE THAN ONE DELIMETER IN C++  first approach
 
 #include <iostream>
 #include <sstream>
@@ -131,7 +131,7 @@ int main()
 	while (std::getline(stringStream, line))
 	{
 		size_t prev(0), pos;
-		while ((pos = line.find_first_of(" ,.", prev)) != std::string::npos)
+		while ((pos = line.find_first_of(" ,.?!;", prev)) != std::string::npos)
 		{
 			if (pos > prev)
 				wordVector.push_back(line.substr(prev, pos - prev));
@@ -146,6 +146,31 @@ int main()
 		std::cout << i << '\n';
 	}
 
+	return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+• SPLITTING BY MORE THAN ONE DELIMETER IN C++  second approach
+
+#include <iostream>
+#include <string>
+
+void parse(const std::string& text)
+{
+	std::string delimiters(".,;!? ");
+	char* next_token = nullptr;
+	char* token = strtok_s(const_cast<char*>(text.c_str()), delimiters.c_str(), &next_token);
+
+	while (token != nullptr)
+	{
+		std::cout << token << '\n';
+		token = strtok_s(nullptr, delimiters.c_str(), &next_token);
+	}	
+}
+
+int main()
+{
+	std::string text; getline(std::cin, text);	
+	parse(text);
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------------
