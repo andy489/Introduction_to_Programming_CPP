@@ -31,7 +31,7 @@ int main() {
     std::cin >> k;
     int len = numLen(n);
     if (k > len || k < 1) {
-        std::cout << "Position out of range";
+        std::cout << "Position out of range!";
     } else {
         std::cout << digitPos(n, k);
     }
