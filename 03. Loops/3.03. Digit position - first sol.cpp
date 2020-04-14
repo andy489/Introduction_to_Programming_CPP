@@ -26,7 +26,7 @@ int digitPos(ll n, int k) {
 int main() {
     std::cout << "Enter integer number and position: ";
     ll n;
-    unsigned short k;
+    int k;
     std::cin >> n;
     std::cin >> k;
     int len = numLen(n);
