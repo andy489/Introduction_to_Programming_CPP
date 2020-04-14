@@ -1,17 +1,3 @@
-//Task 1.04
-#include <iostream> 
-#include <cmath>
-int main()
-{
-	double a, b, c;
-	std::cin >> a >> b >> c;
-	double s = (a + b + c) / 2; // semiperimeter
-	double area = sqrt(s*(s - a)*(s - b)*(s - c)); // Heron's formula
-
-	std::cout << "Area of triangle is: " << area;
-	return 0;
-}
--------------------------------------------------------------------------------------------------------------------------------
 //Task 1.05
 #include <iostream> 
 int main()
