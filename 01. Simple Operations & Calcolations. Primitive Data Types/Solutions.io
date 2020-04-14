@@ -1,21 +1,3 @@
-//Task 1.01
-#include <iostream>
-void swap(int& a, int& b)
-{
-	int temp = a;
-	a = b;
-	b = temp;
-}
-int main()
-{
-	int a, b;
-	std::cin >> a >> b;
-	std::cout << a << ", " << b << "\n";
-	swap(a, b);
-	std::cout << a << ", " << b << "\n";
-	return 0;
-}
--------------------------------------------------------------------------------------------------------------------------------
 //Task 1.02
 #include <iostream>
 #include <cmath>
