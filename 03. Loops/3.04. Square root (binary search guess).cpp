@@ -1,27 +1,18 @@
 // github.com/andy489
 
 #include <iostream>
-#include <cmath>
 
 const double PRECISION = 0.000001;
 
-double sqrt_x(double x, double eps) { // Binary search
-    double left = 0.0, right = x, root;
-
-    while (left <= right) {
-        root = (left + right) / 2.0;
-        if (abs(root * root - x) < PRECISION) {
-            return root;
-        } else if (root * root - x > PRECISION) {
-            right = root;
-        } else {
-            left = root ;
-        }
-    }
+double sqrt_x(double x, double eps) { // Babylonian method
+    double s = x;
+    while ((s - x / s) > eps)
+        s = (s + x / s) / 2;
+    return s;
 }
 
 int main() {
-    const int n = 3;
+    const int n = 2;
     std::cout << sqrt_x(n, PRECISION) << std::endl;
     return 0;
 }
