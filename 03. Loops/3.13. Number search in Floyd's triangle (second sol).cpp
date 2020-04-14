@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cmath>
 
-int getRow(size_t n) {
+int getRow(int n) {
     /* Knowing the n-th row ends with n*(n+1)/2, we can make quadratic equation
     and solve it to get row number for given number k.
     So, n * (n+1)/2 = k, or n * n + n - 2 * k = 0 and D = 1 + 8 * k.         */
@@ -12,7 +12,7 @@ int getRow(size_t n) {
     return row;
 }
 
-int getCol(size_t n) {
+int getCol(int n) {
     int r = getRow(n);
     int col = n - r * (r - 1) / 2; //n minus last number form the upper row
     return col;
