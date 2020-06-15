@@ -1,4 +1,4 @@
-### SOME INTERVIEW QUESTIONS
+### SOME INTERESTING QUESTIONS
 
 **01.** Do ***100000 consequtive composite*** numbers exist? If “no”, argument your answer. Otherwise give an example.      
 *(1-2 minutes)*
