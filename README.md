@@ -1,1 +1,1 @@
-#### Welcome to the repository for extra materials for "Introduction to programming" course in Software Engineering, Computer Science & Informatics Systems at Faculty of Mathematics & Informatics (FMI), Sofia University (SU) "St. Kliment Ohridski".
+#### extra materials for "Introduction to programming" course for Software Engineering, Computer Science & Informatics Systems at FMI, SU "St. Kliment Ohridski".
