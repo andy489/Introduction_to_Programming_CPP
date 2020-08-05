@@ -37,13 +37,12 @@ int main() {
     size_t leftBurgers(0), rightBurgers(0);
     countBurgers(arr, digitCount, leftBurgers, rightBurgers);
 
-    if(leftBurgers == rightBurgers)
+    if (leftBurgers == rightBurgers)
         std::cout << "Even";
-    else {if (leftBurgers > rightBurgers)
+    else if (leftBurgers > rightBurgers)
         std::cout << "Strahil " << leftBurgers;
     else if (leftBurgers < rightBurgers)
         std::cout << "Pesho " << rightBurgers;
-}
     delete[] arr;
     return 0;
 }
