@@ -33,13 +33,13 @@ N|Local N|Section|Task|Solution
 28|3.11|Loops|[Square of numbers, Floyd triangle, Felice Russo](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.10.%2C%203.11.%2C%203.12.%20Square%20of%20numbers%2C%20Floyd%20triangle%2C%20Felice%20Russo.cpp)
 29|3.12|Loops|[Square of numbers, Floyd triangle, Felice Russo](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.10.%2C%203.11.%2C%203.12.%20Square%20of%20numbers%2C%20Floyd%20triangle%2C%20Felice%20Russo.cpp)
 30|3.13|Loops|[Number search in Floyd's triangle](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution 1.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.13.%20Number%20search%20in%20Floyd's%20triangle%20(first%20sol).cpp)<br>[Solution 2.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.13.%20Number%20search%20in%20Floyd's%20triangle%20(second%20sol).cpp)
-31|3.14|Loops|[](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp]()
-32|3.15|Loops|[](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp]()
-33|3.16|Loops|[](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp]()
-34|3.17|Loops|[](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp]()
-35|3.18|Loops|[](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp]()
-36|3.19|Loops|[](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp]()
-37|3.20|Loops|[](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp]()
+31|3.14|Loops|[Christmas tree](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.14.%20Christmas%20tree.cpp)
+32|3.15|Loops|[Heart](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.15.%20Heart.cpp)
+33|3.16|Loops|[Guess?](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.16.%20Guess%3F.cpp)
+34|3.17|Loops|[Calculate function](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.17.%20Calculate%20function.cpp)
+35|3.18|Loops|[Napier constant](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.18.%20Napier%20constant.cpp)
+36|3.19|Loops|[Taxi cab number](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.19.%20Taxi%20number.cpp)
+37|3.20|Loops|[Trailing zeroes](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/03.%20Loops.pdf)|[Solution 1.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.20.%20Trailing%20zeroes%20(first%20sol).cpp)<br>[Solution 2.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/03.%20Loops/3.20.%20Trailing%20zeroes%20(second%20sol).cpp)
 
 
 
