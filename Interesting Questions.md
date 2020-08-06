@@ -81,8 +81,7 @@ You can see that only 0 and the powers of two (1, 2, 4 and 8) result in a 0000/f
 **04.** What will be displayed on the console after executing the following code:
 ```cpp
 #include <iostream> 
-int main()
-{
+int main(){
 	(052 == 0x2a) ? std::cout << "true" : std::cout << "false";
 	return 0;
 }
