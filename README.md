@@ -90,7 +90,7 @@ N|Local N|Section|Task|Solution
 85|5.18|Matrices|[Orthonormal](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/05.%20Matrices.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/5.18.%20Orthonormal.cpp)
 86|5.19|Matrices|[Magic square](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/05.%20Matrices.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/5.19.%20Magic%20square.cpp)
 87|5.20|Matrices|[Construct matrices](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/05.%20Matrices.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/5.20.%20Construct%20matrices.cpp)
-88|5.21|Matrices|[Conway's game of life](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/05.%20Matrices.pdf)|[Hidden]()
+88|5.21|Matrices|[Conway's game of life](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/05.%20Matrices.pdf)|Hidden
 89|5.22|Matrices|[Island and peninsulas](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/05.%20Matrices.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/5.22.%20Islands%20and%20peninsulas.cpp)
 90|5.23|Matrices|[Solve system](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/05.%20Matrices.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/05.%20Matrices/5.23.%20Solve%20system.cpp)
 
