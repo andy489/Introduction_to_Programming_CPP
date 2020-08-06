@@ -4,8 +4,7 @@
 #include <iostream>
 #include <sstream>
 
-int main()
-{
+int main(){
 	std::string str = "10 -15 git";
 	std::istringstream numbersStream(str);
 
@@ -26,8 +25,7 @@ int main()
 #include <iostream>
 #include <sstream>
 
-int main()
-{
+int main(){
 	std::string word = "hello";
 	std::istringstream istr(word);
 	
@@ -38,20 +36,18 @@ int main()
 }
 ```
 ### Пример 3
-*извличане докато*
+*Извличане докато*
 ```cpp
 #include <iostream>
 #include <sstream>
 
-int main()
-{
+int main(){
 	std::string str = "3 4 14 5 text 6";
 	std::istringstream istr(str);
 	
 	int number;
 
-	while (istr>>number)
-	{
+	while (istr>>number){
 		std::cout << "next number is: " << number << '\n';
 	}
 
@@ -65,16 +61,14 @@ int main()
 #include <sstream>
 #include <vector>
 
-int main()
-{
+int main(){
 	std::string line; std::getline(std::cin, line);
 	std::istringstream lineStream(line);
 
 	std::vector<int> digits;
 	char currentNumber;
 
-	while (lineStream >> currentNumber)
-	{
+	while (lineStream >> currentNumber){
 		digits.push_back(currentNumber - '0');
 	}
 
@@ -88,8 +82,7 @@ int main()
 #include <sstream>
 #include <string>
 
-int main()
-{
+int main(){
 	std::istringstream input("some text here");
 
 	std::string inputLine;
@@ -121,8 +114,7 @@ int main()
 #include <iostream>
 #include <sstream>
 #include <string>
-int main()
-{
+int main(){
 	size_t numbersCount;
 	std::cin >> numbersCount;
 	std::cin.ignore();
@@ -133,8 +125,7 @@ int main()
 	std::istringstream istr(input);
 
 	float number = 0.0f;
-	for (size_t i = 0; i < numbersCount; i++)
-	{
+	for (size_t i = 0; i < numbersCount; i++){
 		istr >> number;
 		std::cout << number << std::endl;
 	}
@@ -147,8 +138,7 @@ int main()
 #include <iostream>
 #include <fstream>
 
-int main()
-{
+int main(){
 	std::ifstream input;
 	input.open("input.txt");
 	int a, b;
@@ -169,16 +159,14 @@ int main()
 #include <iostream>
 #include <fstream>
 
-int main()
-{
+int main(){
 	std::ifstream input;
 	// NOTE: the file input.txt should exist in the directory where
 	// the binary file is created and run!
 	input.open("input.txt");
 	
 	// IMPORTANT: always make an error check
-	if (!input.is_open())
-	{
+	if (!input.is_open()){
 		std::cerr << "input.txt file could not be found" << std::endl;
 	}
 
