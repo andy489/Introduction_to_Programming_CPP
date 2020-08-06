@@ -10,14 +10,27 @@ _CrtDumpMemoryLeaks(); // before end of program i.e. return 0;
 // start debugging with f10 and when you reach "return 0" you will be notified if there is a memory leak
 
 --------------------------------------------------------------------------------------------------------------------------------
+• Swapping two numbers
+
+#include <iostream>
+
+int main() {
+    int a = 5, b = 10;
+    std::cout << "a=" << a << "\nb=" << b;
+
+    b += a - (a = b);
+
+    std::cout << "\n<<swap>>\na=" << a << "\nb=" << b;
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
 • REGULAR EXPRESSIONS (RegEx)
 
 // Example 1:
 #include <iostream> 
 #include <regex> 
 
-int main()
-{
+int main(){
 	std::string s1 = "http//www.github.com/"; // target string
 	std::regex s2("(.+)(www.)[a-zA-Z0-9]+(.com/)(.*)"); // searched string
 	//(.+) -> At least one non-eps (eps - the empty char) symbol of any kind;
@@ -38,14 +51,11 @@ int main()
 /* Function that reads from cin until it gets an integer in
 the required range and also handles invalid characters.*/
 
-int inputNum(int lowerBound, int upperBound) 
-{
+int inputNum(int lowerBound, int upperBound) {
 	int n;
-	while (true)
-	{
+	while (true){
 		std::cout << "Input a number: "; std::cin >> n;
-		if (std::cin.fail())
-		{
+		if (std::cin.fail()){
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
@@ -54,8 +64,7 @@ int inputNum(int lowerBound, int upperBound)
 	return n;
 }
 
-int main()
-{
+int main(){
 	int n = inputNum(0, 9);
 	std::cout << "Correct number: " << n;
 
@@ -68,8 +77,7 @@ int main()
 #include <string>
 #include <sstream>
 
-int main() 
-{
+int main() {
 	using namespace std;
 	istringstream input("some text here");
 
@@ -99,15 +107,13 @@ int main()
 #include <string>
 #include <sstream>
 
-int main()
-{
+int main(){
 	using namespace std;
 	istringstream istr("some.text.here");
 
 	string word;
 	getline(istr, word, '.');
-	while (istr)
-	{		
+	while (istr){		
 		cout << word << endl;
 		getline(istr, word, '.');
 	} 
@@ -120,19 +126,16 @@ int main()
 #include <sstream>
 #include <vector>
 
-int main()
-{
+int main(){
 	std::string inputString; getline(std::cin,inputString);
 	std::istringstream stringStream(inputString);
 	std::string line;
 
 	std::vector<std::string>wordVector; wordVector.reserve(10);
 
-	while (std::getline(stringStream, line))
-	{
+	while (std::getline(stringStream, line)){
 		size_t prev(0), pos;
-		while ((pos = line.find_first_of(" ,.?!;", prev)) != std::string::npos)
-		{
+		while ((pos = line.find_first_of(" ,.?!;", prev)) != std::string::npos){
 			if (pos > prev)
 				wordVector.push_back(line.substr(prev, pos - prev));
 			prev = pos + 1;
@@ -141,8 +144,7 @@ int main()
 			wordVector.push_back(line.substr(prev, std::string::npos));
 	}
 
-	for (auto i : wordVector)
-	{
+	for (auto i : wordVector){
 		std::cout << i << '\n';
 	}
 
@@ -154,21 +156,18 @@ int main()
 #include <iostream>
 #include <string>
 
-void parse(const std::string& text)
-{
+void parse(const std::string& text){
 	std::string delimiters(".,;!? ");
 	char* next_token = nullptr;
 	char* token = strtok_s(const_cast<char*>(text.c_str()), delimiters.c_str(), &next_token);
 
-	while (token != nullptr)
-	{
+	while (token != nullptr){
 		std::cout << token << '\n';
 		token = strtok_s(nullptr, delimiters.c_str(), &next_token);
 	}	
 }
 
-int main()
-{
+int main(){
 	std::string text; getline(std::cin, text);	
 	parse(text);
 	return 0;
@@ -179,8 +178,7 @@ int main()
 #include <iostream>
 #include <cmath>
 
-int main()
-{
+int main(){
 	int a, b;
 	std::cin >> a >> b;
 	int max = (a + b + abs(a - b)) / 2;
@@ -193,10 +191,8 @@ int main()
 
 #include <iostream>
 #include <windows.h>
-int main()
-{
-	for (int i = 0; i < 256; i++)
-	{
+int main(){
+	for (int i = 0; i < 256; i++){
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), i);
 		std::cout << "Text color in use = " << i << "\n";
 	}
@@ -206,8 +202,7 @@ int main()
 • CONSOLE COLOR 2
 
 #include <iostream>
-int main()
-{
+int main(){
 	system("color A"); // sets the color of the text in red
 
 	std::cout << "You can change the color of text in the console\n";
