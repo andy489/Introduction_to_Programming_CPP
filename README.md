@@ -158,7 +158,9 @@ N|Local N|Section|Task|Solution
 153|6|Recursion Additional Tasks|[Matrix unfolding](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/Recursion%20Additional%20Tasks/Recursion%20Additional%20Tasks.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/Recursion%20Additional%20Tasks/Task%2006.cpp)
 154|7|Recursion Additional Tasks|[Count and size of areas](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/Recursion%20Additional%20Tasks/Recursion%20Additional%20Tasks.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/Recursion%20Additional%20Tasks/Task%2007.cpp)
 155|8|Recursion Additional Tasks|[Path finder](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/Recursion%20Additional%20Tasks/Recursion%20Additional%20Tasks.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/Recursion%20Additional%20Tasks/Task%2008.cpp)
-
+156|1|SE 1st Control Test 09.11.2018|[Letter check](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%201st%20Constrol%20Test%2C%20FMI%2009.11.2018/SE%201st%20Control%20Test%20FMI%20%2009.11.2018.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%201st%20Constrol%20Test%2C%20FMI%2009.11.2018/Task%201.cpp)
+157|2|SE 1st Control Test 09.11.2018|[Input elements](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%201st%20Constrol%20Test%2C%20FMI%2009.11.2018/SE%201st%20Control%20Test%20FMI%20%2009.11.2018.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%201st%20Constrol%20Test%2C%20FMI%2009.11.2018/Task%202.cpp)
+158|3|SE 1st Control Test 09.11.2018|[Square with minimal area](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%201st%20Constrol%20Test%2C%20FMI%2009.11.2018/SE%201st%20Control%20Test%20FMI%20%2009.11.2018.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%201st%20Constrol%20Test%2C%20FMI%2009.11.2018/Task%203.cpp)
 
 
 
