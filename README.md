@@ -175,7 +175,7 @@ N|Local N|Section|Task|Solution
 170|3.1|SE Homeworks 2018|[Animate HELLO](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%20Homeworks%20FMI%202018/SE%20HW%2C%20FMI%202018.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%20Homeworks%20FMI%202018/Task%2009.cpp)
 171|3.2|SE Homeworks 2018|[Solve Matrix Equation](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%20Homeworks%20FMI%202018/SE%20HW%2C%20FMI%202018.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%20Homeworks%20FMI%202018/Task%2010.cpp)
 172|3.3|SE Homeworks 2018|[Basis](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%20Homeworks%20FMI%202018/SE%20HW%2C%20FMI%202018.pdf)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/SE%20Homeworks%20FMI%202018/Task%2011.cpp)
-173|1|Patterns|[https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/Patterns.md](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/Patterns.md)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/Patterns.md)
+173|1|Patterns|[Tasks](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/Patterns.md)|[Solution.cpp](https://github.com/andy489/Introduction_to_Programming_CPP/blob/master/Patterns.md)
 
 
 
