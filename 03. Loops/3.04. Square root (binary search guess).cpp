@@ -8,7 +8,7 @@ using namespace std;
 #define eps 0.000001
 
 double sq(int n) {
-    if(n==0)
+    if (n == 0)
         return 0.0;
     double low = 0, high = n / 2 + 1,
             mid = low + (high - low) / 2;
