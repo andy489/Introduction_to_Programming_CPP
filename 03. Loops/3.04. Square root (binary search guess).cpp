@@ -1,18 +1,34 @@
 // github.com/andy489
 
 #include <iostream>
+#include <cmath>
 
-const double PRECISION = 0.000001;
+using namespace std;
 
-double sqrt_x(double x, double eps) { // Babylonian method
-    double s = x;
-    while ((s - x / s) > eps)
-        s = (s + x / s) / 2;
-    return s;
+#define eps 0.000001
+
+double sq(int n) {
+    if(n==0)
+        return 0.0;
+    double low = 0, high = n / 2 + 1,
+            mid = low + (high - low) / 2;
+
+    while (abs((mid * mid) - n) > eps) {
+        if ((mid * mid) > n) {
+            high = mid;
+            mid = low + (high - low) / 2;
+
+        } else {
+            low = mid;
+            mid = low + ((high - low) / 2);
+        }
+    }
+    return mid;
 }
 
 int main() {
-    const int n = 2;
-    std::cout << sqrt_x(n, PRECISION) << std::endl;
-    return 0;
+    double x;
+    cin >> x;
+
+    return cout << sq(x), 0;
 }
